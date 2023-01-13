@@ -1,6 +1,6 @@
-.traits {
-  $this: '.traits';
-
+.gear {
+  $this: '.gear';
+  background-color: hsl(random(360) 80% 80% / 80%);
   &__view {
     row-gap: $grid-gutter-row;
   }
@@ -8,10 +8,6 @@
   &__check {
     display: flex;
     align-items: center;
-  }
-
-  .trait__name {
-    font-weight: 700;
   }
 
   // &__extra {
@@ -33,13 +29,16 @@
 }
 
 .repeating {
-  $this: '.traits';
+  $this: '.gear';
 
   // repeating sections
   &__view {
     #{$this}__check {
       span {
         margin-inline-start: $m-sm;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
       }
     }
   }

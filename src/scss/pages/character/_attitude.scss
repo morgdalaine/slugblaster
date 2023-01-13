@@ -53,19 +53,9 @@
       transition: all 0.25s ease-in-out;
       background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
 
-      // background-image: url('https://storage.googleapis.com/char-sheet-app-images-6e101411/zweihander/checkbox-empty.svg');
       background-size: contain;
       background-repeat: no-repeat;
     }
-
-    &:checked:after {
-      // background-image: url('https://storage.googleapis.com/char-sheet-app-images-6e101411/zweihander/checkbox-checked.svg');
-    }
-    // &::after {
-    //   content: '';
-    //   width: 3rem;
-    //   aspect-ratio: 1;
-    // }
     &:checked {
       opacity: 0.5;
     }

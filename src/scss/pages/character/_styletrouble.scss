@@ -8,6 +8,8 @@
 
 .style,
 .trouble {
+  flex: 1;
+
   &__title {
     @extend .panel__title;
   }
@@ -29,10 +31,13 @@
 
 .style {
   $this: '.style';
+  background-color: hsl(random(360) 80% 80% / 80%);
 }
 
 .trouble {
   $this: '.trouble';
+  background-color: hsl(random(360) 80% 80% / 80%);
+
   &__actions {
     display: flex;
     gap: 0 $grid-gutter-col;
