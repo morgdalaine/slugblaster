@@ -1,0 +1,39 @@
+.repeating {
+  $this: '.repeating';
+
+  &__is-empty {
+    // &[value='0'] {
+    //   ~ * #{$this}__view {
+    //     display: grid;
+    //   }
+    // }
+    &[value='on'] {
+      ~ #{$this}__empty {
+        display: block;
+      }
+    }
+  }
+
+  &__controller {
+    &[value='0'] {
+      ~ * #{$this}__view {
+        display: grid;
+      }
+    }
+    &[value='on'] {
+      ~ * #{$this}__edit {
+        display: grid;
+      }
+    }
+  }
+
+  &__empty {
+    display: none;
+  }
+
+  &__view,
+  &__edit {
+    display: none;
+    transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+  }
+}

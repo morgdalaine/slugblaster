@@ -1,0 +1,15 @@
+- const points = Array.from(Array(5).keys(), (i) => i + 1);
+each point in points
+  span.translation(data-i18n=`style_${point}`)= `${point} style`
+  span.translation(data-i18n=`trouble_${point}`)= `${point} trouble`
+
+each personality in data.character.personalities
+  if (data.personalities[personality])
+    each translation in Object.entries(data.personalities[personality].translations)
+      - const [key, text] = translation;
+      span.translation(data-i18n=key)= text
+
+//- gear
+each translation in Object.entries(data.translation.gear)
+  - const [key, text] = translation;
+  span.translation(data-i18n=key)= text

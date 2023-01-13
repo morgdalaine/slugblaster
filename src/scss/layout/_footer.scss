@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  $this: '.footer';
+  // grid-area: footer;
+
+  float: right;
+  padding: $p-md;
+  background-color: hsl(random(360) 80% 80% / 80%);
+
+  > span {
+    opacity: 0.5;
+    &::before {
+      content: 'v';
+    }
+  }
+}

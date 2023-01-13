@@ -1,0 +1,21 @@
+/**
+ * Basic typography style for copy text
+ */
+
+label {
+  display: block;
+  color: $label-color;
+  font-family: $font-label;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+.pictos {
+  font-family: Pictos;
+}
+
+.translation {
+  display: none;
+}

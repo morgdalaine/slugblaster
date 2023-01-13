@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@use 'sass:math';
+@use 'sass:map';
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons&display=swap');
+
+// 1. Configuration and helpers
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/reset';
+@import 'vendors/normalize';
+
+// 3. Base stuff
+
+// 4. Layout-related sections
+@import 'layout/characterviewer';
+
+// 5. Components
+
+// 6. Page-specific styles
+
+// 7. Themes
+@import 'themes/default';
+@import 'themes/darkmode';
+
+.ul-dialog {
+  width: map.get($grid-breakpoints, 'sm');
+}
+
+html {
+  // .sheetform { }
+
+  .charsheet .slugblaster {
+    // Base
+    @import 'base/base';
+    @import 'base/fonts';
+    @import 'base/inputs';
+    @import 'base/helpers';
+    @import 'base/repcontainer';
+    @import 'base/typography';
+    // Components
+    @import 'components/blob';
+    @import 'components/button';
+    @import 'components/editor';
+    @import 'components/edittoggle';
+    @import 'components/panels';
+    @import 'components/repeating';
+    // Pages
+    @import 'pages/home';
+    @import 'pages/character';
+    @import 'pages/gear';
+    @import 'pages/styletrouble';
+    @import 'pages/attitude';
+    // Layout
+    @import 'layout/grid';
+    @import 'layout/header';
+    @import 'layout/navigation';
+    @import 'layout/footer';
+
+    // display: grid;
+    // grid-template-columns: auto 1fr;
+    // grid-template-areas:
+    //   'header stats'
+    //   'nav nav'
+    //   'wrapper wrapper'
+    //   'footer footer';
+    display: flex;
+    flex-direction: column;
+    gap: $grid-gutter-row 0;
+    &__wrapper {
+    }
+  }
+}

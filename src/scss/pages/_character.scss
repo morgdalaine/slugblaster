@@ -1,0 +1,41 @@
+.character {
+  $this: '.character';
+
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gutter-gap;
+
+  &__personality[type='text'] {
+    font-family: $font-title;
+    font-size: 3rem;
+  }
+  &__header {
+    margin-bottom: $m-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+  &__gear {
+    margin-bottom: $m-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+  &__traits {
+    margin-bottom: $m-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+  &__signature {
+    margin-bottom: $m-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+  &__downtime {
+    margin-bottom: $m-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+  &__attitude {
+    margin-bottom: $m-md;
+  }
+
+  &__style-trouble {
+    grid-column: 1 / -1;
+  }
+}

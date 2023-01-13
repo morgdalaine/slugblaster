@@ -1,0 +1,27 @@
+//- panels have editor toggles
+mixin panel(panel)
+  - const semantic = panel.semantic || 'div';
+  #{semantic}.panel(class=panel.name)
+    input.editor__controller(name=`attr_${panel.name}_editor`, type='hidden', value='0')
+    .panel__wrapper
+      block
+      .panel__header(class=`${panel.name}__header`)
+        +block("header", true)
+          if (panel.title)
+            h2.panel__title(data-i18n=panel.name, class=`${panel.name}__title`)= panel.title
+        +edittoggle(panel.name)
+      .panel__content(class=`${panel.name}__content`)
+        +block("content", true)
+
+mixin blob(blob)
+  - const semantic = blob.semantic || 'div';
+  - const hasEditor = blob.editor;
+  - const editorClass = blob.editor ? 'blob--editor' : null;
+  #{semantic}.blob(class=blob.name)
+    input.editor__controller(name=`attr_${blob.name}_editor`, type='hidden', value='0')
+    .blob__wrapper(class=editorClass)
+      block
+      .blob__content(class=`${blob.name}__content`)
+        +block("content", true)
+      if hasEditor
+        +edittoggle(blob.name)

@@ -1,0 +1,1649 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-size: 69%;
+}
+html .characterviewer,
+html .tab-content,
+html .sheetform,
+html .charactersheet {
+  box-sizing: border-box;
+  height: calc(100% - 2rem);
+}
+html .characterviewer {
+  display: grid !important;
+  grid-template-rows: auto 1fr;
+}
+html .characterviewer .nav-tabs {
+  border: none;
+}
+html .characterviewer .nav-tabs > li > a {
+  border: none !important;
+}
+html .characterviewer .charsheet {
+  padding: 0;
+}
+
+.charsheet * {
+  box-sizing: border-box;
+  height: unset;
+  width: unset;
+  padding: unset;
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  color: unset;
+  border: unset;
+  border-radius: unset;
+  background: unset;
+  background-color: unset;
+  text-shadow: unset;
+  box-shadow: unset;
+}
+.charsheet h1,
+.charsheet h2,
+.charsheet h3,
+.charsheet h4,
+.charsheet h5 {
+  font-size: unset;
+  line-height: unset;
+  color: unset;
+}
+.charsheet p,
+.charsheet input,
+.charsheet input[type=number],
+.charsheet textarea,
+.charsheet select,
+.charsheet button,
+.charsheet button[type=roll],
+.charsheet label {
+  display: unset;
+  width: unset;
+  height: unset;
+  padding: unset;
+  margin-bottom: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  text-shadow: none;
+  line-height: unset;
+  color: unset;
+  border: unset;
+  border-radius: unset;
+  background: unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+.charsheet button[type=roll]:before {
+  display: none;
+}
+.charsheet input[disabled],
+.charsheet select[disabled],
+.charsheet textarea[disabled],
+.charsheet input[readonly],
+.charsheet select[readonly],
+.charsheet textarea[readonly] {
+  background-color: unset;
+  border-color: unset;
+}
+
+.charsheet * {
+  font-size: 1em;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.charsheet fieldset {
+  background: transparent;
+}
+.charsheet span {
+  word-break: break-word;
+}
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.characterviewer .content {
+  margin-bottom: 0;
+}
+.characterviewer .nav-tabs {
+  padding-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.characterviewer .nav-tabs > li {
+  margin-bottom: 0;
+}
+.characterviewer .nav-tabs > li > a {
+  padding: 0.25rem;
+}
+.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1) {
+  opacity: 0.3;
+}
+.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):focus {
+  opacity: 1;
+}
+
+.ui-dialog .largedialog {
+  padding: 0;
+}
+.ui-dialog .charsheet {
+  padding: 0;
+}
+
+* {
+  color: var(--text-color, rgb(34, 34, 34));
+  font: normal 1rem/1.4 "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+}
+
+.characterviewer .nav-tabs > li > a {
+  font-variant: small-caps;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+* {
+  --foreground: #fff;
+  --label-color: #292828;
+  --text-color: #292828;
+  --input-background: rgba(237, 237, 237, 0.5);
+  --input-background-color-active: rgba(1, 172, 239, 0.1);
+  --input-background-color-disabled: rgba(237, 237, 237, 0.1);
+  --input-border-color: #eb008b;
+  --input-border-color-active: #eb008b;
+  --input-border-color-disabled: #eb008b;
+  --input-color: rgb(68, 68, 68);
+  --input-color-active: #292828;
+  --input-color-disabled: rgb(153, 153, 153);
+  --button-background: rgba(153, 153, 153, 0.8);
+  --button-background-active: rgba(68, 68, 68, 0.8);
+  --button-background-hover: rgba(237, 237, 237, 0.8);
+  --button-color: #292828;
+  --button-color-active: #01acef;
+  --button-color-hover: #eb008b;
+}
+
+.ul-dialog {
+  width: 576px;
+}
+
+html .charsheet .slugblaster {
+  /**
+   * Clear inner floats
+   */
+  /**
+   * Main content containers
+   * 1. Make the container full-width with a maximum width
+   * 2. Center it in the viewport
+   * 3. Leave some space on the edges, especially valuable on small screens
+   */
+  /**
+   * Hide text while making it readable for screen readers
+   * 1. Needed in WebKit-based browsers because of an implementation bug;
+   *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+   */
+  /**
+   * Hide element while making it readable for screen readers
+   * Shamelessly borrowed from HTML5Boilerplate:
+   * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+   */
+  /**
+   * Basic typography style for copy text
+   */
+  /* CSS */
+  /* CSS */
+  /* CSS */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+}
+html .charsheet .slugblaster .row__header {
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+html .charsheet .slugblaster input[type=number],
+html .charsheet .slugblaster input[type=text],
+html .charsheet .slugblaster select,
+html .charsheet .slugblaster textarea {
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--input-background);
+  border-bottom: 1px dashed var(--input-border-color);
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: var(--input-color);
+  transition: 0.2s ease-in;
+  padding-inline-start: 0.25rem;
+  padding-block: 1px;
+}
+html .charsheet .slugblaster input[type=number]:active, html .charsheet .slugblaster input[type=number]:hover, html .charsheet .slugblaster input[type=number]:focus,
+html .charsheet .slugblaster input[type=text]:active,
+html .charsheet .slugblaster input[type=text]:hover,
+html .charsheet .slugblaster input[type=text]:focus,
+html .charsheet .slugblaster select:active,
+html .charsheet .slugblaster select:hover,
+html .charsheet .slugblaster select:focus,
+html .charsheet .slugblaster textarea:active,
+html .charsheet .slugblaster textarea:hover,
+html .charsheet .slugblaster textarea:focus {
+  outline: 0;
+  background-color: var(--input-background-color-active);
+  color: var(--input-color-active);
+  border-bottom: 1px solid var(--input-border-color-active);
+  padding-inline-start: 0.5rem;
+}
+html .charsheet .slugblaster input[type=number]::placeholder,
+html .charsheet .slugblaster input[type=text]::placeholder,
+html .charsheet .slugblaster select::placeholder,
+html .charsheet .slugblaster textarea::placeholder {
+  color: rgb(153, 153, 153);
+}
+html .charsheet .slugblaster select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://www.svgrepo.com/show/361418/chevron-down.svg");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+html .charsheet .slugblaster select option {
+  background: var(--input-background);
+  background-color: #ef4b31;
+  color: var(--input-color);
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  font-size: 1rem;
+}
+html .charsheet .slugblaster input[type=number] {
+  text-align: center;
+}
+html .charsheet .slugblaster input[type=number][disabled], html .charsheet .slugblaster input[type=number][readonly] {
+  cursor: default;
+  background: var(--input-background-color-disabled);
+  color: var(--input-color-disabled);
+  border: 2px solid var(--input-border-color-disabled);
+}
+html .charsheet .slugblaster textarea {
+  min-height: 5rem;
+  max-height: 10rem;
+  resize: vertical;
+  scrollbar-width: thin;
+  scrollbar-color: var(--input-color-active) transparent;
+}
+@supports selector(::-webkit-scrollbar) {
+  html .charsheet .slugblaster textarea::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+  }
+  html .charsheet .slugblaster textarea::-webkit-scrollbar-track {
+    background: var(--input-color-active);
+  }
+}
+html .charsheet .slugblaster span[name] {
+  white-space: pre-wrap;
+}
+html .charsheet .slugblaster .clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+html .charsheet .slugblaster .container {
+  max-width: 1180px; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+}
+html .charsheet .slugblaster .hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+html .charsheet .slugblaster .visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+html .charsheet .slugblaster .repcontainer {
+  display: grid;
+  gap: 0.5rem 0;
+  margin-block: 0.5rem;
+}
+html .charsheet .slugblaster label {
+  display: block;
+  color: var(--label-color);
+  font-family: "Sofia Sans", "Sofia Sans", "Ubuntu", "Nunito", sans-serif;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+html .charsheet .slugblaster .pictos {
+  font-family: Pictos;
+}
+html .charsheet .slugblaster .translation {
+  display: none;
+}
+html .charsheet .slugblaster .blob {
+  position: relative;
+}
+html .charsheet .slugblaster .blob__wrapper {
+  display: grid;
+}
+html .charsheet .slugblaster .blob--editor {
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster button[type=action],
+html .charsheet .slugblaster button[type=roll] {
+  background: var(--button-background);
+  color: var(--button-color);
+  border-radius: 0.5rem;
+}
+html .charsheet .slugblaster button[type=action]:hover,
+html .charsheet .slugblaster button[type=roll]:hover {
+  background: var(--button-background-hover);
+  color: var(--button-color-hover);
+}
+html .charsheet .slugblaster button[type=action]:active,
+html .charsheet .slugblaster button[type=roll]:active {
+  background: var(--button-background-active);
+  color: var(--button-color-active);
+}
+html .charsheet .slugblaster .numcontroller {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+html .charsheet .slugblaster .numcontroller__span[name] {
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+html .charsheet .slugblaster .numcontroller__increase, html .charsheet .slugblaster .numcontroller__decrease {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 2rem;
+  aspect-ratio: 1;
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  html .charsheet .slugblaster .numcontroller .numcontroller__span {
+    font-size: 1.5rem;
+  }
+  html .charsheet .slugblaster .numcontroller .numcontroller__increase, html .charsheet .slugblaster .numcontroller .numcontroller__decrease {
+    width: 1.5rem;
+  }
+}
+html .charsheet .slugblaster .action__group {
+  display: flex;
+}
+html .charsheet .slugblaster .action__group button:first-of-type {
+  border-radius: 1rem 0 0 1rem;
+}
+html .charsheet .slugblaster .action__group button:last-of-type {
+  border-radius: 0 1rem 1rem 0;
+}
+html .charsheet .slugblaster .action-pill {
+  border-radius: 1rem;
+}
+html .charsheet .slugblaster .button--glitch,
+html .charsheet .slugblaster .button--glitch:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+html .charsheet .slugblaster .button--glitch:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "!";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+html .charsheet .slugblaster .button--glitch:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .button--glitch,
+  html .charsheet .slugblaster .button--glitch:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+html .charsheet .slugblaster .button-3d {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .button-3d {
+    padding: 0.25em 0.75em;
+  }
+}
+html .charsheet .slugblaster .button-3d:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+html .charsheet .slugblaster .button--alt-text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0.5rem;
+}
+html .charsheet .slugblaster .button--alt-text::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 172, 239, 0.5);
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+html .charsheet .slugblaster .button--alt-text:hover::after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+html .charsheet .slugblaster .button--alt-text:hover span:last-child {
+  transform: translateX(-50%) translateY(-80%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+html .charsheet .slugblaster .button--alt-text span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+html .charsheet .slugblaster .button--alt-text span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  white-space: nowrap;
+}
+html .charsheet .slugblaster .button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+html .charsheet .slugblaster .button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+html .charsheet .slugblaster .editor {
+  height: 100%;
+  position: relative;
+}
+html .charsheet .slugblaster .editor__controller[value="0"] ~ * .editor__view {
+  display: grid;
+}
+html .charsheet .slugblaster .editor__controller[value=on] ~ * .editor__edit {
+  display: grid;
+}
+html .charsheet .slugblaster .editor__wrapper {
+  height: 100%;
+  position: relative;
+}
+html .charsheet .slugblaster .editor__view, html .charsheet .slugblaster .editor__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .slugblaster .editor__edit {
+  grid-template-rows: 1fr auto;
+  column-gap: 1rem;
+}
+html .charsheet .slugblaster .editor__view label {
+  border-top: 1px dashed #292828;
+}
+html .charsheet .slugblaster .editor__icon {
+  margin-inline: 0.5rem;
+}
+html .charsheet .slugblaster .editor__toggle {
+  transition: 0.1s linear;
+}
+html .charsheet .slugblaster .editor__toggle:hover {
+  transform: translateY(-0.2rem);
+  text-shadow: 0 0.4rem 0.2rem rgba(239, 75, 49, 0.2);
+}
+html .charsheet .slugblaster .editor__toggle:active {
+  transform: translateY(0.4rem);
+}
+html .charsheet .slugblaster .editor__close {
+  --close-size: 4rem;
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+  width: var(--close-size);
+  aspect-ratio: 1;
+  transition: 0.5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+}
+html .charsheet .slugblaster .editor__close:hover::before {
+  transform: scale(1);
+}
+html .charsheet .slugblaster .editor__close:hover::after {
+  color: #fff;
+}
+html .charsheet .slugblaster .editor__close:active {
+  transform: translateY(0.4rem);
+}
+html .charsheet .slugblaster .editor__close::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--close-size);
+  aspect-ratio: 1;
+  background-color: #ef4b31;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .slugblaster .editor__close::after {
+  content: "*";
+  font-family: Pictos;
+  margin: auto;
+  color: #ef4b31;
+}
+html .charsheet .slugblaster .edit-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.25rem;
+  z-index: 100;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+}
+html .charsheet .slugblaster .edit-toggle__controller[value="0"] ~ .edit-toggle__view {
+  display: block;
+}
+html .charsheet .slugblaster .edit-toggle__controller[value=on] ~ .edit-toggle__edit {
+  display: block;
+}
+html .charsheet .slugblaster .edit-toggle__view, html .charsheet .slugblaster .edit-toggle__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .slugblaster .panel {
+  position: relative;
+}
+html .charsheet .slugblaster .panel__wrapper {
+  display: grid;
+  gap: 0.5rem 0.5rem;
+  height: 100%;
+}
+html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
+  padding: 0.25rem;
+}
+html .charsheet .slugblaster .panel__header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+  align-items: center;
+  padding-right: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  justify-content: space-between;
+}
+html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .attitude__title, html .charsheet .slugblaster .style__title,
+html .charsheet .slugblaster .trouble__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+html .charsheet .slugblaster .repeating__is-empty[value=on] ~ .repeating__empty {
+  display: block;
+}
+html .charsheet .slugblaster .repeating__controller[value="0"] ~ * .repeating__view {
+  display: grid;
+}
+html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__edit {
+  display: grid;
+}
+html .charsheet .slugblaster .repeating__empty {
+  display: none;
+}
+html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .repeating__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .slugblaster .character {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+html .charsheet .slugblaster .character__personality[type=text] {
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-size: 3rem;
+}
+html .charsheet .slugblaster .character__header {
+  margin-bottom: 0.5rem;
+  background-color: hsla(303deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character__gear {
+  margin-bottom: 0.5rem;
+  background-color: hsla(217deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character__traits {
+  margin-bottom: 0.5rem;
+  background-color: hsla(263deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character__signature {
+  margin-bottom: 0.5rem;
+  background-color: hsla(283deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character__downtime {
+  margin-bottom: 0.5rem;
+  background-color: hsla(251deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character__attitude {
+  margin-bottom: 0.5rem;
+}
+html .charsheet .slugblaster .character__style-trouble {
+  grid-column: 1/-1;
+}
+html .charsheet .slugblaster .gear__view {
+  row-gap: 0.5rem;
+}
+html .charsheet .slugblaster .gear__check {
+  display: flex;
+  align-items: center;
+}
+html .charsheet .slugblaster .repeating__view .gear__check span {
+  margin-inline-start: 0.25rem;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+html .charsheet .slugblaster .repeating__edit {
+  position: relative;
+  padding: 0.5rem;
+  background-color: #f59ac2;
+}
+html .charsheet .slugblaster .style-trouble__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+html .charsheet .slugblaster .style__track,
+html .charsheet .slugblaster .trouble__track {
+  display: flex;
+  gap: 0.5rem 0.5rem;
+  margin: 0.5rem;
+}
+html .charsheet .slugblaster .style__checkbox,
+html .charsheet .slugblaster .trouble__checkbox {
+  font-size: 1rem;
+}
+html .charsheet .slugblaster .trouble__actions {
+  display: flex;
+  gap: 0 0.5rem;
+}
+html .charsheet .slugblaster .trouble__action[type=action] {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-inline: 0.25rem;
+}
+html .charsheet .slugblaster .attitude {
+  color: #fff;
+  background-color: #008495;
+  padding: 1rem;
+}
+html .charsheet .slugblaster .attitude__clickies {
+  display: flex;
+  gap: 0 0.5rem;
+  margin-top: 1rem;
+}
+html .charsheet .slugblaster .attitude__dice, html .charsheet .slugblaster .attitude__kick {
+  width: 3rem;
+  aspect-ratio: 1;
+  box-sizing: content-box;
+  display: grid;
+  grid-template-areas: "checkbox";
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+html .charsheet .slugblaster .attitude__dice:before, html .charsheet .slugblaster .attitude__dice:after, html .charsheet .slugblaster .attitude__kick:before, html .charsheet .slugblaster .attitude__kick:after {
+  grid-area: checkbox;
+  height: 100%;
+  width: 100%;
+}
+html .charsheet .slugblaster .attitude__dice:focus, html .charsheet .slugblaster .attitude__kick:focus {
+  outline: 0;
+}
+html .charsheet .slugblaster .attitude__dice:after {
+  display: block;
+  content: "";
+  transition: all 0.25s ease-in-out;
+  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+html .charsheet .slugblaster .attitude__dice:checked {
+  opacity: 0.5;
+}
+html .charsheet .slugblaster .attitude__kick {
+  appearance: none;
+  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
+}
+html .charsheet .slugblaster .attitude__kick:checked {
+  opacity: 0.5;
+}
+html .charsheet .slugblaster .container {
+  background: transparent;
+}
+html .charsheet .slugblaster .row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem 0.5rem;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  margin: auto;
+}
+html .charsheet .slugblaster .row:before, html .charsheet .slugblaster .row:after {
+  display: none;
+}
+html .charsheet .slugblaster .row > * {
+  width: 100%;
+  grid-column: 1/-1;
+}
+html .charsheet .slugblaster .col {
+  grid-column: 1/-1;
+}
+html .charsheet .slugblaster .col-1 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 1;
+}
+html .charsheet .slugblaster .col-2 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 2;
+}
+html .charsheet .slugblaster .col-3 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 3;
+}
+html .charsheet .slugblaster .col-4 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 4;
+}
+html .charsheet .slugblaster .col-5 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 5;
+}
+html .charsheet .slugblaster .col-6 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 6;
+}
+html .charsheet .slugblaster .col-7 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 7;
+}
+html .charsheet .slugblaster .col-8 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 8;
+}
+html .charsheet .slugblaster .col-9 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 9;
+}
+html .charsheet .slugblaster .col-10 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 10;
+}
+html .charsheet .slugblaster .col-11 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 11;
+}
+html .charsheet .slugblaster .col-12 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 12;
+}
+@media (min-width: 375px) {
+  html .charsheet .slugblaster .col-xs-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-xs-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-xs-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-xs-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-xs-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-xs-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-xs-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-xs-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-xs-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-xs-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-xs-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-xs-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-xs {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  html .charsheet .slugblaster .hide-xs {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-xs {
+  display: none;
+}
+@media (width: 375px) {
+  html .charsheet .slugblaster .only-xs {
+    display: block;
+  }
+}
+@media (min-width: 576px) {
+  html .charsheet .slugblaster .col-sm-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-sm-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-sm-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-sm-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-sm-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-sm-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-sm-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-sm-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-sm-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-sm-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-sm-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-sm-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-sm {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  html .charsheet .slugblaster .hide-sm {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-sm {
+  display: none;
+}
+@media (width: 576px) {
+  html .charsheet .slugblaster .only-sm {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .col-md-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-md-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-md-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-md-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-md-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-md-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-md-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-md-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-md-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-md-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-md-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-md-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-md {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  html .charsheet .slugblaster .hide-md {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-md {
+  display: none;
+}
+@media (width: 768px) {
+  html .charsheet .slugblaster .only-md {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  html .charsheet .slugblaster .col-lg-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-lg-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-lg-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-lg-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-lg-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-lg-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-lg-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-lg-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-lg-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-lg-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-lg-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-lg-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-lg {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  html .charsheet .slugblaster .hide-lg {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-lg {
+  display: none;
+}
+@media (width: 992px) {
+  html .charsheet .slugblaster .only-lg {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  html .charsheet .slugblaster .col-xl-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-xl-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-xl-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-xl-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-xl-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-xl-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-xl-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-xl-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-xl-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-xl-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-xl-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-xl-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-xl {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  html .charsheet .slugblaster .hide-xl {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-xl {
+  display: none;
+}
+@media (width: 1200px) {
+  html .charsheet .slugblaster .only-xl {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  html .charsheet .slugblaster .col-xxl-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .slugblaster .col-xxl-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .slugblaster .col-xxl-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .slugblaster .col-xxl-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .slugblaster .col-xxl-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .slugblaster .col-xxl-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .slugblaster .col-xxl-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .slugblaster .col-xxl-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .slugblaster .col-xxl-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .slugblaster .col-xxl-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .slugblaster .col-xxl-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .slugblaster .col-xxl-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+  html .charsheet .slugblaster .show-xxl {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  html .charsheet .slugblaster .hide-xxl {
+    display: none;
+  }
+}
+html .charsheet .slugblaster .only-xxl {
+  display: none;
+}
+@media (width: 1400px) {
+  html .charsheet .slugblaster .only-xxl {
+    display: block;
+  }
+}
+html .charsheet .slugblaster .rowspan-2 {
+  height: 100%;
+  grid-row: span 2;
+}
+html .charsheet .slugblaster .colspan-2 {
+  height: 100%;
+  grid-column: span 2;
+}
+html .charsheet .slugblaster .rowspan-3 {
+  height: 100%;
+  grid-row: span 3;
+}
+html .charsheet .slugblaster .colspan-3 {
+  height: 100%;
+  grid-column: span 3;
+}
+html .charsheet .slugblaster .rowspan-4 {
+  height: 100%;
+  grid-row: span 4;
+}
+html .charsheet .slugblaster .colspan-4 {
+  height: 100%;
+  grid-column: span 4;
+}
+html .charsheet .slugblaster .rowspan-5 {
+  height: 100%;
+  grid-row: span 5;
+}
+html .charsheet .slugblaster .colspan-5 {
+  height: 100%;
+  grid-column: span 5;
+}
+html .charsheet .slugblaster .rowspan-6 {
+  height: 100%;
+  grid-row: span 6;
+}
+html .charsheet .slugblaster .colspan-6 {
+  height: 100%;
+  grid-column: span 6;
+}
+html .charsheet .slugblaster .rowspan-7 {
+  height: 100%;
+  grid-row: span 7;
+}
+html .charsheet .slugblaster .colspan-7 {
+  height: 100%;
+  grid-column: span 7;
+}
+html .charsheet .slugblaster .rowspan-8 {
+  height: 100%;
+  grid-row: span 8;
+}
+html .charsheet .slugblaster .colspan-8 {
+  height: 100%;
+  grid-column: span 8;
+}
+html .charsheet .slugblaster .rowspan-9 {
+  height: 100%;
+  grid-row: span 9;
+}
+html .charsheet .slugblaster .colspan-9 {
+  height: 100%;
+  grid-column: span 9;
+}
+html .charsheet .slugblaster .rowspan-10 {
+  height: 100%;
+  grid-row: span 10;
+}
+html .charsheet .slugblaster .colspan-10 {
+  height: 100%;
+  grid-column: span 10;
+}
+html .charsheet .slugblaster .rowspan-11 {
+  height: 100%;
+  grid-row: span 11;
+}
+html .charsheet .slugblaster .colspan-11 {
+  height: 100%;
+  grid-column: span 11;
+}
+html .charsheet .slugblaster .rowspan-12 {
+  height: 100%;
+  grid-row: span 12;
+}
+html .charsheet .slugblaster .colspan-12 {
+  height: 100%;
+  grid-column: span 12;
+}
+html .charsheet .slugblaster .header {
+  position: relative;
+  overflow: hidden;
+}
+html .charsheet .slugblaster .header .editor__controller[value="0"] ~ .header__wrapper::after {
+  clip-path: circle(25% at 80% 20%);
+}
+html .charsheet .slugblaster .header .editor__controller[value=on] ~ .header__wrapper::after {
+  clip-path: circle(200% at 50% 50%);
+}
+html .charsheet .slugblaster .header__wrapper {
+  position: relative;
+}
+html .charsheet .slugblaster .header__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+html .charsheet .slugblaster .header__edit .header__field--character_avatar img, html .charsheet .slugblaster .header__view .header__field--character_avatar img {
+  height: 4rem;
+  border-top-left-radius: 1rem;
+  box-shadow: 0 0 0 0.2rem #292828;
+}
+html .charsheet .slugblaster .header__view {
+  row-gap: 0.5rem;
+}
+html .charsheet .slugblaster .header__view .header__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+html .charsheet .slugblaster .header__view .header__field--character_name {
+  text-align: left;
+  font-size: 2rem;
+  width: 50%;
+}
+html .charsheet .slugblaster .header__view .header__field--pronouns {
+  text-align: center;
+}
+html .charsheet .slugblaster .header__view .header__field--background span {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+html .charsheet .slugblaster .primary-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: hsla(319deg, 80%, 80%, 0.8);
+  background-color: #ffd45c;
+}
+html .charsheet .slugblaster .primary-navigation li {
+  flex: 1;
+}
+html .charsheet .slugblaster .nav__button {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+html .charsheet .slugblaster .nav__image {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  max-height: 1.5rem;
+}
+html .charsheet .slugblaster .nav__button:hover {
+  background-color: rgba(41, 40, 40, 0.2);
+  color: #fff;
+  border-radius: 2rem;
+}
+html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ * .nav__button--miscellaneous, html .charsheet .slugblaster input[name=attr_nav][value=inventory] ~ * .nav__button--inventory, html .charsheet .slugblaster input[name=attr_nav][value=attacks] ~ * .nav__button--attacks, html .charsheet .slugblaster input[name=attr_nav][value=advskills] ~ * .nav__button--advskills {
+  background-color: rgba(41, 40, 40, 0.2);
+  background-color: #01acef;
+  color: #fff;
+  border-radius: 2rem;
+}
+html .charsheet .slugblaster .page--advskills {
+  display: none;
+  background-color: hsla(271deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--advskills {
+  display: block;
+}
+html .charsheet .slugblaster input[name=attr_nav][value=advskills] ~ .page--advskills {
+  display: block;
+}
+html .charsheet .slugblaster .page--attacks {
+  display: none;
+  background-color: hsla(199deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--attacks {
+  display: block;
+}
+html .charsheet .slugblaster input[name=attr_nav][value=attacks] ~ .page--attacks {
+  display: block;
+}
+html .charsheet .slugblaster .page--inventory {
+  display: none;
+  background-color: hsla(191deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--inventory {
+  display: block;
+}
+html .charsheet .slugblaster input[name=attr_nav][value=inventory] ~ .page--inventory {
+  display: block;
+}
+html .charsheet .slugblaster .page--miscellaneous {
+  display: none;
+  background-color: hsla(24deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--miscellaneous {
+  display: block;
+}
+html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ .page--miscellaneous {
+  display: block;
+}
+html .charsheet .slugblaster .footer {
+  float: right;
+  padding: 0.5rem;
+  background-color: hsla(139deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .footer > span {
+  opacity: 0.5;
+}
+html .charsheet .slugblaster .footer > span::before {
+  content: "v";
+}

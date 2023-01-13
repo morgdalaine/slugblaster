@@ -1,0 +1,80 @@
+.attitude {
+  $this: '.attitude';
+
+  color: $white;
+  background-color: $teal;
+  padding: $p-lg;
+
+  &__title {
+    @extend .panel__title;
+  }
+
+  &__clickies {
+    display: flex;
+    gap: 0 $grid-gutter-col;
+    margin-top: $m-lg;
+  }
+
+  &__dice,
+  &__kick {
+    width: 3rem;
+    aspect-ratio: 1;
+
+    box-sizing: content-box;
+    display: grid;
+    grid-template-areas: 'checkbox';
+    // margin: $m-md auto;
+    // height: 2rem;
+    // width: 2rem;
+
+    outline: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:before,
+    &:after {
+      grid-area: checkbox;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__dice {
+    &:after {
+      display: block;
+      content: '';
+
+      transition: all 0.25s ease-in-out;
+      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
+
+      // background-image: url('https://storage.googleapis.com/char-sheet-app-images-6e101411/zweihander/checkbox-empty.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:checked:after {
+      // background-image: url('https://storage.googleapis.com/char-sheet-app-images-6e101411/zweihander/checkbox-checked.svg');
+    }
+    // &::after {
+    //   content: '';
+    //   width: 3rem;
+    //   aspect-ratio: 1;
+    // }
+    &:checked {
+      opacity: 0.5;
+    }
+  }
+  &__kick {
+    appearance: none;
+    background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg');
+    &:checked {
+      opacity: 0.5;
+    }
+  }
+}

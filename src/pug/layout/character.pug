@@ -1,0 +1,96 @@
+- const character = data.character;
+
+main.character
+  section.character__style-trouble
+    - const { style, trouble } = data.character;
+    +blob({ name: 'style-trouble' })
+      +block('content')
+        .style
+          h2.style__title(data-i18n='style') Style
+          .style__track
+            each radio in style.track
+              label.style__checkbox
+                +field(radio).checkbox--circle
+                span.visually-hidden(data-i18n=`style_${radio.value}`)
+          +span(style.subtitle)
+
+        .trouble
+          .trouble__actions
+            h2.trouble__title(data-i18n='trouble') Trouble
+            each action in trouble.actions
+              +action(action)
+          .trouble__track
+            each radio in trouble.track
+              label.trouble__checkbox
+                +field(radio).checkbox--circle
+                span.visually-hidden(data-i18n=`trouble_${radio.value}`)
+
+  section.character__col1
+    //- section.character__header
+      - const { personality, fields } = character.header;
+      .character__header--personality
+        +field(personality).character__personality
+      each field in fields
+        .character__header--field
+          label.character__header--label(data-i18n=field.name)= field.label
+          +field(field)
+
+    +panel({ name: 'your_character' })
+      - const { personality, fields } = character.header;
+      +block('header')
+        input(
+          name=`attr_${personality.name}`,
+          data-i18n=`placeholder_${personality.placeholder}`,
+          placeholder=personality.placeholder,
+          type='text',
+          style='font-size: 3rem; font-family: "Permanent Marker"'
+        )
+        //- .character__header--personality
+        //-   +field(personality).character__personality
+      +block('content')
+        +editorblock('header')
+          +block('edit')
+            each field in fields
+              .character__header--field
+                label.character__header--label(for=field.name, data-i18n=field.name)= field.label
+                +field(field)
+          +block('view')
+            each field in fields
+              div
+                +span(field)
+                label.character__header--label(data-i18n=field.name)= field.label
+
+    section.character__gear
+      include ../pages/gear
+
+  section.character__col2
+    section.character__attitude
+      - const { attitude } = data.character;
+      - const [boosts, kicks] = attitude.fields;
+      - const four = Array.from(Array(2).keys(), (i) => i + 1);
+      +blob({ name: 'attitude' })
+        +block('content')
+          h2.attitude__title(data-i18n='attitude') Attitude
+          +span(attitude.subtitle)
+
+          +field(boosts)
+          +field(kicks)
+          .attitude__clickies
+            each foo in four
+              - const field = { ...boosts };
+              - field.type = 'checkbox';
+              - field.name = `${field.name}_${foo}`;
+              +field(field).attitude__dice
+
+            each foo in four
+              - const field = { ...kicks };
+              - field.type = 'checkbox';
+              - field.name = `${field.name}_${foo}`;
+              +field(field).attitude__kick
+    section.character__traits
+      include ../pages/traits
+
+  section.character__col3
+    section.character__signature
+
+    aside.character__downtime

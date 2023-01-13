@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+* {
+  --foreground: #{$white};
+
+  --label-color: #{$black};
+  --text-color: #{$black};
+
+  // Inputs
+  --input-background: #{rgb($grey-light, 0.5)};
+  --input-background-color-active: #{rgb($blue, 0.1)};
+  --input-background-color-disabled: #{rgb($grey-light, 0.1)};
+
+  --input-border-color: #{$hotpink};
+  --input-border-color-active: #{$hotpink};
+  --input-border-color-disabled: #{$hotpink};
+
+  --input-color: #{$grey-dark};
+  --input-color-active: #{$black};
+  --input-color-disabled: #{$grey-mid};
+
+  // Buttons
+  --button-background: #{rgb($grey-mid, 0.8)};
+  --button-background-active: #{rgb($grey-dark, 0.8)};
+  --button-background-hover: #{rgb($grey-light, 0.8)};
+
+  --button-color: #{$black};
+  --button-color-active: #{$blue};
+  --button-color-hover: #{$hotpink};
+}

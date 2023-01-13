@@ -1,0 +1,50 @@
+.gear {
+  $this: '.gear';
+
+  &__view {
+    row-gap: $grid-gutter-row;
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+  }
+
+  // &__extra {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: $p-sm;
+
+  //   &--item {
+  //     display: flex;
+  //     gap: 0 $grid-gutter-col;
+
+  //     span {
+  //       font-weight: normal;
+  //       font-variant: normal;
+  //       text-transform: none;
+  //     }
+  //   }
+  // }
+}
+
+.repeating {
+  $this: '.gear';
+
+  // repeating sections
+  &__view {
+    #{$this}__check {
+      span {
+        margin-inline-start: $m-sm;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+      }
+    }
+  }
+  &__edit {
+    position: relative;
+    padding: $p-md;
+    background-color: $pink-light;
+  }
+}

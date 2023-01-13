@@ -1,0 +1,345 @@
+input[type='number'],
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  height: $input-component-size;
+
+  background-color: $input-background;
+  border-bottom: $input-border;
+
+  font-family: $font-input;
+  font-size: $input-font-size;
+  color: $input-color;
+
+  transition: 0.2s ease-in;
+
+  padding-inline-start: $p-sm;
+  padding-block: 1px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: 0;
+
+    background-color: $input-background-active;
+    color: $input-color-active;
+    border-bottom: $input-border-active;
+    padding-inline-start: $p-md;
+  }
+
+  &::placeholder {
+    color: $grey-mid;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url('https://www.svgrepo.com/show/361418/chevron-down.svg');
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+
+  option {
+    background: $input-background;
+    background-color: $red;
+    color: $input-color;
+
+    font-family: $font-input;
+    font-size: $input-font-size;
+  }
+}
+
+input[type='number'] {
+  text-align: center;
+  &[disabled],
+  &[readonly] {
+    cursor: default;
+
+    background: $input-background-disabled;
+    color: $input-color-disabled;
+
+    border: $input-border-disabled;
+  }
+}
+
+textarea {
+  min-height: 5rem;
+  max-height: 10rem;
+  resize: vertical;
+
+  scrollbar-width: thin;
+  scrollbar-color: $input-color-active transparent;
+
+  @supports selector(::-webkit-scrollbar) {
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $input-color-active;
+    }
+  }
+}
+
+span[name] {
+  white-space: pre-wrap;
+  // &:empty {
+  //   text-align: center;
+  //   &:before {
+  //     display: inline;
+  //     content: '—';
+  //   }
+  // }
+}
+
+// .el-input {
+//   position: relative;
+//   font-size: $font-m;
+//   display: inline-flex;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+
+//   &--small {
+//     .el-input {
+//       &__inner {
+//         font-size: $font-s;
+//         height: $input-component-size-small;
+//       }
+//       &__wrapper {
+//         padding-inline: $input-component-size-small;
+//       }
+//     }
+//   }
+//   &--large {
+//     .el-input {
+//       &__inner {
+//         font-size: $font-xl;
+//         height: $input-component-size-large;
+//       }
+//       &__wrapper {
+//         padding-inline: $input-component-size-large;
+//       }
+//     }
+//   }
+
+//   &__wrapper {
+//     display: inline-flex;
+//     flex-grow: 1;
+//     align-items: center;
+//     justify-content: center;
+//     padding-block: 1px;
+//     padding-inline: $p-lg;
+
+//     background-color: $input-background;
+//     box-shadow: $input-shadow;
+//     border-radius: $input-border-radius;
+
+//     &:hover {
+//       box-shadow: $input-shadow-active;
+//     }
+//   }
+//   &__inner {
+//     height: $input-component-size;
+//   }
+// }
+
+// .el-input-number {
+//   position: relative;
+//   display: inline-flex;
+
+//   width: 10rem;
+
+//   &--simple {
+//     width: 5rem;
+//     padding-inline: inherit;
+//     > .el-input-number {
+//       &__increase,
+//       &__decrease {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   &--small {
+//     width: 8rem;
+//     > .el-input__wrapper {
+//       padding-inline: $input-component-size;
+//     }
+//     > .el-input-number {
+//       &__increase,
+//       &__decrease {
+//         width: $input-component-size-small;
+//         aspect-ratio: 1;
+//         font-size: $font-s;
+//       }
+//     }
+//   }
+//   &--large {
+//     width: 15rem;
+//     > .el-input__wrapper {
+//       padding-inline: $input-component-size;
+//     }
+//     > .el-input-number {
+//       &__increase,
+//       &__decrease {
+//         width: $input-component-size-large;
+//         aspect-ratio: 1;
+//         font-size: $font-xl;
+//       }
+//     }
+//   }
+
+//   &__increase,
+//   &__decrease {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: auto;
+//     position: absolute;
+//     z-index: 1;
+//     top: 1px;
+//     bottom: 1px;
+//     width: $input-component-size;
+//     aspect-ratio: 1;
+//     font-size: $font-m;
+//   }
+//   &__increase {
+//     right: 1px;
+//     border-radius: 0 $button-border-radius $button-border-radius 0;
+//     border-left: $input-border;
+//     &:hover {
+//       border-left: $input-border-active;
+//     }
+//   }
+//   &__decrease {
+//     left: 1px;
+//     border-radius: $button-border-radius 0 0 $button-border-radius;
+//     border-right: $input-border;
+//     &:hover {
+//       border-right: $input-border-active;
+//     }
+//   }
+// }
+
+// .el-textarea {
+//   position: relative;
+//   display: inline-block;
+//   width: 100%;
+//   vertical-align: bottom;
+//   &__inner {
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     padding-block: $p-md;
+//     padding-inline: $p-lg;
+
+//     background-color: $input-background;
+//     box-shadow: $input-shadow;
+//     border-radius: $input-border-radius;
+//   }
+// }
+
+// .el-calculated {
+//   position: relative;
+//   display: inline-flex;
+//   width: 5rem;
+
+//   font-family: $font-input;
+
+//   .el-input__wrapper {
+//     // display: table;
+//   }
+//   .el-input__inner {
+//     // display: table-cell;
+//     // vertical-align: middle;
+//     height: $input-component-size;
+//     line-height: $input-component-size;
+//   }
+// }
+
+// .el-switch {
+//   position: relative;
+//   background-color: $input-background;
+//   padding: $p-md;
+//   width: 5rem;
+//   height: 2.5rem;
+//   border-radius: 2rem;
+//   box-shadow: 0 0 0 1px var(--input-border-color) inset;
+//   cursor: pointer;
+
+//   &__checkbox {
+//     position: absolute;
+//     opacity: 0;
+//     &:checked {
+//       + .el-switch__inner {
+//         grid-template-columns: 1fr 1.5rem 0fr;
+//         &::after {
+//           background-color: $green;
+//         }
+//       }
+//     }
+//   }
+//   &__inner {
+//     display: grid;
+//     grid-template-columns: 0fr 1.5rem 1fr;
+//     height: 100%;
+//     transition: 0.2s;
+//     &::after {
+//       content: '';
+//       border-radius: 50%;
+//       background-color: $grey-dark;
+//       grid-column: 2;
+//       transition: background 0.2s;
+//     }
+//   }
+// }
+
+// input[type='checkbox'],
+// input[type='radio'] {
+//   box-sizing: content-box;
+//   display: grid;
+//   grid-template-areas: 'checkbox';
+//   margin-block: $m-sm;
+//   margin-inline: $m-md;
+//   width: 1.25em;
+//   aspect-ratio: 1;
+
+//   outline: 0;
+
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+
+//   &:before,
+//   &::after {
+//     grid-area: checkbox;
+//     height: 100%;
+//     width: 100%;
+//   }
+
+//   &:focus {
+//     outline: 0;
+//   }
+// }
+
+// input[type='checkbox'] {
+//   &.checkbox--scribble {
+//     &::after {
+//       content: '';
+//       display: block;
+
+//       background-image: url('https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle.svg?token=GHSAT0AAAAAABZRLWZII3UAXHNEXGMVZMGUY6AP7YQ');
+//       background-size: contain;
+//       background-repeat: no-repeat;
+//     }
+
+//     &:checked:after {
+//       background-image: url('https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-scribbled.svg?token=GHSAT0AAAAAABZRLWZI63WKB5JFMMBMJTC4Y6AQBXQ');
+//     }
+//   }
+// }

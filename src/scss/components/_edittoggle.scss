@@ -1,0 +1,34 @@
+.edit-toggle {
+  $this: '.edit-toggle';
+  // grid-area: editor;
+  position: absolute;
+  // top: $m-sm;
+  top: 50%;
+  transform: translateY(-50%);
+  right: $m-sm;
+  z-index: 100;
+
+  width: $input-component-size;
+  aspect-ratio: 1;
+
+  border-radius: 0.5rem;
+
+  &__controller {
+    &[value='0'] {
+      ~ #{$this}__view {
+        display: block;
+      }
+    }
+    &[value='on'] {
+      ~ #{$this}__edit {
+        display: block;
+      }
+    }
+  }
+
+  &__view,
+  &__edit {
+    display: none;
+    transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+  }
+}

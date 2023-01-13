@@ -1,0 +1,24 @@
+{
+  "name": "slugblaster",
+  "version": "0.0.0",
+  "description": "Roll20 character sheet for Slugblaster by Mikey Hamm",
+  "scripts": {
+    "start": "run-p compile:*",
+    "compile:sass": "npx sass ./src/scss/slugblaster.scss ./slugblaster.css --watch --no-source-map --no-charset",
+    "compile:pug": "npx pug3 ./src/pug/slugblaster.pug --out ./ --watch --pretty"
+  },
+  "keywords": [
+    "roll20"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@anduh/pug-cli": "^1.0.0-alpha8",
+    "@prettier/plugin-pug": "^2.3.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "prettier": "^2.8.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.56.1"
+  }
+}

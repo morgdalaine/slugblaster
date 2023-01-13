@@ -1,0 +1,40 @@
+.panel {
+  $this: '.panel';
+  position: relative;
+
+  &__wrapper {
+    display: grid;
+    gap: $grid-gutter-row $grid-gutter-col;
+    height: 100%;
+  }
+
+  &__header,
+  &__content {
+    padding: $p-sm;
+  }
+
+  &__header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    // grid-template-areas: 'header editor';
+    column-gap: $gutter-gap;
+    align-items: center;
+    padding-right: $input-component-size + 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $grid-gutter-row $grid-gutter-col;
+    justify-content: space-between;
+
+    // box-shadow: 0 4px 2px -2px black;
+  }
+
+  &__title {
+    font-size: $font-h2;
+    // font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: 700;
+  }
+}

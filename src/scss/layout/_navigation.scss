@@ -1,0 +1,86 @@
+.primary-navigation {
+  display: flex;
+  align-items: center;
+  gap: $gutter-gap;
+  // justify-content: space-between;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  background-color: hsl(random(360) 80% 80% / 80%);
+  background-color: $yellow;
+
+  li {
+    flex: 1;
+  }
+}
+.nav {
+  // grid-area: nav;
+
+  &__button {
+    display: flex;
+    gap: calc($gutter-gap / 2);
+    justify-content: center;
+    padding: $p-md;
+
+    &:hover {
+      @extend %nav-button-hover;
+    }
+  }
+  &__image {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    max-height: 1.5rem;
+  }
+}
+
+%nav-button-hover {
+  background-color: rgba($black, 0.2);
+  color: $white;
+  border-radius: 2rem;
+}
+%nav-button-active {
+  background-color: rgba($black, 0.2);
+  background-color: $blue;
+  color: $white;
+  // background: radial-gradient(circle at 0, $blue, $black);
+  border-radius: 2rem;
+}
+
+$pages: 'advskills', 'attacks', 'inventory', 'miscellaneous';
+@each $page in $pages {
+  .page--#{$page} {
+    display: none;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+
+  input[name='attr_nav'][value='all'] ~ .page--#{$page} {
+    display: block;
+  }
+
+  input[name='attr_nav'] {
+    &[value='#{$page}'] {
+      ~ .page--#{$page} {
+        display: block;
+      }
+
+      ~ * .nav__button--#{$page} {
+        @extend %nav-button-active;
+      }
+    }
+  }
+}
+
+// input[name='attr_nav'] {
+//   &[value='all'] {
+//     ~ .page--all {
+//       display: block;
+//       background-color: hsl(random(360) 80% 80% / 80%);
+//     }
+
+//     ~ * .nav__button--all {
+//       @extend %nav-button-active;
+//     }
+//   }
+// }

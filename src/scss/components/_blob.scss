@@ -1,0 +1,14 @@
+.blob {
+  $this: '.blob';
+  position: relative;
+  // padding: $p-lg;
+
+  &__wrapper {
+    display: grid;
+  }
+  &--editor {
+    grid-template-columns: 1fr auto;
+    // grid-template-areas: 'content editor';
+    gap: $grid-gutter-row $grid-gutter-col;
+  }
+}

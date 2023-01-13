@@ -1,0 +1,59 @@
+.characterviewer {
+  //   .content {
+  //     margin-bottom: 0;
+  //   }
+
+  //   // .nav-tabs > li:not(.active) > a:hover,
+  //   // .nav-tabs > li:not(.active) > a:focus {
+  //   //   background-color: var(--color-surface1);
+  //   //   color: var(--color-primary-text);
+  //   //   text-decoration: underline;
+  //   //   text-decoration-color: currentcolor;
+  //   //   text-decoration-color: var(--color-primary-text);
+  //   //   cursor: default;
+  //   // }
+
+  .nav-tabs {
+    //     // min-width: 351px;
+    //     padding-top: 0.2rem;
+    //     margin-bottom: 0;
+
+    > li > a {
+      font-variant: small-caps;
+      // font-weight: 700;
+      font-family: $font-nav;
+      font-size: $font-xl;
+      text-decoration: none;
+
+      //       // font: normal 1rem / 1.4 $text-font-stack;
+      //       padding: $p-sm;
+    }
+
+    //     // Decrease opacity of Attributes & Abilities tab
+    //     > li:nth-child(4) > a:nth-child(1) {
+    //       opacity: 0.3;
+    //       &:hover,
+    //       &:focus {
+    //         opacity: 1;
+    //       }
+    //     }
+  }
+}
+
+// .ui-dialog {
+//   .largedialog {
+//     padding: 0 $p-md;
+//   }
+//   .charsheet {
+//     padding: 0;
+//   }
+// }
+
+// // div#tab-content.tab-content .attributesabilities {
+// //   min-width: 525px;
+// // }
+// // div#tab-content.tab-content .attributesabilities .largedialog textarea {
+// //   border: 2px solid grey;
+// //   background: #ececec;
+// //   background-color: violet;
+// // }

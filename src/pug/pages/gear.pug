@@ -1,0 +1,56 @@
+- const gear = character.gear;
++panel({ name: 'gear', title: 'Gear' })
+  +block('content')
+    - const { board, raygun } = gear;
+
+    +editorblock('gear')
+      +block('edit')
+        .gear__item
+          label.gear__label(data-i18n=board.name)= board.label
+          +field(board)
+        .gear__item
+          label.gear__label(data-i18n=raygun.name)= raygun.label
+          +field(raygun)
+      +block('view')
+        .gear__item
+          +span(board)
+          label.gear__label(data-i18n=board.name)= board.label
+        .gear__item
+          +span(raygun)
+          label.gear__label(data-i18n=raygun.name)= raygun.label
+
++blob({ name: 'gear'})
+  +repeating('gear')
+    - const { repeating } = gear;
+    - const [check, name, cost, desc] = repeating;
+    //- +block('hidden')
+      div test hidden
+      +field({...check, type: 'hidden'})
+    +block('edit')
+      .row.gear__edit
+        each field in repeating
+          - const hideLabel = ['gear_check', 'gear_name'].includes(field.name);
+          - const divClass = field.span ? `col-${field.span}` : '';
+          - const labelClass = hideLabel ? 'visually-hidden' : null;
+
+          .gear__field(class=`${field.name} ${divClass}`)
+            unless field.type === "checkbox"
+              +field(field)
+            else
+              +field(field).checkbox--scribble
+            label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+
+    +block('view')
+      .gear__view
+        label.gear__check
+          +field(check).checkbox--scribble
+          +span(name)
+
+      //- .gear__extra
+      //-   each extra in extragear
+      //-     label.gear__extra--item
+      //-       +field({...extra, type: 'checkbox'})
+      //-       if extra.type === 'checkbox'
+      //-         span(data-i18n=extra.name)= extra.label
+      //-       else
+      //-         +span({...extra, name: `${extra.name}_name`})
