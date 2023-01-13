@@ -1,0 +1,33 @@
+.slams {
+  $this: '.slams';
+
+  // color: $white;
+  // background-color: $teal;
+  // padding: $p-lg;
+
+  &__title {
+    @extend .panel__title;
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $grid-gutter-row $grid-gutter-col;
+  }
+
+  &__box {
+    &--slam_1 {
+      grid-column: 1 / -1;
+    }
+  }
+  &__input--text[type='text'] {
+    text-align: center;
+    border: 2px solid var(--input-border-color);
+
+    &:active,
+    &:hover,
+    &:focus {
+      border: $input-border-active;
+    }
+  }
+}

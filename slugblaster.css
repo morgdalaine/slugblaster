@@ -166,9 +166,9 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   --input-background: rgba(237, 237, 237, 0.5);
   --input-background-color-active: rgba(1, 172, 239, 0.1);
   --input-background-color-disabled: rgba(237, 237, 237, 0.1);
-  --input-border-color: #eb008b;
+  --input-border-color: #292828;
   --input-border-color-active: #eb008b;
-  --input-border-color-disabled: #eb008b;
+  --input-border-color-disabled: rgb(153, 153, 153);
   --input-color: rgb(68, 68, 68);
   --input-color-active: #292828;
   --input-color-disabled: rgb(153, 153, 153);
@@ -210,9 +210,6 @@ html .charsheet .slugblaster {
   /* CSS */
   /* CSS */
   /* CSS */
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem 0;
 }
 html .charsheet .slugblaster .row__header {
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
@@ -230,7 +227,7 @@ html .charsheet .slugblaster textarea {
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
   font-size: 1rem;
   color: var(--input-color);
-  transition: 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in, padding 0.2s ease-in;
   padding-inline-start: 0.25rem;
   padding-block: 1px;
 }
@@ -247,7 +244,7 @@ html .charsheet .slugblaster textarea:focus {
   outline: 0;
   background-color: var(--input-background-color-active);
   color: var(--input-color-active);
-  border-bottom: 1px solid var(--input-border-color-active);
+  border-bottom: 2px solid var(--input-border-color-active);
   padding-inline-start: 0.5rem;
 }
 html .charsheet .slugblaster input[type=number]::placeholder,
@@ -343,6 +340,11 @@ html .charsheet .slugblaster label {
   font-variant: small-caps;
   letter-spacing: 0.05rem;
   font-weight: 700;
+}
+html .charsheet .slugblaster label span {
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 html .charsheet .slugblaster .pictos {
   font-family: Pictos;
@@ -727,15 +729,15 @@ html .charsheet .slugblaster .panel__header {
   gap: 0.5rem 0.5rem;
   justify-content: space-between;
 }
-html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .attitude__title, html .charsheet .slugblaster .style__title,
+html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .slams__title, html .charsheet .slugblaster .attitude__title, html .charsheet .slugblaster .style__title,
 html .charsheet .slugblaster .trouble__title {
   font-size: 2rem;
   text-transform: uppercase;
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
   font-weight: 700;
 }
-html .charsheet .slugblaster .repeating__is-empty[value=on] ~ .repeating__empty {
-  display: block;
+html .charsheet .slugblaster .repeating__is-empty[value="0"] ~ .repeating__empty {
+  display: grid;
 }
 html .charsheet .slugblaster .repeating__controller[value="0"] ~ * .repeating__view {
   display: grid;
@@ -761,29 +763,47 @@ html .charsheet .slugblaster .character__personality[type=text] {
 }
 html .charsheet .slugblaster .character__header {
   margin-bottom: 0.5rem;
-  background-color: hsla(303deg, 80%, 80%, 0.8);
+  background-color: hsla(71deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character__gear {
   margin-bottom: 0.5rem;
-  background-color: hsla(217deg, 80%, 80%, 0.8);
+  background-color: hsla(71deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character__traits {
   margin-bottom: 0.5rem;
-  background-color: hsla(263deg, 80%, 80%, 0.8);
+  background-color: hsla(144deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character__signature {
   margin-bottom: 0.5rem;
-  background-color: hsla(283deg, 80%, 80%, 0.8);
+  background-color: hsla(152deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character__downtime {
   margin-bottom: 0.5rem;
-  background-color: hsla(251deg, 80%, 80%, 0.8);
+  background-color: hsla(329deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character__attitude {
   margin-bottom: 0.5rem;
 }
 html .charsheet .slugblaster .character__style-trouble {
   grid-column: 1/-1;
+}
+html .charsheet .slugblaster .traits__view {
+  row-gap: 0.5rem;
+}
+html .charsheet .slugblaster .traits__check {
+  display: flex;
+  align-items: center;
+}
+html .charsheet .slugblaster .traits .trait__name {
+  font-weight: 700;
+}
+html .charsheet .slugblaster .repeating__view .traits__check span {
+  margin-inline-start: 0.25rem;
+}
+html .charsheet .slugblaster .repeating__edit {
+  position: relative;
+  padding: 0.5rem;
+  background-color: #f59ac2;
 }
 html .charsheet .slugblaster .gear__view {
   row-gap: 0.5rem;
@@ -874,6 +894,27 @@ html .charsheet .slugblaster .attitude__kick {
 }
 html .charsheet .slugblaster .attitude__kick:checked {
   opacity: 0.5;
+}
+html .charsheet .slugblaster .legacy__view .legacy__name {
+  border-bottom: 1px dashed var(--input-border-color);
+}
+html .charsheet .slugblaster .doom__view .doom__name {
+  border-bottom: 1px dashed var(--input-border-color);
+}
+html .charsheet .slugblaster .slams__boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .slams__box--slam_1 {
+  grid-column: 1/-1;
+}
+html .charsheet .slugblaster .slams__input--text[type=text] {
+  text-align: center;
+  border: 2px solid var(--input-border-color);
+}
+html .charsheet .slugblaster .slams__input--text[type=text]:active, html .charsheet .slugblaster .slams__input--text[type=text]:hover, html .charsheet .slugblaster .slams__input--text[type=text]:focus {
+  border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .container {
   background: transparent;
@@ -1568,7 +1609,7 @@ html .charsheet .slugblaster .primary-navigation {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: hsla(319deg, 80%, 80%, 0.8);
+  background-color: hsla(16deg, 80%, 80%, 0.8);
   background-color: #ffd45c;
 }
 html .charsheet .slugblaster .primary-navigation li {
@@ -1598,7 +1639,7 @@ html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ * .nav_
 }
 html .charsheet .slugblaster .page--advskills {
   display: none;
-  background-color: hsla(271deg, 80%, 80%, 0.8);
+  background-color: hsla(350deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--advskills {
   display: block;
@@ -1608,7 +1649,7 @@ html .charsheet .slugblaster input[name=attr_nav][value=advskills] ~ .page--advs
 }
 html .charsheet .slugblaster .page--attacks {
   display: none;
-  background-color: hsla(199deg, 80%, 80%, 0.8);
+  background-color: hsla(144deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--attacks {
   display: block;
@@ -1618,7 +1659,7 @@ html .charsheet .slugblaster input[name=attr_nav][value=attacks] ~ .page--attack
 }
 html .charsheet .slugblaster .page--inventory {
   display: none;
-  background-color: hsla(191deg, 80%, 80%, 0.8);
+  background-color: hsla(169deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--inventory {
   display: block;
@@ -1628,7 +1669,7 @@ html .charsheet .slugblaster input[name=attr_nav][value=inventory] ~ .page--inve
 }
 html .charsheet .slugblaster .page--miscellaneous {
   display: none;
-  background-color: hsla(24deg, 80%, 80%, 0.8);
+  background-color: hsla(244deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--miscellaneous {
   display: block;
@@ -1639,11 +1680,17 @@ html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ .page--
 html .charsheet .slugblaster .footer {
   float: right;
   padding: 0.5rem;
-  background-color: hsla(139deg, 80%, 80%, 0.8);
+  background-color: hsla(319deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .footer > span {
   opacity: 0.5;
 }
 html .charsheet .slugblaster .footer > span::before {
   content: "v";
+}
+html .charsheet .slugblaster__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+  margin: 0.5rem;
 }

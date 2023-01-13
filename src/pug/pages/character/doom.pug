@@ -1,0 +1,20 @@
+- const { doom } = data.character;
++panel({ name: 'doom', title: 'doom' })
+  +block('content')
+    +repeating('doom')
+      - const { repeating } = doom;
+      - const [name, desc] = repeating;
+      +block('edit')
+        .row.doom__edit
+          each field in repeating
+            - const hideLabel = ['trait_check', 'trait_name'].includes(field.name);
+            - const divClass = field.span ? `col-${field.span}` : '';
+            - const labelClass = hideLabel ? 'visually-hidden' : null;
+            .doom__field(class=`${field.name} ${divClass}`)
+              +field(field)
+              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+
+      +block('view')
+        .doom__view
+          +span(name).doom__name
+          +span(desc)

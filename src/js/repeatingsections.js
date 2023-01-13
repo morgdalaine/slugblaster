@@ -5,7 +5,7 @@
  */
 const isFieldsetEmpty = (fieldset) => {
   getSectionIDs(`repeating_${fieldset}`, (sections) => {
-    setAttrs({ [`${fieldset}_empty`]: sections.length > 0 ? 0 : 'on' });
+    setAttrs({ [`${fieldset}_empty`]: sections.length });
   });
 };
 

@@ -1,4 +1,4 @@
-- const gear = character.gear;
+- const { gear } = data.character;
 +panel({ name: 'gear', title: 'Gear' })
   +block('content')
     - const { board, raygun } = gear;
@@ -21,13 +21,12 @@
 
 +blob({ name: 'gear'})
   +repeating('gear')
-    - const { repeating } = gear;
+    - const { hidden, repeating } = gear;
     - const [check, name, cost, desc] = repeating;
-    //- +block('hidden')
-      div test hidden
-      +field({...check, type: 'hidden'})
     +block('edit')
       .row.gear__edit
+        each field in hidden
+          +field(field)
         each field in repeating
           - const hideLabel = ['gear_check', 'gear_name'].includes(field.name);
           - const divClass = field.span ? `col-${field.span}` : '';

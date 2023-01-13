@@ -59,9 +59,13 @@ html {
     // Pages
     @import 'pages/home';
     @import 'pages/character';
+    @import 'pages/traits';
     @import 'pages/gear';
     @import 'pages/styletrouble';
     @import 'pages/attitude';
+    @import 'pages/character/legacy';
+    @import 'pages/character/doom';
+    @import 'pages/character/slams';
     // Layout
     @import 'layout/grid';
     @import 'layout/header';
@@ -75,10 +79,13 @@ html {
     //   'nav nav'
     //   'wrapper wrapper'
     //   'footer footer';
-    display: flex;
-    flex-direction: column;
-    gap: $grid-gutter-row 0;
+
     &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $grid-gutter-row 0;
+
+      margin: $m-md;
     }
   }
 }

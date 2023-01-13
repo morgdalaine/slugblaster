@@ -10,6 +10,12 @@ label {
   font-variant: small-caps;
   letter-spacing: 0.05rem;
   font-weight: 700;
+
+  span {
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+  }
 }
 
 .pictos {

@@ -1,19 +1,17 @@
-- const traits = character.traits;
+- const { traits } = data.character;
 +panel({ name: 'traits', title: 'Traits' })
   +block('content')
     +repeating('traits')
-      - const { repeating } = traits;
+      - const { hidden, repeating } = traits;
       - const [check, name, desc] = repeating;
-      //- +block('hidden')
-        div test hidden
-        +field({...check, type: 'hidden'})
       +block('edit')
         .row.traits__edit
+          each field in hidden
+            +field(field)
           each field in repeating
             - const hideLabel = ['trait_check', 'trait_name'].includes(field.name);
             - const divClass = field.span ? `col-${field.span}` : '';
             - const labelClass = hideLabel ? 'visually-hidden' : null;
-
             .traits__field(class=`${field.name} ${divClass}`)
               unless field.type === "checkbox"
                 +field(field)
@@ -25,4 +23,5 @@
         .traits__view
           label.traits__check
             +field(check).checkbox--scribble
-            +span(name)
+            +span(name).trait__name
+          +span(desc)

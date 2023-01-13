@@ -1,0 +1,9 @@
+.doom {
+  $this: '.doom';
+
+  &__view {
+    .doom__name {
+      border-bottom: $input-border;
+    }
+  }
+}

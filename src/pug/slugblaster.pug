@@ -5,101 +5,107 @@ include components/_mixins
 
 input(name='attr_version', value='0', type='hidden')
 .slugblaster
-  div(style='display: flex; gap: 0.5rem')
-    div
-      div(style='background: #fff; width: 2rem; aspect-ratio: 1', title='white')
-    div
-      div(style='background: #8d74b3; width: 2rem; aspect-ratio: 1', title='purple-light')
-    div
-      div(style='background: #7151a0; width: 2rem; aspect-ratio: 1', title='purple')
-    div
-      div(style='background: #5a4180; width: 2rem; aspect-ratio: 1', title='purple-dark')
-    div
-      div(style='background: #f59ac2; width: 2rem; aspect-ratio: 1', title='pink-light')
-    div
-      div(style='background: #f281b3; width: 2rem; aspect-ratio: 1', title='pink')
-    div
-      div(style='background: #c2678f; width: 2rem; aspect-ratio: 1', title='pink-dark')
-    div
-      div(style='background: #eb008b; width: 2rem; aspect-ratio: 1', title='hot-pink')
-    div
-      div(style='background: #339daa; width: 2rem; aspect-ratio: 1', title='teal-light')
-    div
-      div(style='background: #008495; width: 2rem; aspect-ratio: 1', title='teal')
-    div
-      div(style='background: #006a77; width: 2rem; aspect-ratio: 1', title='teal-dark')
-    div
-      div(style='background: #34bdf2; width: 2rem; aspect-ratio: 1', title='blue-light')
-    div
-      div(style='background: #01acef; width: 2rem; aspect-ratio: 1', title='blue')
-    div
-      div(style='background: #018abf; width: 2rem; aspect-ratio: 1', title='blue-dark')
-    div
-      div(style='background: #f26f5a; width: 2rem; aspect-ratio: 1', title='red-light')
-    div
-      div(style='background: #ef4b31; width: 2rem; aspect-ratio: 1', title='red')
-    div
-      div(style='background: #bf3c27; width: 2rem; aspect-ratio: 1', title='red-dark')
-    div
-      div(style='background: #ffd45c; width: 2rem; aspect-ratio: 1', title='yellow')
-    div
-      div(style='background: #19a56f; width: 2rem; aspect-ratio: 1', title='green')
-    div
-      div(style='background: rgb(237, 237, 237); width: 2rem; aspect-ratio: 1', title='light-grey')
-    div
-      div(style='background: rgb(153, 153, 153); width: 2rem; aspect-ratio: 1', title='mid-grey')
-    div
-      div(style='background: rgb(68, 68, 68); width: 2rem; aspect-ratio: 1', title='dark-grey')
-    div
-      div(style='background: #292828; width: 2rem; aspect-ratio: 1', title='black')
+  .slugblaster__wrapper
+    include layout/header
 
-  include layout/header
-  //- include pages/stats
+    include layout/character
 
-  include layout/character
+    //- +panel({ name: 'stats', semantic: 'aside'})
+      +block('content')
+        .editor
+          input.editor__controller(name='attr_stats_editor', value='0', type='hidden')
+          .editor__wrapper.stats__wrapper
+            each fieldset in data.stats.fieldsets
+              .stats__stat
+                each field in fieldset
+                  .stat(class=`stat__${field.name}`)
+                    label(data-i18n=field.name)= field.label
+                    +field(field).stat__input
 
-  //- +panel({ name: 'stats', semantic: 'aside'})
-    +block('content')
-      .editor
-        input.editor__controller(name='attr_stats_editor', value='0', type='hidden')
-        .editor__wrapper.stats__wrapper
-          each fieldset in data.stats.fieldsets
-            .stats__stat
-              each field in fieldset
-                .stat(class=`stat__${field.name}`)
-                  label(data-i18n=field.name)= field.label
-                  +field(field).stat__input
+    //- nav.nav
+      input(name='attr_nav', value='advskills', type='hidden')
+      ul#primary-navigation.primary-navigation.nav
+        each nav in data.navigation.radios
+          li
+            button.button--alt-text(name=`act_nav_${nav.value}`, type='action')
+              span(data-i18n=nav.value)= nav.label
+              span(data-i18n=nav.value)= nav.label
 
-  //- nav.nav
-    input(name='attr_nav', value='advskills', type='hidden')
-    ul#primary-navigation.primary-navigation.nav
-      each nav in data.navigation.radios
-        li
-          button.button--alt-text(name=`act_nav_${nav.value}`, type='action')
-            span(data-i18n=nav.value)= nav.label
-            span(data-i18n=nav.value)= nav.label
+    //- main.slugblaster__wrapper
+      input(name='attr_nav', value='advskills', type='hidden')
+      .page--advskills.advanced-skills
+        include pages/advskills
+      .page--attacks.attacks
+        include pages/attacks
+      .page--inventory.inventory
+        include pages/inventory
+      .page--miscellaneous.miscellaneous
+        h2.miscellaneous__title(data-i18n='miscellaneous') Miscellaneous
+        div Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. A erat nam at lectus urna duis convallis. Eu lobortis elementum nibh tellus molestie nunc non. Urna neque viverra justo nec ultrices dui sapien eget. Vitae ultricies leo integer malesuada. Ornare quam viverra orci sagittis eu volutpat. Amet dictum sit amet justo donec enim. Ipsum dolor sit amet consectetur adipiscing elit duis. In massa tempor nec feugiat nisl. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.
+        div Magna ac placerat vestibulum lectus mauris. Sed velit dignissim sodales ut eu sem integer vitae. Magna fermentum iaculis eu non diam phasellus. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Amet risus nullam eget felis eget nunc lobortis. Augue interdum velit euismod in pellentesque massa placerat duis. Lacinia quis vel eros donec ac. Scelerisque viverra mauris in aliquam sem fringilla. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Posuere morbi leo urna molestie at elementum. Volutpat blandit aliquam etiam erat. Purus gravida quis blandit turpis cursus in hac habitasse platea. Felis imperdiet proin fermentum leo vel orci porta non.
+        div Id donec ultrices tincidunt arcu non sodales neque sodales. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisl purus in mollis nunc sed id semper. Dui faucibus in ornare quam viverra. Aenean pharetra magna ac placerat vestibulum lectus. Sed blandit libero volutpat sed cras. Arcu risus quis varius quam quisque id. Amet tellus cras adipiscing enim. Sed nisi lacus sed viverra tellus. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Enim sed faucibus turpis in. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Tellus mauris a diam maecenas. Viverra ipsum nunc aliquet bibendum enim.
+        div Quis viverra nibh cras pulvinar mattis nunc sed blandit. Metus dictum at tempor commodo ullamcorper. Viverra tellus in hac habitasse. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Ultrices gravida dictum fusce ut placerat orci. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Purus semper eget duis at tellus at urna condimentum. Non enim praesent elementum facilisis leo vel fringilla est. Molestie nunc non blandit massa. Semper viverra nam libero justo laoreet sit amet. Amet commodo nulla facilisi nullam. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu.
+        div Purus non enim praesent elementum facilisis leo vel fringilla est. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Ipsum consequat nisl vel pretium lectus quam id. Egestas sed sed risus pretium. Pellentesque dignissim enim sit amet venenatis urna cursus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet porttitor eget dolor morbi non arcu. Congue quisque egestas diam in arcu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Tempor orci dapibus ultrices in iaculis nunc sed. Risus viverra adipiscing at in. Aliquam eleifend mi in nulla.
 
-  //- main.slugblaster__wrapper
-    input(name='attr_nav', value='advskills', type='hidden')
-    .page--advskills.advanced-skills
-      include pages/advskills
-    .page--attacks.attacks
-      include pages/attacks
-    .page--inventory.inventory
-      include pages/inventory
-    .page--miscellaneous.miscellaneous
-      h2.miscellaneous__title(data-i18n='miscellaneous') Miscellaneous
-      div Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. A erat nam at lectus urna duis convallis. Eu lobortis elementum nibh tellus molestie nunc non. Urna neque viverra justo nec ultrices dui sapien eget. Vitae ultricies leo integer malesuada. Ornare quam viverra orci sagittis eu volutpat. Amet dictum sit amet justo donec enim. Ipsum dolor sit amet consectetur adipiscing elit duis. In massa tempor nec feugiat nisl. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.
-      div Magna ac placerat vestibulum lectus mauris. Sed velit dignissim sodales ut eu sem integer vitae. Magna fermentum iaculis eu non diam phasellus. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Amet risus nullam eget felis eget nunc lobortis. Augue interdum velit euismod in pellentesque massa placerat duis. Lacinia quis vel eros donec ac. Scelerisque viverra mauris in aliquam sem fringilla. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Posuere morbi leo urna molestie at elementum. Volutpat blandit aliquam etiam erat. Purus gravida quis blandit turpis cursus in hac habitasse platea. Felis imperdiet proin fermentum leo vel orci porta non.
-      div Id donec ultrices tincidunt arcu non sodales neque sodales. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisl purus in mollis nunc sed id semper. Dui faucibus in ornare quam viverra. Aenean pharetra magna ac placerat vestibulum lectus. Sed blandit libero volutpat sed cras. Arcu risus quis varius quam quisque id. Amet tellus cras adipiscing enim. Sed nisi lacus sed viverra tellus. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Enim sed faucibus turpis in. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Tellus mauris a diam maecenas. Viverra ipsum nunc aliquet bibendum enim.
-      div Quis viverra nibh cras pulvinar mattis nunc sed blandit. Metus dictum at tempor commodo ullamcorper. Viverra tellus in hac habitasse. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Ultrices gravida dictum fusce ut placerat orci. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Purus semper eget duis at tellus at urna condimentum. Non enim praesent elementum facilisis leo vel fringilla est. Molestie nunc non blandit massa. Semper viverra nam libero justo laoreet sit amet. Amet commodo nulla facilisi nullam. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu.
-      div Purus non enim praesent elementum facilisis leo vel fringilla est. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Ipsum consequat nisl vel pretium lectus quam id. Egestas sed sed risus pretium. Pellentesque dignissim enim sit amet venenatis urna cursus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet porttitor eget dolor morbi non arcu. Congue quisque egestas diam in arcu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Tempor orci dapibus ultrices in iaculis nunc sed. Risus viverra adipiscing at in. Aliquam eleifend mi in nulla.
+    footer.footer
+      span.visually-hidden(data-i18n='version') Version
+      span(name='attr_version')
 
-  footer.footer
-    span.visually-hidden(data-i18n='version') Version
-    span(name='attr_version')
+      include abstracts/translations
 
-    include abstracts/translations
+      div(style='display: flex; gap: 0.5rem')
+        div
+          div(style='background: #fff; width: 2rem; aspect-ratio: 1', title='white')
+        div
+          div(style='background: #8d74b3; width: 2rem; aspect-ratio: 1', title='purple-light')
+        div
+          div(style='background: #7151a0; width: 2rem; aspect-ratio: 1', title='purple')
+        div
+          div(style='background: #5a4180; width: 2rem; aspect-ratio: 1', title='purple-dark')
+        div
+          div(style='background: #f59ac2; width: 2rem; aspect-ratio: 1', title='pink-light')
+        div
+          div(style='background: #f281b3; width: 2rem; aspect-ratio: 1', title='pink')
+        div
+          div(style='background: #c2678f; width: 2rem; aspect-ratio: 1', title='pink-dark')
+        div
+          div(style='background: #eb008b; width: 2rem; aspect-ratio: 1', title='hot-pink')
+        div
+          div(style='background: #339daa; width: 2rem; aspect-ratio: 1', title='teal-light')
+        div
+          div(style='background: #008495; width: 2rem; aspect-ratio: 1', title='teal')
+        div
+          div(style='background: #006a77; width: 2rem; aspect-ratio: 1', title='teal-dark')
+        div
+          div(style='background: #34bdf2; width: 2rem; aspect-ratio: 1', title='blue-light')
+        div
+          div(style='background: #01acef; width: 2rem; aspect-ratio: 1', title='blue')
+        div
+          div(style='background: #018abf; width: 2rem; aspect-ratio: 1', title='blue-dark')
+        div
+          div(style='background: #f26f5a; width: 2rem; aspect-ratio: 1', title='red-light')
+        div
+          div(style='background: #ef4b31; width: 2rem; aspect-ratio: 1', title='red')
+        div
+          div(style='background: #bf3c27; width: 2rem; aspect-ratio: 1', title='red-dark')
+        div
+          div(style='background: #ffd45c; width: 2rem; aspect-ratio: 1', title='yellow')
+        div
+          div(style='background: #19a56f; width: 2rem; aspect-ratio: 1', title='green')
+        div
+          div(
+            style='background: rgb(237, 237, 237); width: 2rem; aspect-ratio: 1',
+            title='light-grey'
+          )
+        div
+          div(
+            style='background: rgb(153, 153, 153); width: 2rem; aspect-ratio: 1',
+            title='mid-grey'
+          )
+        div
+          div(style='background: rgb(68, 68, 68); width: 2rem; aspect-ratio: 1', title='dark-grey')
+        div
+          div(style='background: #292828; width: 2rem; aspect-ratio: 1', title='black')
 
 include templates/mixins
 include templates/rolltemplates

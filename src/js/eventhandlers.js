@@ -17,7 +17,7 @@ G_EDITORS.forEach((toggle) => {
 
 // Update empty fieldsets
 G_REPEATING_FIELDSETS.forEach((fieldset) => {
-  on(`sheet:opened change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) =>
+  on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) =>
     isFieldsetEmpty(fieldset)
   );
 });

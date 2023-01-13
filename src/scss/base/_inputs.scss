@@ -12,7 +12,8 @@ textarea {
   font-size: $input-font-size;
   color: $input-color;
 
-  transition: 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in,
+    padding 0.2s ease-in;
 
   padding-inline-start: $p-sm;
   padding-block: 1px;

@@ -1,6 +1,6 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['gear', 'your_character', 'traits'];
+const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -68,6 +68,10 @@ const G_PLAYBOOKS = {
     beat: [''],
     arc: [],
   },
+};
+
+const G_IMPORT_DATA_MAP = {
+  traits: [],
 };
 
 const G_EXTRA_GEAR = [

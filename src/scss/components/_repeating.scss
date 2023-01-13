@@ -2,16 +2,16 @@
   $this: '.repeating';
 
   &__is-empty {
-    // &[value='0'] {
-    //   ~ * #{$this}__view {
-    //     display: grid;
-    //   }
-    // }
-    &[value='on'] {
+    &[value='0'] {
       ~ #{$this}__empty {
-        display: block;
+        display: grid;
       }
     }
+    // &[value='on'] {
+    //   ~ #{$this}__empty {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__controller {

@@ -1,0 +1,9 @@
+.legacy {
+  $this: '.legacy';
+
+  &__view {
+    .legacy__name {
+      border-bottom: $input-border;
+    }
+  }
+}

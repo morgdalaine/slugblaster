@@ -1,4 +1,4 @@
-const getSectionId = (eventInfo) => eventInfo.sourceAttribute.split('_').at(2);
+const getSectionID = (eventInfo) => eventInfo.sourceAttribute.split('_').at(2);
 
 const doNumcontrol = (numcontrol, step, min = null, max = null) => {
   getAttrs([numcontrol, numcontrol + '_max'], (values) => {
@@ -50,8 +50,38 @@ const loadPersonality = (personality) => {
   // style & trouble
   update.style_run_bonus = getTranslationByKey(`${personality}_style`);
 
-  // generateRowID();
-  // https://wiki.roll20.net/Sheet_Worker_Scripts#WARNING
-  console.table(update);
+  // traits
+  importFieldset('traits', pData.traits);
+
+  // console.table(update);
   setAttrs(update);
+};
+
+// https://wiki.roll20.net/Sheet_Worker_Scripts#WARNING
+/**
+ * Need to map from attribute data map to populate translations
+ * getAllAttrs to leave user created rows in the repeating section
+ * @param {*} fieldset
+ * @param {*} data
+ */
+const importFieldset = (fieldset, data) => {
+  getSectionIDs(`repeating_${fieldset}`, (sections) => {
+    const update = {};
+
+    data.forEach((key) => {
+      let rowId = generateRowID();
+      while (rowId in sections) {
+        rowId = generateRowID();
+      }
+      sections.push(rowId);
+
+      const repeatingPrefix = `repeating_traits_${rowId}_trait_`;
+      update[repeatingPrefix + 'name'] = getTranslationByKey(key);
+      update[repeatingPrefix + 'description'] = getTranslationByKey(key + '_description');
+      update[repeatingPrefix + 'autogen'] = 1;
+    });
+
+    console.log(update);
+    setAttrs(update);
+  });
 };

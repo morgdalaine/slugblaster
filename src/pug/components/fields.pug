@@ -29,6 +29,16 @@ mixin field(field)
       - value = value || 'on';
       input(name=`attr_${name}`, checked=selected, value=value, type=type)&attributes(attributes)
 
+    when 'textarea'
+      textarea(
+        name=`attr_${name}`,
+        value=value,
+        readonly=readonly,
+        data-i18n-placeholder=`placeholder_${name}`,
+        placeholder=placeholder,
+        class=klass
+      )&attributes(attributes)
+
     when 'text'
     default
       input(
