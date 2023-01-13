@@ -1,6 +1,6 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom'];
+const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom', 'signature'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -21,7 +21,7 @@ const G_REPEATING_FIELDSETS = [
 
 const G_PLAYBOOKS = {
   grit: {
-    attitude: { dice: 3, kick: 1 },
+    attitude: { boost: 3, kick: 1 },
     traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill'],
     gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
     beat: { grinding: '2_style' },
@@ -41,33 +41,58 @@ const G_PLAYBOOKS = {
     ],
   },
   guts: {
-    attitude: { dice: 1, kick: 3 },
+    attitude: { boost: 1, kick: 3 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   smart: {
-    attitude: { dice: 2, kick: 2 },
+    attitude: { boost: 2, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   chill: {
-    attitude: { dice: 1, kick: 2 },
+    attitude: { boost: 1, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   chill: {
-    attitude: { dice: 1, kick: 0 },
+    attitude: { boost: 1, kick: 0 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
+};
+
+const G_SIGNATURES = {
+  negafriction_sword: {
+    mods: [
+      'slip_rattle',
+      'field_projector',
+      'ref_coating',
+      'negafriction_wake',
+      'subdimensional_edge',
+      'kitbashed',
+    ],
+    looks: [],
+  },
+  gravity_blaster: {},
+  hardlight_board: {},
+  hyperoptic_visor: {},
+  kinetic_deck: {},
+  photonic_jacket: {},
+  powered_armour: {},
+  reality_cannon: {},
+  riftninja_sneakers: {},
+  robotic_companion: {},
+  skipmode_runners: {},
+  voidwear_backpack: {},
 };
 
 const G_IMPORT_DATA_MAP = {

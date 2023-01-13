@@ -1,0 +1,47 @@
+- const signature = data.signature;
++blob({ name: 'turbo', title: 'Turbo' })
+  +block('content')
+    - const { turbo } = signature;
+    - const [boosts, kicks] = turbo.fields;
+    - const four = Array.from(Array(3).keys(), (i) => i + 1);
+
+    span(data-i18n='turbo_description') Describe how your device helps you with an action, then boost or kick as needed.
+
+    +field(boosts)
+    +field(kicks)
+    .turbo__clickies
+      each foo in four
+        - const field = { ...boosts };
+        - field.type = 'checkbox';
+        - field.name = `${field.name}_${foo}`;
+        +field(field).turbo__boost
+
+      each foo in four
+        - const field = { ...kicks };
+        - field.type = 'checkbox';
+        - field.name = `${field.name}_${foo}`;
+        +field(field).turbo__kick
+
++panel({ name: 'signature' })
+  - const [fnc, desc, look] = signature.fields;
+  +block('header')
+    +field(signature.signature).signature__title
+  +block('content')
+    //- .signature--field
+    //-   +span(fnc)
+    //-   label(data-i18n=fnc.name)= fnc.label
+    //- .signature--field
+    //-   +span(desc)
+    //-   label(data-i18n=desc.name)= desc.label
+
+    +editorblock('signature')
+      +block('edit')
+        each field in signature.fields
+          .signature--field
+            +field(field)
+            label(data-i18n=field.name)= field.label
+      +block('view')
+        each field in signature.fields
+          .signature--field
+            +span(field)
+            label(data-i18n=field.name)= field.label

@@ -31,19 +31,18 @@ const loadPersonality = (personality) => {
   const isValid = G_PLAYBOOKS.hasOwnProperty(personality);
   if (!isValid) return;
 
-  const pData = G_PLAYBOOKS[personality];
-
   const update = {};
+  const data = G_PLAYBOOKS[personality];
 
   // personal gear
-  pData.gear.forEach((gear, index) => {
+  data.gear.forEach((gear, index) => {
     const personalGear = `personal_gear_${index + 1}_name`;
     update[personalGear] = gear;
   });
 
   // attitude
-  const { dice, kick } = pData.attitude;
-  update.attitude_dice = dice;
+  const { boost, kick } = data.attitude;
+  update.attitude_boost = boost;
   update.attitude_kick = kick;
   update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`);
 
@@ -51,9 +50,27 @@ const loadPersonality = (personality) => {
   update.style_run_bonus = getTranslationByKey(`${personality}_style`);
 
   // traits
-  importFieldset('traits', pData.traits);
+  // importFieldset('traits', data.traits);
 
   // console.table(update);
+  setAttrs(update);
+};
+
+const loadSignature = (signature) => {
+  const isValid = G_SIGNATURES.hasOwnProperty(signature);
+  if (!isValid) return;
+
+  const update = {};
+  const data = G_SIGNATURES[signature];
+
+  // text stuff
+  update.signature_function = getTranslationByKey(`${signature}_function`);
+  update.signature_description = getTranslationByKey(`${signature}_description`);
+
+  // mods
+  // importFieldset('mods', data.mods);
+
+  //
   setAttrs(update);
 };
 
@@ -75,7 +92,7 @@ const importFieldset = (fieldset, data) => {
       }
       sections.push(rowId);
 
-      const repeatingPrefix = `repeating_traits_${rowId}_trait_`;
+      const repeatingPrefix = `repeating_${fieldset}_${rowId}_trait_`;
       update[repeatingPrefix + 'name'] = getTranslationByKey(key);
       update[repeatingPrefix + 'description'] = getTranslationByKey(key + '_description');
       update[repeatingPrefix + 'autogen'] = 1;

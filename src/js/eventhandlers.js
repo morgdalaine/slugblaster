@@ -23,9 +23,18 @@ G_REPEATING_FIELDSETS.forEach((fieldset) => {
 });
 
 // Load personality data
-on(`sheet:opened change:personality`, (eventInfo) => {
-  const personality = eventInfo.newValue;
-  if (personality) loadPersonality(personality.toLowerCase());
+on(`change:personality`, (eventInfo) => {
+  let personality = eventInfo.newValue;
+  personality = personality.trim().replace(' ', '_').toLowerCase();
+  if (personality) loadPersonality(personality);
+});
+
+// Load signature data
+on(`change:signature`, (eventInfo) => {
+  let signature = eventInfo.newValue;
+  signature = signature.trim().replace(' ', '_').toLowerCase();
+  console.log(signature);
+  if (signature) loadSignature(signature);
 });
 
 // Style & Trouble

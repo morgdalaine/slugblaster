@@ -3,8 +3,15 @@ each point in points
   span.translation(data-i18n=`style_${point}`)= `${point} style`
   span.translation(data-i18n=`trouble_${point}`)= `${point} trouble`
 
+//- playbook personalities
 each personality in data.translation.personalities
   each translation in Object.entries(personality)
+    - const [key, text] = translation;
+    span.translation(data-i18n=key)= text
+
+//- signatures
+each signature in data.translation.signatures
+  each translation in Object.entries(signature)
     - const [key, text] = translation;
     span.translation(data-i18n=key)= text
 

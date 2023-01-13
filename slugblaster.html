@@ -97,7 +97,7 @@
           <input class="editor__controller" name="attr_your_character_editor" type="hidden" value="0"/>
           <div class="panel__wrapper">
             <div class="panel__header your_character__header">
-              <input class="header__personality header__input--text" name="attr_personality" id="personality" type="text" value="" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
+              <input class="header__personality header__input--text character__title" name="attr_personality" id="personality" type="text" value="" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
               <button class="edit-toggle" name="act_your_character-editor" type="action">
                 <input class="edit-toggle__controller" name="attr_your_character_editor" type="hidden" value="0"/>
                 <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
@@ -107,49 +107,49 @@
             <div class="panel__content your_character__content">
               <div class="editor">
                 <div class="editor__edit header__edit">
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="character_name" data-i18n="character_name">Name</label>
+                  <div>
+                    <label for="character_name" data-i18n="character_name">Name</label>
                     <input class="header__character_name header__input--text" name="attr_character_name" id="character_name" type="text" value="" data-i18n-placeholder="placeholder_character_name" placeholder="Farrah"/>
                   </div>
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="look" data-i18n="look">Look</label>
+                  <div>
+                    <label for="look" data-i18n="look">Look</label>
                     <input class="header__look header__input--text" name="attr_look" id="look" type="text" value="" data-i18n-placeholder="placeholder_look" placeholder="all black, muted, chains"/>
                   </div>
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="family" data-i18n="family">Family</label>
+                  <div>
+                    <label for="family" data-i18n="family">Family</label>
                     <input class="header__family header__input--text" name="attr_family" id="family" type="text" value="" data-i18n-placeholder="placeholder_family" placeholder="strict"/>
                   </div>
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="bond" data-i18n="bond">Bond</label>
+                  <div>
+                    <label for="bond" data-i18n="bond">Bond</label>
                     <input class="header__bond header__input--text" name="attr_bond" id="bond" type="text" value="" data-i18n-placeholder="placeholder_bond" placeholder="natural chemistry"/>
                   </div>
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="vibes" data-i18n="vibes">Vibes</label>
+                  <div>
+                    <label for="vibes" data-i18n="vibes">Vibes</label>
                     <input class="header__vibes header__input--text" name="attr_vibes" id="vibes" type="text" value="" data-i18n-placeholder="placeholder_vibes" placeholder="space cadet"/>
                   </div>
-                  <div class="character__header--field">
-                    <label class="character__header--label" for="stickers" data-i18n="stickers">Stickers, etc.</label>
+                  <div>
+                    <label for="stickers" data-i18n="stickers">Stickers, etc.</label>
                     <input class="header__stickers header__input--text" name="attr_stickers" id="stickers" type="text" value="" data-i18n-placeholder="placeholder_stickers" placeholder="'Skate and/or Die' beside a cat in a box"/>
                   </div>
                 </div>
                 <div class="editor__view header__view">
                   <div><span name="attr_character_name"></span>
-                    <label class="character__header--label" data-i18n="character_name">Name</label>
+                    <label data-i18n="character_name">Name</label>
                   </div>
                   <div><span name="attr_look"></span>
-                    <label class="character__header--label" data-i18n="look">Look</label>
+                    <label data-i18n="look">Look</label>
                   </div>
                   <div><span name="attr_family"></span>
-                    <label class="character__header--label" data-i18n="family">Family</label>
+                    <label data-i18n="family">Family</label>
                   </div>
                   <div><span name="attr_bond"></span>
-                    <label class="character__header--label" data-i18n="bond">Bond</label>
+                    <label data-i18n="bond">Bond</label>
                   </div>
                   <div><span name="attr_vibes"></span>
-                    <label class="character__header--label" data-i18n="vibes">Vibes</label>
+                    <label data-i18n="vibes">Vibes</label>
                   </div>
                   <div><span name="attr_stickers"></span>
-                    <label class="character__header--label" data-i18n="stickers">Stickers, etc.</label>
+                    <label data-i18n="stickers">Stickers, etc.</label>
                   </div>
                 </div>
               </div>
@@ -250,11 +250,11 @@
                 <h2 class="blob__title attitude__title" data-i18n="attitude">Attitude</h2>
               </div>
               <div class="blob__content attitude__content"><span name="attr_attitude_subtitle"></span>
-                <input name="attr_attitude_dice" value="" type="hidden"/>
+                <input name="attr_attitude_boost" value="" type="hidden"/>
                 <input name="attr_attitude_kick" value="" type="hidden"/>
                 <div class="attitude__clickies">
-                  <input class="attitude__dice" name="attr_attitude_dice_1" value="on" type="checkbox"/>
-                  <input class="attitude__dice" name="attr_attitude_dice_2" value="on" type="checkbox"/>
+                  <input class="attitude__boost" name="attr_attitude_boost_1" value="on" type="checkbox"/>
+                  <input class="attitude__boost" name="attr_attitude_boost_2" value="on" type="checkbox"/>
                   <input class="attitude__kick" name="attr_attitude_kick_1" value="on" type="checkbox"/>
                   <input class="attitude__kick" name="attr_attitude_kick_2" value="on" type="checkbox"/>
                 </div>
@@ -310,6 +310,72 @@
                     <div class="repeating__delete">
                     </div>
                   </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="character__col">
+        <section class="character__signature">
+          <div class="blob turbo">
+            <input class="editor__controller" name="attr_turbo_editor" type="hidden" value="0"/>
+            <div class="blob__wrapper">
+              <div class="blob__header turbo__header">
+                <h2 class="blob__title turbo__title" data-i18n="turbo">Turbo</h2>
+              </div>
+              <div class="blob__content turbo__content"><span data-i18n="turbo_description">Describe how your device helps you with an action, then boost or kick as needed.</span>
+                <input name="attr_turbo_boost" value="" type="hidden"/>
+                <input name="attr_turbo_kick" value="" type="hidden"/>
+                <div class="turbo__clickies">
+                  <input class="turbo__boost" name="attr_turbo_boost_1" value="on" type="checkbox"/>
+                  <input class="turbo__boost" name="attr_turbo_boost_2" value="on" type="checkbox"/>
+                  <input class="turbo__boost" name="attr_turbo_boost_3" value="on" type="checkbox"/>
+                  <input class="turbo__kick" name="attr_turbo_kick_1" value="on" type="checkbox"/>
+                  <input class="turbo__kick" name="attr_turbo_kick_2" value="on" type="checkbox"/>
+                  <input class="turbo__kick" name="attr_turbo_kick_3" value="on" type="checkbox"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel signature">
+            <input class="editor__controller" name="attr_signature_editor" type="hidden" value="0"/>
+            <div class="panel__wrapper">
+              <div class="panel__header signature__header">
+                <input class="header__signature header__input--text signature__title" name="attr_signature" id="signature" type="text" value="" data-i18n-placeholder="placeholder_signature" placeholder="Signature"/>
+                <button class="edit-toggle" name="act_signature-editor" type="action">
+                  <input class="edit-toggle__controller" name="attr_signature_editor" type="hidden" value="0"/>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                </button>
+              </div>
+              <div class="panel__content signature__content">
+                <div class="editor">
+                  <div class="editor__edit signature__edit">
+                    <div class="signature--field">
+                      <input class="signatures__signature_description signatures__input--text" name="attr_signature_description" id="signature_description" type="text" value="" data-i18n-placeholder="placeholder_signature_description" placeholder="Negafriction is just what it sounds like: complete nonsense."/>
+                      <label data-i18n="signature_description">Description</label>
+                    </div>
+                    <div class="signature--field">
+                      <input class="signatures__signature_function signatures__input--text" name="attr_signature_function" id="signature_function" type="text" value="" data-i18n-placeholder="placeholder_signature_function" placeholder="Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath)."/>
+                      <label data-i18n="signature_function">Function</label>
+                    </div>
+                    <div class="signature--field">
+                      <input class="signatures__signature_look signatures__input--text" name="attr_signature_look" id="signature_look" type="text" value="" data-i18n-placeholder="placeholder_signature_look" placeholder="hardlight katana"/>
+                      <label data-i18n="signature_look">Look</label>
+                    </div>
+                  </div>
+                  <div class="editor__view signature__view">
+                    <div class="signature--field"><span name="attr_signature_description"></span>
+                      <label data-i18n="signature_description">Description</label>
+                    </div>
+                    <div class="signature--field"><span name="attr_signature_function"></span>
+                      <label data-i18n="signature_function">Function</label>
+                    </div>
+                    <div class="signature--field"><span name="attr_signature_look"></span>
+                      <label data-i18n="signature_look">Look</label>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -433,11 +499,9 @@
             </div>
           </div>
         </section>
-        <section class="character__signature"></section>
-        <aside class="character__downtime"></aside>
       </section>
     </main>
-    <footer class="footer"><span class="visually-hidden" data-i18n="version">Version</span><span name="attr_version"></span><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span>
+    <footer class="footer"><span class="visually-hidden" data-i18n="version">Version</span><span name="attr_version"></span><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span>
       <div style="display: flex; gap: 0.5rem">
         <div>
           <div style="background: #fff; width: 2rem; aspect-ratio: 1" title="white"></div>
@@ -516,7 +580,7 @@
 <script type="text/worker">
   const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom'];
+const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom', 'signature'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -537,7 +601,7 @@ const G_REPEATING_FIELDSETS = [
 
 const G_PLAYBOOKS = {
   grit: {
-    attitude: { dice: 3, kick: 1 },
+    attitude: { boost: 3, kick: 1 },
     traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill'],
     gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
     beat: { grinding: '2_style' },
@@ -557,33 +621,58 @@ const G_PLAYBOOKS = {
     ],
   },
   guts: {
-    attitude: { dice: 1, kick: 3 },
+    attitude: { boost: 1, kick: 3 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   smart: {
-    attitude: { dice: 2, kick: 2 },
+    attitude: { boost: 2, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   chill: {
-    attitude: { dice: 1, kick: 2 },
+    attitude: { boost: 1, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
   chill: {
-    attitude: { dice: 1, kick: 0 },
+    attitude: { boost: 1, kick: 0 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
+};
+
+const G_SIGNATURES = {
+  negafriction_sword: {
+    mods: [
+      'slip_rattle',
+      'field_projector',
+      'ref_coating',
+      'negafriction_wake',
+      'subdimensional_edge',
+      'kitbashed',
+    ],
+    looks: [],
+  },
+  gravity_blaster: {},
+  hardlight_board: {},
+  hyperoptic_visor: {},
+  kinetic_deck: {},
+  photonic_jacket: {},
+  powered_armour: {},
+  reality_cannon: {},
+  riftninja_sneakers: {},
+  robotic_companion: {},
+  skipmode_runners: {},
+  voidwear_backpack: {},
 };
 
 const G_IMPORT_DATA_MAP = {
@@ -650,9 +739,18 @@ G_REPEATING_FIELDSETS.forEach((fieldset) => {
 });
 
 // Load personality data
-on(`sheet:opened change:personality`, (eventInfo) => {
-  const personality = eventInfo.newValue;
-  if (personality) loadPersonality(personality.toLowerCase());
+on(`change:personality`, (eventInfo) => {
+  let personality = eventInfo.newValue;
+  personality = personality.trim().replace(' ', '_').toLowerCase();
+  if (personality) loadPersonality(personality);
+});
+
+// Load signature data
+on(`change:signature`, (eventInfo) => {
+  let signature = eventInfo.newValue;
+  signature = signature.trim().replace(' ', '_').toLowerCase();
+  console.log(signature);
+  if (signature) loadSignature(signature);
 });
 
 // Style & Trouble
@@ -690,19 +788,18 @@ const loadPersonality = (personality) => {
   const isValid = G_PLAYBOOKS.hasOwnProperty(personality);
   if (!isValid) return;
 
-  const pData = G_PLAYBOOKS[personality];
-
   const update = {};
+  const data = G_PLAYBOOKS[personality];
 
   // personal gear
-  pData.gear.forEach((gear, index) => {
+  data.gear.forEach((gear, index) => {
     const personalGear = `personal_gear_${index + 1}_name`;
     update[personalGear] = gear;
   });
 
   // attitude
-  const { dice, kick } = pData.attitude;
-  update.attitude_dice = dice;
+  const { boost, kick } = data.attitude;
+  update.attitude_boost = boost;
   update.attitude_kick = kick;
   update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`);
 
@@ -710,9 +807,27 @@ const loadPersonality = (personality) => {
   update.style_run_bonus = getTranslationByKey(`${personality}_style`);
 
   // traits
-  importFieldset('traits', pData.traits);
+  // importFieldset('traits', data.traits);
 
   // console.table(update);
+  setAttrs(update);
+};
+
+const loadSignature = (signature) => {
+  const isValid = G_SIGNATURES.hasOwnProperty(signature);
+  if (!isValid) return;
+
+  const update = {};
+  const data = G_SIGNATURES[signature];
+
+  // text stuff
+  update.signature_function = getTranslationByKey(`${signature}_function`);
+  update.signature_description = getTranslationByKey(`${signature}_description`);
+
+  // mods
+  // importFieldset('mods', data.mods);
+
+  //
   setAttrs(update);
 };
 
@@ -734,7 +849,7 @@ const importFieldset = (fieldset, data) => {
       }
       sections.push(rowId);
 
-      const repeatingPrefix = `repeating_traits_${rowId}_trait_`;
+      const repeatingPrefix = `repeating_${fieldset}_${rowId}_trait_`;
       update[repeatingPrefix + 'name'] = getTranslationByKey(key);
       update[repeatingPrefix + 'description'] = getTranslationByKey(key + '_description');
       update[repeatingPrefix + 'autogen'] = 1;

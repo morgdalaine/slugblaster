@@ -1,0 +1,9 @@
+.header {
+  &__title {
+    &[type='text'] {
+      font-size: 3rem;
+      font-variant: small-caps;
+      font-family: $font-title;
+    }
+  }
+}

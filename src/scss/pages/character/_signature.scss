@@ -1,0 +1,17 @@
+.signature {
+  $this: '.signature';
+  background-color: hsl(random(360) 80% 80% / 80%);
+
+  &__title {
+    &[type='text'] {
+      font-size: 2rem;
+      font-variant: small-caps;
+      font-family: $font-title;
+    }
+  }
+
+  &__edit,
+  &__view {
+    row-gap: $grid-gutter-row;
+  }
+}
