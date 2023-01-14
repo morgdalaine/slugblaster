@@ -25,6 +25,15 @@ G_EDITORS.forEach((toggle) => {
   });
 });
 
+G_BLADES.forEach((toggle) => {
+  on(`clicked:${toggle}-blade`, (eventInfo) => {
+    getAttrs([`${toggle}_blade`], (values) => {
+      const value = values[`${toggle}_blade`] === '0' ? 'on' : '0';
+      setAttrs({ [`${toggle}_blade`]: value });
+    });
+  });
+});
+
 // Update empty fieldsets
 G_REPEATING_FIELDSETS.forEach((fieldset) => {
   on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) =>

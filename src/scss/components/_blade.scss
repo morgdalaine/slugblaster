@@ -1,0 +1,67 @@
+.blade {
+  $this: '.blade';
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: $grid-gutter-row;
+  min-width: 3rem;
+
+  &__wrapper {
+    display: grid;
+    row-gap: $grid-gutter-row;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: $font-h2;
+    // font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: 700;
+
+    &::before {
+      content: '_';
+      font-family: Pictos;
+      margin-inline-end: $m-md;
+      font-weight: normal;
+    }
+  }
+}
+
+.blade-toggle {
+  $this: '.blade-toggle';
+  position: relative;
+
+  padding: $p-md;
+  text-align: left;
+
+  &[type='action'] {
+    background-color: transparent;
+    border-radius: 0;
+    padding: $p-sm;
+  }
+
+  &__controller {
+    &[value='on'] {
+      ~ .blade__wrapper {
+        display: none;
+      }
+
+      ~ button#{$this} {
+        height: 100%;
+
+        > .blade__title {
+          position: absolute;
+          top: $m-md;
+          left: 50%;
+          transform: rotate(90deg) translateY(-50%);
+          transform-origin: left top;
+          white-space: nowrap;
+          &::before {
+            content: '&';
+          }
+        }
+      }
+    }
+  }
+}

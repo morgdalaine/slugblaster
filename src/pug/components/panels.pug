@@ -3,8 +3,8 @@ mixin panel(panel)
   - const semantic = panel.semantic || 'div';
   - const editor = panel.editor || panel.name;
   #{semantic}.panel(class=panel.name)&attributes(attributes)
-    input.editor__controller(name=`attr_${panel.name}_editor`, type='hidden', value='0')
-    input.minimizer__controller(name=`attr_${panel.name}_minimizer`, type='hidden', value='0')
+    input.editor__controller(name=`attr_${panel.name}_editor`, value='on', type='hidden')
+    input.minimizer__controller(name=`attr_${panel.name}_minimizer`, value='0', type='hidden')
     .panel__wrapper
       block
       .panel__header(class=`${panel.name}__header`)
@@ -23,8 +23,8 @@ mixin blob(blob)
   - const hasMinimizer = blob.minimizer;
   - const editorClass = blob.editor ? 'blob--editor' : null;
   #{semantic}.blob(class=blob.name)&attributes(attributes)
-    input.editor__controller(name=`attr_${blob.name}_editor`, type='hidden', value='0')
-    input.minimizer__controller(name=`attr_${blob.name}_minimizer`, type='hidden', value='0')
+    input.editor__controller(name=`attr_${blob.name}_editor`, value='on', type='hidden')
+    input.minimizer__controller(name=`attr_${blob.name}_minimizer`, value='0', type='hidden')
     .blob__wrapper(class=editorClass)
       block
       if (blob.title)

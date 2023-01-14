@@ -1,23 +1,33 @@
 .character {
   $this: '.character';
-
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: minmax(2rem, auto);
   gap: $grid-gutter;
 
-  &__style-trouble {
-    grid-column: 1 / -1;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(2rem, auto);
 
     display: flex;
     flex-wrap: wrap;
+
     gap: $grid-gutter;
-    justify-content: space-around;
   }
 
   &__col {
+    flex: 30%;
     display: flex;
     flex-direction: column;
     gap: $grid-gutter-row 0;
+  }
+
+  &__blades {
+    display: flex;
+    gap: $grid-gutter-row;
   }
 
   @import 'character/attitude';

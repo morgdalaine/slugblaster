@@ -2,10 +2,6 @@
   $this: '.gear';
   background-color: hsl(random(360) 80% 80% / 80%);
 
-  &.blob {
-    padding-top: $p-lg;
-  }
-
   &__edit,
   &__view {
     gap: $grid-gutter;

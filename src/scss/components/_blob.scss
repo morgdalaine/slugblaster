@@ -4,7 +4,8 @@
 
   &__wrapper {
     display: grid;
-    row-gap: $p-sm;
+    row-gap: $grid-gutter-row;
+    overflow: hidden;
   }
 
   &__header,

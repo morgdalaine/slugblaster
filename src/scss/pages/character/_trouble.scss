@@ -1,7 +1,7 @@
 .trouble {
   $this: '.trouble';
   background-color: hsl(random(360) 80% 80% / 80%);
-  flex: 1;
+  // flex: 1;
 
   .trouble__hidden {
     &[value='0'],
