@@ -1,0 +1,12 @@
+- const { components } = data.signature;
++blob({ name: 'components', title: 'Components' })
+  +block('content')
+    - const three = Array.from(Array(3).keys(), (i) => i + 1);
+
+    each component in components
+      .components__component
+        label.components__component--header(data-i18n=component.name)= component.label
+        .components__component--track
+          each index in three
+            - const field = { ...component, value: index };
+            +field(field).components__kick

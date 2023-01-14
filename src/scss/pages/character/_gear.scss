@@ -1,13 +1,26 @@
 .gear {
   $this: '.gear';
   background-color: hsl(random(360) 80% 80% / 80%);
+
+  &.blob {
+    padding-top: $p-lg;
+  }
+
+  &__edit,
   &__view {
-    row-gap: $grid-gutter-row;
+    gap: $grid-gutter;
   }
 
   &__check {
     display: flex;
     align-items: center;
+
+    span {
+      margin-inline-start: $m-sm;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+    }
   }
 
   // &__extra {
@@ -26,25 +39,4 @@
   //     }
   //   }
   // }
-}
-
-.repeating {
-  $this: '.gear';
-
-  // repeating sections
-  &__view {
-    #{$this}__check {
-      span {
-        margin-inline-start: $m-sm;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-      }
-    }
-  }
-  &__edit {
-    position: relative;
-    padding: $p-md;
-    background-color: $pink-light;
-  }
 }

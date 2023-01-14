@@ -2,19 +2,10 @@
   $this: '.repcontainer';
 
   display: grid;
-  gap: $grid-gutter-row 0;
-  margin-block: $grid-gutter-row;
 }
 
 .repitem {
   $this: '.repitem';
 
-  // padding-bottom: $grid-gutter-row;
-
-  // border-bottom: 2px solid transparent;
-  // border-image: linear-gradient(to left, transparent, $input-border-color, transparent) 1;
-
-  // &:last-of-type {
-  //   border-bottom: none;
-  // }
+  margin-bottom: $grid-gutter-row;
 }

@@ -350,13 +350,14 @@ html .charsheet .slugblaster .visually-hidden:not(:focus):not(:active) {
 }
 html .charsheet .slugblaster .repcontainer {
   display: grid;
-  gap: 0.5rem 0;
-  margin-block: 0.5rem;
+}
+html .charsheet .slugblaster .repitem {
+  margin-bottom: 0.5rem;
 }
 html .charsheet .slugblaster label {
   display: block;
   color: var(--label-color);
-  font-family: "Sofia Sans", "Sofia Sans", "Ubuntu", "Nunito", sans-serif;
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", "Nunito", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
@@ -378,6 +379,10 @@ html .charsheet .slugblaster .blob {
 }
 html .charsheet .slugblaster .blob__wrapper {
   display: grid;
+  row-gap: 0.25rem;
+}
+html .charsheet .slugblaster .blob__header, html .charsheet .slugblaster .blob__content {
+  padding: 0.25rem;
 }
 html .charsheet .slugblaster .blob--editor {
   grid-template-columns: 1fr auto;
@@ -540,7 +545,7 @@ html .charsheet .slugblaster .panel {
 }
 html .charsheet .slugblaster .panel__wrapper {
   display: grid;
-  gap: 0.5rem 0.5rem;
+  row-gap: 0.25rem;
   height: 100%;
 }
 html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
@@ -580,6 +585,11 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
   display: none;
   transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
 }
+html .charsheet .slugblaster .repeating__edit {
+  position: relative;
+  padding: 0.5rem;
+  background-color: hsla(76deg, 80%, 80%, 0.8);
+}
 html .charsheet .slugblaster .character {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -600,7 +610,6 @@ html .charsheet .slugblaster .character__col {
 html .charsheet .slugblaster .character .attitude {
   color: #fff;
   background-color: #008495;
-  padding: 1rem;
 }
 html .charsheet .slugblaster .character .attitude__clickies {
   display: flex;
@@ -610,100 +619,129 @@ html .charsheet .slugblaster .character .attitude__clickies {
 html .charsheet .slugblaster .character .attitude__boost, html .charsheet .slugblaster .character .attitude__kick {
   width: 3rem;
   aspect-ratio: 1;
-  box-sizing: content-box;
   display: grid;
-  grid-template-areas: "checkbox";
   outline: 0;
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
-html .charsheet .slugblaster .character .attitude__boost:before, html .charsheet .slugblaster .character .attitude__boost:after, html .charsheet .slugblaster .character .attitude__kick:before, html .charsheet .slugblaster .character .attitude__kick:after {
-  grid-area: checkbox;
-  height: 100%;
-  width: 100%;
+html .charsheet .slugblaster .character .attitude__boost:checked, html .charsheet .slugblaster .character .attitude__kick:checked {
+  opacity: 0.5;
 }
 html .charsheet .slugblaster .character .attitude__boost:focus, html .charsheet .slugblaster .character .attitude__kick:focus {
   outline: 0;
 }
-html .charsheet .slugblaster .character .attitude__boost:after {
-  display: block;
-  content: "";
-  transition: all 0.25s ease-in-out;
+html .charsheet .slugblaster .character .attitude__boost {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-html .charsheet .slugblaster .character .attitude__boost:checked {
-  opacity: 0.5;
 }
 html .charsheet .slugblaster .character .attitude__kick {
-  appearance: none;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
-html .charsheet .slugblaster .character .attitude__kick:checked {
-  opacity: 0.5;
+html .charsheet .slugblaster .character .components {
+  background-color: hsla(38deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .components__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .components__component--header {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+html .charsheet .slugblaster .character .components__component--track {
+  display: flex;
+  gap: 0 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(63deg, 80%, 80%, 0.8);
+  background-color: hsla(26deg, 80%, 80%, 0.8);
 }
-html .charsheet .slugblaster .character .doom__view .doom__name {
+html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .doom .doom__name {
   display: block;
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(137deg, 80%, 80%, 0.8);
+  background-color: hsla(134deg, 80%, 80%, 0.8);
 }
-html .charsheet .slugblaster .character .gear__view {
-  row-gap: 0.5rem;
+html .charsheet .slugblaster .character .gear.blob {
+  padding-top: 1rem;
+}
+html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
+  gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .gear__check {
   display: flex;
   align-items: center;
 }
-html .charsheet .slugblaster .character .repeating__view .gear__check span {
+html .charsheet .slugblaster .character .gear__check span {
   margin-inline-start: 0.25rem;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
 }
-html .charsheet .slugblaster .character .repeating__edit {
-  position: relative;
-  padding: 0.5rem;
-  background-color: #f59ac2;
-}
 html .charsheet .slugblaster .character .header {
-  background-color: hsla(200deg, 80%, 80%, 0.8);
+  background-color: hsla(150deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .header__title[type=text] {
   font-size: 2rem;
-  font-variant: small-caps;
   font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  text-transform: uppercase;
   height: auto;
 }
 html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblaster .character .header__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(310deg, 80%, 80%, 0.8);
+  background-color: hsla(255deg, 80%, 80%, 0.8);
 }
-html .charsheet .slugblaster .character .legacy__view .legacy__name {
+html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .legacy .legacy__name {
   display: block;
   border-bottom: 1px dashed var(--input-border-color);
 }
+html .charsheet .slugblaster .character .mods {
+  background-color: hsla(65deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .mods__check {
+  display: flex;
+  align-items: center;
+}
+html .charsheet .slugblaster .character .mods__check span {
+  margin-inline-start: 0.25rem;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+html .charsheet .slugblaster .character .mods .mod__name {
+  font-weight: 700;
+}
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(293deg, 80%, 80%, 0.8);
+  background-color: hsla(13deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
-  font-variant: small-caps;
   font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  text-transform: uppercase;
+  height: auto;
 }
 html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugblaster .character .signature__view {
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(359deg, 80%, 80%, 0.8);
+  background-color: hsla(128deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -721,8 +759,11 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: hsla(332deg, 80%, 80%, 0.8);
+  background-color: hsla(157deg, 80%, 80%, 0.8);
   flex: 1;
+}
+html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
+  display: none;
 }
 html .charsheet .slugblaster .character .style__track {
   display: flex;
@@ -732,30 +773,36 @@ html .charsheet .slugblaster .character .style__track {
 html .charsheet .slugblaster .character .style__checkbox {
   font-size: 1rem;
 }
-html .charsheet .slugblaster .character .traits {
-  background-color: hsla(30deg, 80%, 80%, 0.8);
+html .charsheet .slugblaster .character .style__checkbox--0 {
+  order: 1;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
-html .charsheet .slugblaster .character .traits__view {
-  row-gap: 0.5rem;
+html .charsheet .slugblaster .character .traits {
+  background-color: hsla(179deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
+  gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .traits__check {
   display: flex;
   align-items: center;
 }
+html .charsheet .slugblaster .character .traits__check span {
+  margin-inline-start: 0.25rem;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
 html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
-html .charsheet .slugblaster .character .repeating__view .traits__check span {
-  margin-inline-start: 0.25rem;
-}
-html .charsheet .slugblaster .character .repeating__edit {
-  position: relative;
-  padding: 0.5rem;
-  background-color: #f59ac2;
-}
 html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(210deg, 80%, 80%, 0.8);
+  background-color: hsla(84deg, 80%, 80%, 0.8);
   flex: 1;
+}
+html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
+  display: none;
 }
 html .charsheet .slugblaster .character .trouble__track {
   display: flex;
@@ -764,6 +811,15 @@ html .charsheet .slugblaster .character .trouble__track {
 }
 html .charsheet .slugblaster .character .trouble__checkbox {
   font-size: 1rem;
+  display: grid;
+}
+html .charsheet .slugblaster .character .trouble__checkbox--0 {
+  order: 1;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--text-color, rgb(34, 34, 34));
+}
+html .charsheet .slugblaster .character .trouble__checkbox--4 {
+  margin-right: 1rem;
 }
 html .charsheet .slugblaster .character .trouble__actions {
   display: flex;
@@ -778,7 +834,6 @@ html .charsheet .slugblaster .character .trouble__action[type=action] {
 html .charsheet .slugblaster .character .turbo {
   color: #fff;
   background-color: #008495;
-  padding: 1rem;
 }
 html .charsheet .slugblaster .character .turbo__clickies {
   display: flex;
@@ -788,39 +843,27 @@ html .charsheet .slugblaster .character .turbo__clickies {
 html .charsheet .slugblaster .character .turbo__boost, html .charsheet .slugblaster .character .turbo__kick {
   width: 3rem;
   aspect-ratio: 1;
-  box-sizing: content-box;
   display: grid;
-  grid-template-areas: "checkbox";
   outline: 0;
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
-html .charsheet .slugblaster .character .turbo__boost:before, html .charsheet .slugblaster .character .turbo__boost:after, html .charsheet .slugblaster .character .turbo__kick:before, html .charsheet .slugblaster .character .turbo__kick:after {
-  grid-area: checkbox;
-  height: 100%;
-  width: 100%;
+html .charsheet .slugblaster .character .turbo__boost:checked, html .charsheet .slugblaster .character .turbo__kick:checked {
+  opacity: 0.5;
 }
 html .charsheet .slugblaster .character .turbo__boost:focus, html .charsheet .slugblaster .character .turbo__kick:focus {
   outline: 0;
 }
-html .charsheet .slugblaster .character .turbo__boost:after {
-  display: block;
-  content: "";
-  transition: all 0.25s ease-in-out;
+html .charsheet .slugblaster .character .turbo__boost {
+  appearance: none;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-html .charsheet .slugblaster .character .turbo__boost:checked {
-  opacity: 0.5;
 }
 html .charsheet .slugblaster .character .turbo__kick {
   appearance: none;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
-}
-html .charsheet .slugblaster .character .turbo__kick:checked {
-  opacity: 0.5;
 }
 html .charsheet .slugblaster .container {
   background: transparent;
@@ -1461,7 +1504,7 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: hsla(34deg, 80%, 80%, 0.8);
+  background-color: hsla(343deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
@@ -1487,7 +1530,7 @@ html .charsheet .slugblaster .nav__action {
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .footer {
-  background-color: hsla(294deg, 80%, 80%, 0.8);
+  background-color: hsla(246deg, 80%, 80%, 0.8);
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {
@@ -1496,9 +1539,9 @@ html .charsheet .slugblaster .footer > span {
 html .charsheet .slugblaster .footer > span::before {
   content: "v";
 }
-html__wrapper {
+html .charsheet .slugblaster__wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem 0;
-  margin: 0.5rem;
+  margin: 0.25rem;
 }

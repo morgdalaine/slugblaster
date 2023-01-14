@@ -2,7 +2,8 @@ mixin field(field)
   -
     let { name, type, readonly, value, placeholder, min, max, size, selected, blockName } = field;
     type = type || 'text';
-    value = value || '';
+
+    if (value !== 0) value = value || null;
 
     let id = name;
     let klass = `${blockName}__${name} ${blockName}__input--${type}`;
@@ -26,7 +27,7 @@ mixin field(field)
 
     when 'checkbox'
     when 'radio'
-      - value = value || 'on';
+      - if (type === 'checkbox') value = value || 'on';
       input(name=`attr_${name}`, checked=selected, value=value, type=type)&attributes(attributes)
 
     when 'textarea'

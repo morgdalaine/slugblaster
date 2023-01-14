@@ -4,7 +4,7 @@
 
   &__wrapper {
     display: grid;
-    gap: $grid-gutter;
+    row-gap: $p-sm;
     height: 100%;
   }
 

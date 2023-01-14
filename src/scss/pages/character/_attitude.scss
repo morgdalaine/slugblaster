@@ -3,7 +3,6 @@
 
   color: $white;
   background-color: $teal;
-  padding: $p-lg;
 
   &__clickies {
     display: flex;
@@ -16,51 +15,26 @@
     width: 3rem;
     aspect-ratio: 1;
 
-    box-sizing: content-box;
     display: grid;
-    grid-template-areas: 'checkbox';
-    // margin: $m-md auto;
-    // height: 2rem;
-    // width: 2rem;
-
     outline: 0;
 
-    -webkit-appearance: none;
     -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
 
-    &:before,
-    &:after {
-      grid-area: checkbox;
-      height: 100%;
-      width: 100%;
+    &:checked {
+      opacity: 0.5;
     }
-
     &:focus {
       outline: 0;
     }
   }
-
   &__boost {
-    &:after {
-      display: block;
-      content: '';
-
-      transition: all 0.25s ease-in-out;
-      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
-
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    &:checked {
-      opacity: 0.5;
-    }
+    background-image: image('boost.svg');
+    background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
   }
   &__kick {
-    appearance: none;
+    background-image: image('kick.svg');
     background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg');
-    &:checked {
-      opacity: 0.5;
-    }
   }
 }

@@ -1,10 +1,14 @@
 .doom {
   $this: '.doom';
   background-color: hsl(random(360) 80% 80% / 80%);
+
+  &__edit,
   &__view {
-    .doom__name {
-      display: block;
-      border-bottom: $input-border;
-    }
+    gap: $grid-gutter;
+  }
+
+  .doom__name {
+    display: block;
+    border-bottom: $input-border;
   }
 }

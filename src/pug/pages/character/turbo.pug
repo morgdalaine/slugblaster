@@ -10,14 +10,14 @@
     +field(boosts)
     +field(kicks)
     .turbo__clickies
-      each foo in four
+      each index in four
         - const field = { ...boosts };
         - field.type = 'checkbox';
-        - field.name = `${field.name}_${foo}`;
+        - field.name = `${field.name}_${index}`;
         +field(field).turbo__boost
 
-      each foo in four
+      each index in four
         - const field = { ...kicks };
         - field.type = 'checkbox';
-        - field.name = `${field.name}_${foo}`;
+        - field.name = `${field.name}_${index}`;
         +field(field).turbo__kick

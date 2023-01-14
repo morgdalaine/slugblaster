@@ -10,12 +10,12 @@ mixin repeating(fieldset, toggleName)
       .repeating__subtitle
 
     fieldset(class=`repeating_${fieldset}`)
-      +block('hidden', true)
-      .repeating__edit
-        +block('edit', true)
+      .repeating__wrapper
+        .repeating__edit
+          +block('edit', true)
 
-      .repeating__view
-        +block('view', true)
+        .repeating__view
+          +block('view', true)
 
-      .repeating__delete
-        +block('delete', true)
+        .repeating__delete
+          +block('delete', true)

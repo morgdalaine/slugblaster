@@ -36,4 +36,10 @@
     display: none;
     transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
   }
+
+  &__edit {
+    position: relative;
+    padding: $p-md;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
 }

@@ -1,11 +1,17 @@
 .blob {
   $this: '.blob';
   position: relative;
-  // padding: $p-lg;
 
   &__wrapper {
     display: grid;
+    row-gap: $p-sm;
   }
+
+  &__header,
+  &__content {
+    padding: $p-sm;
+  }
+
   &__title {
     @extend .panel__title;
   }

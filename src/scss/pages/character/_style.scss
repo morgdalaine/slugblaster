@@ -3,6 +3,15 @@
   background-color: hsl(random(360) 80% 80% / 80%);
   flex: 1;
 
+  .style__hidden {
+    &[value='0'],
+    &:not([value]) {
+      ~ * #{$this}__checkbox--0 {
+        display: none;
+      }
+    }
+  }
+
   &__track {
     display: flex;
     gap: $grid-gutter;
@@ -16,5 +25,12 @@
     // display: grid;
     // grid-template-columns: 1em auto;
     // gap: 0.5em;
+
+    // move 0 slot to end
+    &--0 {
+      order: 1;
+      padding-left: $grid-gutter-col;
+      border-left: 2px solid $text-color;
+    }
   }
 }

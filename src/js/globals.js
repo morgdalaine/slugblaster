@@ -1,6 +1,6 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['header', 'gear', 'traits', 'legacy', 'doom', 'signature'];
+const G_EDITORS = ['header', 'gear', 'mods', 'traits', 'legacy', 'doom', 'signature'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -22,9 +22,16 @@ const G_REPEATING_FIELDSETS = [
 const G_PLAYBOOKS = {
   grit: {
     attitude: { boost: 3, kick: 1 },
-    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill'],
+    traits: [
+      'patient',
+      'sacrifice_your_body',
+      'diligent',
+      'walk_it_off',
+      'skill',
+      'personal_growth',
+    ],
     gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
-    beat: { grinding: '2_style' },
+    beat: { grinding: '2_style', origin_story: '3_style', sharpened: '4_style' },
     arc: [
       { a_goal: '1_style' },
       { setbacks: '2_style' },

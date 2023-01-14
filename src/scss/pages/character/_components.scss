@@ -1,0 +1,24 @@
+.components {
+  $this: '.components';
+  background-color: hsl(random(360) 80% 80% / 80%);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $grid-gutter;
+  }
+
+  &__component {
+    &--header {
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &--track {
+      display: flex;
+      gap: 0 $grid-gutter-col;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: 'https://raw.githubusercontent.com/morgdalaine/slugblaster/main/' !default;
 
 // Margins
 $m-xl: 2rem;
@@ -45,7 +45,7 @@ $font-nav: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-playbook: 'Rubik Dirt', 'Comic Sans MS', serif !default;
 $font-nav-tab: 'Sofia Sans Condensed', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
 
-$font-label: 'Sofia Sans', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
+$font-label: 'Poppins', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
 $font-body: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-input: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-action: 'Coiny', 'Comic Sans MS', serif !default;

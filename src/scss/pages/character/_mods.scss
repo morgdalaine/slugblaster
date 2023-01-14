@@ -1,5 +1,5 @@
-.traits {
-  $this: '.traits';
+.mods {
+  $this: '.mods';
   background-color: hsl(random(360) 80% 80% / 80%);
 
   &__edit,
@@ -19,7 +19,7 @@
     }
   }
 
-  .trait__name {
+  .mod__name {
     font-weight: 700;
   }
 }

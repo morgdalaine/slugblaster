@@ -1,13 +1,20 @@
 -
   data.translation.personalities = {
+    misc: {
+      personal_growth: "Personal Growth",
+      personal_growth_description: "A trait from another personality. How are you changing? Who are you learning from?",
+    },
     grit: {
       // attitude
       grit_attitude: 'Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?',
+
       // style
       grit_style: 'Get +1 style after runs where you show toughness or focus.',
+
       // extra gear
       something_everyone_else_forgot: 'something everyone else forgot',
       backup_portaling_device: 'backup portaling device',
+
       // traits
       patient: 'Patient',
       patient_description:
@@ -23,23 +30,36 @@
       skill: 'Skill',
       skill_description:
         'You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.',
+
       // beat
       grinding: 'Grinding',
+      grinding_cost: '',
+      grinding_result: '',
       grinding_description:
         'A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.',
+
       // arc
       a_goal: 'A Goal',
+      a_goal_cost: '1_style',
+      a_goal_result: '+1 slam (tired, blistered, etc.)',
       a_goal_description:
         'A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)',
       setbacks: 'Setbacks',
+      setbacks_cost: '2_style',
+      setbacks_result: '+1 slam',
       setbacks_description:
         'The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?',
       quitting: 'Quitting',
+      quitting_cost: '4_trouble',
+      quitting_result: '+1 doom, +1 fracture',
       quitting_description:
         'The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.',
       perseverance: 'Perseverance',
+      perseverance_cost: '3_style',
+      perseverance_result: '−1 doom, −1 fracture, +2 legacy, +1 trait',
       perseverance_description:
         'You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.',
+
       // vibes
       one_song_on_repeat: 'one song on repeat',
       never_smile: 'never smile',

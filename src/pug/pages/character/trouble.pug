@@ -1,11 +1,14 @@
 - const { trouble } = data.character;
 +blob({ name: 'trouble', title: 'Trouble' })
   +block('content')
+    - const { hidden, track, actions } = trouble;
+    each field in hidden
+      +field(field).trouble__hidden
     .trouble__track
-      each radio in trouble.track
-        label.trouble__checkbox
+      each radio in track
+        label.trouble__checkbox(class=`trouble__checkbox--${radio.value}`)
           +field(radio).checkbox--circle
           span.visually-hidden(data-i18n=`trouble_${radio.value}`)
     .trouble__actions
-      each action in trouble.actions
+      each action in actions
         +action(action)

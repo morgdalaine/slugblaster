@@ -1,0 +1,27 @@
+- const { mods } = data.signature;
++panel({ name: 'mods', title: 'Mods' })
+  +block('content')
+    +repeating('mods')
+      - const { hidden, repeating } = mods;
+      - const [check, name, desc] = repeating;
+      +block('edit')
+        .row.mods__edit
+          each field in hidden
+            +field(field)
+          each field in repeating
+            - const hideLabel = ['mod_check', 'mod_name'].includes(field.name);
+            - const divClass = field.span ? `col-${field.span}` : '';
+            - const labelClass = hideLabel ? 'visually-hidden' : null;
+            .mods__field(class=`${field.name} ${divClass}`)
+              unless field.type === "checkbox"
+                +field(field)
+              else
+                +field(field).checkbox--scribble
+              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+
+      +block('view')
+        .mods__view
+          label.mods__check
+            +field(check).checkbox--scribble
+            +span(name).mod__name
+          +span(desc)
