@@ -3,10 +3,15 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $gutter-gap;
+  gap: $grid-gutter;
 
   &__style-trouble {
     grid-column: 1 / -1;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $grid-gutter;
+    justify-content: space-around;
   }
 
   &__col {
@@ -18,10 +23,12 @@
   @import 'character/attitude';
   @import 'character/doom';
   @import 'character/gear';
+  @import 'character/header';
   @import 'character/legacy';
   @import 'character/signature';
   @import 'character/slams';
-  @import 'character/turbo';
-  @import 'character/styletrouble';
+  @import 'character/style';
   @import 'character/traits';
+  @import 'character/trouble';
+  @import 'character/turbo';
 }

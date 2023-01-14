@@ -6,7 +6,7 @@ include components/_mixins
 input(name='attr_version', value='0', type='hidden')
 .slugblaster
   .slugblaster__wrapper
-    include layout/header
+    include layout/nav
 
     include layout/character
 
@@ -53,59 +53,59 @@ input(name='attr_version', value='0', type='hidden')
 
       include abstracts/translations
 
-      div(style='display: flex; gap: 0.5rem')
+      //- .fonts
+        h1(style='font-size: 3rem; font-family: "Caveat"') Caveat; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Gloria Hallelujah"') Gloria Hallelujah; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Coiny"') Coiny; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Lato"') Lato; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Poppins"') Poppins; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Roboto"') Roboto; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Sofia Sans Condensed"') Sofia Sans Condensed; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Sofia Sans"') Sofia Sans; Sphinx of black quartz, judge my vow!
+        h1(style='font-size: 3rem; font-family: "Ubuntu"') Ubuntu; Sphinx of black quartz, judge my vow!
+
+      div(style='display: flex; gap: 0.25rem')
         div
-          div(style='background: #fff; width: 2rem; aspect-ratio: 1', title='white')
+          div(style='background: #8d74b3; width: 4rem; aspect-ratio: 1', title='purple-light')
+          div(style='background: #7151a0; width: 4rem; aspect-ratio: 1', title='purple')
+          div(style='background: #5a4180; width: 4rem; aspect-ratio: 1', title='purple-dark')
         div
-          div(style='background: #8d74b3; width: 2rem; aspect-ratio: 1', title='purple-light')
+          div(style='background: #f59ac2; width: 4rem; aspect-ratio: 1', title='pink-light')
+          div(style='background: #f281b3; width: 4rem; aspect-ratio: 1', title='pink')
+          div(style='background: #c2678f; width: 4rem; aspect-ratio: 1', title='pink-dark')
+        div(style='background: #eb008b; width: 4rem; aspect-ratio: 1', title='hot-pink')
         div
-          div(style='background: #7151a0; width: 2rem; aspect-ratio: 1', title='purple')
+          div(style='background: #339daa; width: 4rem; aspect-ratio: 1', title='teal-light')
+          div(style='background: #008495; width: 4rem; aspect-ratio: 1', title='teal')
+          div(style='background: #006a77; width: 4rem; aspect-ratio: 1', title='teal-dark')
         div
-          div(style='background: #5a4180; width: 2rem; aspect-ratio: 1', title='purple-dark')
+          div(style='background: #34bdf2; width: 4rem; aspect-ratio: 1', title='blue-light')
+          div(style='background: #01acef; width: 4rem; aspect-ratio: 1', title='blue')
+          div(style='background: #018abf; width: 4rem; aspect-ratio: 1', title='blue-dark')
         div
-          div(style='background: #f59ac2; width: 2rem; aspect-ratio: 1', title='pink-light')
+          div(style='background: #f26f5a; width: 4rem; aspect-ratio: 1', title='red-light')
+          div(style='background: #ef4b31; width: 4rem; aspect-ratio: 1', title='red')
+          div(style='background: #bf3c27; width: 4rem; aspect-ratio: 1', title='red-dark')
         div
-          div(style='background: #f281b3; width: 2rem; aspect-ratio: 1', title='pink')
+          div(style='background: #ffdd7d; width: 4rem; aspect-ratio: 1', title='yellow-light')
+          div(style='background: #ffd45c; width: 4rem; aspect-ratio: 1', title='yellow')
+          div(style='background: #ccaa4a; width: 4rem; aspect-ratio: 1', title='yellow-dark')
         div
-          div(style='background: #c2678f; width: 2rem; aspect-ratio: 1', title='pink-dark')
+          div(style='background: #47b78c; width: 4rem; aspect-ratio: 1', title='green-light')
+          div(style='background: #19a56f; width: 4rem; aspect-ratio: 1', title='green')
+          div(style='background: #148459; width: 4rem; aspect-ratio: 1', title='green-dark')
         div
-          div(style='background: #eb008b; width: 2rem; aspect-ratio: 1', title='hot-pink')
-        div
-          div(style='background: #339daa; width: 2rem; aspect-ratio: 1', title='teal-light')
-        div
-          div(style='background: #008495; width: 2rem; aspect-ratio: 1', title='teal')
-        div
-          div(style='background: #006a77; width: 2rem; aspect-ratio: 1', title='teal-dark')
-        div
-          div(style='background: #34bdf2; width: 2rem; aspect-ratio: 1', title='blue-light')
-        div
-          div(style='background: #01acef; width: 2rem; aspect-ratio: 1', title='blue')
-        div
-          div(style='background: #018abf; width: 2rem; aspect-ratio: 1', title='blue-dark')
-        div
-          div(style='background: #f26f5a; width: 2rem; aspect-ratio: 1', title='red-light')
-        div
-          div(style='background: #ef4b31; width: 2rem; aspect-ratio: 1', title='red')
-        div
-          div(style='background: #bf3c27; width: 2rem; aspect-ratio: 1', title='red-dark')
-        div
-          div(style='background: #ffd45c; width: 2rem; aspect-ratio: 1', title='yellow')
-        div
-          div(style='background: #19a56f; width: 2rem; aspect-ratio: 1', title='green')
-        div
+          div(style='background: #fff; width: 4rem; height: 2.4rem', title='white')
           div(
-            style='background: rgb(237, 237, 237); width: 2rem; aspect-ratio: 1',
+            style='background: rgb(237, 237, 237); width: 4rem; height: 2.4rem',
             title='light-grey'
           )
-        div
           div(
-            style='background: rgb(153, 153, 153); width: 2rem; aspect-ratio: 1',
+            style='background: rgb(153, 153, 153); width: 4rem; height: 2.4rem',
             title='mid-grey'
           )
-        div
-          div(style='background: rgb(68, 68, 68); width: 2rem; aspect-ratio: 1', title='dark-grey')
-        div
-          div(style='background: #292828; width: 2rem; aspect-ratio: 1', title='black')
+          div(style='background: rgb(68, 68, 68); width: 4rem; height: 2.4rem', title='dark-grey')
+          div(style='background: #292828; width: 4rem; height: 2.4rem', title='black')
 
 include templates/mixins
 include templates/rolltemplates

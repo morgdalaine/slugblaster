@@ -1,21 +1,11 @@
-.style-trouble {
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-
-.style,
 .trouble {
+  $this: '.trouble';
+  background-color: hsl(random(360) 80% 80% / 80%);
   flex: 1;
 
-  &__title {
-    @extend .panel__title;
-  }
   &__track {
     display: flex;
-    gap: $grid-gutter-row $grid-gutter-col;
+    gap: $grid-gutter;
     margin: $m-md;
   }
   &__checkbox {
@@ -27,16 +17,6 @@
     // grid-template-columns: 1em auto;
     // gap: 0.5em;
   }
-}
-
-.style {
-  $this: '.style';
-  background-color: hsl(random(360) 80% 80% / 80%);
-}
-
-.trouble {
-  $this: '.trouble';
-  background-color: hsl(random(360) 80% 80% / 80%);
 
   &__actions {
     display: flex;

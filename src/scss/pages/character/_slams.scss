@@ -5,14 +5,10 @@
   // background-color: $teal;
   // padding: $p-lg;
 
-  &__title {
-    @extend .panel__title;
-  }
-
   &__boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: $grid-gutter-row $grid-gutter-col;
+    gap: $grid-gutter;
   }
 
   &__box {

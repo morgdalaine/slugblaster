@@ -5,10 +5,6 @@
   background-color: $teal;
   padding: $p-lg;
 
-  &__title {
-    @extend .panel__title;
-  }
-
   &__clickies {
     display: flex;
     gap: 0 $grid-gutter-col;

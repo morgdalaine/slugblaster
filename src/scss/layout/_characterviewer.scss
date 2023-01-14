@@ -1,59 +1,92 @@
-.characterviewer {
-  //   .content {
-  //     margin-bottom: 0;
-  //   }
+// .sheet-darkmode .ui-dialog .nav-tabs > li.active > a,
+// .sheet-darkmode .ui-dialog .nav-tabs > li.active > a:hover,
+// .sheet-darkmode .ui-dialog .nav-tabs > li.active > a:focus {
+// }
 
-  //   // .nav-tabs > li:not(.active) > a:hover,
-  //   // .nav-tabs > li:not(.active) > a:focus {
-  //   //   background-color: var(--color-surface1);
-  //   //   color: var(--color-primary-text);
-  //   //   text-decoration: underline;
-  //   //   text-decoration-color: currentcolor;
-  //   //   text-decoration-color: var(--color-primary-text);
-  //   //   cursor: default;
-  //   // }
+// background-color: var(--dark-primary);
+// border-color: var(--dark-primary-highlight);
+// color: var(--dark-primarytext);
 
-  .nav-tabs {
-    //     // min-width: 351px;
-    //     padding-top: 0.2rem;
-    //     margin-bottom: 0;
+div#tab-content.tab-content .attributesabilities {
+  min-width: 525px;
 
-    > li > a {
-      font-variant: small-caps;
-      // font-weight: 700;
-      font-family: $font-nav;
-      font-size: $font-xl;
-      text-decoration: none;
-
-      //       // font: normal 1rem / 1.4 $text-font-stack;
-      //       padding: $p-sm;
-    }
-
-    //     // Decrease opacity of Attributes & Abilities tab
-    //     > li:nth-child(4) > a:nth-child(1) {
-    //       opacity: 0.3;
-    //       &:hover,
-    //       &:focus {
-    //         opacity: 1;
-    //       }
-    //     }
+  .divider {
+    border: none;
   }
 }
 
-// .ui-dialog {
-//   .largedialog {
-//     padding: 0 $p-md;
-//   }
-//   .charsheet {
-//     padding: 0;
-//   }
-// }
+html {
+  .characterviewer {
+    display: grid !important;
+    grid-template-rows: auto 1fr;
 
-// // div#tab-content.tab-content .attributesabilities {
-// //   min-width: 525px;
-// // }
-// // div#tab-content.tab-content .attributesabilities .largedialog textarea {
-// //   border: 2px solid grey;
-// //   background: #ececec;
-// //   background-color: violet;
-// // }
+    .content {
+      margin-bottom: 0;
+    }
+
+    .charsheet {
+      padding: 0;
+    }
+
+    .nav-tabs {
+      padding-top: $p-sm;
+      margin-bottom: $m-sm;
+      border: none;
+      // border-bottom: $nav-tab-border;
+
+      > li {
+        margin-bottom: 0;
+
+        &.active {
+          > a {
+            opacity: 1 !important;
+            color: $nav-tab-color;
+            background: $nav-tab-background;
+          }
+        }
+
+        > a {
+          border: none !important;
+          padding-block: $p-sm;
+          padding-inline: $p-md;
+
+          font-family: $font-nav-tab;
+          font-size: $font-xl;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          // background-color: rgb($teal-light, 0.2);
+
+          &:hover,
+          &:active {
+            color: $nav-tab-color;
+          }
+          &:hover {
+            background: $nav-tab-background-hover;
+          }
+          &:active {
+            background: $nav-tab-background-active;
+          }
+        }
+
+        &.active,
+        &:not(.active) {
+          > a,
+          > a:hover,
+          > a:focus {
+            text-decoration: none;
+          }
+        }
+      }
+
+      // Decrease opacity of Attributes & Abilities tab
+      > li:nth-child(4) > a:nth-child(1) {
+        opacity: 0.3;
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

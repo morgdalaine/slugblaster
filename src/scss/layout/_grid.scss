@@ -9,7 +9,7 @@
 .row {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
-  gap: $grid-gutter-row $grid-gutter-col;
+  gap: $grid-gutter;
   justify-items: center;
   align-items: start;
 

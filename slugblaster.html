@@ -2,109 +2,128 @@
 <input name="attr_version" value="0" type="hidden"/>
 <div class="slugblaster">
   <div class="slugblaster__wrapper">
-    <header class="header">
-      <h2 data-i18n="slugblaster">Slugblaster</h2>
-      <h4><span name="attr_sheet_mode" data-i18n-dynamic="data-i18n-dynamic"></span></h4>
-      <div class="header__modes">
-        <button class="header__action header--character" name="act_character" type="action"><span class="header__action--label" data-i18n="character">Character</span>
-        </button>
-        <button class="header__action header--crew" name="act_crew" type="action"><span class="header__action--label" data-i18n="crew">Crew</span>
-        </button>
+    <div class="blob tophat">
+      <input class="editor__controller" name="attr_tophat_editor" type="hidden" value="0"/>
+      <div class="blob__wrapper">
+        <div class="blob__content tophat__content">
+          <h2 class="tophat__title" data-i18n="slugblaster">Slugblaster</h2>
+          <ul class="nav">
+            <li>
+              <button class="nav__action nav--character button--glitch" name="act_character" type="action"><span class="nav__action--label" data-i18n="character">Character</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav__action nav--crew button--glitch" name="act_crew" type="action"><span class="nav__action--label" data-i18n="crew">Crew</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav__action nav--options button--glitch" name="act_options" type="action"><span class="nav__action--label" data-i18n="options">Options</span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </div>
     <main class="character">
       <section class="character__style-trouble">
-        <div class="blob style-trouble">
-          <input class="editor__controller" name="attr_style-trouble_editor" type="hidden" value="0"/>
+        <div class="blob style">
+          <input class="editor__controller" name="attr_style_editor" type="hidden" value="0"/>
           <div class="blob__wrapper">
-            <div class="blob__content style-trouble__content">
-              <div class="style">
-                <h2 class="style__title" data-i18n="style">Style</h2>
-                <div class="style__track">
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="on" type="radio"/><span class="visually-hidden" data-i18n="style_0"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="1" type="radio"/><span class="visually-hidden" data-i18n="style_1"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="2" type="radio"/><span class="visually-hidden" data-i18n="style_2"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="3" type="radio"/><span class="visually-hidden" data-i18n="style_3"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="4" type="radio"/><span class="visually-hidden" data-i18n="style_4"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="5" type="radio"/><span class="visually-hidden" data-i18n="style_5"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="6" type="radio"/><span class="visually-hidden" data-i18n="style_6"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="7" type="radio"/><span class="visually-hidden" data-i18n="style_7"></span>
-                  </label>
-                  <label class="style__checkbox">
-                    <input class="checkbox--circle" name="attr_style" value="8" type="radio"/><span class="visually-hidden" data-i18n="style_8"></span>
-                  </label>
-                </div><span name="attr_style_run_bonus"></span>
+            <div class="blob__header style__header">
+              <h2 class="blob__title style__title" data-i18n="style">Style</h2>
+            </div>
+            <div class="blob__content style__content">
+              <div class="style__track">
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="on" type="radio"/><span class="visually-hidden" data-i18n="style_0"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="1" type="radio"/><span class="visually-hidden" data-i18n="style_1"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="2" type="radio"/><span class="visually-hidden" data-i18n="style_2"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="3" type="radio"/><span class="visually-hidden" data-i18n="style_3"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="4" type="radio"/><span class="visually-hidden" data-i18n="style_4"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="5" type="radio"/><span class="visually-hidden" data-i18n="style_5"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="6" type="radio"/><span class="visually-hidden" data-i18n="style_6"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="7" type="radio"/><span class="visually-hidden" data-i18n="style_7"></span>
+                </label>
+                <label class="style__checkbox">
+                  <input class="checkbox--circle" name="attr_style" value="8" type="radio"/><span class="visually-hidden" data-i18n="style_8"></span>
+                </label>
+              </div><span name="attr_style_run_bonus"></span>
+            </div>
+          </div>
+        </div>
+        <div class="blob trouble">
+          <input class="editor__controller" name="attr_trouble_editor" type="hidden" value="0"/>
+          <div class="blob__wrapper">
+            <div class="blob__header trouble__header">
+              <h2 class="blob__title trouble__title" data-i18n="trouble">Trouble</h2>
+            </div>
+            <div class="blob__content trouble__content">
+              <div class="trouble__track">
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="on" type="radio"/><span class="visually-hidden" data-i18n="trouble_0"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="1" type="radio"/><span class="visually-hidden" data-i18n="trouble_1"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="2" type="radio"/><span class="visually-hidden" data-i18n="trouble_2"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="3" type="radio"/><span class="visually-hidden" data-i18n="trouble_3"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="4" type="radio"/><span class="visually-hidden" data-i18n="trouble_4"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="5" type="radio"/><span class="visually-hidden" data-i18n="trouble_5"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="6" type="radio"/><span class="visually-hidden" data-i18n="trouble_6"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="7" type="radio"/><span class="visually-hidden" data-i18n="trouble_7"></span>
+                </label>
+                <label class="trouble__checkbox">
+                  <input class="checkbox--circle" name="attr_trouble" value="8" type="radio"/><span class="visually-hidden" data-i18n="trouble_8"></span>
+                </label>
               </div>
-              <div class="trouble">
-                <div class="trouble__actions">
-                  <h2 class="trouble__title" data-i18n="trouble">Trouble</h2>
-                  <button class="trouble__action trouble--nope" name="act_nope" type="action"><span class="trouble__action--label" data-i18n="nope">Nope!</span>
-                  </button>
-                  <button class="trouble__action trouble--disaster" name="act_disaster" type="action"><span class="trouble__action--label" data-i18n="disaster">Disaster</span>
-                  </button>
-                </div>
-                <div class="trouble__track">
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="on" type="radio"/><span class="visually-hidden" data-i18n="trouble_0"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="1" type="radio"/><span class="visually-hidden" data-i18n="trouble_1"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="2" type="radio"/><span class="visually-hidden" data-i18n="trouble_2"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="3" type="radio"/><span class="visually-hidden" data-i18n="trouble_3"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="4" type="radio"/><span class="visually-hidden" data-i18n="trouble_4"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="5" type="radio"/><span class="visually-hidden" data-i18n="trouble_5"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="6" type="radio"/><span class="visually-hidden" data-i18n="trouble_6"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="7" type="radio"/><span class="visually-hidden" data-i18n="trouble_7"></span>
-                  </label>
-                  <label class="trouble__checkbox">
-                    <input class="checkbox--circle" name="attr_trouble" value="8" type="radio"/><span class="visually-hidden" data-i18n="trouble_8"></span>
-                  </label>
-                </div>
+              <div class="trouble__actions">
+                <button class="trouble__action trouble--nope" name="act_nope" type="action"><span class="trouble__action--label" data-i18n="nope">Nope!</span>
+                </button>
+                <button class="trouble__action trouble--disaster" name="act_disaster" type="action"><span class="trouble__action--label" data-i18n="disaster">Disaster</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="character__col">
-        <div class="panel your_character">
-          <input class="editor__controller" name="attr_your_character_editor" type="hidden" value="0"/>
+        <div class="panel header">
+          <input class="editor__controller" name="attr_header_editor" type="hidden" value="0"/>
           <div class="panel__wrapper">
-            <div class="panel__header your_character__header">
-              <input class="header__personality header__input--text character__title" name="attr_personality" id="personality" type="text" value="" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
-              <button class="edit-toggle" name="act_your_character-editor" type="action">
-                <input class="edit-toggle__controller" name="attr_your_character_editor" type="hidden" value="0"/>
+            <div class="panel__header header__header">
+              <input class="header__personality header__input--text header__title" name="attr_personality" id="personality" type="text" value="" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
+              <button class="edit-toggle" name="act_header-editor" type="action">
+                <input class="edit-toggle__controller" name="attr_header_editor" type="hidden" value="0"/>
                 <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
                 <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
               </button>
             </div>
-            <div class="panel__content your_character__content">
+            <div class="panel__content header__content">
               <div class="editor">
                 <div class="editor__edit header__edit">
                   <div>
@@ -317,7 +336,7 @@
         </section>
       </section>
       <section class="character__col">
-        <section class="character__signature">
+        <section class="character__turbo">
           <div class="blob turbo">
             <input class="editor__controller" name="attr_turbo_editor" type="hidden" value="0"/>
             <div class="blob__wrapper">
@@ -338,6 +357,8 @@
               </div>
             </div>
           </div>
+        </section>
+        <section class="character__signature">
           <div class="panel signature">
             <input class="editor__controller" name="attr_signature_editor" type="hidden" value="0"/>
             <div class="panel__wrapper">
@@ -502,75 +523,49 @@
       </section>
     </main>
     <footer class="footer"><span class="visually-hidden" data-i18n="version">Version</span><span name="attr_version"></span><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span>
-      <div style="display: flex; gap: 0.5rem">
+      <div style="display: flex; gap: 0.25rem">
         <div>
-          <div style="background: #fff; width: 2rem; aspect-ratio: 1" title="white"></div>
+          <div style="background: #8d74b3; width: 4rem; aspect-ratio: 1" title="purple-light"></div>
+          <div style="background: #7151a0; width: 4rem; aspect-ratio: 1" title="purple"></div>
+          <div style="background: #5a4180; width: 4rem; aspect-ratio: 1" title="purple-dark"></div>
         </div>
         <div>
-          <div style="background: #8d74b3; width: 2rem; aspect-ratio: 1" title="purple-light"></div>
+          <div style="background: #f59ac2; width: 4rem; aspect-ratio: 1" title="pink-light"></div>
+          <div style="background: #f281b3; width: 4rem; aspect-ratio: 1" title="pink"></div>
+          <div style="background: #c2678f; width: 4rem; aspect-ratio: 1" title="pink-dark"></div>
+        </div>
+        <div style="background: #eb008b; width: 4rem; aspect-ratio: 1" title="hot-pink"></div>
+        <div>
+          <div style="background: #339daa; width: 4rem; aspect-ratio: 1" title="teal-light"></div>
+          <div style="background: #008495; width: 4rem; aspect-ratio: 1" title="teal"></div>
+          <div style="background: #006a77; width: 4rem; aspect-ratio: 1" title="teal-dark"></div>
         </div>
         <div>
-          <div style="background: #7151a0; width: 2rem; aspect-ratio: 1" title="purple"></div>
+          <div style="background: #34bdf2; width: 4rem; aspect-ratio: 1" title="blue-light"></div>
+          <div style="background: #01acef; width: 4rem; aspect-ratio: 1" title="blue"></div>
+          <div style="background: #018abf; width: 4rem; aspect-ratio: 1" title="blue-dark"></div>
         </div>
         <div>
-          <div style="background: #5a4180; width: 2rem; aspect-ratio: 1" title="purple-dark"></div>
+          <div style="background: #f26f5a; width: 4rem; aspect-ratio: 1" title="red-light"></div>
+          <div style="background: #ef4b31; width: 4rem; aspect-ratio: 1" title="red"></div>
+          <div style="background: #bf3c27; width: 4rem; aspect-ratio: 1" title="red-dark"></div>
         </div>
         <div>
-          <div style="background: #f59ac2; width: 2rem; aspect-ratio: 1" title="pink-light"></div>
+          <div style="background: #ffdd7d; width: 4rem; aspect-ratio: 1" title="yellow-light"></div>
+          <div style="background: #ffd45c; width: 4rem; aspect-ratio: 1" title="yellow"></div>
+          <div style="background: #ccaa4a; width: 4rem; aspect-ratio: 1" title="yellow-dark"></div>
         </div>
         <div>
-          <div style="background: #f281b3; width: 2rem; aspect-ratio: 1" title="pink"></div>
+          <div style="background: #47b78c; width: 4rem; aspect-ratio: 1" title="green-light"></div>
+          <div style="background: #19a56f; width: 4rem; aspect-ratio: 1" title="green"></div>
+          <div style="background: #148459; width: 4rem; aspect-ratio: 1" title="green-dark"></div>
         </div>
         <div>
-          <div style="background: #c2678f; width: 2rem; aspect-ratio: 1" title="pink-dark"></div>
-        </div>
-        <div>
-          <div style="background: #eb008b; width: 2rem; aspect-ratio: 1" title="hot-pink"></div>
-        </div>
-        <div>
-          <div style="background: #339daa; width: 2rem; aspect-ratio: 1" title="teal-light"></div>
-        </div>
-        <div>
-          <div style="background: #008495; width: 2rem; aspect-ratio: 1" title="teal"></div>
-        </div>
-        <div>
-          <div style="background: #006a77; width: 2rem; aspect-ratio: 1" title="teal-dark"></div>
-        </div>
-        <div>
-          <div style="background: #34bdf2; width: 2rem; aspect-ratio: 1" title="blue-light"></div>
-        </div>
-        <div>
-          <div style="background: #01acef; width: 2rem; aspect-ratio: 1" title="blue"></div>
-        </div>
-        <div>
-          <div style="background: #018abf; width: 2rem; aspect-ratio: 1" title="blue-dark"></div>
-        </div>
-        <div>
-          <div style="background: #f26f5a; width: 2rem; aspect-ratio: 1" title="red-light"></div>
-        </div>
-        <div>
-          <div style="background: #ef4b31; width: 2rem; aspect-ratio: 1" title="red"></div>
-        </div>
-        <div>
-          <div style="background: #bf3c27; width: 2rem; aspect-ratio: 1" title="red-dark"></div>
-        </div>
-        <div>
-          <div style="background: #ffd45c; width: 2rem; aspect-ratio: 1" title="yellow"></div>
-        </div>
-        <div>
-          <div style="background: #19a56f; width: 2rem; aspect-ratio: 1" title="green"></div>
-        </div>
-        <div>
-          <div style="background: rgb(237, 237, 237); width: 2rem; aspect-ratio: 1" title="light-grey"></div>
-        </div>
-        <div>
-          <div style="background: rgb(153, 153, 153); width: 2rem; aspect-ratio: 1" title="mid-grey"></div>
-        </div>
-        <div>
-          <div style="background: rgb(68, 68, 68); width: 2rem; aspect-ratio: 1" title="dark-grey"></div>
-        </div>
-        <div>
-          <div style="background: #292828; width: 2rem; aspect-ratio: 1" title="black"></div>
+          <div style="background: #fff; width: 4rem; height: 2.4rem" title="white"></div>
+          <div style="background: rgb(237, 237, 237); width: 4rem; height: 2.4rem" title="light-grey"></div>
+          <div style="background: rgb(153, 153, 153); width: 4rem; height: 2.4rem" title="mid-grey"></div>
+          <div style="background: rgb(68, 68, 68); width: 4rem; height: 2.4rem" title="dark-grey"></div>
+          <div style="background: #292828; width: 4rem; height: 2.4rem" title="black"></div>
         </div>
       </div>
     </footer>
@@ -580,7 +575,7 @@
 <script type="text/worker">
   const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom', 'signature'];
+const G_EDITORS = ['header', 'gear', 'traits', 'legacy', 'doom', 'signature'];
 
 const G_REPEATING_FIELDSETS = [
   // character

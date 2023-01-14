@@ -1,6 +1,6 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['gear', 'your_character', 'traits', 'legacy', 'doom', 'signature'];
+const G_EDITORS = ['header', 'gear', 'traits', 'legacy', 'doom', 'signature'];
 
 const G_REPEATING_FIELDSETS = [
   // character

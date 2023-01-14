@@ -3,6 +3,7 @@
   background-color: hsl(random(360) 80% 80% / 80%);
   &__view {
     .doom__name {
+      display: block;
       border-bottom: $input-border;
     }
   }

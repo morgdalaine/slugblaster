@@ -25,6 +25,7 @@ $grid-columns: 12;
 $gutter-gap: $p-lg;
 $grid-gutter-row: $p-md;
 $grid-gutter-col: $p-md;
+$grid-gutter: $grid-gutter-row $grid-gutter-col;
 
 /// Regular font family
 /// @type List
@@ -39,14 +40,17 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
 // Fonts
-$font-nav: 'Permanent Marker', 'Comic Sans MS', serif !default;
-$font-title: 'Permanent Marker', 'Comic Sans MS', serif !default;
+$font-title: 'Rubik Dirt', 'Comic Sans MS', serif !default;
+$font-nav: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
+$font-playbook: 'Rubik Dirt', 'Comic Sans MS', serif !default;
+$font-nav-tab: 'Sofia Sans Condensed', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
+
 $font-label: 'Sofia Sans', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
 $font-body: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-input: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-action: 'Permanent Marker', 'Comic Sans MS', serif !default;
+$font-action: 'Coiny', 'Comic Sans MS', serif !default;
 $font-header: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Caveat', 'Comic Sans MS', cursive !default;
+$font-handwritten: 'Gloria Hallelujah', 'Caveat', 'Comic Sans MS', cursive !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
@@ -121,8 +125,14 @@ $blue-dark: shade-color($blue, 20%);
 $red: #ef4b31;
 $red-light: tint-color($red, 20%);
 $red-dark: shade-color($red, 20%);
+
 $yellow: #ffd45c;
+$yellow-light: tint-color($yellow, 20%);
+$yellow-dark: shade-color($yellow, 20%);
+
 $green: #19a56f;
+$green-light: tint-color($green, 20%);
+$green-dark: shade-color($green, 20%);
 
 $foreground: var(--foreground);
 
@@ -144,6 +154,13 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px,
 ) !default;
+
+// Nav-Tab
+$nav-tab-color: $white;
+$nav-tab-background: $teal;
+$nav-tab-background-active: $teal-dark;
+$nav-tab-background-hover: $teal-light;
+$nav-tab-border: 2px solid $teal;
 
 // Inputs
 $input-component-size: 2.5rem;

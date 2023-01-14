@@ -4,7 +4,7 @@
 
   &__wrapper {
     display: grid;
-    gap: $grid-gutter-row $grid-gutter-col;
+    gap: $grid-gutter;
     height: 100%;
   }
 
@@ -24,7 +24,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: $grid-gutter-row $grid-gutter-col;
+    gap: $grid-gutter;
     justify-content: space-between;
 
     // box-shadow: 0 4px 2px -2px black;

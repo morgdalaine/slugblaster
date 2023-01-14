@@ -1,0 +1,11 @@
+- const { trouble } = data.character;
++blob({ name: 'trouble', title: 'Trouble' })
+  +block('content')
+    .trouble__track
+      each radio in trouble.track
+        label.trouble__checkbox
+          +field(radio).checkbox--circle
+          span.visually-hidden(data-i18n=`trouble_${radio.value}`)
+    .trouble__actions
+      each action in trouble.actions
+        +action(action)

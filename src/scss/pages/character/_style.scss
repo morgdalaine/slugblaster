@@ -1,0 +1,20 @@
+.style {
+  $this: '.style';
+  background-color: hsl(random(360) 80% 80% / 80%);
+  flex: 1;
+
+  &__track {
+    display: flex;
+    gap: $grid-gutter;
+    margin: $m-md;
+  }
+  &__checkbox {
+    // font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    // font-weight: bold;
+    // line-height: 1.1;
+    // display: grid;
+    // grid-template-columns: 1em auto;
+    // gap: 0.5em;
+  }
+}

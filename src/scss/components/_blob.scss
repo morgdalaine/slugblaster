@@ -6,9 +6,12 @@
   &__wrapper {
     display: grid;
   }
+  &__title {
+    @extend .panel__title;
+  }
   &--editor {
     grid-template-columns: 1fr auto;
     // grid-template-areas: 'content editor';
-    gap: $grid-gutter-row $grid-gutter-col;
+    gap: $grid-gutter;
   }
 }

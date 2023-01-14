@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Coiny&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300:400:700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -18,19 +20,6 @@ html .sheetform,
 html .charactersheet {
   box-sizing: border-box;
   height: calc(100% - 2rem);
-}
-html .characterviewer {
-  display: grid !important;
-  grid-template-rows: auto 1fr;
-}
-html .characterviewer .nav-tabs {
-  border: none;
-}
-html .characterviewer .nav-tabs > li > a {
-  border: none !important;
-}
-html .characterviewer .charsheet {
-  padding: 0;
 }
 
 .charsheet * {
@@ -120,26 +109,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   margin: 0;
 }
 
-.characterviewer .content {
-  margin-bottom: 0;
-}
-.characterviewer .nav-tabs {
-  padding-top: 0.2rem;
-  margin-bottom: 1rem;
-}
-.characterviewer .nav-tabs > li {
-  margin-bottom: 0;
-}
-.characterviewer .nav-tabs > li > a {
-  padding: 0.25rem;
-}
-.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1) {
-  opacity: 0.3;
-}
-.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):focus {
-  opacity: 1;
-}
-
 .ui-dialog .largedialog {
   padding: 0;
 }
@@ -152,11 +121,66 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   font: normal 1rem/1.4 "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
 }
 
-.characterviewer .nav-tabs > li > a {
-  font-variant: small-caps;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+div#tab-content.tab-content .attributesabilities {
+  min-width: 525px;
+}
+div#tab-content.tab-content .attributesabilities .divider {
+  border: none;
+}
+
+html .characterviewer {
+  display: grid !important;
+  grid-template-rows: auto 1fr;
+}
+html .characterviewer .content {
+  margin-bottom: 0;
+}
+html .characterviewer .charsheet {
+  padding: 0;
+}
+html .characterviewer .nav-tabs {
+  padding-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border: none;
+}
+html .characterviewer .nav-tabs > li {
+  margin-bottom: 0;
+}
+html .characterviewer .nav-tabs > li.active > a {
+  opacity: 1 !important;
+  color: #fff;
+  background: #008495;
+}
+html .characterviewer .nav-tabs > li > a {
+  border: none !important;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  font-family: "Sofia Sans Condensed", "Sofia Sans", "Ubuntu", "Nunito", sans-serif;
   font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+html .characterviewer .nav-tabs > li > a:hover, html .characterviewer .nav-tabs > li > a:active {
+  color: #fff;
+}
+html .characterviewer .nav-tabs > li > a:hover {
+  background: #339daa;
+}
+html .characterviewer .nav-tabs > li > a:active {
+  background: #006a77;
+}
+html .characterviewer .nav-tabs > li.active > a,
+html .characterviewer .nav-tabs > li.active > a:hover,
+html .characterviewer .nav-tabs > li.active > a:focus, html .characterviewer .nav-tabs > li:not(.active) > a,
+html .characterviewer .nav-tabs > li:not(.active) > a:hover,
+html .characterviewer .nav-tabs > li:not(.active) > a:focus {
   text-decoration: none;
+}
+html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1) {
+  opacity: 0.3;
+}
+html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):focus {
+  opacity: 1;
 }
 
 * {
@@ -207,9 +231,6 @@ html .charsheet .slugblaster {
   /**
    * Basic typography style for copy text
    */
-  /* CSS */
-  /* CSS */
-  /* CSS */
 }
 html .charsheet .slugblaster .row__header {
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
@@ -417,198 +438,6 @@ html .charsheet .slugblaster .action__group button:last-of-type {
 html .charsheet .slugblaster .action-pill {
   border-radius: 1rem;
 }
-html .charsheet .slugblaster .button--glitch,
-html .charsheet .slugblaster .button--glitch:after {
-  width: 150px;
-  height: 76px;
-  line-height: 78px;
-  font-size: 20px;
-  font-family: "Bebas Neue", sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
-  border: 0;
-  color: #fff;
-  letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00e6f6;
-  outline: transparent;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-html .charsheet .slugblaster .button--glitch:after {
-  --slice-0: inset(50% 50% 50% 50%);
-  --slice-1: inset(80% -6px 0 0);
-  --slice-2: inset(50% -6px 30% 0);
-  --slice-3: inset(10% -6px 85% 0);
-  --slice-4: inset(40% -6px 43% 0);
-  --slice-5: inset(80% -6px 5% 0);
-  content: "!";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
-  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
-  clip-path: var(--slice-0);
-}
-html .charsheet .slugblaster .button--glitch:hover:after {
-  animation: 1s glitch;
-  animation-timing-function: steps(2, end);
-}
-@keyframes glitch {
-  0% {
-    clip-path: var(--slice-1);
-    transform: translate(-20px, -10px);
-  }
-  10% {
-    clip-path: var(--slice-3);
-    transform: translate(10px, 10px);
-  }
-  20% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 10px);
-  }
-  30% {
-    clip-path: var(--slice-3);
-    transform: translate(0px, 5px);
-  }
-  40% {
-    clip-path: var(--slice-2);
-    transform: translate(-5px, 0px);
-  }
-  50% {
-    clip-path: var(--slice-3);
-    transform: translate(5px, 0px);
-  }
-  60% {
-    clip-path: var(--slice-4);
-    transform: translate(5px, 10px);
-  }
-  70% {
-    clip-path: var(--slice-2);
-    transform: translate(-10px, 10px);
-  }
-  80% {
-    clip-path: var(--slice-5);
-    transform: translate(20px, -10px);
-  }
-  90% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 0px);
-  }
-  100% {
-    clip-path: var(--slice-1);
-    transform: translate(0);
-  }
-}
-@media (min-width: 768px) {
-  html .charsheet .slugblaster .button--glitch,
-  html .charsheet .slugblaster .button--glitch:after {
-    width: 200px;
-    height: 86px;
-    line-height: 88px;
-  }
-}
-html .charsheet .slugblaster .button-3d {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-@media (min-width: 768px) {
-  html .charsheet .slugblaster .button-3d {
-    padding: 0.25em 0.75em;
-  }
-}
-html .charsheet .slugblaster .button-3d:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
-}
-html .charsheet .slugblaster .button--alt-text {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  padding: 0.5rem;
-}
-html .charsheet .slugblaster .button--alt-text::after {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(1, 172, 239, 0.5);
-  transform-origin: bottom center;
-  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  transform: skewY(9.3deg) scaleY(0);
-  z-index: 50;
-}
-html .charsheet .slugblaster .button--alt-text:hover::after {
-  transform-origin: bottom center;
-  transform: skewY(9.3deg) scaleY(2);
-}
-html .charsheet .slugblaster .button--alt-text:hover span:last-child {
-  transform: translateX(-50%) translateY(-80%);
-  opacity: 1;
-  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-}
-html .charsheet .slugblaster .button--alt-text span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-html .charsheet .slugblaster .button--alt-text span:last-child {
-  color: white;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 100;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translateY(225%) translateX(-50%);
-  white-space: nowrap;
-}
-html .charsheet .slugblaster .button-54 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-html .charsheet .slugblaster .button-54:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
-}
-@media (min-width: 768px) {
-  html .charsheet .slugblaster .button-54 {
-    padding: 0.25em 0.75em;
-  }
-}
 html .charsheet .slugblaster .editor {
   height: 100%;
   position: relative;
@@ -729,8 +558,7 @@ html .charsheet .slugblaster .panel__header {
   gap: 0.5rem 0.5rem;
   justify-content: space-between;
 }
-html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .character .style__title,
-html .charsheet .slugblaster .character .trouble__title, html .charsheet .slugblaster .character .turbo__title, html .charsheet .slugblaster .character .slams__title, html .charsheet .slugblaster .character .attitude__title {
+html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .blob__title {
   font-size: 2rem;
   text-transform: uppercase;
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
@@ -755,10 +583,14 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 html .charsheet .slugblaster .character {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character__style-trouble {
   grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  justify-content: space-around;
 }
 html .charsheet .slugblaster .character__col {
   display: flex;
@@ -813,13 +645,14 @@ html .charsheet .slugblaster .character .attitude__kick:checked {
   opacity: 0.5;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(166deg, 80%, 80%, 0.8);
+  background-color: hsla(63deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .doom__view .doom__name {
+  display: block;
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(155deg, 80%, 80%, 0.8);
+  background-color: hsla(137deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .gear__view {
   row-gap: 0.5rem;
@@ -839,25 +672,38 @@ html .charsheet .slugblaster .character .repeating__edit {
   padding: 0.5rem;
   background-color: #f59ac2;
 }
+html .charsheet .slugblaster .character .header {
+  background-color: hsla(200deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .header__title[type=text] {
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  height: auto;
+}
+html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblaster .character .header__view {
+  gap: 0.5rem 0.5rem;
+}
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(57deg, 80%, 80%, 0.8);
+  background-color: hsla(310deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .legacy__view .legacy__name {
+  display: block;
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(51deg, 80%, 80%, 0.8);
+  background-color: hsla(293deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
   font-variant: small-caps;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Rubik Dirt", "Comic Sans MS", serif;
 }
 html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugblaster .character .signature__view {
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(326deg, 80%, 80%, 0.8);
+  background-color: hsla(359deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -873,6 +719,61 @@ html .charsheet .slugblaster .character .slams__input--text[type=text] {
 }
 html .charsheet .slugblaster .character .slams__input--text[type=text]:active, html .charsheet .slugblaster .character .slams__input--text[type=text]:hover, html .charsheet .slugblaster .character .slams__input--text[type=text]:focus {
   border: 2px solid var(--input-border-color-active);
+}
+html .charsheet .slugblaster .character .style {
+  background-color: hsla(332deg, 80%, 80%, 0.8);
+  flex: 1;
+}
+html .charsheet .slugblaster .character .style__track {
+  display: flex;
+  gap: 0.5rem 0.5rem;
+  margin: 0.5rem;
+}
+html .charsheet .slugblaster .character .style__checkbox {
+  font-size: 1rem;
+}
+html .charsheet .slugblaster .character .traits {
+  background-color: hsla(30deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .traits__view {
+  row-gap: 0.5rem;
+}
+html .charsheet .slugblaster .character .traits__check {
+  display: flex;
+  align-items: center;
+}
+html .charsheet .slugblaster .character .traits .trait__name {
+  font-weight: 700;
+}
+html .charsheet .slugblaster .character .repeating__view .traits__check span {
+  margin-inline-start: 0.25rem;
+}
+html .charsheet .slugblaster .character .repeating__edit {
+  position: relative;
+  padding: 0.5rem;
+  background-color: #f59ac2;
+}
+html .charsheet .slugblaster .character .trouble {
+  background-color: hsla(210deg, 80%, 80%, 0.8);
+  flex: 1;
+}
+html .charsheet .slugblaster .character .trouble__track {
+  display: flex;
+  gap: 0.5rem 0.5rem;
+  margin: 0.5rem;
+}
+html .charsheet .slugblaster .character .trouble__checkbox {
+  font-size: 1rem;
+}
+html .charsheet .slugblaster .character .trouble__actions {
+  display: flex;
+  gap: 0 0.5rem;
+}
+html .charsheet .slugblaster .character .trouble__action[type=action] {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-inline: 0.25rem;
 }
 html .charsheet .slugblaster .character .turbo {
   color: #fff;
@@ -920,62 +821,6 @@ html .charsheet .slugblaster .character .turbo__kick {
 }
 html .charsheet .slugblaster .character .turbo__kick:checked {
   opacity: 0.5;
-}
-html .charsheet .slugblaster .character .style-trouble__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-html .charsheet .slugblaster .character .style,
-html .charsheet .slugblaster .character .trouble {
-  flex: 1;
-}
-html .charsheet .slugblaster .character .style__track,
-html .charsheet .slugblaster .character .trouble__track {
-  display: flex;
-  gap: 0.5rem 0.5rem;
-  margin: 0.5rem;
-}
-html .charsheet .slugblaster .character .style__checkbox,
-html .charsheet .slugblaster .character .trouble__checkbox {
-  font-size: 1rem;
-}
-html .charsheet .slugblaster .character .style {
-  background-color: hsla(227deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(334deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster .character .trouble__actions {
-  display: flex;
-  gap: 0 0.5rem;
-}
-html .charsheet .slugblaster .character .trouble__action[type=action] {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding-inline: 0.25rem;
-}
-html .charsheet .slugblaster .character .traits {
-  background-color: hsla(186deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster .character .traits__view {
-  row-gap: 0.5rem;
-}
-html .charsheet .slugblaster .character .traits__check {
-  display: flex;
-  align-items: center;
-}
-html .charsheet .slugblaster .character .traits .trait__name {
-  font-weight: 700;
-}
-html .charsheet .slugblaster .character .repeating__view .traits__check span {
-  margin-inline-start: 0.25rem;
-}
-html .charsheet .slugblaster .character .repeating__edit {
-  position: relative;
-  padding: 0.5rem;
-  background-color: #f59ac2;
 }
 html .charsheet .slugblaster .container {
   background: transparent;
@@ -1615,133 +1460,35 @@ html .charsheet .slugblaster .colspan-12 {
   height: 100%;
   grid-column: span 12;
 }
-html .charsheet .slugblaster .header {
-  position: relative;
-  overflow: hidden;
+html .charsheet .slugblaster .tophat {
+  background-color: hsla(34deg, 80%, 80%, 0.8);
 }
-html .charsheet .slugblaster .header .editor__controller[value="0"] ~ .header__wrapper::after {
-  clip-path: circle(25% at 80% 20%);
-}
-html .charsheet .slugblaster .header .editor__controller[value=on] ~ .header__wrapper::after {
-  clip-path: circle(200% at 50% 50%);
-}
-html .charsheet .slugblaster .header__wrapper {
-  position: relative;
-}
-html .charsheet .slugblaster .header__wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s ease-in-out;
-  z-index: -1;
-}
-html .charsheet .slugblaster .header__edit .header__field--character_avatar img, html .charsheet .slugblaster .header__view .header__field--character_avatar img {
-  height: 4rem;
-  border-top-left-radius: 1rem;
-  box-shadow: 0 0 0 0.2rem #292828;
-}
-html .charsheet .slugblaster .header__view {
-  row-gap: 0.5rem;
-}
-html .charsheet .slugblaster .header__view .header__header {
+html .charsheet .slugblaster .tophat__content {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.5rem;
+}
+html .charsheet .slugblaster .tophat__title {
+  font-size: 3rem;
+  font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  text-transform: uppercase;
+}
+html .charsheet .slugblaster .nav {
+  display: flex;
+  gap: 0.5rem 0.5rem;
   align-items: center;
 }
-html .charsheet .slugblaster .header__view .header__field--character_name {
-  text-align: left;
-  font-size: 2rem;
-  width: 50%;
-}
-html .charsheet .slugblaster .header__view .header__field--pronouns {
-  text-align: center;
-}
-html .charsheet .slugblaster .header__view .header__field--background span {
-  font-size: 1.25rem;
-  font-style: italic;
-}
-html .charsheet .slugblaster .primary-navigation {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: hsla(163deg, 80%, 80%, 0.8);
-  background-color: #ffd45c;
-}
-html .charsheet .slugblaster .primary-navigation li {
-  flex: 1;
-}
-html .charsheet .slugblaster .nav__button {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 0.5rem;
-}
-html .charsheet .slugblaster .nav__image {
-  width: 1.5rem;
-  aspect-ratio: 1;
-  max-height: 1.5rem;
-}
-html .charsheet .slugblaster .nav__button:hover {
-  background-color: rgba(41, 40, 40, 0.2);
-  color: #fff;
-  border-radius: 2rem;
-}
-html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ * .nav__button--miscellaneous, html .charsheet .slugblaster input[name=attr_nav][value=inventory] ~ * .nav__button--inventory, html .charsheet .slugblaster input[name=attr_nav][value=attacks] ~ * .nav__button--attacks, html .charsheet .slugblaster input[name=attr_nav][value=advskills] ~ * .nav__button--advskills {
-  background-color: rgba(41, 40, 40, 0.2);
-  background-color: #01acef;
-  color: #fff;
-  border-radius: 2rem;
-}
-html .charsheet .slugblaster .page--advskills {
-  display: none;
-  background-color: hsla(273deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--advskills {
-  display: block;
-}
-html .charsheet .slugblaster input[name=attr_nav][value=advskills] ~ .page--advskills {
-  display: block;
-}
-html .charsheet .slugblaster .page--attacks {
-  display: none;
-  background-color: hsla(275deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--attacks {
-  display: block;
-}
-html .charsheet .slugblaster input[name=attr_nav][value=attacks] ~ .page--attacks {
-  display: block;
-}
-html .charsheet .slugblaster .page--inventory {
-  display: none;
-  background-color: hsla(130deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--inventory {
-  display: block;
-}
-html .charsheet .slugblaster input[name=attr_nav][value=inventory] ~ .page--inventory {
-  display: block;
-}
-html .charsheet .slugblaster .page--miscellaneous {
-  display: none;
-  background-color: hsla(194deg, 80%, 80%, 0.8);
-}
-html .charsheet .slugblaster input[name=attr_nav][value=all] ~ .page--miscellaneous {
-  display: block;
-}
-html .charsheet .slugblaster input[name=attr_nav][value=miscellaneous] ~ .page--miscellaneous {
-  display: block;
+html .charsheet .slugblaster .nav__action {
+  min-height: 3rem;
+  padding-inline: 0.5rem;
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  text-transform: uppercase;
 }
 html .charsheet .slugblaster .footer {
-  float: right;
+  background-color: hsla(294deg, 80%, 80%, 0.8);
   padding: 0.5rem;
-  background-color: hsla(60deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .footer > span {
   opacity: 0.5;
@@ -1749,7 +1496,7 @@ html .charsheet .slugblaster .footer > span {
 html .charsheet .slugblaster .footer > span::before {
   content: "v";
 }
-html .charsheet .slugblaster__wrapper {
+html__wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem 0;
