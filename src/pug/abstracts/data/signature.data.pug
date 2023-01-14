@@ -61,28 +61,32 @@
     ],
     turbo: {
       fields: [
-        { name: 'turbo_boost', label: 'Boost', type: 'hidden', blockName: 'turbo' },
-        { name: 'turbo_kick', label: 'Kick', type: 'hidden', blockName: 'turbo' },
+        { name: 'turbo_boost', label: 'Turbo Boost', type: 'hidden', blockName: 'turbo' },
+        { name: 'turbo_kick', label: 'Turbo Kick', type: 'hidden', blockName: 'turbo' },
       ],
     },
     mods: {
       hidden: [{ name: 'mod_autogen', type: 'hidden', blockName: 'mod' }],
+      fields: [
+        { name: 'turbo_boost', label: 'Add +1 boost', type: 'checkbox', blockName: 'mods' },
+        { name: 'turbo_kick', label: 'Add +1 kick', type: 'checkbox', blockName: 'mods' },
+      ],
       repeating: [
-        { name: 'mod_check', label: 'Select mod', type: 'checkbox', span: 1, blockName: 'mod' },
+        { name: 'mod_check', label: 'Select mod', type: 'checkbox', span: 1, blockName: 'mods' },
         {
           name: 'mod_name',
           label: 'mod',
           placeholder: 'Slip Rattle',
           type: 'text',
           span: 11,
-          blockName: 'mod',
+          blockName: 'mods',
         },
         {
           name: 'mod_cost',
           label: 'Cost',
           placeholder: '1 coil, 1 disc',
           type: 'text',
-          blockName: 'mod',
+          blockName: 'mods',
         },
         {
           name: 'mod_description',
@@ -90,7 +94,7 @@
           placeholder:
             'Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse.',
           type: 'textarea',
-          blockName: 'mod',
+          blockName: 'mods',
         },
       ],
     },

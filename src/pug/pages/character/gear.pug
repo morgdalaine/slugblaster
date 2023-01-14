@@ -1,9 +1,8 @@
 - const { gear } = data.character;
 +panel({ name: 'gear', title: 'Gear' })
   +block('content')
-    - const { board, raygun } = gear;
-
     +editorblock('gear')
+      - const { board, raygun } = gear;
       +block('edit')
         .gear__item
           label.gear__label(data-i18n=board.name)= board.label
@@ -20,36 +19,37 @@
           label.gear__label(data-i18n=raygun.name)= raygun.label
 
 +blob({ name: 'gear'})
-  +repeating('gear')
-    - const { hidden, repeating } = gear;
-    - const [check, name, cost, desc] = repeating;
-    +block('edit')
-      .row.gear__edit
-        each field in hidden
-          +field(field)
-        each field in repeating
-          - const hideLabel = ['gear_check', 'gear_name'].includes(field.name);
-          - const divClass = field.span ? `col-${field.span}` : '';
-          - const labelClass = hideLabel ? 'visually-hidden' : null;
+  +block('content')
+    +repeating('gear')
+      - const { hidden, repeating } = gear;
+      - const [check, name, cost, desc] = repeating;
+      +block('edit')
+        .row.gear__edit
+          each field in hidden
+            +field(field)
+          each field in repeating
+            - const hideLabel = ['gear_check', 'gear_name'].includes(field.name);
+            - const divClass = field.span ? `col-${field.span}` : '';
+            - const labelClass = hideLabel ? 'visually-hidden' : null;
 
-          .gear__field(class=`${field.name} ${divClass}`)
-            unless field.type === "checkbox"
-              +field(field)
-            else
-              +field(field).checkbox--scribble
-            label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+            .gear__field(class=`${field.name} ${divClass}`)
+              unless field.type === "checkbox"
+                +field(field)
+              else
+                +field(field).checkbox--scribble
+              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
 
-    +block('view')
-      .gear__view
-        label.gear__check
-          +field(check).checkbox--scribble
-          +span(name)
+      +block('view')
+        .gear__view
+          label.gear__check
+            +field(check).checkbox--scribble
+            +span(name)
 
-      //- .gear__extra
-      //-   each extra in extragear
-      //-     label.gear__extra--item
-      //-       +field({...extra, type: 'checkbox'})
-      //-       if extra.type === 'checkbox'
-      //-         span(data-i18n=extra.name)= extra.label
-      //-       else
-      //-         +span({...extra, name: `${extra.name}_name`})
+        //- .gear__extra
+        //-   each extra in extragear
+        //-     label.gear__extra--item
+        //-       +field({...extra, type: 'checkbox'})
+        //-       if extra.type === 'checkbox'
+        //-         span(data-i18n=extra.name)= extra.label
+        //-       else
+        //-         +span({...extra, name: `${extra.name}_name`})

@@ -580,7 +580,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: hsla(24deg, 80%, 80%, 0.8);
+  background-color: hsla(261deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -596,7 +596,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
   padding: 0.5rem;
-  background-color: hsla(30deg, 80%, 80%, 0.8);
+  background-color: hsla(142deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character {
   display: grid;
@@ -624,31 +624,69 @@ html .charsheet .slugblaster .character .attitude__clickies {
   gap: 0 0.5rem;
   margin-top: 1rem;
 }
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="1"] ~ * .attitude__boost--1 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="2"] ~ * .attitude__boost--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="2"] ~ * .attitude__boost--2 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="3"] ~ * .attitude__boost--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="3"] ~ * .attitude__boost--2,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="3"] ~ * .attitude__boost--3 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="4"] ~ * .attitude__boost--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="4"] ~ * .attitude__boost--2,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="4"] ~ * .attitude__boost--3,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="4"] ~ * .attitude__boost--4 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="1"] ~ * .attitude__kick--1 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="2"] ~ * .attitude__kick--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="2"] ~ * .attitude__kick--2 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="3"] ~ * .attitude__kick--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="3"] ~ * .attitude__kick--2,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="3"] ~ * .attitude__kick--3 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--1,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--2,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--3,
+html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--4 {
+  display: grid;
+}
 html .charsheet .slugblaster .character .attitude__boost, html .charsheet .slugblaster .character .attitude__kick {
+  display: none;
   width: 3rem;
   aspect-ratio: 1;
-  display: grid;
+}
+html .charsheet .slugblaster .character .attitude__boost input, html .charsheet .slugblaster .character .attitude__kick input {
   outline: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-html .charsheet .slugblaster .character .attitude__boost:checked, html .charsheet .slugblaster .character .attitude__kick:checked {
+html .charsheet .slugblaster .character .attitude__boost input:checked, html .charsheet .slugblaster .character .attitude__kick input:checked {
   opacity: 0.5;
 }
-html .charsheet .slugblaster .character .attitude__boost:focus, html .charsheet .slugblaster .character .attitude__kick:focus {
+html .charsheet .slugblaster .character .attitude__boost input:focus, html .charsheet .slugblaster .character .attitude__kick input:focus {
   outline: 0;
 }
-html .charsheet .slugblaster .character .attitude__boost {
+html .charsheet .slugblaster .character .attitude__boost input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
 }
-html .charsheet .slugblaster .character .attitude__kick {
+html .charsheet .slugblaster .character .attitude__kick input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .components {
-  background-color: hsla(124deg, 80%, 80%, 0.8);
+  background-color: hsla(162deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -667,7 +705,7 @@ html .charsheet .slugblaster .character .components__component--track {
   justify-content: center;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(64deg, 80%, 80%, 0.8);
+  background-color: hsla(320deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -677,7 +715,7 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: hsla(211deg, 80%, 80%, 0.8);
+  background-color: hsla(163deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .downtime + .panel {
   margin-top: 0.5rem;
@@ -710,7 +748,7 @@ html .charsheet .slugblaster .character .downtime__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(221deg, 80%, 80%, 0.8);
+  background-color: hsla(4deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .gear.blob {
   padding-top: 1rem;
@@ -729,7 +767,7 @@ html .charsheet .slugblaster .character .gear__check span {
   text-transform: none;
 }
 html .charsheet .slugblaster .character .header {
-  background-color: hsla(141deg, 80%, 80%, 0.8);
+  background-color: hsla(326deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .header__title[type=text] {
   font-size: 2rem;
@@ -741,7 +779,7 @@ html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblas
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(12deg, 80%, 80%, 0.8);
+  background-color: hsla(220deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -751,10 +789,16 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: hsla(179deg, 80%, 80%, 0.8);
+  background-color: hsla(272deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .mods__edit .mods__turbo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  justify-content: space-between;
 }
 html .charsheet .slugblaster .character .mods__check {
   display: flex;
@@ -770,7 +814,7 @@ html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(180deg, 80%, 80%, 0.8);
+  background-color: hsla(192deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
@@ -782,7 +826,7 @@ html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugb
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(121deg, 80%, 80%, 0.8);
+  background-color: hsla(227deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -800,7 +844,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: hsla(358deg, 80%, 80%, 0.8);
+  background-color: hsla(84deg, 80%, 80%, 0.8);
   flex: 1;
 }
 html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
@@ -820,7 +864,7 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: hsla(122deg, 80%, 80%, 0.8);
+  background-color: hsla(156deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
@@ -839,7 +883,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(56deg, 80%, 80%, 0.8);
+  background-color: hsla(226deg, 80%, 80%, 0.8);
   flex: 1;
 }
 html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
@@ -881,28 +925,37 @@ html .charsheet .slugblaster .character .turbo__clickies {
   gap: 0 0.5rem;
   margin-top: 1rem;
 }
+html .charsheet .slugblaster .character .turbo input[name=attr_turbo_boost][value=on] ~ * .turbo__boost--3 {
+  display: grid;
+}
+html .charsheet .slugblaster .character .turbo input[name=attr_turbo_kick][value=on] ~ * .turbo__kick--3 {
+  display: grid;
+}
 html .charsheet .slugblaster .character .turbo__boost, html .charsheet .slugblaster .character .turbo__kick {
+  display: grid;
   width: 3rem;
   aspect-ratio: 1;
-  display: grid;
+}
+html .charsheet .slugblaster .character .turbo__boost--3, html .charsheet .slugblaster .character .turbo__kick--3 {
+  display: none;
+}
+html .charsheet .slugblaster .character .turbo__boost input, html .charsheet .slugblaster .character .turbo__kick input {
   outline: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-html .charsheet .slugblaster .character .turbo__boost:checked, html .charsheet .slugblaster .character .turbo__kick:checked {
+html .charsheet .slugblaster .character .turbo__boost input:checked, html .charsheet .slugblaster .character .turbo__kick input:checked {
   opacity: 0.5;
 }
-html .charsheet .slugblaster .character .turbo__boost:focus, html .charsheet .slugblaster .character .turbo__kick:focus {
+html .charsheet .slugblaster .character .turbo__boost input:focus, html .charsheet .slugblaster .character .turbo__kick input:focus {
   outline: 0;
 }
-html .charsheet .slugblaster .character .turbo__boost {
-  appearance: none;
+html .charsheet .slugblaster .character .turbo__boost input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
 }
-html .charsheet .slugblaster .character .turbo__kick {
-  appearance: none;
+html .charsheet .slugblaster .character .turbo__kick input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
@@ -1545,7 +1598,7 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: hsla(170deg, 80%, 80%, 0.8);
+  background-color: hsla(8deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
@@ -1571,7 +1624,7 @@ html .charsheet .slugblaster .nav__action {
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .footer {
-  background-color: hsla(0deg, 80%, 80%, 0.8);
+  background-color: hsla(239deg, 80%, 80%, 0.8);
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {

@@ -1,6 +1,17 @@
 - const { mods } = data.signature;
 +panel({ name: 'mods', title: 'Mods' })
   +block('content')
+    +editorblock('mods')
+      - const { fields } = mods;
+      +block('edit')
+        .mods__turbo
+          each field in fields
+            label.mods__check
+              +field(field).checkbox--scribble
+              span(data-i18n='mod_' + field.name)= field.label
+
++blob({ name: 'mods' })
+  +block('content')
     +repeating('mods')
       - const { hidden, repeating } = mods;
       - const [check, name, desc] = repeating;

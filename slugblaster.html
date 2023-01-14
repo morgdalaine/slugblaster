@@ -216,49 +216,49 @@
           <div class="blob gear">
             <input class="editor__controller" name="attr_gear_editor" type="hidden" value="0"/>
             <div class="blob__wrapper">
-              <div class="repeating">
-                <input class="repeating__is-empty" name="attr_gear_empty" value="0" type="hidden"/>
-                <input class="repeating__controller" name="attr_gear_editor" type="hidden"/>
-                <div class="repeating__empty">
-                  <div class="repeating__header"><span data-i18n="none_gear_repeating">None gear with left beef</span></div>
-                  <div class="repeating__subtitle"></div>
-                </div>
-                <fieldset class="repeating_gear">
-                  <div class="repeating__wrapper">
-                    <div class="repeating__edit">
-                      <div class="row gear__edit">
-                        <input name="attr_gear_autogen" type="hidden"/>
-                        <div class="gear__field gear_check col-1">
-                          <input class="checkbox--scribble" name="attr_gear_check" value="on" type="checkbox"/>
-                          <label class="visually-hidden" for="gear_check" data-i18n="gear_check">Select Gear</label>
-                        </div>
-                        <div class="gear__field gear_name col-11">
-                          <input class="gear__gear_name gear__input--text" name="attr_gear_name" id="gear_name" type="text" data-i18n-placeholder="placeholder_gear_name" placeholder="grappling hook"/>
-                          <label class="visually-hidden" for="gear_name" data-i18n="gear_name">Gear</label>
-                        </div>
-                        <div class="gear__field gear_cost ">
-                          <input class="gear__gear_cost gear__input--text" name="attr_gear_cost" id="gear_cost" type="text" data-i18n-placeholder="placeholder_gear_cost" placeholder="1 coil"/>
-                          <label for="gear_cost" data-i18n="gear_cost">Cost</label>
-                        </div>
-                        <div class="gear__field gear_description ">
-                          <textarea class="gear__gear_description gear__input--textarea" name="attr_gear_description" data-i18n-placeholder="placeholder_gear_description" placeholder="A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch."></textarea>
-                          <label for="gear_description" data-i18n="gear_description">Description</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="repeating__view">
-                      <div class="gear__view">
-                        <label class="gear__check">
-                          <input class="checkbox--scribble" name="attr_gear_check" value="on" type="checkbox"/><span name="attr_gear_name"></span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="repeating__delete">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
               <div class="blob__content gear__content">
+                <div class="repeating">
+                  <input class="repeating__is-empty" name="attr_gear_empty" value="0" type="hidden"/>
+                  <input class="repeating__controller" name="attr_gear_editor" type="hidden"/>
+                  <div class="repeating__empty">
+                    <div class="repeating__header"><span data-i18n="none_gear_repeating">None gear with left beef</span></div>
+                    <div class="repeating__subtitle"></div>
+                  </div>
+                  <fieldset class="repeating_gear">
+                    <div class="repeating__wrapper">
+                      <div class="repeating__edit">
+                        <div class="row gear__edit">
+                          <input name="attr_gear_autogen" type="hidden"/>
+                          <div class="gear__field gear_check col-1">
+                            <input class="checkbox--scribble" name="attr_gear_check" value="on" type="checkbox"/>
+                            <label class="visually-hidden" for="gear_check" data-i18n="gear_check">Select Gear</label>
+                          </div>
+                          <div class="gear__field gear_name col-11">
+                            <input class="gear__gear_name gear__input--text" name="attr_gear_name" id="gear_name" type="text" data-i18n-placeholder="placeholder_gear_name" placeholder="grappling hook"/>
+                            <label class="visually-hidden" for="gear_name" data-i18n="gear_name">Gear</label>
+                          </div>
+                          <div class="gear__field gear_cost ">
+                            <input class="gear__gear_cost gear__input--text" name="attr_gear_cost" id="gear_cost" type="text" data-i18n-placeholder="placeholder_gear_cost" placeholder="1 coil"/>
+                            <label for="gear_cost" data-i18n="gear_cost">Cost</label>
+                          </div>
+                          <div class="gear__field gear_description ">
+                            <textarea class="gear__gear_description gear__input--textarea" name="attr_gear_description" data-i18n-placeholder="placeholder_gear_description" placeholder="A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch."></textarea>
+                            <label for="gear_description" data-i18n="gear_description">Description</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="repeating__view">
+                        <div class="gear__view">
+                          <label class="gear__check">
+                            <input class="checkbox--scribble" name="attr_gear_check" value="on" type="checkbox"/><span name="attr_gear_name"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="repeating__delete">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
             </div>
           </div>
@@ -276,14 +276,30 @@
                 <input name="attr_attitude_boost" type="hidden"/>
                 <input name="attr_attitude_kick" type="hidden"/>
                 <div class="attitude__clickies">
-                  <input class="attitude__boost" name="attr_attitude_boost_1" value="on" type="checkbox"/>
-                  <input class="attitude__boost" name="attr_attitude_boost_2" value="on" type="checkbox"/>
-                  <input class="attitude__boost" name="attr_attitude_boost_3" value="on" type="checkbox"/>
-                  <input class="attitude__boost" name="attr_attitude_boost_4" value="on" type="checkbox"/>
-                  <input class="attitude__kick" name="attr_attitude_kick_1" value="on" type="checkbox"/>
-                  <input class="attitude__kick" name="attr_attitude_kick_2" value="on" type="checkbox"/>
-                  <input class="attitude__kick" name="attr_attitude_kick_3" value="on" type="checkbox"/>
-                  <input class="attitude__kick" name="attr_attitude_kick_4" value="on" type="checkbox"/>
+                  <label class="attitude__boost attitude__boost--1">
+                    <input name="attr_attitude_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_1">Attitude Boost 1</span>
+                  </label>
+                  <label class="attitude__boost attitude__boost--2">
+                    <input name="attr_attitude_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_2">Attitude Boost 2</span>
+                  </label>
+                  <label class="attitude__boost attitude__boost--3">
+                    <input name="attr_attitude_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_3">Attitude Boost 3</span>
+                  </label>
+                  <label class="attitude__boost attitude__boost--4">
+                    <input name="attr_attitude_boost_4" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_4">Attitude Boost 4</span>
+                  </label>
+                  <label class="attitude__kick attitude__kick--1">
+                    <input name="attr_attitude_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_1">Attitude Kick 1</span>
+                  </label>
+                  <label class="attitude__kick attitude__kick--2">
+                    <input name="attr_attitude_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_2">Attitude Kick 2</span>
+                  </label>
+                  <label class="attitude__kick attitude__kick--3">
+                    <input name="attr_attitude_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_3">Attitude Kick 3</span>
+                  </label>
+                  <label class="attitude__kick attitude__kick--4">
+                    <input name="attr_attitude_kick_4" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_4">Attitude Kick 4</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -357,12 +373,24 @@
                 <input name="attr_turbo_boost" type="hidden"/>
                 <input name="attr_turbo_kick" type="hidden"/>
                 <div class="turbo__clickies">
-                  <input class="turbo__boost" name="attr_turbo_boost_1" value="on" type="checkbox"/>
-                  <input class="turbo__boost" name="attr_turbo_boost_2" value="on" type="checkbox"/>
-                  <input class="turbo__boost" name="attr_turbo_boost_3" value="on" type="checkbox"/>
-                  <input class="turbo__kick" name="attr_turbo_kick_1" value="on" type="checkbox"/>
-                  <input class="turbo__kick" name="attr_turbo_kick_2" value="on" type="checkbox"/>
-                  <input class="turbo__kick" name="attr_turbo_kick_3" value="on" type="checkbox"/>
+                  <label class="turbo__boost turbo__boost--1">
+                    <input name="attr_turbo_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_1">Turbo Boost 1</span>
+                  </label>
+                  <label class="turbo__boost turbo__boost--2">
+                    <input name="attr_turbo_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_2">Turbo Boost 2</span>
+                  </label>
+                  <label class="turbo__boost turbo__boost--3">
+                    <input name="attr_turbo_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_3">Turbo Boost 3</span>
+                  </label>
+                  <label class="turbo__kick turbo__kick--1">
+                    <input name="attr_turbo_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_1">Turbo Kick 1</span>
+                  </label>
+                  <label class="turbo__kick turbo__kick--2">
+                    <input name="attr_turbo_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_2">Turbo Kick 2</span>
+                  </label>
+                  <label class="turbo__kick turbo__kick--3">
+                    <input name="attr_turbo_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_3">Turbo Kick 3</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -425,6 +453,27 @@
                 </button>
               </div>
               <div class="panel__content mods__content">
+                <div class="editor">
+                  <div class="editor__edit mods__edit">
+                    <div class="mods__turbo">
+                      <label class="mods__check">
+                        <input class="checkbox--scribble" name="attr_turbo_boost" value="on" type="checkbox"/><span data-i18n="mod_turbo_boost">Add +1 boost</span>
+                      </label>
+                      <label class="mods__check">
+                        <input class="checkbox--scribble" name="attr_turbo_kick" value="on" type="checkbox"/><span data-i18n="mod_turbo_kick">Add +1 kick</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="editor__view mods__view">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blob mods">
+            <input class="editor__controller" name="attr_mods_editor" type="hidden" value="0"/>
+            <div class="blob__wrapper">
+              <div class="blob__content mods__content">
                 <div class="repeating">
                   <input class="repeating__is-empty" name="attr_mods_empty" value="0" type="hidden"/>
                   <input class="repeating__controller" name="attr_mods_editor" type="hidden"/>
@@ -442,15 +491,15 @@
                             <label class="visually-hidden" for="mod_check" data-i18n="mod_check">Select mod</label>
                           </div>
                           <div class="mods__field mod_name col-11">
-                            <input class="mod__mod_name mod__input--text" name="attr_mod_name" id="mod_name" type="text" data-i18n-placeholder="placeholder_mod_name" placeholder="Slip Rattle"/>
+                            <input class="mods__mod_name mods__input--text" name="attr_mod_name" id="mod_name" type="text" data-i18n-placeholder="placeholder_mod_name" placeholder="Slip Rattle"/>
                             <label class="visually-hidden" for="mod_name" data-i18n="mod_name">mod</label>
                           </div>
                           <div class="mods__field mod_cost ">
-                            <input class="mod__mod_cost mod__input--text" name="attr_mod_cost" id="mod_cost" type="text" data-i18n-placeholder="placeholder_mod_cost" placeholder="1 coil, 1 disc"/>
+                            <input class="mods__mod_cost mods__input--text" name="attr_mod_cost" id="mod_cost" type="text" data-i18n-placeholder="placeholder_mod_cost" placeholder="1 coil, 1 disc"/>
                             <label for="mod_cost" data-i18n="mod_cost">Cost</label>
                           </div>
                           <div class="mods__field mod_description ">
-                            <textarea class="mod__mod_description mod__input--textarea" name="attr_mod_description" data-i18n-placeholder="placeholder_mod_description" placeholder="Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse."></textarea>
+                            <textarea class="mods__mod_description mods__input--textarea" name="attr_mod_description" data-i18n-placeholder="placeholder_mod_description" placeholder="Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse."></textarea>
                             <label for="mod_description" data-i18n="mod_description">Description</label>
                           </div>
                         </div>
@@ -1130,14 +1179,14 @@ const G_PLAYBOOKS = {
     beat: [''],
     arc: [],
   },
-  smart: {
+  smarts: {
     attitude: { boost: 2, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
-  chill: {
+  heart: {
     attitude: { boost: 1, kick: 2 },
     traits: [],
     gear: [],

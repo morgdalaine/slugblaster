@@ -13,10 +13,14 @@
         - const field = { ...boosts };
         - field.type = 'checkbox';
         - field.name = `${field.name}_${index}`;
-        +field(field).attitude__boost
+        label.attitude__boost(class=`attitude__boost--${index}`)
+          +field(field)
+          span.visually-hidden(data-i18n=field.name)= field.label + ' ' + index
 
       each index in four
         - const field = { ...kicks };
         - field.type = 'checkbox';
         - field.name = `${field.name}_${index}`;
-        +field(field).attitude__kick
+        label.attitude__kick(class=`attitude__kick--${index}`)
+          +field(field)
+          span.visually-hidden(data-i18n=field.name)= field.label + ' ' + index

@@ -7,6 +7,15 @@
     gap: $grid-gutter;
   }
 
+  &__edit {
+    #{$this}__turbo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $grid-gutter;
+      justify-content: space-between;
+    }
+  }
+
   &__check {
     display: flex;
     align-items: center;

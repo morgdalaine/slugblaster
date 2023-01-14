@@ -76,14 +76,14 @@ const G_PLAYBOOKS = {
     beat: [''],
     arc: [],
   },
-  smart: {
+  smarts: {
     attitude: { boost: 2, kick: 2 },
     traits: [],
     gear: [],
     beat: [''],
     arc: [],
   },
-  chill: {
+  heart: {
     attitude: { boost: 1, kick: 2 },
     traits: [],
     gear: [],
