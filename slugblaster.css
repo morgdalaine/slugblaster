@@ -384,6 +384,15 @@ html .charsheet .slugblaster .blob__wrapper {
 html .charsheet .slugblaster .blob__header, html .charsheet .slugblaster .blob__content {
   padding: 0.25rem;
 }
+html .charsheet .slugblaster .blob__header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5rem;
+}
 html .charsheet .slugblaster .blob--editor {
   grid-template-columns: 1fr auto;
   gap: 0.5rem 0.5rem;
@@ -520,13 +529,22 @@ html .charsheet .slugblaster .editor__close::after {
   margin: auto;
   color: #ef4b31;
 }
+html .charsheet .slugblaster .minimizer {
+  height: 100%;
+  position: relative;
+}
+html .charsheet .slugblaster .minimizer__controller[value=on] ~ * .panel__content,
+html .charsheet .slugblaster .minimizer__controller[value=on] ~ * .blob__content {
+  height: 0;
+  margin-top: -100rem;
+}
 html .charsheet .slugblaster .edit-toggle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0.25rem;
   z-index: 100;
-  width: 2.5rem;
+  width: 2rem;
   aspect-ratio: 1;
   border-radius: 0.5rem;
 }
@@ -540,28 +558,52 @@ html .charsheet .slugblaster .edit-toggle__view, html .charsheet .slugblaster .e
   display: none;
   transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
 }
+html .charsheet .slugblaster .edit-toggle__view .pictos, html .charsheet .slugblaster .edit-toggle__edit .pictos {
+  font-size: 1.5rem;
+}
+html .charsheet .slugblaster .minimizer-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5rem;
+  z-index: 100;
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+}
+html .charsheet .slugblaster .minimizer-toggle__controller[value="0"] ~ .minimizer-toggle__view {
+  display: block;
+}
+html .charsheet .slugblaster .minimizer-toggle__controller[value=on] ~ .minimizer-toggle__edit {
+  display: block;
+}
+html .charsheet .slugblaster .minimizer-toggle__view, html .charsheet .slugblaster .minimizer-toggle__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .slugblaster .minimizer-toggle__view .pictos, html .charsheet .slugblaster .minimizer-toggle__edit .pictos {
+  font-size: 1.5rem;
+}
 html .charsheet .slugblaster .panel {
   position: relative;
 }
 html .charsheet .slugblaster .panel__wrapper {
   display: grid;
   row-gap: 0.25rem;
-  height: 100%;
+  overflow: hidden;
 }
 html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
   padding: 0.25rem;
 }
 html .charsheet .slugblaster .panel__header {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 1rem;
-  align-items: center;
-  padding-right: 3.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 0.5rem;
+  align-items: center;
   justify-content: space-between;
+  padding-right: 3.5rem;
+  padding-right: 5rem;
 }
 html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .blob__title {
   font-size: 2rem;
@@ -580,7 +622,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: hsla(261deg, 80%, 80%, 0.8);
+  background-color: hsla(213deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -596,7 +638,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
   padding: 0.5rem;
-  background-color: hsla(142deg, 80%, 80%, 0.8);
+  background-color: hsla(254deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character {
   display: grid;
@@ -686,7 +728,7 @@ html .charsheet .slugblaster .character .attitude__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .components {
-  background-color: hsla(162deg, 80%, 80%, 0.8);
+  background-color: hsla(82deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -705,7 +747,7 @@ html .charsheet .slugblaster .character .components__component--track {
   justify-content: center;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(320deg, 80%, 80%, 0.8);
+  background-color: hsla(272deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -715,7 +757,7 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: hsla(163deg, 80%, 80%, 0.8);
+  background-color: hsla(4deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .downtime + .panel {
   margin-top: 0.5rem;
@@ -748,7 +790,7 @@ html .charsheet .slugblaster .character .downtime__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(4deg, 80%, 80%, 0.8);
+  background-color: hsla(176deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .gear.blob {
   padding-top: 1rem;
@@ -767,7 +809,7 @@ html .charsheet .slugblaster .character .gear__check span {
   text-transform: none;
 }
 html .charsheet .slugblaster .character .header {
-  background-color: hsla(326deg, 80%, 80%, 0.8);
+  background-color: hsla(53deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .header__title[type=text] {
   font-size: 2rem;
@@ -779,7 +821,7 @@ html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblas
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(220deg, 80%, 80%, 0.8);
+  background-color: hsla(188deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -789,7 +831,7 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: hsla(272deg, 80%, 80%, 0.8);
+  background-color: hsla(280deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -814,7 +856,7 @@ html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(192deg, 80%, 80%, 0.8);
+  background-color: hsla(285deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
@@ -826,7 +868,7 @@ html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugb
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(227deg, 80%, 80%, 0.8);
+  background-color: hsla(244deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -844,7 +886,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: hsla(84deg, 80%, 80%, 0.8);
+  background-color: hsla(165deg, 80%, 80%, 0.8);
   flex: 1;
 }
 html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
@@ -864,7 +906,7 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: hsla(156deg, 80%, 80%, 0.8);
+  background-color: hsla(258deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
@@ -883,7 +925,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(226deg, 80%, 80%, 0.8);
+  background-color: hsla(158deg, 80%, 80%, 0.8);
   flex: 1;
 }
 html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
@@ -1598,7 +1640,7 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: hsla(8deg, 80%, 80%, 0.8);
+  background-color: hsla(225deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
@@ -1624,7 +1666,7 @@ html .charsheet .slugblaster .nav__action {
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .footer {
-  background-color: hsla(239deg, 80%, 80%, 0.8);
+  background-color: hsla(236deg, 80%, 80%, 0.8);
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {

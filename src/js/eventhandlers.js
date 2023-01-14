@@ -6,11 +6,21 @@ G_SHEET_MODES.forEach((mode) => {
 });
 
 // Edit / View panel modes
+// QUESTION: should the editor and minimizer be linked?
 G_EDITORS.forEach((toggle) => {
   on(`clicked:${toggle}-editor`, (eventInfo) => {
-    getAttrs([`${toggle}_editor`], (values) => {
+    getAttrs([`${toggle}_editor`, `${toggle}_minimizer`], (values) => {
+      const isMinimized = values[`${toggle}_minimized`] === 'on';
+
       const value = values[`${toggle}_editor`] === '0' ? 'on' : '0';
       setAttrs({ [`${toggle}_editor`]: value });
+    });
+  });
+
+  on(`clicked:${toggle}-minimizer`, (eventInfo) => {
+    getAttrs([`${toggle}_minimizer`], (values) => {
+      const value = values[`${toggle}_minimizer`] === '0' ? 'on' : '0';
+      setAttrs({ [`${toggle}_minimizer`]: value });
     });
   });
 });

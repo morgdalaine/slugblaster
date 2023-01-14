@@ -8,7 +8,7 @@
   right: $m-sm;
   z-index: 100;
 
-  width: $input-component-size;
+  width: $input-component-size-small;
   aspect-ratio: 1;
 
   border-radius: 0.5rem;
@@ -30,5 +30,46 @@
   &__edit {
     display: none;
     transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+
+    .pictos {
+      font-size: $font-h4;
+    }
+  }
+}
+
+.minimizer-toggle {
+  $this: '.minimizer-toggle';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5rem;
+  z-index: 100;
+
+  width: $input-component-size-small;
+  aspect-ratio: 1;
+
+  border-radius: 0.5rem;
+
+  &__controller {
+    &[value='0'] {
+      ~ #{$this}__view {
+        display: block;
+      }
+    }
+    &[value='on'] {
+      ~ #{$this}__edit {
+        display: block;
+      }
+    }
+  }
+
+  &__view,
+  &__edit {
+    display: none;
+    transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+
+    .pictos {
+      font-size: $font-h4;
+    }
   }
 }

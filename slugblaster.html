@@ -4,6 +4,7 @@
   <div class="slugblaster__wrapper">
     <div class="blob tophat">
       <input class="editor__controller" name="attr_tophat_editor" type="hidden" value="0"/>
+      <input class="minimizer__controller" name="attr_tophat_minimizer" type="hidden" value="0"/>
       <div class="blob__wrapper">
         <div class="blob__content tophat__content">
           <h2 class="tophat__title" data-i18n="slugblaster">Slugblaster</h2>
@@ -25,9 +26,10 @@
       </div>
     </div>
     <main class="character">
-      <section class="character__style-trouble">
+      <section class="character__col">
         <div class="blob style">
           <input class="editor__controller" name="attr_style_editor" type="hidden" value="0"/>
+          <input class="minimizer__controller" name="attr_style_minimizer" type="hidden" value="0"/>
           <div class="blob__wrapper">
             <div class="blob__header style__header">
               <h2 class="blob__title style__title" data-i18n="style">Style</h2>
@@ -66,8 +68,11 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="character__col">
         <div class="blob trouble">
           <input class="editor__controller" name="attr_trouble_editor" type="hidden" value="0"/>
+          <input class="minimizer__controller" name="attr_trouble_minimizer" type="hidden" value="0"/>
           <div class="blob__wrapper">
             <div class="blob__header trouble__header">
               <h2 class="blob__title trouble__title" data-i18n="trouble">Trouble</h2>
@@ -114,15 +119,24 @@
         </div>
       </section>
       <section class="character__col">
+        <section class="character__rolls"></section>
+      </section>
+      <section class="character__col">
         <div class="panel header">
           <input class="editor__controller" name="attr_header_editor" type="hidden" value="0"/>
+          <input class="minimizer__controller" name="attr_header_minimizer" type="hidden" value="0"/>
           <div class="panel__wrapper">
             <div class="panel__header header__header">
               <input class="header__personality header__input--text header__title" name="attr_personality" id="personality" type="text" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
+              <button class="minimizer-toggle" name="act_header-minimizer" type="action">
+                <input class="minimizer-toggle__controller" name="attr_header_minimizer" type="hidden" value="0"/>
+                <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+              </button>
               <button class="edit-toggle" name="act_header-editor" type="action">
                 <input class="edit-toggle__controller" name="attr_header_editor" type="hidden" value="0"/>
-                <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
               </button>
             </div>
             <div class="panel__content header__content">
@@ -180,13 +194,19 @@
         <section class="character__gear">
           <div class="panel gear">
             <input class="editor__controller" name="attr_gear_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header gear__header">
                 <h2 class="panel__title gear__title" data-i18n="gear">Gear</h2>
+                <button class="minimizer-toggle" name="act_gear-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_gear-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_gear_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content gear__content">
@@ -215,6 +235,7 @@
           </div>
           <div class="blob gear">
             <input class="editor__controller" name="attr_gear_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__content gear__content">
                 <div class="repeating">
@@ -268,6 +289,7 @@
         <section class="character__attitude">
           <div class="blob attitude">
             <input class="editor__controller" name="attr_attitude_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_attitude_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header attitude__header">
                 <h2 class="blob__title attitude__title" data-i18n="attitude">Attitude</h2>
@@ -308,13 +330,19 @@
         <section class="character__traits">
           <div class="panel traits">
             <input class="editor__controller" name="attr_traits_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_traits_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header traits__header">
                 <h2 class="panel__title traits__title" data-i18n="traits">Traits</h2>
+                <button class="minimizer-toggle" name="act_traits-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_traits_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_traits-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_traits_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content traits__content">
@@ -365,6 +393,7 @@
         <section class="character__turbo">
           <div class="blob turbo">
             <input class="editor__controller" name="attr_turbo_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_turbo_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header turbo__header">
                 <h2 class="blob__title turbo__title" data-i18n="turbo">Turbo</h2>
@@ -399,13 +428,19 @@
         <section class="character__signature">
           <div class="panel signature">
             <input class="editor__controller" name="attr_signature_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_signature_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header signature__header">
                 <input class="header__signature header__input--text signature__title" name="attr_signature" id="signature" type="text" data-i18n-placeholder="placeholder_signature" placeholder="Signature"/>
+                <button class="minimizer-toggle" name="act_signature-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_signature_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_signature-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_signature_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content signature__content">
@@ -443,13 +478,19 @@
         <section class="character__mods">
           <div class="panel mods">
             <input class="editor__controller" name="attr_mods_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header mods__header">
                 <h2 class="panel__title mods__title" data-i18n="mods">Mods</h2>
+                <button class="minimizer-toggle" name="act_mods-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_mods-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_mods_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content mods__content">
@@ -472,6 +513,7 @@
           </div>
           <div class="blob mods">
             <input class="editor__controller" name="attr_mods_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__content mods__content">
                 <div class="repeating">
@@ -523,6 +565,7 @@
         <section class="character__components">
           <div class="blob components">
             <input class="editor__controller" name="attr_components_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_components_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header components__header">
                 <h2 class="blob__title components__title" data-i18n="components">Components</h2>
@@ -569,13 +612,19 @@
         <section class="character__legacy">
           <div class="panel legacy">
             <input class="editor__controller" name="attr_legacy_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_legacy_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header legacy__header">
                 <h2 class="panel__title legacy__title" data-i18n="legacy">legacy</h2>
+                <button class="minimizer-toggle" name="act_legacy-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_legacy_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_legacy-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_legacy_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content legacy__content">
@@ -616,13 +665,19 @@
         <section class="character__doom">
           <div class="panel doom">
             <input class="editor__controller" name="attr_doom_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_doom_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header doom__header">
                 <h2 class="panel__title doom__title" data-i18n="doom">doom</h2>
+                <button class="minimizer-toggle" name="act_doom-minimizer" type="action">
+                  <input class="minimizer-toggle__controller" name="attr_doom_minimizer" type="hidden" value="0"/>
+                  <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                  <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                </button>
                 <button class="edit-toggle" name="act_doom-editor" type="action">
                   <input class="edit-toggle__controller" name="attr_doom_editor" type="hidden" value="0"/>
-                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                  <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                  <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                 </button>
               </div>
               <div class="panel__content doom__content">
@@ -663,6 +718,7 @@
         <section class="character__slams">
           <div class="blob slams">
             <input class="editor__controller" name="attr_slams_editor" type="hidden" value="0"/>
+            <input class="minimizer__controller" name="attr_slams_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header slams__header">
                 <h2 class="blob__title slams__title" data-i18n="slams">Slams</h2>
@@ -690,13 +746,19 @@
       <aside class="character__downtime">
                 <div class="panel trait-beats downtime">
                   <input class="editor__controller" name="attr_trait-beats_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_trait-beats_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header trait-beats__header">
                       <h2 class="panel__title trait-beats__title" data-i18n="trait-beats">Trait Beats</h2>
+                      <button class="minimizer-toggle" name="act_trait-beats-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_trait-beats_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_trait-beats-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_trait-beats_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content trait-beats__content">
@@ -750,13 +812,19 @@
                 </div>
                 <div class="panel personality-arc downtime">
                   <input class="editor__controller" name="attr_personality-arc_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_personality-arc_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header personality-arc__header">
                       <h2 class="panel__title personality-arc__title" data-i18n="personality-arc">Personality Arc</h2>
+                      <button class="minimizer-toggle" name="act_personality-arc-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_personality-arc_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_personality-arc-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_personality-arc_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content personality-arc__content">
@@ -810,13 +878,19 @@
                 </div>
                 <div class="panel family-arc downtime">
                   <input class="editor__controller" name="attr_family-arc_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_family-arc_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header family-arc__header">
                       <h2 class="panel__title family-arc__title" data-i18n="family-arc">Family Arc</h2>
+                      <button class="minimizer-toggle" name="act_family-arc-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_family-arc_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_family-arc-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_family-arc_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content family-arc__content">
@@ -870,13 +944,19 @@
                 </div>
                 <div class="panel angst-arc downtime">
                   <input class="editor__controller" name="attr_angst-arc_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_angst-arc_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header angst-arc__header">
                       <h2 class="panel__title angst-arc__title" data-i18n="angst-arc">Angst Arc</h2>
+                      <button class="minimizer-toggle" name="act_angst-arc-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_angst-arc_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_angst-arc-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_angst-arc_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content angst-arc__content">
@@ -930,13 +1010,19 @@
                 </div>
                 <div class="panel crew-beats downtime">
                   <input class="editor__controller" name="attr_crew-beats_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_crew-beats_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header crew-beats__header">
                       <h2 class="panel__title crew-beats__title" data-i18n="crew-beats">Crew Beats</h2>
+                      <button class="minimizer-toggle" name="act_crew-beats-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_crew-beats_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_crew-beats-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_crew-beats_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content crew-beats__content">
@@ -990,13 +1076,19 @@
                 </div>
                 <div class="panel other-beats downtime">
                   <input class="editor__controller" name="attr_other-beats_editor" type="hidden" value="0"/>
+                  <input class="minimizer__controller" name="attr_other-beats_minimizer" type="hidden" value="0"/>
                   <div class="panel__wrapper">
                     <div class="panel__header other-beats__header">
                       <h2 class="panel__title other-beats__title" data-i18n="other-beats">Other Beats</h2>
+                      <button class="minimizer-toggle" name="act_other-beats-minimizer" type="action">
+                        <input class="minimizer-toggle__controller" name="attr_other-beats_minimizer" type="hidden" value="0"/>
+                        <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                        <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                      </button>
                       <button class="edit-toggle" name="act_other-beats-editor" type="action">
                         <input class="edit-toggle__controller" name="attr_other-beats_editor" type="hidden" value="0"/>
-                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
-                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+                        <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                        <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                       </button>
                     </div>
                     <div class="panel__content other-beats__content">
@@ -1274,11 +1366,21 @@ G_SHEET_MODES.forEach((mode) => {
 });
 
 // Edit / View panel modes
+// QUESTION: should the editor and minimizer be linked?
 G_EDITORS.forEach((toggle) => {
   on(`clicked:${toggle}-editor`, (eventInfo) => {
-    getAttrs([`${toggle}_editor`], (values) => {
+    getAttrs([`${toggle}_editor`, `${toggle}_minimizer`], (values) => {
+      const isMinimized = values[`${toggle}_minimized`] === 'on';
+
       const value = values[`${toggle}_editor`] === '0' ? 'on' : '0';
       setAttrs({ [`${toggle}_editor`]: value });
+    });
+  });
+
+  on(`clicked:${toggle}-minimizer`, (eventInfo) => {
+    getAttrs([`${toggle}_minimizer`], (values) => {
+      const value = values[`${toggle}_minimizer`] === '0' ? 'on' : '0';
+      setAttrs({ [`${toggle}_minimizer`]: value });
     });
   });
 });

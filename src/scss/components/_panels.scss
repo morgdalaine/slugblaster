@@ -5,7 +5,7 @@
   &__wrapper {
     display: grid;
     row-gap: $p-sm;
-    height: 100%;
+    overflow: hidden;
   }
 
   &__header,
@@ -15,17 +15,15 @@
 
   &__header {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    // grid-template-areas: 'header editor';
-    column-gap: $gutter-gap;
-    align-items: center;
-    padding-right: $input-component-size + 1;
 
     display: flex;
     flex-wrap: wrap;
     gap: $grid-gutter;
+    align-items: center;
     justify-content: space-between;
+
+    padding-right: $input-component-size + 1;
+    padding-right: 5rem;
 
     // box-shadow: 0 4px 2px -2px black;
   }

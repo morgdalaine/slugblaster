@@ -12,6 +12,18 @@
     padding: $p-sm;
   }
 
+  &__header {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $grid-gutter;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-right: 5rem;
+  }
+
   &__title {
     @extend .panel__title;
   }
