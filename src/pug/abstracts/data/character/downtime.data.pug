@@ -1,0 +1,30 @@
+-
+  data.character.downtime = {
+    sections: [
+      { name: 'trait-beats', title: 'Trait Beats' },
+      { name: 'personality-arc', title: 'Personality Arc' },
+      { name: 'family-arc', title: 'Family Arc' },
+      { name: 'angst-arc', title: 'Angst Arc' },
+      { name: 'crew-beats', title: 'Crew Beats' },
+      { name: 'other-beats', title: 'Other Beats' },
+    ],
+    repeating: [
+      { name: 'downtime_check', label: 'Check', placeholder: 'Check', type: 'checkbox', span: 1, blockName: 'downtime' },
+      { name: 'downtime_name', label: 'Name', placeholder: 'Name', type: 'text', span: 11, blockName: 'downtime' },
+      { name: 'downtime_cost', label: 'Cost', placeholder: 'Cost', type: 'text', blockName: 'downtime' },
+      {
+        name: 'downtime_description',
+        label: 'Description',
+        placeholder: 'Description',
+        type: 'textarea',
+        blockName: 'downtime',
+      },
+      {
+        name: 'downtime_result',
+        label: 'Result',
+        placeholder: 'Result',
+        type: 'text',
+        blockName: 'downtime',
+      },
+    ],
+  }

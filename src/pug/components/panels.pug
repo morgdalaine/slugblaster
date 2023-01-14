@@ -2,7 +2,7 @@
 mixin panel(panel)
   - const semantic = panel.semantic || 'div';
   - const editor = panel.editor || panel.name;
-  #{semantic}.panel(class=panel.name)
+  #{semantic}.panel(class=panel.name)&attributes(attributes)
     input.editor__controller(name=`attr_${panel.name}_editor`, type='hidden', value='0')
     .panel__wrapper
       block
@@ -18,7 +18,7 @@ mixin blob(blob)
   - const semantic = blob.semantic || 'div';
   - const hasEditor = blob.editor;
   - const editorClass = blob.editor ? 'blob--editor' : null;
-  #{semantic}.blob(class=blob.name)
+  #{semantic}.blob(class=blob.name)&attributes(attributes)
     input.editor__controller(name=`attr_${blob.name}_editor`, type='hidden', value='0')
     .blob__wrapper(class=editorClass)
       block

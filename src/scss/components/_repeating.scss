@@ -29,6 +29,15 @@
 
   &__empty {
     display: none;
+    background-color: hsl(random(360) 80% 80% / 80%);
+  }
+
+  &__header {
+    padding: $p-md;
+    span {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__view,

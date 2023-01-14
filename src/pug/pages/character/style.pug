@@ -8,5 +8,5 @@
       each radio in track
         label.style__checkbox(class=`style__checkbox--${radio.value}`)
           +field(radio).checkbox--circle
-          span.visually-hidden(data-i18n=`style_${radio.value}`)
+          span.visually-hidden(data-i18n=`style_${radio.value}`)= radio.label
     +span(subtitle)

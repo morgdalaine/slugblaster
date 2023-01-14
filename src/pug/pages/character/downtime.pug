@@ -1,0 +1,31 @@
+mixin makeDowntimeFieldset(fieldset)
+  - const { downtime } = data.character;
+  +panel({ name: fieldset.name, title: fieldset.title }).downtime
+    +block('content')
+      +repeating(fieldset.name)
+        - const { repeating } = downtime;
+        - const [check, name, cost, desc, result] = repeating;
+        +block('edit')
+          .row.downtime__edit
+            //- each field in hidden
+              +field(field)
+            each field in repeating
+              - const hideLabel = ['downtime_check', 'downtime_name'].includes(field.name);
+              - const divClass = field.span ? `col-${field.span}` : '';
+              - const labelClass = hideLabel ? 'visually-hidden' : null;
+
+              .downtime__field(class=`${field.name} ${divClass}`)
+                unless field.type === "checkbox"
+                  +field(field)
+                else
+                  +field(field).checkbox--scribble
+                label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+        +block('view')
+          .downtime__view
+            label.downtime__check
+              +field(check).checkbox--scribble
+              +span(name).downtime__name
+            +span(cost).downtime__cost
+
+each section in data.character.downtime.sections
+  +makeDowntimeFieldset(section)

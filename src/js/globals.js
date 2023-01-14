@@ -1,6 +1,20 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
-const G_EDITORS = ['header', 'gear', 'mods', 'traits', 'legacy', 'doom', 'signature'];
+const G_EDITORS = [
+  'header',
+  'gear',
+  'mods',
+  'traits',
+  'legacy',
+  'doom',
+  'signature',
+  'trait-beats',
+  'personality-arc',
+  'family-arc',
+  'angst-arc',
+  'crew-beats',
+  'other-beats',
+];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -9,6 +23,14 @@ const G_REPEATING_FIELDSETS = [
   'mods',
   'legacy',
   'doom',
+
+  // downtime
+  'trait-beats',
+  'personality-arc',
+  'family-arc',
+  'angst-arc',
+  'crew-beats',
+  'other-beats',
 
   // crew sheet
   'crews',

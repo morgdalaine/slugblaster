@@ -78,76 +78,138 @@
         type: 'text',
         blockName: 'gear',
       },
-      hidden: [
-        { name: 'gear_autogen', type: 'hidden', blockName: 'gear' },
-      ],
+      hidden: [{ name: 'gear_autogen', type: 'hidden', blockName: 'gear' }],
       repeating: [
         { name: 'gear_check', label: 'Select Gear', type: 'checkbox', span: 1, blockName: 'gear' },
-        { name: 'gear_name', label: 'Gear', placeholder: "grappling hook", type: 'text', span: 11, blockName: 'gear' },
-        { name: 'gear_cost', label: 'Cost', placeholder: "1 coil", type: 'text', blockName: 'gear' },
-        { name: 'gear_description', label: 'Description', placeholder: "A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch.", type: 'textarea', blockName: 'gear' },
-      ]
+        {
+          name: 'gear_name',
+          label: 'Gear',
+          placeholder: 'grappling hook',
+          type: 'text',
+          span: 11,
+          blockName: 'gear',
+        },
+        { name: 'gear_cost', label: 'Cost', placeholder: '1 coil', type: 'text', blockName: 'gear' },
+        {
+          name: 'gear_description',
+          label: 'Description',
+          placeholder:
+            'A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch.',
+          type: 'textarea',
+          blockName: 'gear',
+        },
+      ],
     },
     style: {
-      hidden: [
-        { name: 'style', type: 'hidden', blockName: 'style' },
-      ],
+      hidden: [{ name: 'style', type: 'hidden', blockName: 'style' }],
       subtitle: { name: 'style_run_bonus', type: 'span', blockName: 'style' },
-      track:Array.from(Array(9).keys(), (i) => ({ name: 'style', value: i, type: 'radio', blockName: 'style' })),},
+      track: Array.from(Array(9).keys(), (i) => ({
+        name: 'style',
+        label: `${i} style`,
+        value: i,
+        type: 'radio',
+        blockName: 'style',
+      })),
+    },
     trouble: {
-      hidden: [
-        { name: 'trouble', type: 'hidden', blockName: 'trouble' },
-      ],
+      hidden: [{ name: 'trouble', type: 'hidden', blockName: 'trouble' }],
       actions: [
-        { name: "nope", label: "Nope!", type: "action", blockName: "trouble" },
-        { name: "disaster", label: "Disaster", type: "action", blockName: "trouble" },
+        { name: 'nope', label: 'Nope!', type: 'action', blockName: 'trouble' },
+        { name: 'disaster', label: 'Disaster', type: 'action', blockName: 'trouble' },
       ],
-      track: Array.from(Array(9).keys(), (i) => ({ name: 'trouble', value: i, type: 'radio', blockName: 'trouble' })),},
+      track: Array.from(Array(9).keys(), (i) => ({
+        name: 'trouble',
+        label: `${i} trouble`,
+        value: i,
+        type: 'radio',
+        blockName: 'trouble',
+      })),
+    },
     traits: {
-      hidden: [
-        { name: 'trait_autogen', type: 'hidden', blockName: 'traits' },
-      ],
+      hidden: [{ name: 'trait_autogen', type: 'hidden', blockName: 'traits' }],
       repeating: [
-        { name: 'trait_check', label: 'Select trait', type: 'checkbox', span: 1, blockName: 'traits' },
-        { name: 'trait_name', label: 'trait', placeholder: "Patient", type: 'text', span: 11, blockName: 'traits' },
-        { name: 'trait_description', label: 'Description', placeholder: "When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.", type: 'textarea', blockName: 'traits' },
-      ]
+        {
+          name: 'trait_check',
+          label: 'Select trait',
+          type: 'checkbox',
+          span: 1,
+          blockName: 'traits',
+        },
+        {
+          name: 'trait_name',
+          label: 'trait',
+          placeholder: 'Patient',
+          type: 'text',
+          span: 11,
+          blockName: 'traits',
+        },
+        {
+          name: 'trait_description',
+          label: 'Description',
+          placeholder:
+            'When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.',
+          type: 'textarea',
+          blockName: 'traits',
+        },
+      ],
     },
     legacy: {
       repeating: [
-        { name: 'legacy_name', label: 'Legacy', placeholder: "viral video of 1080", type: 'text', blockName: 'legacy' },
-        { name: 'legacy_description', label: 'Description', placeholder: "", type: 'textarea', blockName: 'legacy' },
-      ]
+        {
+          name: 'legacy_name',
+          label: 'Legacy',
+          placeholder: 'viral video of 1080',
+          type: 'text',
+          blockName: 'legacy',
+        },
+        {
+          name: 'legacy_description',
+          label: 'Description',
+          placeholder: 'Description',
+          type: 'textarea',
+          blockName: 'legacy',
+        },
+      ],
     },
     doom: {
       repeating: [
-        { name: 'doom_name', label: 'doom', placeholder: "broke mom's trust", type: 'text', blockName: 'doom' },
-        { name: 'doom_description', label: 'Description', placeholder: "", type: 'textarea', blockName: 'doom' },
-      ]
+        {
+          name: 'doom_name',
+          label: 'doom',
+          placeholder: "broke mom's trust",
+          type: 'text',
+          blockName: 'doom',
+        },
+        {
+          name: 'doom_description',
+          label: 'Description',
+          placeholder: 'Description',
+          type: 'textarea',
+          blockName: 'doom',
+        },
+      ],
     },
     slams: {
       fields: [
-        { name: 'slam_1', label: 'slams', placeholder: "slam", type: 'text', blockName: 'slams' },
-        { name: 'slam_2', label: 'slams', placeholder: "slam", type: 'text', blockName: 'slams' },
-        { name: 'slam_3', label: 'slams', placeholder: "slam", type: 'text', blockName: 'slams' },
-      ]
+        {
+          name: 'slam_1',
+          label: 'Slams',
+          placeholder: 'super bruised ribs',
+          type: 'text',
+          blockName: 'slams',
+        },
+        {
+          name: 'slam_2',
+          label: 'Slams',
+          placeholder: 'frustrated',
+          type: 'text',
+          blockName: 'slams',
+        },
+        { name: 'slam_3', label: 'Slams', placeholder: 'slimed', type: 'text', blockName: 'slams' },
+      ],
     },
-    downtime: {
-      sections: ['trait_beats',
-      'grit_arc',
-      'family_arc',
-      'angst_arc',
-      'crew_beats',
-      'other_beats',],
-      fields: [
-        { name: 'check', label: 'Check', placeholder: '', type: 'text', blockName: 'downtime' },
-        { name: 'name', label: 'Name', placeholder: '', type: 'text', blockName: 'downtime' },
-        { name: 'cost', label: 'Cost', placeholder: '', type: 'text', blockName: 'downtime' },
-        { name: 'description', label: 'Description', placeholder: '', type: 'text', blockName: 'downtime' },
-        { name: 'result', label: 'Result', placeholder: '', type: 'text', blockName: 'downtime' },
-      ]
-    }
   };
+
 
 
 //-  extragear: [

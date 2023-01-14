@@ -1,7 +1,9 @@
 - const points = Array.from(Array(5).keys(), (i) => i + 1);
 each point in points
   span.translation(data-i18n=`style_${point}`)= `${point} style`
+  span.translation(data-i18n=`style_${point}_short`)= `${point}s`
   span.translation(data-i18n=`trouble_${point}`)= `${point} trouble`
+  span.translation(data-i18n=`trouble_${point}_short`)= `${point}t`
 
 //- playbook personalities
 each personality in data.translation.personalities
