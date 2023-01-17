@@ -17,7 +17,7 @@ const G_EDITORS = [
   'other-beats',
 ];
 
-const G_BLADES = ['downtime', 'epilogue'];
+const G_BLADES = ['downtimes', 'epilogue'];
 
 const G_REPEATING_FIELDSETS = [
   // character
