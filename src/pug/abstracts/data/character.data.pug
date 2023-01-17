@@ -1,11 +1,4 @@
 -
-  const traitsBroadcast = [
-    '&{template:slugcast}',
-    '{{character=@{character_name}}}',
-    '{{title=^{traits}}}',
-    '{{^{trait_name}=@{trait_name}}}',
-    '{{^{trait_description}=@{trait_description}}}',
-  ].join(' ');
   const doomBroadcast = [
     '&{template:slugcast}',
     '{{character=@{character_name}}}',
@@ -19,14 +12,6 @@
     '{{title=^{legacy}}}',
     '{{^{legacy_name}=@{legacy_name}}}',
     '{{^{legacy_description}=@{legacy_description}}}',
-  ].join(' ');
-  const gearBroadcast = [
-    '&{template:slugcast}',
-    '{{character=@{character_name}}}',
-    '{{title=^{gear}}}',
-    '{{^{gear_name}=@{gear_name}}}',
-    '{{^{gear_cost}=@{gear_cost}}}',
-    '{{^{gear_description}=@{gear_description}}}',
   ].join(' ');
 
   data.character = {
@@ -94,44 +79,6 @@
         { name: 'attitude_kick', label: 'Attitude Kick', type: 'hidden', blockName: 'attitude' },
       ],
     },
-    gear: {
-      board: {
-        name: 'your_board',
-        label: 'Your Board',
-        placeholder: 'street deck with hologram griptape',
-        type: 'text',
-        blockName: 'gear',
-      },
-      raygun: {
-        name: 'your_raygun',
-        label: 'Your Raygun',
-        placeholder: 'circuit-bent photon pistol',
-        type: 'text',
-        blockName: 'gear',
-      },
-      hidden: [{ name: 'gear_autogen', type: 'hidden', blockName: 'gear' }],
-      broadcast: gearBroadcast,
-      repeating: [
-        { name: 'gear_check', label: 'Select Gear', type: 'checkbox', span: 1, blockName: 'gear' },
-        {
-          name: 'gear_name',
-          label: 'Gear',
-          placeholder: 'grappling hook',
-          type: 'text',
-          span: 11,
-          blockName: 'gear',
-        },
-        { name: 'gear_cost', label: 'Cost', placeholder: '1 coil', type: 'text', blockName: 'gear' },
-        {
-          name: 'gear_description',
-          label: 'Description',
-          placeholder:
-            'A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch.',
-          type: 'textarea',
-          blockName: 'gear',
-        },
-      ],
-    },
     style: {
       hidden: [{ name: 'style', type: 'hidden', blockName: 'style' }],
       subtitle: { name: 'style_run_bonus', type: 'span', blockName: 'style' },
@@ -156,35 +103,6 @@
         type: 'radio',
         blockName: 'trouble',
       })),
-    },
-    traits: {
-      hidden: [{ name: 'trait_autogen', type: 'hidden', blockName: 'traits' }],
-      broadcast: traitsBroadcast,
-      repeating: [
-        {
-          name: 'trait_check',
-          label: 'Select trait',
-          type: 'checkbox',
-          span: 1,
-          blockName: 'traits',
-        },
-        {
-          name: 'trait_name',
-          label: 'trait',
-          placeholder: 'Patient',
-          type: 'text',
-          span: 11,
-          blockName: 'traits',
-        },
-        {
-          name: 'trait_description',
-          label: 'Description',
-          placeholder:
-            'When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.',
-          type: 'textarea',
-          blockName: 'traits',
-        },
-      ],
     },
     legacy: {
       broadcast: legacyBroadcast,
@@ -243,104 +161,4 @@
         { name: 'slam_3', label: 'Slams', placeholder: 'slimed', type: 'text', blockName: 'slams' },
       ],
     },
-    dicetray: {
-      hidden: [],
-      actions: [
-        { name: 'roll-character', label: 'Roll!', type: 'action', blockName: 'dicetray' },
-        { name: 'roll-character-trick', label: 'Do a Trick!', type: 'action', blockName: 'dicetray' },
-      ],
-      fields: [
-        {
-          name: 'dicetray_boosts',
-          label: 'Boost',
-          type: 'number',
-          span: 6,
-          blockName: 'dicetray',
-        },
-        {
-          name: 'dicetray_kicks',
-          label: 'Kick',
-          type: 'number',
-          span: 6,
-          blockName: 'dicetray',
-        },
-        {
-          name: 'dicetray_dare',
-          label: 'Dare',
-          options: [
-            { name: 'choose_dare', text: 'choose dare...', selected: true },
-            { name: 'plus_1d6', text: '+1d6' },
-            { name: 'plus_kick', text: '1 kick' },
-            { name: 'clear_trouble', text: 'clear 1 trouble' },
-          ],
-          type: 'select',
-          blockName: 'dicetray',
-        },
-        {
-          name: 'dicetray_reset',
-          label: 'Reset After Roll',
-          type: 'checkbox',
-          blockName: 'dicetray',
-        },
-      ],
-    },
   };
-
-//-  extragear: [
-        {
-          name: 'your_phone',
-          label: 'your phone',
-          selected: true,
-          type: 'checkbox',
-          blockName: 'gear',
-        },
-        {
-          name: 'personal_gear_1',
-          dynamic: true,
-          selected: true,
-          type: 'hidden',
-          blockName: 'gear',
-        },
-        { name: 'personal_gear_2', dynamic: true, type: 'hidden', blockName: 'gear' },
-        { name: 'grappling_hook', label: 'grappling hook', type: 'checkbox', blockName: 'gear' },
-        {
-          name: 'spacetime_ampimeter',
-          label: 'spacetime ampimeter',
-          type: 'checkbox',
-          blockName: 'gear',
-        },
-        { name: 'hacking_tools', label: 'hacking tools', type: 'checkbox', blockName: 'gear' },
-        { name: 'multiversal_maps', label: 'multiversal maps', type: 'checkbox', blockName: 'gear' },
-        { name: 'repair_tools', label: 'repair tools', type: 'checkbox', blockName: 'gear' },
-        { name: 'small_drone', label: 'a small drone', type: 'checkbox', blockName: 'gear' },
-        { name: 'pro_camera_gear', label: 'pro camera gear', type: 'checkbox', blockName: 'gear' },
-        { name: 'peel_back_kit', label: 'peel back kit', type: 'checkbox', blockName: 'gear' },
-        { name: 'hazwear', label: 'hazwear', type: 'checkbox', blockName: 'gear' },
-        {
-          name: 'backup_portaling_device',
-          label: 'backup portaling device',
-          type: 'checkbox',
-          blockName: 'gear',
-        },
-        { name: "logic_binder", label: "logic binder", type: "checkbox", blockName: "gear" },
-        { name: "advanced_portal_tech", label: "advanced portal tech", type: "checkbox", blockName: "gear" },
-        { name: "hardecker_sludge_flares", label: "Hardecker sludge flares", type: "checkbox", blockName: "gear" },
-        { name: "hardlight_marker", label: "hardlight marker", type: "checkbox", blockName: "gear" },
-        { name: "maser_grenades", label: "maser grenades", type: "checkbox", blockName: "gear" },
-        { name: "smartcord", label: "smartcord", type: "checkbox", blockName: "gear" },
-        { name: "the_fust_mix", label: "the FUST mix", type: "checkbox", blockName: "gear" },
-        { name: "beam_filter", label: "beam filter", type: "checkbox", blockName: "gear" },
-        { name: "wilkies_gravity_stickers", label: "Wilkie’S gravity stickers", type: "checkbox", blockName: "gear" },
-        { name: "panic_energy_fuel_line", label: "PANIC energy fuel-line", type: "checkbox", blockName: "gear" },
-        { name: "fust_stasis_stickers", label: "FUST stasis stickers", type: "checkbox", blockName: "gear" },
-        { name: "aug_band", label: "aug band", type: "checkbox", blockName: "gear" },
-        { name: "particle_bond_tights", label: "particle bond tights", type: "checkbox", blockName: "gear" },
-        { name: "3d_printed_ablatine", label: "3D-printed ablatine", type: "checkbox", blockName: "gear" },
-        { name: "knock_off_scram_cat_tee", label: "knock-off Scram Cat tee", type: "checkbox", blockName: "gear" },
-        { name: "miper_escape_bag", label: "Miper escape bag", type: "checkbox", blockName: "gear" },
-        { name: "awf_bracelet", label: "awf bracelet", type: "checkbox", blockName: "gear" },
-        { name: "duraweave_jacket", label: "duraweave jacket", type: "checkbox", blockName: "gear" },
-        { name: "link_patch_duo", label: "link patch duo", type: "checkbox", blockName: "gear" },
-        { name: "slam_patch", label: "slam patch", type: "checkbox", blockName: "gear" },
-      ],
-  }

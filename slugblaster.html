@@ -51,11 +51,11 @@
                   <div class="editor__edit dicetray__edit">
                     <div class="row dicetray__edit">
                       <div class="dicetray__field dicetray_boosts col-6">
-                        <input class="checkbox--scribble" name="attr_dicetray_boosts" placeholder="0" type="number"/>
+                        <input class="checkbox--scribble" name="attr_dicetray_boosts" placeholder="0" min="0" type="number"/>
                         <label for="dicetray_boosts" data-i18n="dicetray_boosts">Boost</label>
                       </div>
                       <div class="dicetray__field dicetray_kicks col-6">
-                        <input class="checkbox--scribble" name="attr_dicetray_kicks" placeholder="0" type="number"/>
+                        <input class="checkbox--scribble" name="attr_dicetray_kicks" placeholder="0" min="0" type="number"/>
                         <label for="dicetray_kicks" data-i18n="dicetray_kicks">Kick</label>
                       </div>
                       <div class="dicetray__field dicetray_dare ">
@@ -718,6 +718,120 @@
         </section>
       </section>
       <div class="character__blades">
+        <aside class="blade diary">
+          <input class="blade-toggle__controller" name="attr_diary_blade" value="0" type="hidden"/>
+          <button class="blade-toggle" name="act_diary-blade" type="action">
+            <h2 class="blade__title" data-i18n="diary">Diary</h2>
+          </button>
+          <div class="blade__wrapper">
+            <div class="panel notes">
+              <input class="editor__controller" name="attr_notes_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header notes__header">
+                  <h2 class="panel__title notes__title" data-i18n="notes">notes</h2>
+                  <button class="minimizer-toggle" name="act_notes-minimizer" type="action">
+                    <input class="minimizer-toggle__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+                    <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                    <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                  </button>
+                  <button class="edit-toggle" name="act_notes-editor" type="action">
+                    <input class="edit-toggle__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                    <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                    <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                  </button>
+                </div>
+                <div class="panel__content notes__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_notes_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_notes_repeating">None notes with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_notes">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                          <div class="row notes__edit">
+                            <div class="notes__field note_name ">
+                              <input class="notes__note_name notes__input--text" name="attr_note_name" id="note_name" type="text" data-i18n-placeholder="placeholder_note_name" placeholder="broke mom's trust"/>
+                              <label class="visually-hidden" for="note_name" data-i18n="note_name">Note</label>
+                            </div>
+                            <div class="notes__field note_description ">
+                              <textarea class="notes__note_description notes__input--textarea" name="attr_note_description" data-i18n-placeholder="placeholder_note_description" placeholder="Description"></textarea>
+                              <label for="note_description" data-i18n="note_description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__view">
+                          <div class="bubble note">
+                            <input class="bubble__controller" name="attr_note_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="notes__view"><span class="note__name" name="attr_note_name"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_note-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{notes}}} {{^{note_name}=@{note_name}}} {{^{note_description}=@{note_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_note_collapse">
+                                  <input name="attr_note_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_note_description"></span>
+                                <label data-i18n="note_description">Description</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__delete"><span class="note__name" name="attr_note_name"></span>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel clocks">
+              <input class="editor__controller" name="attr_clocks_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_clocks_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header clocks__header">
+                  <h2 class="panel__title clocks__title" data-i18n="clocks">Clocks</h2>
+                  <button class="minimizer-toggle" name="act_clocks-minimizer" type="action">
+                    <input class="minimizer-toggle__controller" name="attr_clocks_minimizer" value="0" type="hidden"/>
+                    <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                    <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                  </button>
+                  <button class="edit-toggle" name="act_clocks-editor" type="action">
+                    <input class="edit-toggle__controller" name="attr_clocks_editor" value="on" type="hidden"/>
+                    <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                    <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                  </button>
+                </div>
+                <div class="panel__content clocks__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_clocks_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_clocks_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_clocks_repeating">None clocks with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_clocks">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                        </div>
+                        <div class="repeating__view">
+                        </div>
+                        <div class="repeating__delete">
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
         <aside class="blade downtimes">
           <input class="blade-toggle__controller" name="attr_downtimes_blade" value="0" type="hidden"/>
           <button class="blade-toggle" name="act_downtimes-blade" type="action">
@@ -1592,31 +1706,36 @@ const results = {
   const G_SHEET_MODES = ['character', 'crew'];
 
 const G_EDITORS = [
-  'header',
-  'gear',
-  'mods',
-  'traits',
-  'legacy',
-  'dicetray',
-  'doom',
-  'signature',
-  'trait-beats',
-  'personality-arc',
-  'family-arc',
   'angst-arc',
   'crew-beats',
+  'clocks',
+  'dicetray',
+  'doom',
+  'family-arc',
+  'gear',
+  'header',
+  'legacy',
+  'mods',
+  'notes',
   'other-beats',
+  'personality-arc',
+  'signature',
+  'trait-beats',
+  'traits',
 ];
 
-const G_BLADES = ['downtimes', 'epilogue'];
+const G_BLADES = ['downtimes', 'epilogue', 'diary'];
 
 const G_REPEATING_FIELDSETS = [
   // character
-  'gear',
-  'traits',
-  'mods',
-  'legacy',
   'doom',
+  'gear',
+  'legacy',
+  'mods',
+  'traits',
+
+  // common
+  'notes',
 
   // downtime
   'trait-beats',
@@ -1627,12 +1746,12 @@ const G_REPEATING_FIELDSETS = [
   'other-beats',
 
   // crew sheet
-  'crews',
-  'sponsors',
-  'fractures',
   'authorities',
-  'sponsors',
+  'crews',
   'crowds',
+  'fractures',
+  'sponsors',
+  'sponsors',
 ];
 
 const G_PLAYBOOKS = {

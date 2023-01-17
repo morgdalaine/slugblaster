@@ -1,31 +1,36 @@
 const G_SHEET_MODES = ['character', 'crew'];
 
 const G_EDITORS = [
-  'header',
-  'gear',
-  'mods',
-  'traits',
-  'legacy',
-  'dicetray',
-  'doom',
-  'signature',
-  'trait-beats',
-  'personality-arc',
-  'family-arc',
   'angst-arc',
   'crew-beats',
+  'clocks',
+  'dicetray',
+  'doom',
+  'family-arc',
+  'gear',
+  'header',
+  'legacy',
+  'mods',
+  'notes',
   'other-beats',
+  'personality-arc',
+  'signature',
+  'trait-beats',
+  'traits',
 ];
 
-const G_BLADES = ['downtimes', 'epilogue'];
+const G_BLADES = ['downtimes', 'epilogue', 'diary'];
 
 const G_REPEATING_FIELDSETS = [
   // character
-  'gear',
-  'traits',
-  'mods',
-  'legacy',
   'doom',
+  'gear',
+  'legacy',
+  'mods',
+  'traits',
+
+  // common
+  'notes',
 
   // downtime
   'trait-beats',
@@ -36,12 +41,12 @@ const G_REPEATING_FIELDSETS = [
   'other-beats',
 
   // crew sheet
-  'crews',
-  'sponsors',
-  'fractures',
   'authorities',
-  'sponsors',
+  'crews',
   'crowds',
+  'fractures',
+  'sponsors',
+  'sponsors',
 ];
 
 const G_PLAYBOOKS = {
