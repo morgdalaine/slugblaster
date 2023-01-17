@@ -52,7 +52,6 @@ on(`change:personality`, (eventInfo) => {
 on(`change:signature`, (eventInfo) => {
   let signature = eventInfo.newValue;
   signature = signature.trim().replace(' ', '_').toLowerCase();
-  console.log(signature);
   if (signature) loadSignature(signature);
 });
 

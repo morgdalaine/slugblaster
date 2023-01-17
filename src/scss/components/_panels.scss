@@ -20,19 +20,17 @@
 
     display: flex;
     flex-wrap: wrap;
+
     gap: $grid-gutter;
     align-items: center;
     justify-content: space-between;
 
-    padding-right: $input-component-size + 1;
-    padding-right: 5rem;
-
-    // box-shadow: 0 4px 2px -2px black;
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 
   &__title {
     font-size: $font-h2;
-    // font-variant: small-caps;
     text-transform: uppercase;
     font-family: $font-header;
     font-weight: 700;

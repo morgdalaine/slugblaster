@@ -52,7 +52,6 @@ const loadPersonality = (personality) => {
   // traits
   // importFieldset('traits', data.traits);
 
-  // console.table(update);
   setAttrs(update);
 };
 
@@ -98,7 +97,6 @@ const importFieldset = (fieldset, data) => {
       update[repeatingPrefix + 'autogen'] = 1;
     });
 
-    console.log(update);
     setAttrs(update);
   });
 };

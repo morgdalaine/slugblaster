@@ -1,12 +1,5 @@
 .edit-toggle {
   $this: '.edit-toggle';
-  // grid-area: editor;
-  position: absolute;
-  // top: $m-sm;
-  top: 50%;
-  transform: translateY(-50%);
-  right: $m-sm;
-  z-index: 100;
 
   width: $input-component-size-small;
   aspect-ratio: 1;
@@ -39,11 +32,6 @@
 
 .minimizer-toggle {
   $this: '.minimizer-toggle';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2.5rem;
-  z-index: 100;
 
   width: $input-component-size-small;
   aspect-ratio: 1;
@@ -72,4 +60,12 @@
       font-size: $font-h4;
     }
   }
+}
+
+.broadcast {
+  $this: '.broadcast';
+  width: $input-component-size-small;
+  aspect-ratio: 1;
+
+  border-radius: 0.5rem;
 }

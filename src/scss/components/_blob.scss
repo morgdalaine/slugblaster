@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-right: 5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 
   &__title {
@@ -32,7 +33,6 @@
   }
   &--editor {
     grid-template-columns: 1fr auto;
-    // grid-template-areas: 'content editor';
     gap: $grid-gutter;
   }
 }
