@@ -10,61 +10,25 @@ input(name='attr_version', value='0', type='hidden')
 
     include layout/character
 
-    //- +panel({ name: 'stats', semantic: 'aside'})
-      +block('content')
-        .editor
-          input.editor__controller(name='attr_stats_editor', value='0', type='hidden')
-          .editor__wrapper.stats__wrapper
-            each fieldset in data.stats.fieldsets
-              .stats__stat
-                each field in fieldset
-                  .stat(class=`stat__${field.name}`)
-                    label(data-i18n=field.name)= field.label
-                    +field(field).stat__input
-
-    //- nav.nav
-      input(name='attr_nav', value='advskills', type='hidden')
-      ul#primary-navigation.primary-navigation.nav
-        each nav in data.navigation.radios
-          li
-            button.button--alt-text(name=`act_nav_${nav.value}`, type='action')
-              span(data-i18n=nav.value)= nav.label
-              span(data-i18n=nav.value)= nav.label
-
-    //- main.slugblaster__wrapper
-      input(name='attr_nav', value='advskills', type='hidden')
-      .page--advskills.advanced-skills
-        include pages/advskills
-      .page--attacks.attacks
-        include pages/attacks
-      .page--inventory.inventory
-        include pages/inventory
-      .page--miscellaneous.miscellaneous
-        h2.miscellaneous__title(data-i18n='miscellaneous') Miscellaneous
-        div Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. A erat nam at lectus urna duis convallis. Eu lobortis elementum nibh tellus molestie nunc non. Urna neque viverra justo nec ultrices dui sapien eget. Vitae ultricies leo integer malesuada. Ornare quam viverra orci sagittis eu volutpat. Amet dictum sit amet justo donec enim. Ipsum dolor sit amet consectetur adipiscing elit duis. In massa tempor nec feugiat nisl. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.
-        div Magna ac placerat vestibulum lectus mauris. Sed velit dignissim sodales ut eu sem integer vitae. Magna fermentum iaculis eu non diam phasellus. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Amet risus nullam eget felis eget nunc lobortis. Augue interdum velit euismod in pellentesque massa placerat duis. Lacinia quis vel eros donec ac. Scelerisque viverra mauris in aliquam sem fringilla. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Posuere morbi leo urna molestie at elementum. Volutpat blandit aliquam etiam erat. Purus gravida quis blandit turpis cursus in hac habitasse platea. Felis imperdiet proin fermentum leo vel orci porta non.
-        div Id donec ultrices tincidunt arcu non sodales neque sodales. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nisl purus in mollis nunc sed id semper. Dui faucibus in ornare quam viverra. Aenean pharetra magna ac placerat vestibulum lectus. Sed blandit libero volutpat sed cras. Arcu risus quis varius quam quisque id. Amet tellus cras adipiscing enim. Sed nisi lacus sed viverra tellus. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Enim sed faucibus turpis in. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Tellus mauris a diam maecenas. Viverra ipsum nunc aliquet bibendum enim.
-        div Quis viverra nibh cras pulvinar mattis nunc sed blandit. Metus dictum at tempor commodo ullamcorper. Viverra tellus in hac habitasse. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Ultrices gravida dictum fusce ut placerat orci. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Purus semper eget duis at tellus at urna condimentum. Non enim praesent elementum facilisis leo vel fringilla est. Molestie nunc non blandit massa. Semper viverra nam libero justo laoreet sit amet. Amet commodo nulla facilisi nullam. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu.
-        div Purus non enim praesent elementum facilisis leo vel fringilla est. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Ipsum consequat nisl vel pretium lectus quam id. Egestas sed sed risus pretium. Pellentesque dignissim enim sit amet venenatis urna cursus. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Amet porttitor eget dolor morbi non arcu. Congue quisque egestas diam in arcu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Tempor orci dapibus ultrices in iaculis nunc sed. Risus viverra adipiscing at in. Aliquam eleifend mi in nulla.
-
     footer.footer
       span.visually-hidden(data-i18n='version') Version
       span(name='attr_version')
 
       include abstracts/translations
 
-      //- .fonts
-        h1(style='font-size: 3rem; font-family: "Caveat"') Caveat; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Gloria Hallelujah"') Gloria Hallelujah; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Coiny"') Coiny; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Lato"') Lato; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Poppins"') Poppins; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Roboto"') Roboto; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Sofia Sans Condensed"') Sofia Sans Condensed; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Sofia Sans"') Sofia Sans; Sphinx of black quartz, judge my vow!
-        h1(style='font-size: 3rem; font-family: "Ubuntu"') Ubuntu; Sphinx of black quartz, judge my vow!
+      .fonts
+        h2(style='font: 1.25rem "Architects Daughter"') Architects Daughter; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "DotGothic16"') DotGothic16; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Gloria Hallelujah"') Gloria Hallelujah; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Knewave"') Knewave; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Lato"') Lato; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Poppins"') Poppins; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Roboto"') Roboto; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Sofia Sans Condensed"') Sofia Sans Condensed; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Sofia Sans"') Sofia Sans; Sphinx of black quartz judge my vow 1 2 3 4 5 6
+        h2(style='font: 1.25rem "Ubuntu"') Ubuntu; Sphinx of black quartz judge my vow 1 2 3 4 5 6
 
-      div(style='display: flex; gap: 0.25rem')
+      //- div(style='display: flex; gap: 0.25rem')
         div
           div(style='background: #8d74b3; width: 4rem; aspect-ratio: 1', title='purple-light')
           div(style='background: #7151a0; width: 4rem; aspect-ratio: 1', title='purple')
@@ -112,7 +76,9 @@ include templates/rolltemplates
 
 // === WORKERS ===
 script(type='text/worker')
+  include ../js/dice/diceworkers.js
+  include ../js/dice/dicehandlers.js
   include ../js/globals.js
-  include ../js/eventhandlers.js
   include ../js/sheetworkers.js
+  include ../js/eventhandlers.js
   include ../js/repeatingsections.js

@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Coiny&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Knewave&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DotGothic16&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap");
@@ -19,7 +19,7 @@ html .tab-content,
 html .sheetform,
 html .charactersheet {
   box-sizing: border-box;
-  height: calc(100% - 2rem);
+  height: calc(100% - 1px);
 }
 
 .charsheet * {
@@ -184,6 +184,141 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   opacity: 1;
 }
 
+.sheet-rolltemplate-slugblaster {
+  /**
+   * Basic typography style for copy text
+   */
+}
+.sheet-rolltemplate-slugblaster label {
+  display: block;
+  color: var(--label-color);
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", "Nunito", sans-serif;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+.sheet-rolltemplate-slugblaster label span {
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+.sheet-rolltemplate-slugblaster .pictos {
+  font-family: Pictos;
+}
+.sheet-rolltemplate-slugblaster .translation {
+  display: none;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll {
+  display: grid;
+  gap: 0.5rem 0.5rem;
+  background-color: hsla(285deg, 80%, 80%, 0.8);
+}
+.sheet-rolltemplate-slugblaster .sheet-roll * {
+  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
+  line-height: inherit;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__header, .sheet-rolltemplate-slugblaster .sheet-roll__content {
+  padding: 0.5rem;
+  background: linear-gradient(to right, hsla(270deg, 80%, 80%, 0.8), transparent);
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  justify-content: flex-end;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__header span {
+  font-family: "Architects Daughter", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-size: 1.125rem;
+  font-variant: small-caps;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__header--character_name {
+  font-weight: 700;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__title {
+  font-family: "Knewave", "Comic Sans MS", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__subtitle {
+  font-size: 1rem;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__results {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0 0.5rem;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__results--roll {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  aspect-ratio: 1;
+  grid-row: 1/-1;
+  grid-column-start: 1;
+  outline: 1px solid #292828;
+  outline-offset: 0;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__results--roll .inlinerollresult {
+  display: block;
+  width: inherit;
+  font-family: "Knewave", "Comic Sans MS", serif;
+  font-size: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background-image: radial-gradient(hsl(251deg, 80%, 80%), hsl(149deg, 80%, 80%), hsl(203deg, 80%, 80%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #292828;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #292828;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__results--dice {
+  display: flex;
+  gap: 0.5rem 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__results--label {
+  text-align: center;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__result span {
+  font-family: "Architects Daughter", "Gloria Hallelujah", "Comic Sans MS", cursive;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type::after {
+  content: " ";
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__die span {
+  padding: 0;
+  margin: 0;
+  font-family: "DotGothic16", monospace;
+  font-size: 1.25rem;
+  line-height: normal;
+}
+.sheet-rolltemplate-slugblaster .sheet-roll__boosts, .sheet-rolltemplate-slugblaster .sheet-roll__kicks, .sheet-rolltemplate-slugblaster .sheet-roll__dares {
+  display: flex;
+  gap: 0.5rem 0.5rem;
+}
+.sheet-rolltemplate-slugblaster .inlinerollresult {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: "DotGothic16", monospace;
+  font-size: 1.25rem;
+  line-height: normal;
+}
+.sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit, .sheet-rolltemplate-slugblaster .inlinerollresult.fullfail, .sheet-rolltemplate-slugblaster .inlinerollresult.importantroll {
+  border: none;
+}
+
 * {
   --foreground: #fff;
   --label-color: #292828;
@@ -287,6 +422,7 @@ html .charsheet .slugblaster select {
   background-image: url("https://www.svgrepo.com/show/361418/chevron-down.svg");
   background-position: 100% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 html .charsheet .slugblaster select option {
   background: var(--input-background);
@@ -322,6 +458,11 @@ html .charsheet .slugblaster textarea {
 }
 html .charsheet .slugblaster span[name] {
   white-space: pre-wrap;
+}
+html .charsheet .slugblaster label input[type=checkbox] + span {
+  -webkit-margin-start: 0.25rem;
+          margin-inline-start: 0.25rem;
+  vertical-align: middle;
 }
 html .charsheet .slugblaster .clearfix::after {
   clear: both;
@@ -369,6 +510,7 @@ html .charsheet .slugblaster label {
   font-variant: small-caps;
   letter-spacing: 0.05rem;
   font-weight: 700;
+  margin: 0;
 }
 html .charsheet .slugblaster label span {
   font-weight: normal;
@@ -425,7 +567,7 @@ html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-
 html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-toggle > .blade__title {
   position: absolute;
   top: 0.5rem;
-  left: 50%;
+  left: 45%;
   transform: rotate(90deg) translateY(-50%);
   transform-origin: left top;
   white-space: nowrap;
@@ -443,6 +585,8 @@ html .charsheet .slugblaster .blob__wrapper {
 }
 html .charsheet .slugblaster .blob__header, html .charsheet .slugblaster .blob__content {
   padding: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, hsla(307deg, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster .blob__header {
   position: relative;
@@ -655,6 +799,8 @@ html .charsheet .slugblaster .panel__wrapper {
 }
 html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
   padding: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, hsla(283deg, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster .panel__header {
   position: relative;
@@ -683,7 +829,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: hsla(223deg, 80%, 80%, 0.8);
+  background-color: hsla(281deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -699,7 +845,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
   padding: 0.5rem;
-  background-color: hsla(210deg, 80%, 80%, 0.8);
+  background-color: hsla(343deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character {
   position: relative;
@@ -798,7 +944,7 @@ html .charsheet .slugblaster .character .attitude__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .components {
-  background-color: hsla(190deg, 80%, 80%, 0.8);
+  background-color: hsla(37deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -816,8 +962,26 @@ html .charsheet .slugblaster .character .components__component--track {
   align-items: center;
   justify-content: center;
 }
+html .charsheet .slugblaster .character .dicetray {
+  background-color: hsla(343deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .character .dicetray__content {
+  display: grid;
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .dicetray__edit, html .charsheet .slugblaster .character .dicetray__view {
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .dicetray__field.col-6 label {
+  text-align: center;
+}
+html .charsheet .slugblaster .character .dicetray__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(228deg, 80%, 80%, 0.8);
+  background-color: hsla(30deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -827,7 +991,7 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: hsla(202deg, 80%, 80%, 0.8);
+  background-color: hsla(295deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .downtime + .panel {
   margin-top: 0.5rem;
@@ -840,17 +1004,6 @@ html .charsheet .slugblaster .character .downtime__view {
   flex-wrap: wrap;
   gap: 0.5rem 0.5rem;
 }
-html .charsheet .slugblaster .character .downtime__check {
-  display: flex;
-  align-items: center;
-}
-html .charsheet .slugblaster .character .downtime__check span {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-}
 html .charsheet .slugblaster .character .downtime .downtime__name {
   font-weight: 700;
 }
@@ -861,28 +1014,17 @@ html .charsheet .slugblaster .character .downtime__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(295deg, 80%, 80%, 0.8);
+  background-color: hsla(20deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
   gap: 0.5rem 0.5rem;
 }
-html .charsheet .slugblaster .character .gear__check {
-  display: flex;
-  align-items: center;
-}
-html .charsheet .slugblaster .character .gear__check span {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-}
 html .charsheet .slugblaster .character .header {
-  background-color: hsla(15deg, 80%, 80%, 0.8);
+  background-color: hsla(192deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .header__title[type=text] {
   font-size: 2rem;
-  font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  font-family: "Knewave", "Comic Sans MS", serif;
   text-transform: uppercase;
   height: auto;
 }
@@ -890,7 +1032,7 @@ html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblas
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(298deg, 80%, 80%, 0.8);
+  background-color: hsla(55deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -900,7 +1042,7 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: hsla(46deg, 80%, 80%, 0.8);
+  background-color: hsla(202deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -911,26 +1053,15 @@ html .charsheet .slugblaster .character .mods__edit .mods__turbo {
   gap: 0.5rem 0.5rem;
   justify-content: space-between;
 }
-html .charsheet .slugblaster .character .mods__check {
-  display: flex;
-  align-items: center;
-}
-html .charsheet .slugblaster .character .mods__check span {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-}
 html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(47deg, 80%, 80%, 0.8);
+  background-color: hsla(131deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
-  font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  font-family: "Knewave", "Comic Sans MS", serif;
   text-transform: uppercase;
   height: auto;
 }
@@ -938,7 +1069,7 @@ html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugb
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(91deg, 80%, 80%, 0.8);
+  background-color: hsla(138deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -956,7 +1087,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: hsla(287deg, 80%, 80%, 0.8);
+  background-color: hsla(286deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
   display: none;
@@ -975,27 +1106,16 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: hsla(236deg, 80%, 80%, 0.8);
+  background-color: hsla(359deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
-}
-html .charsheet .slugblaster .character .traits__check {
-  display: flex;
-  align-items: center;
-}
-html .charsheet .slugblaster .character .traits__check span {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
 }
 html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(260deg, 80%, 80%, 0.8);
+  background-color: hsla(92deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
   display: none;
@@ -1709,7 +1829,7 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: hsla(22deg, 80%, 80%, 0.8);
+  background-color: hsla(81deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
@@ -1720,7 +1840,7 @@ html .charsheet .slugblaster .tophat__content {
 }
 html .charsheet .slugblaster .tophat__title {
   font-size: 3rem;
-  font-family: "Rubik Dirt", "Comic Sans MS", serif;
+  font-family: "Knewave", "Comic Sans MS", serif;
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .nav {
@@ -1735,7 +1855,7 @@ html .charsheet .slugblaster .nav__action {
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .footer {
-  background-color: hsla(313deg, 80%, 80%, 0.8);
+  background-color: hsla(3deg, 80%, 80%, 0.8);
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {
@@ -1749,4 +1869,5 @@ html .charsheet .slugblaster__wrapper {
   flex-direction: column;
   gap: 0.5rem 0;
   margin: 0.25rem;
+  margin-right: 1rem;
 }

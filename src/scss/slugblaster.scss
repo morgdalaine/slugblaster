@@ -2,13 +2,13 @@
 @use 'sass:math';
 @use 'sass:map';
 
-@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DotGothic16&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap');
@@ -31,6 +31,7 @@
 // 5. Components
 
 // 6. Page-specific styles
+@import 'templates/rolltemplate';
 
 // 7. Themes
 @import 'themes/default';
@@ -75,6 +76,9 @@ html {
       gap: $grid-gutter-row 0;
 
       margin: $m-sm;
+
+      //  make room for scrollbar
+      margin-right: $m-lg;
     }
   }
 }

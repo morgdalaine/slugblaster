@@ -40,6 +40,7 @@ select {
   background-image: url('https://www.svgrepo.com/show/361418/chevron-down.svg');
   background-position: 100% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
 
   option {
     background: $input-background;
@@ -93,6 +94,13 @@ span[name] {
   //     content: '—';
   //   }
   // }
+}
+
+label {
+  input[type='checkbox'] + span {
+    margin-inline-start: $m-sm;
+    vertical-align: middle;
+  }
 }
 
 // .el-input {

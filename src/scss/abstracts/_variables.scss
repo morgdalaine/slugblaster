@@ -40,9 +40,9 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
 // Fonts
-$font-title: 'Rubik Dirt', 'Comic Sans MS', serif !default;
+$font-title: 'Knewave', 'Comic Sans MS', serif !default;
 $font-nav: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-playbook: 'Rubik Dirt', 'Comic Sans MS', serif !default;
+$font-playbook: 'Knewave', 'Comic Sans MS', serif !default;
 $font-nav-tab: 'Sofia Sans Condensed', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
 
 $font-label: 'Poppins', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
@@ -50,7 +50,8 @@ $font-body: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-input: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
 $font-action: 'Coiny', 'Comic Sans MS', serif !default;
 $font-header: 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Gloria Hallelujah', 'Caveat', 'Comic Sans MS', cursive !default;
+$font-handwritten: 'Architects Daughter', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-dice: 'DotGothic16', monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text

@@ -6,6 +6,7 @@ const G_EDITORS = [
   'mods',
   'traits',
   'legacy',
+  'dicetray',
   'doom',
   'signature',
   'trait-beats',

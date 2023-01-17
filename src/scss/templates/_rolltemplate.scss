@@ -1,0 +1,159 @@
+.sheet-rolltemplate-slugblaster {
+  @import '../base/typography';
+
+  .sheet-roll {
+    display: grid;
+    gap: $grid-gutter;
+    background-color: hsl(random(360) 80% 80% / 80%);
+    // padding: $p-lg;
+
+    * {
+      font-family: $font-body;
+      line-height: inherit;
+    }
+
+    &__header,
+    &__content {
+      padding: $p-md;
+      background: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
+    }
+
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 $grid-gutter-col;
+
+      justify-content: flex-end;
+
+      span {
+        font-family: $font-handwritten;
+        font-size: $font-l;
+        // line-height: 1rem;
+
+        // text-transform: uppercase;
+        font-variant: small-caps;
+      }
+
+      &--character_name {
+        font-weight: 700;
+      }
+    }
+    &__title {
+      font-family: $font-title;
+      font-size: $font-h2;
+      text-transform: uppercase;
+    }
+    &__subtitle {
+      font-size: $font-m;
+    }
+
+    &__results {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 1fr auto;
+      gap: 0 $grid-gutter-col;
+
+      &--roll,
+      &--dice,
+      &--label {
+        // background-color: rgb(0, 0, 0, 0.1);
+      }
+
+      &--roll {
+        display: grid;
+        place-items: center;
+        width: 5rem;
+        aspect-ratio: 1;
+
+        grid-row: 1 / -1;
+        grid-column-start: 1;
+
+        outline: 1px solid $black;
+        outline-offset: 0;
+
+        .inlinerollresult {
+          display: block;
+          width: inherit;
+
+          font-family: $font-title;
+          font-size: 5rem;
+          line-height: 5rem;
+
+          text-align: center;
+
+          background-image: radial-gradient(
+            hsl(random(360) 80% 80%),
+            hsl(random(360) 80% 80%),
+            hsl(random(360) 80% 80%)
+          );
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          background-color: $black;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $black;
+        }
+      }
+      &--dice {
+        display: flex;
+        gap: $grid-gutter;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      &--label {
+        text-align: center;
+      }
+    }
+
+    &__result {
+      span {
+        font-family: $font-handwritten;
+        &:first-of-type {
+          font-weight: 700;
+          text-transform: uppercase;
+          &::after {
+            content: ' ';
+          }
+        }
+      }
+    }
+
+    &__die {
+      span {
+        padding: 0;
+        margin: 0;
+        font-family: $font-dice;
+        font-size: $font-h5;
+        line-height: normal;
+      }
+    }
+
+    &__modifiers {
+      // display: flex;
+      // gap: $grid-gutter;
+      // flex-wrap: wrap;
+    }
+    &__boosts,
+    &__kicks,
+    &__dares {
+      display: flex;
+      gap: $grid-gutter;
+      // text-align: center;
+    }
+  }
+
+  .inlinerollresult {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-family: $font-dice;
+    font-size: $font-h5;
+    line-height: normal;
+    &.fullcrit,
+    &.fullfail,
+    &.importantroll {
+      border: none;
+    }
+  }
+}

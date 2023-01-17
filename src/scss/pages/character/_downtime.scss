@@ -17,18 +17,6 @@
     gap: $grid-gutter;
   }
 
-  &__check {
-    display: flex;
-    align-items: center;
-
-    span {
-      margin-inline-start: $m-sm;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-    }
-  }
-
   .downtime__name {
     font-weight: 700;
   }

@@ -25,10 +25,22 @@ mixin field(field)
           .el-input__wrapper
             +span(field).el-input__inner
 
+    when 'select'
+      select(name=`attr_${name}`, readonly=readonly, class=klass)&attributes(attributes)
+        each option in field.options
+          - const isSelected = option.value === value || option.selected;
+          - const isHidden = option.hidden ? true : false;
+          - value = option.value || option.name;
+          option(data-i18n=`opt_${option.name}`, value=value, selected=isSelected, hidden=isHidden)= option.text
+
     when 'checkbox'
     when 'radio'
       - if (type === 'checkbox') value = value || 'on';
-      input(name=`attr_${name}`, checked=selected, value=value, type=type)&attributes(attributes)
+      input(name=`attr_${name}`, id=id, checked=selected, value=value, type=type)&attributes(attributes)
+
+    when 'number'
+      - placeholder = placeholder || 0;
+      input(name=`attr_${name}`, value=value, placeholder=placeholder, min=min, max=max, type=type)&attributes(attributes)
 
     when 'textarea'
       textarea(

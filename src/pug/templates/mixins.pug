@@ -20,3 +20,23 @@ mixin rollFunction(array)
     block
   each tag in array.reverse()
     | {{/#{ tag }}}
+
+mixin displayDie(die)
+  +rollFunction([`rollBetween() computed::${die} 1 1`])
+    .sheet-roll__die
+      span.sheet-roll__die--1 1
+  +rollFunction([`rollBetween() computed::${die} 2 2`])
+    .sheet-roll__die
+      span.sheet-roll__die--2 2
+  +rollFunction([`rollBetween() computed::${die} 3 3`])
+    .sheet-roll__die
+      span.sheet-roll__die--3 3
+  +rollFunction([`rollBetween() computed::${die} 4 4`])
+    .sheet-roll__die
+      span.sheet-roll__die--4 4
+  +rollFunction([`rollBetween() computed::${die} 5 5`])
+    .sheet-roll__die
+      span.sheet-roll__die--5 5
+  +rollFunction([`rollBetween() computed::${die} 6 6`])
+    .sheet-roll__die
+      span.sheet-roll__die--6 6
