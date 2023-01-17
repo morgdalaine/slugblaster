@@ -19,6 +19,15 @@
       ~ * #{$this}__view {
         display: grid;
       }
+      ~ .repcontrol {
+        display: none;
+      }
+      ~ * .itemcontrol * {
+        display: none;
+      }
+      ~ * #{$this}__delete {
+        display: none;
+      }
     }
     &[value='on'] {
       ~ * #{$this}__edit {
@@ -41,7 +50,8 @@
   }
 
   &__view,
-  &__edit {
+  &__edit,
+  &__delete {
     display: none;
     transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
   }
@@ -50,5 +60,11 @@
     position: relative;
     padding: $p-md;
     background-color: hsl(random(360) 80% 80% / 80%);
+  }
+
+  &__delete {
+    min-height: $input-component-size-small;
+    padding-inline: calc($input-component-size-small + $p-sm);
+    align-items: center;
   }
 }

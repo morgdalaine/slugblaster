@@ -1,4 +1,14 @@
 -
+  const downtimeBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{downtime}}}',
+    '{{^{downtime_name}=@{downtime_name}}}',
+    '{{^{downtime_cost}=@{downtime_cost}}}',
+    '{{^{downtime_description}=@{downtime_description}}}',
+    '{{^{downtime_result}=@{downtime_result}}}',
+  ].join(' ');
+
   data.character.downtime = {
     sections: [
       { name: 'trait-beats', title: 'Trait Beats' },
@@ -8,6 +18,7 @@
       { name: 'crew-beats', title: 'Crew Beats' },
       { name: 'other-beats', title: 'Other Beats' },
     ],
+    broadcast: downtimeBroadcast,
     repeating: [
       { name: 'downtime_check', label: 'Check', placeholder: 'Check', type: 'checkbox', span: 1, blockName: 'downtime' },
       { name: 'downtime_name', label: 'Name', placeholder: 'Name', type: 'text', span: 11, blockName: 'downtime' },

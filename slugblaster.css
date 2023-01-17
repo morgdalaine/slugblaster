@@ -184,11 +184,13 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   opacity: 1;
 }
 
+.sheet-rolltemplate-slugcast,
 .sheet-rolltemplate-slugblaster {
   /**
    * Basic typography style for copy text
    */
 }
+.sheet-rolltemplate-slugcast label,
 .sheet-rolltemplate-slugblaster label {
   display: block;
   color: var(--label-color);
@@ -199,58 +201,72 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-weight: 700;
   margin: 0;
 }
+.sheet-rolltemplate-slugcast label span,
 .sheet-rolltemplate-slugblaster label span {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
 }
+.sheet-rolltemplate-slugcast .pictos,
 .sheet-rolltemplate-slugblaster .pictos {
   font-family: Pictos;
 }
+.sheet-rolltemplate-slugcast .translation,
 .sheet-rolltemplate-slugblaster .translation {
   display: none;
 }
+.sheet-rolltemplate-slugcast .sheet-roll,
 .sheet-rolltemplate-slugblaster .sheet-roll {
   display: grid;
   gap: 0.5rem 0.5rem;
-  background-color: hsla(285deg, 80%, 80%, 0.8);
+  background-color: hsla(209deg, 80%, 80%, 0.8);
 }
+.sheet-rolltemplate-slugcast .sheet-roll *,
 .sheet-rolltemplate-slugblaster .sheet-roll * {
   font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
   line-height: inherit;
 }
-.sheet-rolltemplate-slugblaster .sheet-roll__header, .sheet-rolltemplate-slugblaster .sheet-roll__content {
+.sheet-rolltemplate-slugcast .sheet-roll__header, .sheet-rolltemplate-slugcast .sheet-roll__content,
+.sheet-rolltemplate-slugblaster .sheet-roll__header,
+.sheet-rolltemplate-slugblaster .sheet-roll__content {
   padding: 0.5rem;
-  background: linear-gradient(to right, hsla(270deg, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(233deg, 80%, 80%, 0.8), transparent);
 }
+.sheet-rolltemplate-slugcast .sheet-roll__header,
 .sheet-rolltemplate-slugblaster .sheet-roll__header {
   display: flex;
   flex-wrap: wrap;
   gap: 0 0.5rem;
   justify-content: flex-end;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__header span,
 .sheet-rolltemplate-slugblaster .sheet-roll__header span {
   font-family: "Architects Daughter", "Gloria Hallelujah", "Comic Sans MS", cursive;
   font-size: 1.125rem;
   font-variant: small-caps;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__header--character_name,
 .sheet-rolltemplate-slugblaster .sheet-roll__header--character_name {
   font-weight: 700;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__title,
 .sheet-rolltemplate-slugblaster .sheet-roll__title {
   font-family: "Knewave", "Comic Sans MS", serif;
   font-size: 2rem;
   text-transform: uppercase;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__subtitle,
 .sheet-rolltemplate-slugblaster .sheet-roll__subtitle {
   font-size: 1rem;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__results,
 .sheet-rolltemplate-slugblaster .sheet-roll__results {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr auto;
   gap: 0 0.5rem;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__results--roll,
 .sheet-rolltemplate-slugblaster .sheet-roll__results--roll {
   display: grid;
   place-items: center;
@@ -261,6 +277,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   outline: 1px solid #292828;
   outline-offset: 0;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__results--roll .inlinerollresult,
 .sheet-rolltemplate-slugblaster .sheet-roll__results--roll .inlinerollresult {
   display: block;
   width: inherit;
@@ -268,7 +285,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(251deg, 80%, 80%), hsl(149deg, 80%, 80%), hsl(203deg, 80%, 80%));
+  background-image: radial-gradient(hsl(37deg, 80%, 80%), hsl(99deg, 80%, 80%), hsl(220deg, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -276,25 +293,31 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #292828;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__results--dice,
 .sheet-rolltemplate-slugblaster .sheet-roll__results--dice {
   display: flex;
   gap: 0.5rem 0.5rem;
   align-items: center;
   justify-content: space-evenly;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__results--label,
 .sheet-rolltemplate-slugblaster .sheet-roll__results--label {
   text-align: center;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__result span,
 .sheet-rolltemplate-slugblaster .sheet-roll__result span {
   font-family: "Architects Daughter", "Gloria Hallelujah", "Comic Sans MS", cursive;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__result span:first-of-type,
 .sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type {
   font-weight: 700;
   text-transform: uppercase;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__result span:first-of-type::after,
 .sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type::after {
   content: " ";
 }
+.sheet-rolltemplate-slugcast .sheet-roll__die span,
 .sheet-rolltemplate-slugblaster .sheet-roll__die span {
   padding: 0;
   margin: 0;
@@ -302,10 +325,28 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 1.25rem;
   line-height: normal;
 }
-.sheet-rolltemplate-slugblaster .sheet-roll__boosts, .sheet-rolltemplate-slugblaster .sheet-roll__kicks, .sheet-rolltemplate-slugblaster .sheet-roll__dares {
+.sheet-rolltemplate-slugcast .sheet-roll__boosts, .sheet-rolltemplate-slugcast .sheet-roll__kicks, .sheet-rolltemplate-slugcast .sheet-roll__dares,
+.sheet-rolltemplate-slugblaster .sheet-roll__boosts,
+.sheet-rolltemplate-slugblaster .sheet-roll__kicks,
+.sheet-rolltemplate-slugblaster .sheet-roll__dares {
   display: flex;
   gap: 0.5rem 0.5rem;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__broadcast,
+.sheet-rolltemplate-slugblaster .sheet-roll__broadcast {
+  display: grid;
+  gap: 0.5rem 0.5rem;
+  margin-top: 1rem;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__broadcast--value,
+.sheet-rolltemplate-slugblaster .sheet-roll__broadcast--value {
+  display: block;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__broadcast--key,
+.sheet-rolltemplate-slugblaster .sheet-roll__broadcast--key {
+  border-top: 1px dashed #292828;
+}
+.sheet-rolltemplate-slugcast .inlinerollresult,
 .sheet-rolltemplate-slugblaster .inlinerollresult {
   border: none;
   background-color: transparent;
@@ -315,7 +356,10 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 1.25rem;
   line-height: normal;
 }
-.sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit, .sheet-rolltemplate-slugblaster .inlinerollresult.fullfail, .sheet-rolltemplate-slugblaster .inlinerollresult.importantroll {
+.sheet-rolltemplate-slugcast .inlinerollresult.fullcrit, .sheet-rolltemplate-slugcast .inlinerollresult.fullfail, .sheet-rolltemplate-slugcast .inlinerollresult.importantroll,
+.sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit,
+.sheet-rolltemplate-slugblaster .inlinerollresult.fullfail,
+.sheet-rolltemplate-slugblaster .inlinerollresult.importantroll {
   border: none;
 }
 
@@ -332,12 +376,12 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   --input-color: rgb(68, 68, 68);
   --input-color-active: #292828;
   --input-color-disabled: rgb(153, 153, 153);
-  --button-background: rgba(153, 153, 153, 0.8);
-  --button-background-active: rgba(68, 68, 68, 0.8);
-  --button-background-hover: rgba(237, 237, 237, 0.8);
-  --button-color: #292828;
-  --button-color-active: #01acef;
-  --button-color-hover: #eb008b;
+  --button-background: rgba(113, 81, 160, 0.8);
+  --button-background-active: rgba(90, 65, 128, 0.8);
+  --button-background-hover: rgba(141, 116, 179, 0.8);
+  --button-color: #ffd45c;
+  --button-color-active: #ffdd7d;
+  --button-color-hover: #ffd45c;
 }
 
 .ul-dialog {
@@ -419,7 +463,7 @@ html .charsheet .slugblaster select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("https://www.svgrepo.com/show/361418/chevron-down.svg");
+  background-image: url("https://www.svgrepo.com/show/471164/chevron-down.svg");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -499,8 +543,67 @@ html .charsheet .slugblaster .visually-hidden:not(:focus):not(:active) {
 html .charsheet .slugblaster .repcontainer {
   display: grid;
 }
+html .charsheet .slugblaster .repcontainer.editmode + .repcontrol {
+  display: block !important;
+}
+html .charsheet .slugblaster .repcontainer.editmode + .repcontrol button.repcontrol_edit::before {
+  background-image: url("https://www.svgrepo.com/show/471631/lock-unlocked-01.svg");
+}
+html .charsheet .slugblaster .repcontainer.editmode .repeating__delete {
+  display: grid;
+}
+html .charsheet .slugblaster .repcontainer.editmode .repeating__edit {
+  display: none !important;
+}
 html .charsheet .slugblaster .repitem {
   margin-bottom: 0.5rem;
+}
+html .charsheet .slugblaster .repcontrol_add, html .charsheet .slugblaster .repcontrol_edit, html .charsheet .slugblaster .repcontrol_del, html .charsheet .slugblaster .repcontrol_move {
+  font-size: 0;
+}
+html .charsheet .slugblaster .repcontrol_add::before, html .charsheet .slugblaster .repcontrol_edit::before, html .charsheet .slugblaster .repcontrol_del::before, html .charsheet .slugblaster .repcontrol_move::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+html .charsheet .slugblaster .repcontrol_add:hover, html .charsheet .slugblaster .repcontrol_edit:hover, html .charsheet .slugblaster .repcontrol_del:hover, html .charsheet .slugblaster .repcontrol_move:hover {
+  background-color: transparent;
+  filter: invert(99%);
+}
+html .charsheet .slugblaster .repcontrol_add::before, html .charsheet .slugblaster .repcontrol_edit::before {
+  width: 2rem;
+}
+html .charsheet .slugblaster .repcontrol_add::before {
+  background-image: url("https://www.svgrepo.com/show/471794/plus-square.svg");
+}
+html .charsheet .slugblaster .repcontrol_edit::before {
+  background-image: url("https://www.svgrepo.com/show/471623/lock-01.svg");
+}
+html .charsheet .slugblaster .repcontrol_del, html .charsheet .slugblaster .repcontrol_move {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html .charsheet .slugblaster .repcontrol_del {
+  right: 0.25rem;
+}
+html .charsheet .slugblaster .repcontrol_del::before {
+  background-image: url("https://www.svgrepo.com/show/471998/trash-01.svg");
+}
+html .charsheet .slugblaster .repcontrol_move {
+  left: 0.25rem;
+}
+html .charsheet .slugblaster .repcontrol_move::before {
+  background-image: url("https://www.svgrepo.com/show/471721/move.svg");
+}
+html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
+  background-color: transparent;
+}
+html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
+  background-image: linear-gradient(to right, hsla(311deg, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -586,7 +689,7 @@ html .charsheet .slugblaster .blob__wrapper {
 html .charsheet .slugblaster .blob__header, html .charsheet .slugblaster .blob__content {
   padding: 0.25rem;
   background-color: rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, hsla(307deg, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(270deg, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster .blob__header {
   position: relative;
@@ -601,11 +704,76 @@ html .charsheet .slugblaster .blob--editor {
   grid-template-columns: 1fr auto;
   gap: 0.5rem 0.5rem;
 }
+html .charsheet .slugblaster .bubble__controller[value=on] ~ * .bubble__expand--collapse {
+  display: block;
+}
+html .charsheet .slugblaster .bubble__controller[value="0"] ~ .bubble__content .bubble__collapse {
+  margin-top: -100rem;
+}
+html .charsheet .slugblaster .bubble__controller[value="0"] ~ * .bubble__expand {
+  transform: rotate(180deg);
+}
+html .charsheet .slugblaster .bubble__controller[value="0"] ~ * .bubble__expand--expand {
+  display: block;
+}
+html .charsheet .slugblaster .bubble__header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 0.5rem;
+}
+html .charsheet .slugblaster .bubble__content {
+  overflow: hidden;
+}
+html .charsheet .slugblaster .bubble__collapse {
+  transition: margin-top 0.5s;
+}
+html .charsheet .slugblaster .bubble__controls {
+  display: flex;
+  gap: 0.25rem;
+}
+html .charsheet .slugblaster .bubble__broadcast, html .charsheet .slugblaster .bubble__expand {
+  display: grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  transition: transform 0.5s;
+}
+html .charsheet .slugblaster .bubble__broadcast:hover, html .charsheet .slugblaster .bubble__expand:hover {
+  transform: translateY(-2px);
+}
+html .charsheet .slugblaster .bubble__broadcast[type=roll] {
+  background-color: transparent;
+  background-image: url("https://www.svgrepo.com/show/471691/message-square-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+html .charsheet .slugblaster .bubble__broadcast[type=roll]:hover, html .charsheet .slugblaster .bubble__broadcast[type=roll]:active, html .charsheet .slugblaster .bubble__broadcast[type=roll]:focus {
+  background-color: transparent;
+  background-image: url("https://www.svgrepo.com/show/471691/message-square-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+html .charsheet .slugblaster .bubble__expand {
+  background-image: url("https://www.svgrepo.com/show/471164/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+html .charsheet .slugblaster .bubble__expand--expand, html .charsheet .slugblaster .bubble__expand--collapse {
+  display: none;
+}
+html .charsheet .slugblaster .bubble__expand input {
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 html .charsheet .slugblaster button[type=action],
 html .charsheet .slugblaster button[type=roll] {
   background: var(--button-background);
   color: var(--button-color);
   border-radius: 0.5rem;
+  padding: 0;
+  margin: 0;
 }
 html .charsheet .slugblaster button[type=action]:hover,
 html .charsheet .slugblaster button[type=roll]:hover {
@@ -800,7 +968,7 @@ html .charsheet .slugblaster .panel__wrapper {
 html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
   padding: 0.25rem;
   background-color: rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, hsla(283deg, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(325deg, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster .panel__header {
   position: relative;
@@ -824,12 +992,21 @@ html .charsheet .slugblaster .repeating__is-empty[value="0"] ~ .repeating__empty
 html .charsheet .slugblaster .repeating__controller[value="0"] ~ * .repeating__view {
   display: grid;
 }
+html .charsheet .slugblaster .repeating__controller[value="0"] ~ .repcontrol {
+  display: none;
+}
+html .charsheet .slugblaster .repeating__controller[value="0"] ~ * .itemcontrol * {
+  display: none;
+}
+html .charsheet .slugblaster .repeating__controller[value="0"] ~ * .repeating__delete {
+  display: none;
+}
 html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__edit {
   display: grid;
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: hsla(281deg, 80%, 80%, 0.8);
+  background-color: hsla(73deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -838,14 +1015,19 @@ html .charsheet .slugblaster .repeating__header span {
   display: block;
   text-align: center;
 }
-html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .repeating__edit {
+html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .repeating__edit, html .charsheet .slugblaster .repeating__delete {
   display: none;
   transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
 }
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
   padding: 0.5rem;
-  background-color: hsla(343deg, 80%, 80%, 0.8);
+  background-color: hsla(224deg, 80%, 80%, 0.8);
+}
+html .charsheet .slugblaster .repeating__delete {
+  min-height: 2rem;
+  padding-inline: 2.25rem;
+  align-items: center;
 }
 html .charsheet .slugblaster .character {
   position: relative;
@@ -944,7 +1126,7 @@ html .charsheet .slugblaster .character .attitude__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .components {
-  background-color: hsla(37deg, 80%, 80%, 0.8);
+  background-color: hsla(242deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -963,7 +1145,7 @@ html .charsheet .slugblaster .character .components__component--track {
   justify-content: center;
 }
 html .charsheet .slugblaster .character .dicetray {
-  background-color: hsla(343deg, 80%, 80%, 0.8);
+  background-color: hsla(286deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .dicetray__content {
   display: grid;
@@ -981,7 +1163,7 @@ html .charsheet .slugblaster .character .dicetray__actions {
   justify-content: space-evenly;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: hsla(30deg, 80%, 80%, 0.8);
+  background-color: hsla(105deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -991,7 +1173,7 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: hsla(295deg, 80%, 80%, 0.8);
+  background-color: hsla(210deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .downtime + .panel {
   margin-top: 0.5rem;
@@ -1014,13 +1196,13 @@ html .charsheet .slugblaster .character .downtime__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: hsla(20deg, 80%, 80%, 0.8);
+  background-color: hsla(206deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .header {
-  background-color: hsla(192deg, 80%, 80%, 0.8);
+  background-color: hsla(197deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .header__title[type=text] {
   font-size: 2rem;
@@ -1032,7 +1214,7 @@ html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblas
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: hsla(55deg, 80%, 80%, 0.8);
+  background-color: hsla(175deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -1042,7 +1224,7 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: hsla(202deg, 80%, 80%, 0.8);
+  background-color: hsla(217deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -1057,7 +1239,7 @@ html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: hsla(131deg, 80%, 80%, 0.8);
+  background-color: hsla(51deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .signature__title[type=text] {
   font-size: 2rem;
@@ -1069,7 +1251,7 @@ html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugb
   row-gap: 0.5rem;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: hsla(138deg, 80%, 80%, 0.8);
+  background-color: hsla(84deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -1087,7 +1269,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: hsla(286deg, 80%, 80%, 0.8);
+  background-color: hsla(311deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
   display: none;
@@ -1104,9 +1286,21 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
   order: 1;
   padding-left: 0.5rem;
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
+  display: grid;
+}
+html .charsheet .slugblaster .character .style__checkbox--0 input {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("https://www.svgrepo.com/show/471908/slash-circle-02.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: hsla(359deg, 80%, 80%, 0.8);
+  background-color: hsla(81deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
@@ -1115,7 +1309,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: hsla(92deg, 80%, 80%, 0.8);
+  background-color: hsla(7deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
   display: none;
@@ -1172,9 +1366,9 @@ html .charsheet .slugblaster .character .turbo__boost--3, html .charsheet .slugb
 }
 html .charsheet .slugblaster .character .turbo__boost input, html .charsheet .slugblaster .character .turbo__kick input {
   outline: 0;
-  -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 html .charsheet .slugblaster .character .turbo__boost input:checked, html .charsheet .slugblaster .character .turbo__kick input:checked {
   opacity: 0.5;
@@ -1829,33 +2023,47 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: hsla(81deg, 80%, 80%, 0.8);
+  background-color: hsla(72deg, 80%, 80%, 0.8);
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem 0.5rem;
   align-items: center;
   justify-content: space-between;
   padding-inline: 0.5rem;
 }
 html .charsheet .slugblaster .tophat__title {
+  flex: calc(60% - 1rem);
   font-size: 3rem;
   font-family: "Knewave", "Comic Sans MS", serif;
   text-transform: uppercase;
+}
+html .charsheet .slugblaster .tophat .nav {
+  flex: calc(40% - 1rem);
 }
 html .charsheet .slugblaster .nav {
   display: flex;
   gap: 0.5rem 0.5rem;
   align-items: center;
+  justify-content: space-between;
+}
+html .charsheet .slugblaster .nav > li {
+  flex: 1;
 }
 html .charsheet .slugblaster .nav__action {
+  width: 100%;
   min-height: 3rem;
-  padding-inline: 0.5rem;
-  font-family: "Poppins", "Sofia Sans", "Ubuntu", sans-serif;
   text-transform: uppercase;
 }
+html .charsheet .slugblaster .nav__action span {
+  padding-inline: 0.5rem;
+  font-family: "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-weight: 700;
+  white-space: nowrap;
+}
 html .charsheet .slugblaster .footer {
-  background-color: hsla(3deg, 80%, 80%, 0.8);
+  background-color: hsla(143deg, 80%, 80%, 0.8);
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {

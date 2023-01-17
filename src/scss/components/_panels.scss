@@ -12,7 +12,7 @@
   &__content {
     padding: $p-sm;
     background-color: rgb(0, 0, 0, 0.1);
-    background: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
+    background-image: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
   }
 
   &__header {

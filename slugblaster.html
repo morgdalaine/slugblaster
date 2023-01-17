@@ -252,12 +252,29 @@
                       </div>
                       <div class="repeating__view">
                         <div class="gear__view">
-                          <label class="gear__check">
-                            <input class="checkbox--scribble" name="attr_gear_check" id="gear_check" value="on" type="checkbox"/><span name="attr_gear_name"></span>
-                          </label>
+                          <div class="bubble gear">
+                            <input class="bubble__controller" name="attr_gear_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <label class="gear__check">
+                                <input class="checkbox--scribble" name="attr_gear_check" id="gear_check" value="on" type="checkbox"/><span class="gear__name" name="attr_gear_name"></span>
+                              </label>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_gear-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{gear}}} {{^{gear_name}=@{gear_name}}} {{^{gear_cost}=@{gear_cost}}} {{^{gear_description}=@{gear_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_gear_collapse">
+                                  <input name="attr_gear_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_gear_cost"></span>
+                                <label data-i18n="gear_cost">Cost</label><span name="attr_gear_description"></span>
+                                <label data-i18n="gear_description">Description</label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="repeating__delete">
+                      <div class="repeating__delete"><span name="attr_gear_name"></span>
                       </div>
                     </div>
                   </fieldset>
@@ -393,12 +410,29 @@
                       </div>
                       <div class="repeating__view">
                         <div class="traits__view">
-                          <label class="traits__check">
-                            <input class="checkbox--scribble" name="attr_trait_check" id="trait_check" value="on" type="checkbox"/><span class="trait__name" name="attr_trait_name"></span>
-                          </label><span name="attr_trait_description"></span>
+                          <div class="bubble trait">
+                            <input class="bubble__controller" name="attr_trait_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <label class="traits__check">
+                                <input class="checkbox--scribble" name="attr_trait_check" id="trait_check" value="on" type="checkbox"/><span class="trait__name" name="attr_trait_name"></span>
+                              </label>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_trait-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{traits}}} {{^{trait_name}=@{trait_name}}} {{^{trait_description}=@{trait_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_trait_collapse">
+                                  <input name="attr_trait_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_trait_description"></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="repeating__delete">
+                        <div class="traits__view"><span class="trait__name" name="attr_trait_name"></span>
+                        </div>
                       </div>
                     </div>
                   </fieldset>
@@ -607,13 +641,30 @@
                         </div>
                       </div>
                       <div class="repeating__view">
-                        <div class="mods__view">
-                          <label class="mods__check">
-                            <input class="checkbox--scribble" name="attr_mod_check" id="mod_check" value="on" type="checkbox"/><span class="mod__name" name="attr_mod_name"></span>
-                          </label><span name="attr_mod_cost"></span>
+                        <div class="bubble mod">
+                          <input class="bubble__controller" name="attr_mod_collapse" value="0" type="hidden"/>
+                          <div class="bubble__header">
+                            <div class="mods__view">
+                              <label class="mods__check">
+                                <input class="checkbox--scribble" name="attr_mod_check" id="mod_check" value="on" type="checkbox"/><span class="mod__name" name="attr_mod_name"></span>
+                              </label>
+                            </div>
+                            <div class="bubble__controls">
+                              <button class="bubble__broadcast" name="roll_mod-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{mods}}} {{^{mod_name}=@{mod_name}}} {{^{mod_cost}=@{mod_cost}}} {{^{mod_description}=@{mod_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                              <label class="bubble__expand" for="attr_mod_collapse">
+                                <input name="attr_mod_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="bubble__content">
+                            <div class="bubble__collapse"><span name="attr_mod_cost"></span>
+                              <label data-i18n="mod_cost">Cost</label><span name="attr_mod_description"></span>
+                              <label data-i18n="mod_description">Description</label>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="repeating__delete">
+                      <div class="repeating__delete"><span class="mod__name" name="attr_mod_name"></span>
                       </div>
                     </div>
                   </fieldset>
@@ -725,13 +776,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -791,13 +859,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -857,13 +942,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -923,13 +1025,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -989,13 +1108,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -1055,13 +1191,30 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="downtime__view">
-                            <label class="downtime__check">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
-                            </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                          <div class="bubble downtime">
+                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="downtime__view">
+                                <label class="downtime__check">
+                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_downtime_collapse">
+                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
+                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
+                                <label data-i18n="downtime_description">Description</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -1117,10 +1270,25 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="legacy__view"><span class="legacy__name" name="attr_legacy_name"></span><span name="attr_legacy_description"></span>
+                          <div class="legacy__view">
+                            <div class="bubble legacy">
+                              <input class="bubble__controller" name="attr_legacy_collapse" value="0" type="hidden"/>
+                              <div class="bubble__header"><span class="legacy__name" name="attr_legacy_name"></span>
+                                <div class="bubble__controls">
+                                  <button class="bubble__broadcast" name="roll_legacy-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{legacy}}} {{^{legacy_name}=@{legacy_name}}} {{^{legacy_description}=@{legacy_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                  <label class="bubble__expand" for="attr_legacy_collapse">
+                                    <input name="attr_legacy_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="bubble__content">
+                                <div class="bubble__collapse"><span name="attr_legacy_description"></span>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="legacy__name" name="attr_legacy_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -1168,10 +1336,25 @@
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <div class="doom__view"><span class="doom__name" name="attr_doom_name"></span><span name="attr_doom_description"></span>
+                          <div class="doom__view">
+                            <div class="bubble doom">
+                              <input class="bubble__controller" name="attr_doom_collapse" value="0" type="hidden"/>
+                              <div class="bubble__header"><span class="doom__name" name="attr_doom_name"></span>
+                                <div class="bubble__controls">
+                                  <button class="bubble__broadcast" name="roll_doom-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{doom}}} {{^{doom_name}=@{doom_name}}} {{^{doom_description}=@{doom_description}}}" type="roll"><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                  <label class="bubble__expand" for="attr_doom_collapse">
+                                    <input name="attr_doom_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="bubble__content">
+                                <div class="bubble__collapse"><span name="attr_doom_description"></span>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="doom__name" name="attr_doom_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -1185,18 +1368,6 @@
     </main>
     <footer class="footer"><span class="visually-hidden" data-i18n="version">Version</span><span name="attr_version"></span>
       <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span>
-      </div>
-      <div class="fonts">
-        <h2 style="font: 1.25rem &quot;Architects Daughter&quot;">Architects Daughter; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;DotGothic16&quot;">DotGothic16; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Gloria Hallelujah&quot;">Gloria Hallelujah; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Knewave&quot;">Knewave; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Lato&quot;">Lato; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Poppins&quot;">Poppins; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Roboto&quot;">Roboto; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Sofia Sans Condensed&quot;">Sofia Sans Condensed; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Sofia Sans&quot;">Sofia Sans; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
-        <h2 style="font: 1.25rem &quot;Ubuntu&quot;">Ubuntu; Sphinx of black quartz judge my vow 1 2 3 4 5 6</h2>
       </div>
     </footer>
   </div>
@@ -1288,6 +1459,20 @@
         <div class="sheet-roll__dares">
           <label data-i18n="dare">Dare</label>{{#plus_1d6}}<span data-i18n="plus_1d6">+1d6</span>{{/plus_1d6}}{{#plus_kick}}<span data-i18n="plus_kick">1 kick</span>{{/plus_kick}}{{#clear_trouble}}<span data-i18n="clear_trouble">clear 1 trouble</span>{{/clear_trouble}}
         </div>{{/choose_dare}}
+      </div>
+    </div>
+  </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-slugcast">
+  <div class="sheet-roll">
+    <div class="sheet-roll__header"><span class="sheet-roll__header--character_name">{{ character }}</span><span class="sheet-roll__header--take-action" data-i18n="shares_with_the_class">Shares With The Class</span></div>
+    <div class="sheet-roll__content">
+      <div class="sheet-roll__title">{{ title }}</div>
+      <div class="sheet-roll__subtitle">{{ subtitle }}</div>
+      <div class="sheet-roll__broadcast">{{#allprops() character title subtitle}}
+        <div class="sheet-roll__broadcast-item"><span class="sheet-roll__broadcast--value">{{value}}</span>
+          <label class="sheet-roll__broadcast--key">{{key}}</label>
+        </div>{{/allprops() character title subtitle}}
       </div>
     </div>
   </div>

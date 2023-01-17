@@ -2,7 +2,7 @@
 +panel({ name: 'legacy', title: 'legacy' })
   +block('content')
     +repeating('legacy')
-      - const { repeating } = legacy;
+      - const { broadcast, repeating } = legacy;
       - const [name, desc] = repeating;
       +block('edit')
         .row.legacy__edit
@@ -16,5 +16,11 @@
 
       +block('view')
         .legacy__view
-          +span(name).legacy__name
-          +span(desc)
+          +bubble({ name: 'legacy', broadcast })
+            +block('header')
+              +span(name).legacy__name
+            +block('content')
+              +span(desc)
+
+      +block('delete')
+        +span(name).legacy__name

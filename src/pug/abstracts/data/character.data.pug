@@ -1,4 +1,34 @@
 -
+  const traitsBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{traits}}}',
+    '{{^{trait_name}=@{trait_name}}}',
+    '{{^{trait_description}=@{trait_description}}}',
+  ].join(' ');
+  const doomBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{doom}}}',
+    '{{^{doom_name}=@{doom_name}}}',
+    '{{^{doom_description}=@{doom_description}}}',
+  ].join(' ');
+  const legacyBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{legacy}}}',
+    '{{^{legacy_name}=@{legacy_name}}}',
+    '{{^{legacy_description}=@{legacy_description}}}',
+  ].join(' ');
+  const gearBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{gear}}}',
+    '{{^{gear_name}=@{gear_name}}}',
+    '{{^{gear_cost}=@{gear_cost}}}',
+    '{{^{gear_description}=@{gear_description}}}',
+  ].join(' ');
+
   data.character = {
     //- finish run clean up button?
     personalities: ['grit', 'guts', 'smarts', 'heart', 'chill'],
@@ -80,6 +110,7 @@
         blockName: 'gear',
       },
       hidden: [{ name: 'gear_autogen', type: 'hidden', blockName: 'gear' }],
+      broadcast: gearBroadcast,
       repeating: [
         { name: 'gear_check', label: 'Select Gear', type: 'checkbox', span: 1, blockName: 'gear' },
         {
@@ -128,6 +159,7 @@
     },
     traits: {
       hidden: [{ name: 'trait_autogen', type: 'hidden', blockName: 'traits' }],
+      broadcast: traitsBroadcast,
       repeating: [
         {
           name: 'trait_check',
@@ -155,6 +187,7 @@
       ],
     },
     legacy: {
+      broadcast: legacyBroadcast,
       repeating: [
         {
           name: 'legacy_name',
@@ -173,6 +206,7 @@
       ],
     },
     doom: {
+      broadcast: doomBroadcast,
       repeating: [
         {
           name: 'doom_name',
@@ -251,8 +285,6 @@
       ],
     },
   };
-
-
 
 //-  extragear: [
         {

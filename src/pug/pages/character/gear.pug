@@ -21,7 +21,7 @@
 +blob({ name: 'gear'})
   +block('content')
     +repeating('gear')
-      - const { hidden, repeating } = gear;
+      - const { hidden, broadcast, repeating } = gear;
       - const [check, name, cost, desc] = repeating;
       +block('edit')
         .row.gear__edit
@@ -41,9 +41,19 @@
 
       +block('view')
         .gear__view
-          label.gear__check
-            +field(check).checkbox--scribble
-            +span(name)
+          +bubble({ name: 'gear', broadcast })
+            +block('header')
+              label.gear__check
+                +field(check).checkbox--scribble
+                +span(name).gear__name
+            +block('content')
+              +span(cost)
+              label(data-i18n=cost.name)= cost.label
+              +span(desc)
+              label(data-i18n=desc.name)= desc.label
+
+      +block('delete')
+        +span(name)
 
         //- .gear__extra
         //-   each extra in extragear

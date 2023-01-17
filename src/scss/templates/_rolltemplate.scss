@@ -1,3 +1,4 @@
+.sheet-rolltemplate-slugcast,
 .sheet-rolltemplate-slugblaster {
   @import '../base/typography';
 
@@ -15,7 +16,7 @@
     &__header,
     &__content {
       padding: $p-md;
-      background: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
+      background-image: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
     }
 
     &__header {
@@ -139,6 +140,21 @@
       display: flex;
       gap: $grid-gutter;
       // text-align: center;
+    }
+
+    &__broadcast {
+      display: grid;
+      gap: $grid-gutter;
+      margin-top: $m-lg;
+
+      &-item {
+      }
+      &--value {
+        display: block;
+      }
+      &--key {
+        border-top: 1px dashed $black;
+      }
     }
   }
 

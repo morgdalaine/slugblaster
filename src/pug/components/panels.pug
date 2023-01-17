@@ -8,14 +8,14 @@ mixin panel(panel)
     .panel__wrapper
       block
       .panel__header(class=`${panel.name}__header`)
-        +block("header", true)
+        +block('header', true)
           if (panel.title)
             h2.panel__title(data-i18n=panel.name, class=`${panel.name}__title`)= panel.title
         unless panel.static
           +minitoggle(panel.name)
         +edittoggle(panel.name)
       .panel__content(class=`${panel.name}__content`)
-        +block("content", true)
+        +block('content', true)
 
 mixin blob(blob)
   - const semantic = blob.semantic || 'div';
@@ -35,4 +35,29 @@ mixin blob(blob)
           if hasMinimizer
             +minitoggle(blob.name)
       .blob__content(class=`${blob.name}__content`)
-        +block("content", true)
+        +block('content', true)
+
+mixin bubble(bubble)
+  .bubble(class=bubble.name)&attributes(attributes)
+    block
+    input.bubble__controller(name=`attr_${bubble.name}_collapse`, value='0', type='hidden')
+    .bubble__header
+      +block('header', true)
+      .bubble__controls
+        if (bubble.broadcast)
+          +broadcast(bubble)
+        label.bubble__expand(for=`attr_${bubble.name}_collapse`)
+          input(name=`attr_${bubble.name}_collapse`, type='checkbox')
+          span.bubble__expand--collapse.visually-hidden(data-i18n='collapse_content') Collapse Content
+          span.bubble__expand--expand.visually-hidden(data-i18n='expand_content') Expand Content
+    .bubble__content
+      .bubble__collapse
+        +block('content', true)
+
+mixin broadcast(broadcast)
+  button.bubble__broadcast(
+    name=`roll_${broadcast.name}-broadcast`,
+    value=broadcast.broadcast,
+    type='roll'
+  )
+    span.visually-hidden(data-i18n='broadcast_to_chat') Broadcast to Chat

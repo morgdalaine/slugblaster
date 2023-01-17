@@ -2,7 +2,7 @@
 +panel({ name: 'doom', title: 'doom' })
   +block('content')
     +repeating('doom')
-      - const { repeating } = doom;
+      - const { broadcast, repeating } = doom;
       - const [name, desc] = repeating;
       +block('edit')
         .row.doom__edit
@@ -16,5 +16,11 @@
 
       +block('view')
         .doom__view
-          +span(name).doom__name
-          +span(desc)
+          +bubble({ name: 'doom', broadcast })
+            +block('header')
+              +span(name).doom__name
+            +block('content')
+              +span(desc)
+
+      +block('delete')
+        +span(name).doom__name

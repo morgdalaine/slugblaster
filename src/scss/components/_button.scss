@@ -10,6 +10,9 @@ button[type='roll'] {
   color: $button-color;
   border-radius: $button-border-radius;
 
+  padding: 0;
+  margin: 0;
+
   &:hover {
     background: $button-background-hover;
     color: $button-color-hover;

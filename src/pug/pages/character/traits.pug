@@ -2,7 +2,7 @@
 +panel({ name: 'traits', title: 'Traits' })
   +block('content')
     +repeating('traits')
-      - const { hidden, repeating } = traits;
+      - const { hidden, broadcast, repeating } = traits;
       - const [check, name, desc] = repeating;
       +block('edit')
         .row.traits__edit
@@ -21,7 +21,14 @@
 
       +block('view')
         .traits__view
-          label.traits__check
-            +field(check).checkbox--scribble
-            +span(name).trait__name
-          +span(desc)
+          +bubble({ name: 'trait', broadcast })
+            +block('header')
+              label.traits__check
+                +field(check).checkbox--scribble
+                +span(name).trait__name
+            +block('content')
+              +span(desc)
+
+      +block('delete')
+        .traits__view
+          +span(name).trait__name

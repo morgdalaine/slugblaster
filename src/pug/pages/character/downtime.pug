@@ -3,7 +3,7 @@ mixin makeDowntimeFieldset(fieldset)
   +panel({ name: fieldset.name, title: fieldset.title }).downtime
     +block('content')
       +repeating(fieldset.name)
-        - const { repeating } = downtime;
+        - const { broadcast, repeating } = downtime;
         - const [check, name, cost, desc, result] = repeating;
         +block('edit')
           .row.downtime__edit
@@ -20,12 +20,24 @@ mixin makeDowntimeFieldset(fieldset)
                 else
                   +field(field).checkbox--scribble
                 label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+
         +block('view')
-          .downtime__view
-            label.downtime__check
-              +field(check).checkbox--scribble
-              +span(name).downtime__name
-            +span(cost).downtime__cost
+          +bubble({ name: 'downtime', broadcast })
+            +block('header')
+              .downtime__view
+                label.downtime__check
+                  +field(check).checkbox--scribble
+                  +span(name).downtime__name
+                +span(cost).downtime__cost
+
+            +block('content')
+              +span(result)
+              label(data-i18n=result.name)= result.label
+              +span(desc)
+              label(data-i18n=desc.name)= desc.label
+
+        +block('delete')
+          +span(name).downtime__name
 
 each section in data.character.downtime.sections
   +makeDowntimeFieldset(section)

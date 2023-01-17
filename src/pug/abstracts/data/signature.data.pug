@@ -1,4 +1,13 @@
 -
+  const modsBroadcast = [
+    '&{template:slugcast}',
+    '{{character=@{character_name}}}',
+    '{{title=^{mods}}}',
+    '{{^{mod_name}=@{mod_name}}}',
+    '{{^{mod_cost}=@{mod_cost}}}',
+    '{{^{mod_description}=@{mod_description}}}',
+  ].join(' ');
+
   data.signature = {
     signatures: [
       'gravity_blaster',
@@ -72,6 +81,7 @@
         { name: 'turbo_boost', label: 'Add +1 boost', type: 'checkbox', blockName: 'mods' },
         { name: 'turbo_kick', label: 'Add +1 kick', type: 'checkbox', blockName: 'mods' },
       ],
+      broadcast: modsBroadcast,
       repeating: [
         { name: 'mod_check', label: 'Select mod', type: 'checkbox', span: 1, blockName: 'mods' },
         {

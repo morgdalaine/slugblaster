@@ -48,3 +48,18 @@ rolltemplate.sheet-rolltemplate-slugblaster
               span(data-i18n='plus_kick') 1 kick
             +tags(['clear_trouble'])
               span(data-i18n='clear_trouble') clear 1 trouble
+
+rolltemplate.sheet-rolltemplate-slugcast
+  .sheet-roll
+    .sheet-roll__header
+      span.sheet-roll__header--character_name {{ character }}
+      span.sheet-roll__header--take-action(data-i18n='shares_with_the_class') Shares With The Class
+      //- span.sheet-roll__header--take-action(data-i18n='broadcasts') Broadcasts
+    .sheet-roll__content
+      .sheet-roll__title {{ title }}
+      .sheet-roll__subtitle {{ subtitle }}
+      .sheet-roll__broadcast
+        +rollFunction(["allprops() character title subtitle"])
+          .sheet-roll__broadcast-item
+            span.sheet-roll__broadcast--value= `{{value}}`
+            label.sheet-roll__broadcast--key= `{{key}}`
