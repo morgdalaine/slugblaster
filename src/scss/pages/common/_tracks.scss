@@ -1,0 +1,87 @@
+.tracks {
+  $this: '.tracks';
+  background-color: hsl(random(360) 80% 80% / 80%);
+
+  &__edit,
+  &__view {
+    gap: $grid-gutter;
+  }
+
+  &__edit {
+  }
+
+  &__progress-track {
+    display: flex;
+    gap: $p-sm;
+  }
+
+  .track__name {
+    display: block;
+  }
+
+  .track__progress {
+    position: relative;
+    display: grid;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    &:hover,
+    &:focus {
+      color: $button-color;
+      background-color: $button-background-hover;
+      box-shadow: $input-shadow;
+    }
+  }
+
+  .track__letter,
+  .track__marked {
+    margin: 0;
+
+    font-family: $font-handwritten;
+    font-family: $font-playbook;
+    font-family: $font-nav;
+    font-size: $font-h4;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .track__marked {
+    display: none;
+  }
+
+  .track__marker[type='checkbox'] {
+    position: absolute;
+    outline: none;
+    appearance: none;
+
+    width: 100%;
+    height: 100%;
+
+    &:checked {
+      + .track__letter {
+        display: none;
+        // font-size: 0;
+        color: $foreground;
+        background-color: $input-color;
+        // &::after {
+        //   content: 'X';
+        //   font-size: $font-h4;
+        // }
+      }
+      ~ .track__marked {
+        display: block;
+        color: $foreground;
+        background-color: $input-color;
+      }
+    }
+  }
+
+  .track__letter-exists {
+    &:not([value]),
+    &:empty,
+    &[value=''] {
+      + .track__progress {
+        display: none !important;
+      }
+    }
+  }
+}

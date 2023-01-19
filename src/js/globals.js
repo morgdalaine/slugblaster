@@ -3,7 +3,7 @@ const G_SHEET_MODES = ['character', 'crew'];
 const G_EDITORS = [
   'angst-arc',
   'crew-beats',
-  'clocks',
+  'tracks',
   'dicetray',
   'doom',
   'family-arc',
@@ -30,6 +30,7 @@ const G_REPEATING_FIELDSETS = [
   'traits',
 
   // common
+  'tracks',
   'notes',
 
   // downtime
@@ -48,6 +49,10 @@ const G_REPEATING_FIELDSETS = [
   'sponsors',
   'sponsors',
 ];
+
+const G_TRACK = {
+  max: 12,
+};
 
 const G_PLAYBOOKS = {
   grit: {

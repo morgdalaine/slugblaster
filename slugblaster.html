@@ -818,40 +818,121 @@
                 </div>
               </div>
             </div>
-            <div class="panel clocks">
-              <input class="editor__controller" name="attr_clocks_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_clocks_minimizer" value="0" type="hidden"/>
+            <div class="panel tracks">
+              <input class="editor__controller" name="attr_tracks_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
               <div class="panel__wrapper">
-                <div class="panel__header clocks__header">
-                  <h2 class="panel__title clocks__title" data-i18n="clocks">Clocks</h2>
+                <div class="panel__header tracks__header">
+                  <h2 class="panel__title tracks__title" data-i18n="tracks">Tracks</h2>
                   <div class="panel__controls">
-                    <button class="minimizer-toggle" name="act_clocks-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_clocks_minimizer" value="0" type="hidden"/>
+                    <button class="minimizer-toggle" name="act_tracks-minimizer" type="action">
+                      <input class="minimizer-toggle__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
-                    <button class="edit-toggle" name="act_clocks-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_clocks_editor" value="on" type="hidden"/>
+                    <button class="edit-toggle" name="act_tracks-editor" type="action">
+                      <input class="edit-toggle__controller" name="attr_tracks_editor" value="on" type="hidden"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
                   </div>
                 </div>
-                <div class="panel__content clocks__content">
+                <div class="panel__content tracks__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_clocks_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_clocks_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_tracks_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_tracks_editor" value="on" type="hidden"/>
                     <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_clocks_repeating">None clocks with left beef</span></div>
+                      <div class="repeating__header"><span data-i18n="none_tracks_repeating">None tracks with left beef</span></div>
                       <div class="repeating__subtitle"></div>
                     </div>
-                    <fieldset class="repeating_clocks">
+                    <fieldset class="repeating_tracks">
                       <div class="repeating__wrapper">
                         <div class="repeating__edit">
+                          <div class="row tracks__edit">
+                            <input name="attr_track_completed" type="hidden"/>
+                            <input name="attr_track_size" type="hidden"/>
+                            <input name="attr_track_display" type="hidden"/>
+                            <div class="tracks__field track_name ">
+                              <input class="tracks__track_name tracks__input--text" name="attr_track_name" id="track_name" type="text" data-i18n-placeholder="placeholder_track_name" placeholder="SKATE"/>
+                              <label class="visually-hidden" for="track_name" data-i18n="track_name">Track</label>
+                            </div>
+                            <div class="tracks__field track_description ">
+                              <textarea class="tracks__track_description tracks__input--textarea" name="attr_track_description" data-i18n-placeholder="placeholder_track_description" placeholder="Description"></textarea>
+                              <label for="track_description" data-i18n="track_description">Description</label>
+                            </div>
+                          </div>
                         </div>
                         <div class="repeating__view">
+                          <div class="bubble track">
+                            <input class="bubble__controller" name="attr_track_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="tracks__view">
+                                <div class="tracks__progress-track">
+                                  <input class="track__letter-exists" name="attr_track_letter_1" type="hidden"/>
+                                  <label class="track__progress track__progress--1" for="track_marker_1">
+                                    <input class="track__marker" name="attr_track_marker_1" id="track_marker_1" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_1"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_1">Track 1</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_2" type="hidden"/>
+                                  <label class="track__progress track__progress--2" for="track_marker_2">
+                                    <input class="track__marker" name="attr_track_marker_2" id="track_marker_2" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_2"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_2">Track 2</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_3" type="hidden"/>
+                                  <label class="track__progress track__progress--3" for="track_marker_3">
+                                    <input class="track__marker" name="attr_track_marker_3" id="track_marker_3" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_3"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_3">Track 3</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_4" type="hidden"/>
+                                  <label class="track__progress track__progress--4" for="track_marker_4">
+                                    <input class="track__marker" name="attr_track_marker_4" id="track_marker_4" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_4"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_4">Track 4</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_5" type="hidden"/>
+                                  <label class="track__progress track__progress--5" for="track_marker_5">
+                                    <input class="track__marker" name="attr_track_marker_5" id="track_marker_5" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_5"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_5">Track 5</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_6" type="hidden"/>
+                                  <label class="track__progress track__progress--6" for="track_marker_6">
+                                    <input class="track__marker" name="attr_track_marker_6" id="track_marker_6" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_6"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_6">Track 6</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_7" type="hidden"/>
+                                  <label class="track__progress track__progress--7" for="track_marker_7">
+                                    <input class="track__marker" name="attr_track_marker_7" id="track_marker_7" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_7"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_7">Track 7</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_8" type="hidden"/>
+                                  <label class="track__progress track__progress--8" for="track_marker_8">
+                                    <input class="track__marker" name="attr_track_marker_8" id="track_marker_8" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_8"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_8">Track 8</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_9" type="hidden"/>
+                                  <label class="track__progress track__progress--9" for="track_marker_9">
+                                    <input class="track__marker" name="attr_track_marker_9" id="track_marker_9" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_9"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_9">Track 9</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_10" type="hidden"/>
+                                  <label class="track__progress track__progress--10" for="track_marker_10">
+                                    <input class="track__marker" name="attr_track_marker_10" id="track_marker_10" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_10"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_10">Track 10</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_11" type="hidden"/>
+                                  <label class="track__progress track__progress--11" for="track_marker_11">
+                                    <input class="track__marker" name="attr_track_marker_11" id="track_marker_11" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_11"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_11">Track 11</span>
+                                  </label>
+                                  <input class="track__letter-exists" name="attr_track_letter_12" type="hidden"/>
+                                  <label class="track__progress track__progress--12" for="track_marker_12">
+                                    <input class="track__marker" name="attr_track_marker_12" id="track_marker_12" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_12"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_12">Track 12</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="broadcast bubble__broadcast" name="roll_track-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=@{track_display}}} {{^{track_name}=@{track_name} (@{track_completed}/@{track_size})}} {{^{track_description}=@{track_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_track_collapse">
+                                  <input name="attr_track_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span class="track__name" name="attr_track_name"></span><span name="attr_track_description"></span>
+                                <label data-i18n="track_description">Description</label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="repeating__delete">
+                        <div class="repeating__delete"><span class="track__name" name="attr_track_name"></span>
                         </div>
                       </div>
                     </fieldset>
@@ -1749,7 +1830,7 @@ const results = {
 const G_EDITORS = [
   'angst-arc',
   'crew-beats',
-  'clocks',
+  'tracks',
   'dicetray',
   'doom',
   'family-arc',
@@ -1776,6 +1857,7 @@ const G_REPEATING_FIELDSETS = [
   'traits',
 
   // common
+  'tracks',
   'notes',
 
   // downtime
@@ -1794,6 +1876,10 @@ const G_REPEATING_FIELDSETS = [
   'sponsors',
   'sponsors',
 ];
+
+const G_TRACK = {
+  max: 12,
+};
 
 const G_PLAYBOOKS = {
   grit: {
@@ -1946,6 +2032,51 @@ const nopeTrouble = () => {
   });
 };
 
+const makeTrack = (sectionId) => {
+  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+  const request = [repeatingPrefix + 'track_name'];
+  getAttrs(request, (values) => {
+    const update = {};
+    const trackName = values[repeatingPrefix + 'track_name'];
+    update[repeatingPrefix + 'track_name'] = trackName.trim().toUpperCase();
+    update[repeatingPrefix + 'track_size'] = trackName.length;
+
+    for (let index = 0; index < G_TRACK.max; index++) {
+      const key = repeatingPrefix + 'track_letter_' + (index + 1);
+      const letter = trackName[index];
+
+      update[key] = letter ? letter.toUpperCase() : '';
+      if (!letter) update[repeatingPrefix + 'track_marker_' + (index + 1)] = 0;
+    }
+
+    setAttrs(update);
+  });
+};
+
+const makeTrackString = (sectionId) => {
+  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+  const markers = Array.from(Array(G_TRACK.max).keys(), (index) => `track_marker_${index + 1}`);
+
+  const request = ['track_name', 'track_size', ...markers].map((r) => repeatingPrefix + r);
+  getAttrs(request, (values) => {
+    const update = {};
+    const trackName = values[repeatingPrefix + 'track_name'];
+    const trackDisplay = Array(trackName.length);
+    let trackCompleted = 0;
+
+    Array.from(trackName, (letter, index) => {
+      const marked = values[repeatingPrefix + 'track_marker_' + (index + 1)];
+
+      trackDisplay[index] = marked === 'on' ? 'X' : trackName[index];
+      if (marked === 'on') trackCompleted++;
+    });
+
+    update[repeatingPrefix + 'track_display'] = trackDisplay.join(' ');
+    update[repeatingPrefix + 'track_completed'] = trackCompleted;
+    setAttrs(update);
+  });
+};
+
 const loadPersonality = (personality) => {
   const isValid = G_PLAYBOOKS.hasOwnProperty(personality);
   if (!isValid) return;
@@ -2077,7 +2208,19 @@ on(`change:signature`, (eventInfo) => {
 });
 
 // Style & Trouble
-on('clicked:nope', (eventInfo) => nopeTrouble());
+on(`clicked:nope`, (eventInfo) => nopeTrouble());
+
+// Progress Tracks / SKATE / tracks
+on(`change:repeating_tracks:track_name clicked:repeating_tracks:track-reset`, (eventInfo) => {
+  const sectionId = getSectionID(eventInfo);
+  makeTrack(sectionId);
+});
+Array.from(Array(G_TRACK.max).keys(), (index) => {
+  on(`change:repeating_tracks:track_marker_${index + 1}`, (eventInfo) => {
+    const sectionId = getSectionID(eventInfo);
+    makeTrackString(sectionId);
+  });
+});
   /**
  * Checks if a repeating fieldset is empty by counting the
  * number of sections inside the fieldset.

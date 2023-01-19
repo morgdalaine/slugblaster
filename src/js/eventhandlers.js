@@ -56,4 +56,16 @@ on(`change:signature`, (eventInfo) => {
 });
 
 // Style & Trouble
-on('clicked:nope', (eventInfo) => nopeTrouble());
+on(`clicked:nope`, (eventInfo) => nopeTrouble());
+
+// Progress Tracks / SKATE / tracks
+on(`change:repeating_tracks:track_name clicked:repeating_tracks:track-reset`, (eventInfo) => {
+  const sectionId = getSectionID(eventInfo);
+  makeTrack(sectionId);
+});
+Array.from(Array(G_TRACK.max).keys(), (index) => {
+  on(`change:repeating_tracks:track_marker_${index + 1}`, (eventInfo) => {
+    const sectionId = getSectionID(eventInfo);
+    makeTrackString(sectionId);
+  });
+});

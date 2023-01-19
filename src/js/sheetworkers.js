@@ -27,6 +27,51 @@ const nopeTrouble = () => {
   });
 };
 
+const makeTrack = (sectionId) => {
+  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+  const request = [repeatingPrefix + 'track_name'];
+  getAttrs(request, (values) => {
+    const update = {};
+    const trackName = values[repeatingPrefix + 'track_name'];
+    update[repeatingPrefix + 'track_name'] = trackName.trim().toUpperCase();
+    update[repeatingPrefix + 'track_size'] = trackName.length;
+
+    for (let index = 0; index < G_TRACK.max; index++) {
+      const key = repeatingPrefix + 'track_letter_' + (index + 1);
+      const letter = trackName[index];
+
+      update[key] = letter ? letter.toUpperCase() : '';
+      if (!letter) update[repeatingPrefix + 'track_marker_' + (index + 1)] = 0;
+    }
+
+    setAttrs(update);
+  });
+};
+
+const makeTrackString = (sectionId) => {
+  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+  const markers = Array.from(Array(G_TRACK.max).keys(), (index) => `track_marker_${index + 1}`);
+
+  const request = ['track_name', 'track_size', ...markers].map((r) => repeatingPrefix + r);
+  getAttrs(request, (values) => {
+    const update = {};
+    const trackName = values[repeatingPrefix + 'track_name'];
+    const trackDisplay = Array(trackName.length);
+    let trackCompleted = 0;
+
+    Array.from(trackName, (letter, index) => {
+      const marked = values[repeatingPrefix + 'track_marker_' + (index + 1)];
+
+      trackDisplay[index] = marked === 'on' ? 'X' : trackName[index];
+      if (marked === 'on') trackCompleted++;
+    });
+
+    update[repeatingPrefix + 'track_display'] = trackDisplay.join(' ');
+    update[repeatingPrefix + 'track_completed'] = trackCompleted;
+    setAttrs(update);
+  });
+};
+
 const loadPersonality = (personality) => {
   const isValid = G_PLAYBOOKS.hasOwnProperty(personality);
   if (!isValid) return;
