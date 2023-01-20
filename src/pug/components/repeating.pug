@@ -5,7 +5,7 @@ mixin repeating(fieldset, toggleName)
     input.repeating__controller(name=`attr_${fieldset}_editor`, value='on', type='hidden')
     .repeating__empty
       - const emptyKey = `none_${fieldset}_repeating`;
-      - const emptyHeader = `None ${fieldset.replace(/-/g, ' ')} with left beef`;
+      - const emptyHeader = `None ${fieldset.replace(/[-_]+/g, ' ')} with left beef`;
       .repeating__header
         span(data-i18n=emptyKey)= emptyHeader
       .repeating__subtitle

@@ -2,24 +2,30 @@ const G_SHEET_MODES = ['character', 'crew'];
 
 const G_EDITORS = [
   'angst-arc',
+  'authority-factions',
   'crew-beats',
-  'tracks',
+  'crew-factions',
+  'header-crew',
+  'crowd-factions',
   'dicetray',
   'doom',
   'family-arc',
   'gear',
   'header',
+  'fame',
   'legacy',
   'mods',
   'notes',
   'other-beats',
   'personality-arc',
   'signature',
+  'sponsor-factions',
+  'tracks',
   'trait-beats',
   'traits',
 ];
 
-const G_BLADES = ['downtimes', 'epilogue', 'diary'];
+const G_BLADES = ['downtimes', 'epilogue', 'factions', 'diary', 'multiverse'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -42,12 +48,10 @@ const G_REPEATING_FIELDSETS = [
   'other-beats',
 
   // crew sheet
-  'authorities',
-  'crews',
-  'crowds',
-  'fractures',
-  'sponsors',
-  'sponsors',
+  'crew-factions',
+  'authority-factions',
+  'sponsor-factions',
+  'crowd-factions',
 ];
 
 const G_TRACK = {

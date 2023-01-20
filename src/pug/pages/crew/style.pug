@@ -1,0 +1,12 @@
++blob({ name: 'style', title: 'Style' })
+  - const { style } = data.crew;
+  +block('content')
+    - const { subtitle, hidden, track } = style;
+    each field in hidden
+      +field(field).style__hidden
+    .style__track
+      each radio in track
+        label.style__checkbox(class=`style__checkbox--${radio.value}`)
+          +field(radio).checkbox--circle
+          span.visually-hidden(data-i18n=`style_${radio.value}`)= radio.label
+    //- +span(subtitle)

@@ -1,0 +1,48 @@
+.style {
+  $this: '.style';
+  background-color: hsl(random(360) 80% 80% / 80%);
+  // flex: 1;
+
+  .style__hidden {
+    &[value='0'],
+    &:not([value]) {
+      ~ * #{$this}__checkbox--0 {
+        display: none;
+      }
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: $grid-gutter;
+    margin: $m-md;
+  }
+  &__checkbox {
+    // font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    // font-weight: bold;
+    // line-height: 1.1;
+    // display: grid;
+    // grid-template-columns: 1em auto;
+    // gap: 0.5em;
+
+    // move 0 slot to end
+    &--0 {
+      order: 1;
+      padding-left: $grid-gutter-col;
+      border-left: 2px solid $text-color;
+      display: grid;
+
+      input {
+        width: 1.5rem;
+        aspect-ratio: 1;
+        outline: 0;
+        appearance: none;
+
+        background-image: url('https://www.svgrepo.com/show/471908/slash-circle-02.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

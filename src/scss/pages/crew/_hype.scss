@@ -1,0 +1,57 @@
+.hype {
+  $this: '.hype';
+
+  color: $white;
+  background-color: $teal;
+
+  &__clickies {
+    display: flex;
+    gap: 0 $grid-gutter-col;
+    margin-top: $m-lg;
+  }
+
+  @each $item in 'boost', 'kick' {
+    input[name='attr_hype_#{$item}'] {
+      &[value='on'] {
+        ~ * #{$this}__#{$item}--3 {
+          display: grid;
+        }
+      }
+    }
+  }
+
+  &__boost,
+  &__kick {
+    display: grid;
+    width: 3rem;
+    aspect-ratio: 1;
+
+    &--3 {
+      display: none;
+    }
+
+    input {
+      outline: 0;
+      appearance: none;
+
+      &:checked {
+        opacity: 0.5;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+  &__boost {
+    input {
+      background-image: image('boost.svg');
+      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
+    }
+  }
+  &__kick {
+    input {
+      background-image: image('kick.svg');
+      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg');
+    }
+  }
+}

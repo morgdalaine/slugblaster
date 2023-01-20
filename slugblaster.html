@@ -1608,7 +1608,197 @@
     </main>
     <main class="crew">
       <section class="crew__main">
-        <section class="crew__col"><span>Crew</span></section>
+        <section class="crew__col">
+          <section class="panel header-crew">
+            <input class="editor__controller" name="attr_header-crew_editor" value="on" type="hidden"/>
+            <input class="minimizer__controller" name="attr_header-crew_minimizer" value="0" type="hidden"/>
+            <div class="panel__wrapper">
+              <div class="panel__header header-crew__header">
+                <h2 class="panel__title header-crew__title" data-i18n="header-crew">The Crew</h2>
+                <div class="panel__controls">
+                  <button class="minimizer-toggle" name="act_header-crew-minimizer" type="action">
+                    <input class="minimizer-toggle__controller" name="attr_header-crew_minimizer" value="0" type="hidden"/>
+                    <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                    <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                  </button>
+                  <button class="edit-toggle" name="act_header-crew-editor" type="action">
+                    <input class="edit-toggle__controller" name="attr_header-crew_editor" value="on" type="hidden"/>
+                    <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                    <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                  </button>
+                </div>
+              </div>
+              <div class="panel__content header-crew__content">
+                <div class="editor">
+                  <div class="editor__edit header__edit">
+                    <div>
+                      <label for="character_name" data-i18n="character_name">Name</label>
+                      <input class="header__character_name header__input--text" name="attr_character_name" id="character_name" type="text" data-i18n-placeholder="placeholder_character_name" placeholder="Farrah"/>
+                    </div>
+                    <div>
+                      <label for="brands" data-i18n="brands">Brands</label>
+                      <input class="header__brands header__input--text" name="attr_brands" id="brands" type="text" data-i18n-placeholder="placeholder_brands" placeholder="good kids, weirdos"/>
+                    </div>
+                    <div>
+                      <label for="hangouts" data-i18n="hangouts">Hangouts</label>
+                      <input class="header__hangouts header__input--text" name="attr_hangouts" id="hangouts" type="text" data-i18n-placeholder="placeholder_hangouts" placeholder="the gas station"/>
+                    </div>
+                  </div>
+                  <div class="editor__view header__view">
+                    <div><span name="attr_character_name"></span>
+                      <label data-i18n="character_name">Name</label>
+                    </div>
+                    <div><span name="attr_brands"></span>
+                      <label data-i18n="brands">Brands</label>
+                    </div>
+                    <div><span name="attr_hangouts"></span>
+                      <label data-i18n="hangouts">Hangouts</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="blob fractures">
+            <input class="editor__controller" name="attr_fractures_editor" value="on" type="hidden"/>
+            <input class="minimizer__controller" name="attr_fractures_minimizer" value="0" type="hidden"/>
+            <div class="blob__wrapper">
+              <div class="blob__header fractures__header">
+                <h2 class="blob__title fractures__title" data-i18n="fractures">Fractures</h2>
+                <div class="blob__controls">
+                  <button class="broadcast broadcast" name="roll_fractures-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{fractures}}} {{^{fracture_1}=@{fracture_1}}} {{^{fracture_2}=@{fracture_2}}} {{^{fracture_3}=@{fracture_3}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                </div>
+              </div>
+              <div class="blob__content fractures__content">
+                <div class="fractures__boxes">
+                  <div class="fractures__box fractures__box--fracture_1">
+                    <input class="fractures__fracture_1 fractures__input--text" name="attr_fracture_1" id="fracture_1" type="text" data-i18n-placeholder="placeholder_fracture_1" placeholder="super bruised ribs"/>
+                    <label class="visually-hidden" for="fracture_1" data-i18n="fracture_1">Fracture 1</label>
+                  </div>
+                  <div class="fractures__box fractures__box--fracture_2">
+                    <input class="fractures__fracture_2 fractures__input--text" name="attr_fracture_2" id="fracture_2" type="text" data-i18n-placeholder="placeholder_fracture_2" placeholder="frustrated"/>
+                    <label class="visually-hidden" for="fracture_2" data-i18n="fracture_2">Fracture 2</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="crew__col">
+          <section class="blob hype">
+            <input class="editor__controller" name="attr_hype_editor" value="on" type="hidden"/>
+            <input class="minimizer__controller" name="attr_hype_minimizer" value="0" type="hidden"/>
+            <div class="blob__wrapper">
+              <div class="blob__header hype__header">
+                <h2 class="blob__title hype__title" data-i18n="hype">Hype</h2>
+                <div class="blob__controls">
+                </div>
+              </div>
+              <div class="blob__content hype__content"><span data-i18n="hype_description">Do it for the crew and boost or kick as needed.</span>
+                <input name="attr_hype_boost" type="hidden"/>
+                <input name="attr_hype_kick" type="hidden"/>
+                <div class="hype__clickies">
+                  <label class="hype__boost hype__boost--1">
+                    <input name="attr_hype_boost_1" id="hype_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_1">Hype Boost 1</span>
+                  </label>
+                  <label class="hype__boost hype__boost--2">
+                    <input name="attr_hype_boost_2" id="hype_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_2">Hype Boost 2</span>
+                  </label>
+                  <label class="hype__boost hype__boost--3">
+                    <input name="attr_hype_boost_3" id="hype_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_3">Hype Boost 3</span>
+                  </label>
+                  <label class="hype__kick hype__kick--1">
+                    <input name="attr_hype_kick_1" id="hype_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_1">Hype Kick 1</span>
+                  </label>
+                  <label class="hype__kick hype__kick--2">
+                    <input name="attr_hype_kick_2" id="hype_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_2">Hype Kick 2</span>
+                  </label>
+                  <label class="hype__kick hype__kick--3">
+                    <input name="attr_hype_kick_3" id="hype_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_3">Hype Kick 3</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="blob style">
+            <input class="editor__controller" name="attr_style_editor" value="on" type="hidden"/>
+            <input class="minimizer__controller" name="attr_style_minimizer" value="0" type="hidden"/>
+            <div class="blob__wrapper">
+              <div class="blob__header style__header">
+                <h2 class="blob__title style__title" data-i18n="style">Style</h2>
+                <div class="blob__controls">
+                </div>
+              </div>
+              <div class="blob__content style__content">
+                <input class="style__hidden" name="attr_crew_style" type="hidden"/>
+                <div class="style__track">
+                  <label class="style__checkbox style__checkbox--0">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="0" type="radio"/><span class="visually-hidden" data-i18n="style_0">0 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--1">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="1" type="radio"/><span class="visually-hidden" data-i18n="style_1">1 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--2">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="2" type="radio"/><span class="visually-hidden" data-i18n="style_2">2 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--3">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="3" type="radio"/><span class="visually-hidden" data-i18n="style_3">3 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--4">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="4" type="radio"/><span class="visually-hidden" data-i18n="style_4">4 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--5">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="5" type="radio"/><span class="visually-hidden" data-i18n="style_5">5 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--6">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="6" type="radio"/><span class="visually-hidden" data-i18n="style_6">6 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--7">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="7" type="radio"/><span class="visually-hidden" data-i18n="style_7">7 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--8">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="8" type="radio"/><span class="visually-hidden" data-i18n="style_8">8 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--9">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="9" type="radio"/><span class="visually-hidden" data-i18n="style_9">9 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--10">
+                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="10" type="radio"/><span class="visually-hidden" data-i18n="style_10">10 style</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="panel fame">
+            <input class="editor__controller" name="attr_fame_editor" value="on" type="hidden"/>
+            <input class="minimizer__controller" name="attr_fame_minimizer" value="0" type="hidden"/>
+            <div class="panel__wrapper">
+              <div class="panel__header fame__header">
+                <h2 class="panel__title fame__title" data-i18n="fame">Fame</h2>
+                <div class="panel__controls">
+                  <button class="minimizer-toggle" name="act_fame-minimizer" type="action">
+                    <input class="minimizer-toggle__controller" name="attr_fame_minimizer" value="0" type="hidden"/>
+                    <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                    <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                  </button>
+                  <button class="edit-toggle" name="act_fame-editor" type="action">
+                    <input class="edit-toggle__controller" name="attr_fame_editor" value="on" type="hidden"/>
+                    <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                    <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                  </button>
+                </div>
+              </div>
+              <div class="panel__content fame__content">
+                <div class="editor">
+                  <div class="editor__edit fame__edit">
+                  </div>
+                  <div class="editor__view fame__view">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
       </section>
       <aside class="crew__blades">
         <aside class="blade diary">
@@ -1808,6 +1998,350 @@
                 </div>
               </div>
             </section>
+          </div>
+        </aside>
+        <aside class="blade factions">
+          <input class="blade-toggle__controller" name="attr_factions_blade" value="0" type="hidden"/>
+          <button class="blade-toggle" name="act_factions-blade" type="action">
+            <h2 class="blade__title" data-i18n="factions">Factions</h2>
+          </button>
+          <div class="blade__wrapper">
+            <section class="panel crew-factions factions">
+              <input class="editor__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_crew-factions_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header crew-factions__header">
+                  <h2 class="panel__title crew-factions__title" data-i18n="crew-factions">Crews</h2>
+                  <div class="panel__controls">
+                    <button class="minimizer-toggle" name="act_crew-factions-minimizer" type="action">
+                      <input class="minimizer-toggle__controller" name="attr_crew-factions_minimizer" value="0" type="hidden"/>
+                      <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                      <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                    </button>
+                    <button class="edit-toggle" name="act_crew-factions-editor" type="action">
+                      <input class="edit-toggle__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
+                      <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                      <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="panel__content crew-factions__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_crew-factions_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_crew-factions_repeating">None crew factions with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_crew-factions">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                          <div class="row factions__edit">
+                            <div class="faction__field faction_name col-8">
+                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                            </div>
+                            <div class="faction__field faction_relationship col-4">
+                              <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
+                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                              </select>
+                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                            </div>
+                            <div class="faction__field faction_description ">
+                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__view">
+                          <article class="bubble faction">
+                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="factions__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_faction_collapse">
+                                  <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_faction_description"></span>
+                                <label data-i18n="faction_description">Description</label>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="repeating__delete"><span class="faction__name" name="attr_faction_name"></span>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="panel authority-factions factions">
+              <input class="editor__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_authority-factions_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header authority-factions__header">
+                  <h2 class="panel__title authority-factions__title" data-i18n="authority-factions">Authorities</h2>
+                  <div class="panel__controls">
+                    <button class="minimizer-toggle" name="act_authority-factions-minimizer" type="action">
+                      <input class="minimizer-toggle__controller" name="attr_authority-factions_minimizer" value="0" type="hidden"/>
+                      <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                      <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                    </button>
+                    <button class="edit-toggle" name="act_authority-factions-editor" type="action">
+                      <input class="edit-toggle__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
+                      <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                      <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="panel__content authority-factions__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_authority-factions_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_authority-factions_repeating">None authority factions with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_authority-factions">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                          <div class="row factions__edit">
+                            <div class="faction__field faction_name col-8">
+                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                            </div>
+                            <div class="faction__field faction_relationship col-4">
+                              <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
+                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                              </select>
+                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                            </div>
+                            <div class="faction__field faction_description ">
+                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__view">
+                          <article class="bubble faction">
+                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="factions__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_faction_collapse">
+                                  <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_faction_description"></span>
+                                <label data-i18n="faction_description">Description</label>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="repeating__delete"><span class="faction__name" name="attr_faction_name"></span>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="panel sponsor-factions factions">
+              <input class="editor__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_sponsor-factions_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header sponsor-factions__header">
+                  <h2 class="panel__title sponsor-factions__title" data-i18n="sponsor-factions">Sponsors</h2>
+                  <div class="panel__controls">
+                    <button class="minimizer-toggle" name="act_sponsor-factions-minimizer" type="action">
+                      <input class="minimizer-toggle__controller" name="attr_sponsor-factions_minimizer" value="0" type="hidden"/>
+                      <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                      <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                    </button>
+                    <button class="edit-toggle" name="act_sponsor-factions-editor" type="action">
+                      <input class="edit-toggle__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
+                      <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                      <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="panel__content sponsor-factions__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_sponsor-factions_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_sponsor-factions_repeating">None sponsor factions with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_sponsor-factions">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                          <div class="row factions__edit">
+                            <div class="faction__field faction_name col-8">
+                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                            </div>
+                            <div class="faction__field faction_relationship col-4">
+                              <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
+                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                              </select>
+                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                            </div>
+                            <div class="faction__field faction_description ">
+                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__view">
+                          <article class="bubble faction">
+                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="factions__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_faction_collapse">
+                                  <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_faction_description"></span>
+                                <label data-i18n="faction_description">Description</label>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="repeating__delete"><span class="faction__name" name="attr_faction_name"></span>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="panel crowd-factions factions">
+              <input class="editor__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
+              <input class="minimizer__controller" name="attr_crowd-factions_minimizer" value="0" type="hidden"/>
+              <div class="panel__wrapper">
+                <div class="panel__header crowd-factions__header">
+                  <h2 class="panel__title crowd-factions__title" data-i18n="crowd-factions">Crowds</h2>
+                  <div class="panel__controls">
+                    <button class="minimizer-toggle" name="act_crowd-factions-minimizer" type="action">
+                      <input class="minimizer-toggle__controller" name="attr_crowd-factions_minimizer" value="0" type="hidden"/>
+                      <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
+                      <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
+                    </button>
+                    <button class="edit-toggle" name="act_crowd-factions-editor" type="action">
+                      <input class="edit-toggle__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
+                      <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
+                      <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="panel__content crowd-factions__content">
+                  <div class="repeating">
+                    <input class="repeating__is-empty" name="attr_crowd-factions_empty" value="0" type="hidden"/>
+                    <input class="repeating__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
+                    <div class="repeating__empty">
+                      <div class="repeating__header"><span data-i18n="none_crowd-factions_repeating">None crowd factions with left beef</span></div>
+                      <div class="repeating__subtitle"></div>
+                    </div>
+                    <fieldset class="repeating_crowd-factions">
+                      <div class="repeating__wrapper">
+                        <div class="repeating__edit">
+                          <div class="row factions__edit">
+                            <div class="faction__field faction_name col-8">
+                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                            </div>
+                            <div class="faction__field faction_relationship col-4">
+                              <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
+                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                              </select>
+                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                            </div>
+                            <div class="faction__field faction_description ">
+                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="repeating__view">
+                          <article class="bubble faction">
+                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <div class="bubble__header">
+                              <div class="factions__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
+                              </div>
+                              <div class="bubble__controls">
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <label class="bubble__expand" for="attr_faction_collapse">
+                                  <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="bubble__content">
+                              <div class="bubble__collapse"><span name="attr_faction_description"></span>
+                                <label data-i18n="faction_description">Description</label>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="repeating__delete"><span class="faction__name" name="attr_faction_name"></span>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </aside>
+        <aside class="blade multiverse">
+          <input class="blade-toggle__controller" name="attr_multiverse_blade" value="0" type="hidden"/>
+          <button class="blade-toggle" name="act_multiverse-blade" type="action">
+            <h2 class="blade__title" data-i18n="multiverse">The Multiverse</h2>
+          </button>
+          <div class="blade__wrapper">
           </div>
         </aside>
       </aside>
@@ -2036,24 +2570,30 @@ const results = {
 
 const G_EDITORS = [
   'angst-arc',
+  'authority-factions',
   'crew-beats',
-  'tracks',
+  'crew-factions',
+  'header-crew',
+  'crowd-factions',
   'dicetray',
   'doom',
   'family-arc',
   'gear',
   'header',
+  'fame',
   'legacy',
   'mods',
   'notes',
   'other-beats',
   'personality-arc',
   'signature',
+  'sponsor-factions',
+  'tracks',
   'trait-beats',
   'traits',
 ];
 
-const G_BLADES = ['downtimes', 'epilogue', 'diary'];
+const G_BLADES = ['downtimes', 'epilogue', 'factions', 'diary', 'multiverse'];
 
 const G_REPEATING_FIELDSETS = [
   // character
@@ -2076,12 +2616,10 @@ const G_REPEATING_FIELDSETS = [
   'other-beats',
 
   // crew sheet
-  'authorities',
-  'crews',
-  'crowds',
-  'fractures',
-  'sponsors',
-  'sponsors',
+  'crew-factions',
+  'authority-factions',
+  'sponsor-factions',
+  'crowd-factions',
 ];
 
 const G_TRACK = {

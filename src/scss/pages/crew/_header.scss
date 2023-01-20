@@ -1,0 +1,18 @@
+.header {
+  $this: '.header';
+  background-color: hsl(random(360) 80% 80% / 80%);
+
+  &__title {
+    &[type='text'] {
+      font-size: 2rem;
+      font-family: $font-playbook;
+      text-transform: uppercase;
+      height: auto;
+    }
+  }
+
+  &__edit,
+  &__view {
+    gap: $grid-gutter;
+  }
+}

@@ -6,7 +6,7 @@
     "start": "run-p compile:* postcss",
     "compile:sass": "npx sass ./src/scss/slugblaster.scss ./slugblaster.css --watch --no-source-map --no-charset",
     "compile:pug": "npx pug3 ./src/pug/slugblaster.pug --out ./ --watch --pretty",
-    "postcss": "npx postcss slugblaster.css -o slugblaster.css --use autoprefixer --watch --verbose --no-map"
+    "postcss": "npx postcss slugblaster.css --output slugblaster.css --use autoprefixer --watch --verbose --no-map"
   },
   "keywords": [
     "roll20"

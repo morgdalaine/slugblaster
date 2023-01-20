@@ -3,9 +3,17 @@
 main.crew
   section.crew__main
     section.crew__col
-      span Crew
+      include ../pages/crew/header
+      include ../pages/crew/fractures
+    section.crew__col
+      include ../pages/crew/hype
+      include ../pages/crew/style
+      include ../pages/crew/fame
 
   aside.crew__blades
     +blade({ name: 'diary', title: 'Diary' })
       include ../pages/common/notes
       include ../pages/common/tracks
+    +blade({ name: 'factions', title: 'Factions' })
+      include ../pages/crew/factions
+    +blade({ name: 'multiverse', title: 'The Multiverse' })

@@ -1,0 +1,39 @@
+-
+  data.crew = {
+    header: {
+      fields: [
+        {
+          name: 'character_name',
+          label: 'Name',
+          placeholder: 'Farrah',
+          type: 'text',
+          blockName: 'header',
+        },
+        {
+          name: 'brands',
+          label: 'Brands',
+          placeholder: 'good kids, weirdos',
+          type: 'text',
+          blockName: 'header',
+        },
+        { name: 'hangouts', label: 'Hangouts', placeholder: 'the gas station', type: 'text', blockName: 'header' },
+      ]
+    },
+    style: {
+      hidden: [{ name: 'crew_style', type: 'hidden', blockName: 'style' }],
+      subtitle: { name: 'style_run_bonus', type: 'span', blockName: 'style' },
+      track: Array.from(Array(11).keys(), (i) => ({
+        name: 'crew_style',
+        label: `${i} style`,
+        value: i,
+        type: 'radio',
+        blockName: 'style',
+      })),
+    },
+    hype: {
+      fields: [
+        { name: 'hype_boost', label: 'Hype Boost', type: 'hidden', blockName: 'hype' },
+        { name: 'hype_kick', label: 'Hype Kick', type: 'hidden', blockName: 'hype' },
+      ],
+    },
+  }
