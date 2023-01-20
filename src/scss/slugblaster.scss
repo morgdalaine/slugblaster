@@ -32,6 +32,7 @@
 // 5. Components
 
 // 6. Page-specific styles
+@import 'pages/home';
 @import 'templates/rolltemplate';
 
 // 7. Themes
@@ -63,8 +64,8 @@ html {
     @import 'components/repeating';
 
     // Pages
-    @import 'pages/home';
     @import 'pages/character';
+    @import 'pages/crew';
 
     // Layout
     @import 'layout/grid';

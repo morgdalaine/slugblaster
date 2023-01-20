@@ -3,16 +3,19 @@ include abstracts/data
 
 include components/_mixins
 
-input(name='attr_version', value='0', type='hidden')
++field(data.global.sheet_mode).slugblaster__sheet-mode
 .slugblaster
   .slugblaster__wrapper
     include layout/nav
 
     include layout/character
+    include layout/crew
 
     footer.footer
-      span.visually-hidden(data-i18n='version') Version
-      span(name='attr_version')
+      - const version = data.global.sheet_version;
+      +field(version)
+      span.visually-hidden(data-i18n=version.name)= version.label
+      +span(version)
 
       include abstracts/translations
 

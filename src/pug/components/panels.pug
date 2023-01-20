@@ -1,6 +1,6 @@
 //- panels have editor toggles
 mixin panel(panel)
-  - const semantic = panel.semantic || 'div';
+  - const semantic = panel.semantic || 'section';
   - const editor = panel.editor || panel.name;
   #{semantic}.panel(class=panel.name)&attributes(attributes)
     input.editor__controller(name=`attr_${panel.name}_editor`, value='on', type='hidden')
@@ -19,7 +19,7 @@ mixin panel(panel)
         +block('content', true)
 
 mixin blob(blob)
-  - const semantic = blob.semantic || 'div';
+  - const semantic = blob.semantic || 'section';
   - const editorClass = blob.editor ? 'blob--editor' : null;
   #{semantic}.blob(class=blob.name)&attributes(attributes)
     input.editor__controller(name=`attr_${blob.name}_editor`, value='on', type='hidden')
@@ -41,7 +41,7 @@ mixin blob(blob)
         +block('content', true)
 
 mixin bubble(bubble)
-  .bubble(class=bubble.name)
+  article.bubble(class=bubble.name)
     block
     input.bubble__controller(name=`attr_${bubble.name}_collapse`, value='0', type='hidden')
     .bubble__header

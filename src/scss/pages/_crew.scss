@@ -1,0 +1,7 @@
+.crew {
+  $this: '.crew';
+  position: relative;
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: minmax(2rem, auto);
+  gap: $grid-gutter;
+}

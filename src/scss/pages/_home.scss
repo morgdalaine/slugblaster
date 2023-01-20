@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.slu {
+  &[value='character'] {
+    ~ * .character {
+      display: grid;
+    }
+    ~ * .nav--character {
+      outline: $input-border-active;
+    }
+  }
+
+  &[value='crew'] {
+    ~ * .crew {
+      display: grid;
+    }
+    ~ * .nav--crew {
+      outline: $input-border-active;
+    }
+  }
+}
+
+.character,
+.crew {
+  display: none;
+}
