@@ -77,7 +77,6 @@
 
   .track__letter-exists {
     &:not([value]),
-    &:empty,
     &[value=''] {
       + .track__progress {
         display: none !important;

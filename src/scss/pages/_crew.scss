@@ -4,4 +4,7 @@
   grid-template-columns: 1fr auto;
   grid-auto-rows: minmax(2rem, auto);
   gap: $grid-gutter;
+
+  @import 'common/notes';
+  @import 'common/tracks';
 }
