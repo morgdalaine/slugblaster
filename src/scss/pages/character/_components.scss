@@ -21,4 +21,23 @@
       justify-content: center;
     }
   }
+  .component__checkbox {
+    display: grid;
+    font-size: 1rem;
+
+    input {
+      appearance: none;
+      outline: none;
+
+      width: 1.5rem;
+      aspect-ratio: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('https://www.svgrepo.com/show/448352/circle.svg');
+
+      &:checked {
+        background-image: url('https://www.svgrepo.com/show/448206/circle.svg');
+      }
+    }
+  }
 }

@@ -18,30 +18,32 @@
     margin: $m-md;
   }
   &__checkbox {
-    // font-family: system-ui, sans-serif;
+    display: grid;
     font-size: 1rem;
-    // font-weight: bold;
-    // line-height: 1.1;
-    // display: grid;
-    // grid-template-columns: 1em auto;
-    // gap: 0.5em;
+
+    input {
+      appearance: none;
+      outline: none;
+
+      width: 1.5rem;
+      aspect-ratio: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('https://www.svgrepo.com/show/448395/diamond.svg');
+
+      &:checked {
+        background-image: url('https://www.svgrepo.com/show/448209/diamond.svg');
+      }
+    }
 
     // move 0 slot to end
     &--0 {
       order: 1;
       padding-left: $grid-gutter-col;
       border-left: 2px solid $text-color;
-      display: grid;
 
       input {
-        width: 1.5rem;
-        aspect-ratio: 1;
-        outline: 0;
-        appearance: none;
-
-        background-image: url('https://www.svgrepo.com/show/471908/slash-circle-02.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
       }
     }
   }

@@ -4,9 +4,11 @@
     - const three = Array.from(Array(3).keys(), (i) => i + 1);
 
     each component in components
-      .components__component
+      .components__component(class=`components__component--${component.name}`)
         label.components__component--header(data-i18n=component.name)= component.label
         .components__component--track
           each index in three
             - const field = { ...component, value: index };
-            +field(field).components__kick
+            label.component__checkbox(class=`component__checkbox--${index}`)
+              +field(field)
+              span.visually-hidden(data-i18n=`${component.name}_${index}`)= `${index} ${component.label}`
