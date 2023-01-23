@@ -18,36 +18,52 @@ rolltemplate.sheet-rolltemplate-slugblaster
               +displayDie(die)
         .sheet-roll__results--label
           label(data-i18n='dice_pool') Dice Pool
-      .sheet-roll__result
-        +rollFunction([`rollBetween() roll 6 6`])
-          span(data-i18n='roll_success') Success!
-          span(data-i18n='roll_success_description') You do it!
 
-        +rollFunction([`rollBetween() roll 4 5`])
-          span(data-i18n='roll_mixed_success') Mixed success.
-          span(data-i18n='roll_mixed_success_description') You do it, but there’s a problem.
+      +tags(['action'])
+        .sheet-roll__result
+          +rollFunction([`rollBetween() roll 6 6`])
+            span(data-i18n='roll_success') Success!
+            span(data-i18n='roll_success_description') You do it!
 
-        +rollFunction([`rollBetween() roll 1 3`])
-          span(data-i18n='roll_failure') Failure.
-          span(data-i18n='roll_failure_description') You don’t do it, and there’s a problem.
+          +rollFunction([`rollBetween() roll 4 5`])
+            span(data-i18n='roll_mixed_success') Mixed success.
+            span(data-i18n='roll_mixed_success_description') You do it, but there’s a problem.
 
-      .sheet-roll__modifiers
-        .sheet-roll__boosts
-          label(data-i18n='boosts') Boosts
-          span.sheet-roll__value {{ boosts }}
-        .sheet-roll__kicks
-          label(data-i18n='kicks') Kicks
-          span.sheet-roll__value {{ kicks }}
+          +rollFunction([`rollBetween() roll 0 3`])
+            span(data-i18n='roll_failure') Failure.
+            span(data-i18n='roll_failure_description') You don’t do it, and there’s a problem.
 
-        +tags(['^choose_dare'])
-          .sheet-roll__dares
-            label(data-i18n='dare') Dare
-            +tags(['plus_1d6'])
-              span(data-i18n='plus_1d6') +1d6
-            +tags(['plus_kick'])
-              span(data-i18n='plus_kick') 1 kick
-            +tags(['clear_trouble'])
-              span(data-i18n='clear_trouble') clear 1 trouble
+        .sheet-roll__modifiers
+          .sheet-roll__boosts
+            label(data-i18n='boosts') Boosts
+            span.sheet-roll__value {{ boosts }}
+          .sheet-roll__kicks
+            label(data-i18n='kicks') Kicks
+            span.sheet-roll__value {{ kicks }}
+
+          +tags(['^choose_dare'])
+            .sheet-roll__dares
+              label(data-i18n='dare') Dare
+              +tags(['plus_1d6'])
+                span(data-i18n='plus_1d6') +1d6
+              +tags(['plus_kick'])
+                span(data-i18n='plus_kick') 1 kick
+              +tags(['clear_trouble'])
+                span(data-i18n='clear_trouble') clear 1 trouble
+
+      +tags(['disaster'])
+        .sheet-roll__result
+          +rollFunction([`rollBetween() roll 6 6`])
+            span(data-i18n='roll_disaster_success') Easy street.
+            span(data-i18n='roll_disaster_success_description') Avoid disaster and mark 1 style.
+
+          +rollFunction([`rollBetween() roll 4 5`])
+            span(data-i18n='roll_disaster_mixed_success') Close call!
+            span(data-i18n='roll_disaster_mixed_success_description') Avoid disaster but mark 1 trouble.
+
+          +rollFunction([`rollBetween() roll 0 3`])
+            span(data-i18n='roll_disaster_failure') Disaster strikes!
+            span(data-i18n='roll_disaster_failure_description') Something really bad happens (page 147). Mark doom.
 
 rolltemplate.sheet-rolltemplate-slugcast
   .sheet-roll

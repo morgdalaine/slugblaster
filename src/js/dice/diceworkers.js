@@ -4,7 +4,7 @@
  * @returns
  */
 const makeRollTemplate = (params) => {
-  const { title, subtitle, trick, dice } = params;
+  const { title, subtitle, type, trick, dice, boosts, kicks } = params;
   let roll = params.roll || '[[1d6]]';
 
   const template = [
@@ -12,13 +12,18 @@ const makeRollTemplate = (params) => {
     `{{character=@{character_name}}}`,
     `{{title=${title}}}`,
     `{{subtitle=${subtitle}}}`,
+    `{{${type}=true}}`,
     `{{roll=${roll}}}`,
+
     `{{result=[[0]]}}`,
-    trick ? '{{trick=true}}' : '',
-    `{{@{dicetray_dare}=true}}`,
-    `{{boosts=@{dicetray_boosts}}}`,
-    `{{kicks=@{dicetray_kicks}}}`,
   ];
+
+  if (trick) template.push('{{trick=true}}');
+  if (type === 'action') {
+    template.push(`{{@{dicetray_dare}=true}}`);
+    template.push(`{{boosts=${boosts}}}`);
+    template.push(`{{kicks=${kicks}}}`);
+  }
 
   Array.from(Array(dice).keys(), (die) => {
     template.push(`{{die${die + 1}=[[0]]}}`);
@@ -56,14 +61,35 @@ const makeCharacterRoll = (trick = false) => {
     const dare = values.dicetray_dare || '';
 
     const dice = 1 + boosts + (dare === 'plus_1d6' ? 1 : 0);
-    const kick = 1 + kicks + (dare === 'plus_kick' ? 1 : 0);
+    const kick = 0 + kicks + (dare === 'plus_kick' ? 1 : 0);
     const params = {
       title: 'Slugblaster Title',
       subtitle: 'Slugblaster Subtitle',
+      type: 'action',
       dice: dice,
       roll: `[[${dice}d6kh1sd]]`,
       trick: trick,
-      kick: kick,
+      boosts: dice - 1,
+      kicks: kick,
+    };
+
+    const template = makeRollTemplate(params);
+    makeRoll(template);
+  });
+};
+
+const makeDisasterRoll = () => {
+  const request = ['trouble', 'trouble_max'];
+  getAttrs(request, (values) => {
+    const trouble = +values.trouble || 0;
+    const troubleMax = +values.trouble_max || G_CONSTANTS.trouble_max;
+    const dice = troubleMax - trouble;
+    const params = {
+      title: 'Disaster Strikes!',
+      subtitle: 'Everyone’s luck runs out eventually',
+      type: 'disaster',
+      dice: dice,
+      roll: `[[${dice}d6kh1sd]]`,
     };
 
     const template = makeRollTemplate(params);

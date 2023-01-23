@@ -63,7 +63,8 @@ on(`change:repeating_tracks:track_name clicked:repeating_tracks:track-reset`, (e
   const sectionId = getSectionID(eventInfo);
   makeTrack(sectionId);
 });
-Array.from(Array(G_TRACK.max).keys(), (index) => {
+
+Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
   on(`change:repeating_tracks:track_marker_${index + 1}`, (eventInfo) => {
     const sectionId = getSectionID(eventInfo);
     makeTrackString(sectionId);

@@ -36,7 +36,7 @@ const makeTrack = (sectionId) => {
     update[repeatingPrefix + 'track_name'] = trackName.trim().toUpperCase();
     update[repeatingPrefix + 'track_size'] = trackName.length;
 
-    for (let index = 0; index < G_TRACK.max; index++) {
+    for (let index = 0; index < G_CONSTANTS.progress_track_max; index++) {
       const key = repeatingPrefix + 'track_letter_' + (index + 1);
       const letter = trackName[index];
 
@@ -50,7 +50,10 @@ const makeTrack = (sectionId) => {
 
 const makeTrackString = (sectionId) => {
   const repeatingPrefix = `repeating_tracks_${sectionId}_`;
-  const markers = Array.from(Array(G_TRACK.max).keys(), (index) => `track_marker_${index + 1}`);
+  const markers = Array.from(
+    Array(G_CONSTANTS.progress_track_max).keys(),
+    (index) => `track_marker_${index + 1}`
+  );
 
   const request = ['track_name', 'track_size', ...markers].map((r) => repeatingPrefix + r);
   getAttrs(request, (values) => {

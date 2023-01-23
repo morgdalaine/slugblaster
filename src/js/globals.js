@@ -54,8 +54,9 @@ const G_REPEATING_FIELDSETS = [
   'crowd-factions',
 ];
 
-const G_TRACK = {
-  max: 12,
+const G_CONSTANTS = {
+  trouble_max: 8,
+  progress_track_max: 12,
 };
 
 const G_PLAYBOOKS = {
