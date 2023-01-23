@@ -13,7 +13,8 @@
   }
 
   &__track {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 2rem);
     gap: $grid-gutter;
     margin: $m-md;
   }
@@ -38,6 +39,11 @@
 
     // move 0 slot to end
     &--0 {
+      grid-row: 1 / span 2;
+      grid-column: 6;
+      align-content: center;
+      height: 100%;
+
       order: 1;
       padding-left: $grid-gutter-col;
       border-left: 2px solid $text-color;

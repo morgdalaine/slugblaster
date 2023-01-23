@@ -1,12 +1,12 @@
 mixin makeFactionFieldset(fieldset)
   - const { factions } = data.crew;
-  +panel({ name: fieldset.name, title: fieldset.title }).factions
+  +panel({ name: fieldset.name, title: fieldset.title }).faction
     +block('content')
       +repeating(fieldset.name)
         - const { broadcast, repeating } = factions;
         - const [name, relationship, desc] = repeating;
         +block('edit')
-          .row.factions__edit
+          .row.faction__edit
             //- each field in hidden
               +field(field)
             each field in repeating
@@ -24,7 +24,7 @@ mixin makeFactionFieldset(fieldset)
         +block('view')
           +bubble({ name: 'faction', broadcast })
             +block('header')
-              .factions__view
+              .faction__view
                 +span(relationship).faction__relationship
                 +span(name).faction__name
 

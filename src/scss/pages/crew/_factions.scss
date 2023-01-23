@@ -1,5 +1,5 @@
-.factions {
-  $this: '.factions';
+.faction {
+  $this: '.faction';
   background-color: hsl(random(360) 80% 80% / 80%);
 
   + .panel {
