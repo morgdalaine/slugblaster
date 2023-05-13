@@ -1,5 +1,13 @@
 +panel({ name: 'fame', title: 'Fame' })
+  - const { fame } = data.crew;
   +block('content')
     +editorblock('fame')
+      - const { fields } = fame;
       +block('edit')
+        .fame__hype
+          each field in fields
+            label.fame__check
+              +field(field).checkbox--scribble
+              span(data-i18n='fame_' + field.name)= field.label
+
       +block('view')

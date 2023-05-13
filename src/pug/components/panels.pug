@@ -41,7 +41,7 @@ mixin blob(blob)
         +block('content', true)
 
 mixin bubble(bubble)
-  article.bubble(class=bubble.name)
+  article.bubble(class=`bubble__${bubble.name}`)
     block
     input.bubble__controller(name=`attr_${bubble.name}_collapse`, value='0', type='hidden')
     .bubble__header

@@ -120,12 +120,31 @@
     }
 
     &__die {
+      background-color: $black;
+      border-radius: 1rem;
+      width: $input-component-size-large;
+      aspect-ratio: 1;
+      text-align: center;
+
       span {
         padding: 0;
         margin: 0;
         font-family: $font-dice;
-        font-size: $font-h5;
+        font-size: $font-h2;
         line-height: normal;
+      }
+
+      &--1,
+      &--2,
+      &--3 {
+        color: $purple-light;
+      }
+      &--4,
+      &--5 {
+        color: $yellow;
+      }
+      &--6 {
+        color: $pink;
       }
     }
 

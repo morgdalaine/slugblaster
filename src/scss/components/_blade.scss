@@ -11,7 +11,7 @@
     display: grid;
     row-gap: $grid-gutter-row;
     overflow: hidden;
-    min-width: 25vw;
+    width: 25vw;
   }
 
   &__title {

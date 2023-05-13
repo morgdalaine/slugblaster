@@ -29,6 +29,14 @@
     gap: $grid-gutter-row;
   }
 
+  input[name*='load_factions'] {
+    &:not([value='0']) {
+      + #{$this}--factions {
+        display: none;
+      }
+    }
+  }
+
   @import 'crew/factions';
   @import 'crew/fame';
   @import 'crew/fractures';

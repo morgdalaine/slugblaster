@@ -1,5 +1,5 @@
 
-<input class="slugblaster__sheet-mode" name="attr_sheet_mode" value="character" type="hidden"/>
+<input class="slugblaster__sheet-mode" name="attr_sheet_mode" type="hidden" value="character"/>
 <div class="slugblaster">
   <div class="slugblaster__wrapper">
     <section class="blob tophat">
@@ -53,16 +53,16 @@
                   <div class="editor__edit dicetray__edit">
                     <div class="row dicetray__edit">
                       <div class="dicetray__field dicetray_boosts col-6">
-                        <input class="checkbox--scribble" name="attr_dicetray_boosts" placeholder="0" min="0" type="number"/>
+                        <input class="checkbox--scribble" inputmode="numeric" min="0" name="attr_dicetray_boosts" pattern="[0-9]+" placeholder="0" type="number"/>
                         <label for="dicetray_boosts" data-i18n="dicetray_boosts">Boost</label>
                       </div>
                       <div class="dicetray__field dicetray_kicks col-6">
-                        <input class="checkbox--scribble" name="attr_dicetray_kicks" placeholder="0" min="0" type="number"/>
+                        <input class="checkbox--scribble" inputmode="numeric" min="0" name="attr_dicetray_kicks" pattern="[0-9]+" placeholder="0" type="number"/>
                         <label for="dicetray_kicks" data-i18n="dicetray_kicks">Kick</label>
                       </div>
                       <div class="dicetray__field dicetray_dare ">
                         <select class="dicetray__dicetray_dare dicetray__input--select checkbox--scribble" name="attr_dicetray_dare">
-                          <option data-i18n="opt_choose_dare" value="choose_dare" selected="selected">choose dare...</option>
+                          <option data-i18n="opt_choose_dare" selected="selected" value="choose_dare">choose dare...</option>
                           <option data-i18n="opt_plus_1d6" value="plus_1d6">+1d6</option>
                           <option data-i18n="opt_plus_kick" value="plus_kick">1 kick</option>
                           <option data-i18n="opt_clear_trouble" value="clear_trouble">clear 1 trouble</option>
@@ -71,7 +71,7 @@
                       </div>
                       <div class="dicetray__field dicetray_reset ">
                         <label for="dicetray_reset">
-                          <input name="attr_dicetray_reset" id="dicetray_reset" value="on" type="checkbox"/><span data-i18n="dicetray_reset">Reset After Roll</span>
+                          <input id="dicetray_reset" name="attr_dicetray_reset" type="checkbox" value="on"/><span data-i18n="dicetray_reset">Reset After Roll</span>
                         </label>
                       </div>
                     </div>
@@ -87,7 +87,7 @@
             <input class="minimizer__controller" name="attr_header_minimizer" value="0" type="hidden"/>
             <div class="panel__wrapper">
               <div class="panel__header header__header">
-                <input class="header__personality header__input--text header__title" name="attr_personality" id="personality" type="text" data-i18n-placeholder="placeholder_personality" placeholder="Personality"/>
+                <input class="header__personality header__input--text header__title" data-i18n-placeholder="placeholder_personality" id="personality" name="attr_personality" placeholder="Personality" type="text"/>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_header-minimizer" type="action">
                     <input class="minimizer-toggle__controller" name="attr_header_minimizer" value="0" type="hidden"/>
@@ -106,27 +106,27 @@
                   <div class="editor__edit header__edit">
                     <div>
                       <label for="character_name" data-i18n="character_name">Name</label>
-                      <input class="header__character_name header__input--text" name="attr_character_name" id="character_name" type="text" data-i18n-placeholder="placeholder_character_name" placeholder="Farrah"/>
+                      <input class="header__character_name header__input--text" data-i18n-placeholder="placeholder_character_name" id="character_name" name="attr_character_name" placeholder="Farrah" type="text"/>
                     </div>
                     <div>
                       <label for="look" data-i18n="look">Look</label>
-                      <input class="header__look header__input--text" name="attr_look" id="look" type="text" data-i18n-placeholder="placeholder_look" placeholder="all black, muted, chains"/>
+                      <input class="header__look header__input--text" data-i18n-placeholder="placeholder_look" id="look" name="attr_look" placeholder="all black, muted, chains" type="text"/>
                     </div>
                     <div>
                       <label for="family" data-i18n="family">Family</label>
-                      <input class="header__family header__input--text" name="attr_family" id="family" type="text" data-i18n-placeholder="placeholder_family" placeholder="strict"/>
+                      <input class="header__family header__input--text" data-i18n-placeholder="placeholder_family" id="family" name="attr_family" placeholder="strict" type="text"/>
                     </div>
                     <div>
                       <label for="bond" data-i18n="bond">Bond</label>
-                      <input class="header__bond header__input--text" name="attr_bond" id="bond" type="text" data-i18n-placeholder="placeholder_bond" placeholder="natural chemistry"/>
+                      <input class="header__bond header__input--text" data-i18n-placeholder="placeholder_bond" id="bond" name="attr_bond" placeholder="natural chemistry" type="text"/>
                     </div>
                     <div>
                       <label for="vibes" data-i18n="vibes">Vibes</label>
-                      <input class="header__vibes header__input--text" name="attr_vibes" id="vibes" type="text" data-i18n-placeholder="placeholder_vibes" placeholder="space cadet"/>
+                      <input class="header__vibes header__input--text" data-i18n-placeholder="placeholder_vibes" id="vibes" name="attr_vibes" placeholder="space cadet" type="text"/>
                     </div>
                     <div>
                       <label for="stickers" data-i18n="stickers">Stickers, etc.</label>
-                      <input class="header__stickers header__input--text" name="attr_stickers" id="stickers" type="text" data-i18n-placeholder="placeholder_stickers" placeholder="'Skate and/or Die' beside a cat in a box"/>
+                      <input class="header__stickers header__input--text" data-i18n-placeholder="placeholder_stickers" id="stickers" name="attr_stickers" placeholder="'Skate and/or Die' beside a cat in a box" type="text"/>
                     </div>
                   </div>
                   <div class="editor__view header__view">
@@ -166,15 +166,15 @@
               <div class="blob__content slams__content">
                 <div class="slams__boxes">
                   <div class="slams__box slams__box--slam_1">
-                    <input class="slams__slam_1 slams__input--text" name="attr_slam_1" id="slam_1" type="text" data-i18n-placeholder="placeholder_slam_1" placeholder="super bruised ribs"/>
+                    <input class="slams__slam_1 slams__input--text" data-i18n-placeholder="placeholder_slam_1" id="slam_1" name="attr_slam_1" placeholder="super bruised ribs" type="text"/>
                     <label class="visually-hidden" for="slam_1" data-i18n="slam_1">Super Slam</label>
                   </div>
                   <div class="slams__box slams__box--slam_2">
-                    <input class="slams__slam_2 slams__input--text" name="attr_slam_2" id="slam_2" type="text" data-i18n-placeholder="placeholder_slam_2" placeholder="frustrated"/>
+                    <input class="slams__slam_2 slams__input--text" data-i18n-placeholder="placeholder_slam_2" id="slam_2" name="attr_slam_2" placeholder="frustrated" type="text"/>
                     <label class="visually-hidden" for="slam_2" data-i18n="slam_2">Slam 1</label>
                   </div>
                   <div class="slams__box slams__box--slam_3">
-                    <input class="slams__slam_3 slams__input--text" name="attr_slam_3" id="slam_3" type="text" data-i18n-placeholder="placeholder_slam_3" placeholder="slimed"/>
+                    <input class="slams__slam_3 slams__input--text" data-i18n-placeholder="placeholder_slam_3" id="slam_3" name="attr_slam_3" placeholder="slimed" type="text"/>
                     <label class="visually-hidden" for="slam_3" data-i18n="slam_3">Slam 2</label>
                   </div>
                 </div>
@@ -205,11 +205,11 @@
                   <div class="editor__edit gear__edit">
                     <div class="gear__item">
                       <label class="gear__label" data-i18n="your_board">Your Board</label>
-                      <input class="gear__your_board gear__input--text" name="attr_your_board" id="your_board" type="text" data-i18n-placeholder="placeholder_your_board" placeholder="street deck with hologram griptape"/>
+                      <input class="gear__your_board gear__input--text" data-i18n-placeholder="placeholder_your_board" id="your_board" name="attr_your_board" placeholder="street deck with hologram griptape" type="text"/>
                     </div>
                     <div class="gear__item">
                       <label class="gear__label" data-i18n="your_raygun">Your Raygun</label>
-                      <input class="gear__your_raygun gear__input--text" name="attr_your_raygun" id="your_raygun" type="text" data-i18n-placeholder="placeholder_your_raygun" placeholder="circuit-bent photon pistol"/>
+                      <input class="gear__your_raygun gear__input--text" data-i18n-placeholder="placeholder_your_raygun" id="your_raygun" name="attr_your_raygun" placeholder="circuit-bent photon pistol" type="text"/>
                     </div>
                   </div>
                   <div class="editor__view gear__view">
@@ -242,30 +242,30 @@
                         <div class="row gear__edit">
                           <input name="attr_gear_autogen" type="hidden"/>
                           <div class="gear__field gear_check col-1">
-                            <input class="checkbox--scribble" name="attr_gear_check" id="gear_check" value="on" type="checkbox"/>
+                            <input class="checkbox--scribble" id="gear_check" name="attr_gear_check" type="checkbox" value="on"/>
                             <label class="visually-hidden" for="gear_check" data-i18n="gear_check">Select Gear</label>
                           </div>
                           <div class="gear__field gear_name col-11">
-                            <input class="gear__gear_name gear__input--text" name="attr_gear_name" id="gear_name" type="text" data-i18n-placeholder="placeholder_gear_name" placeholder="grappling hook"/>
+                            <input class="gear__gear_name gear__input--text" data-i18n-placeholder="placeholder_gear_name" id="gear_name" name="attr_gear_name" placeholder="grappling hook" type="text"/>
                             <label class="visually-hidden" for="gear_name" data-i18n="gear_name">Gear</label>
                           </div>
                           <div class="gear__field gear_cost ">
-                            <input class="gear__gear_cost gear__input--text" name="attr_gear_cost" id="gear_cost" type="text" data-i18n-placeholder="placeholder_gear_cost" placeholder="1 coil"/>
+                            <input class="gear__gear_cost gear__input--text" data-i18n-placeholder="placeholder_gear_cost" id="gear_cost" name="attr_gear_cost" placeholder="1 coil" type="text"/>
                             <label for="gear_cost" data-i18n="gear_cost">Cost</label>
                           </div>
                           <div class="gear__field gear_description ">
-                            <textarea class="gear__gear_description gear__input--textarea" name="attr_gear_description" data-i18n-placeholder="placeholder_gear_description" placeholder="A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch."></textarea>
+                            <textarea class="gear__gear_description gear__input--textarea" data-i18n-placeholder="placeholder_gear_description" name="attr_gear_description" placeholder="A pistol-sized launcher that fires an anti-negafriction dart which sticks firmly to most surfaces until switched off. The dart is attached to a hundred feet of lightweight carbon-fibre cable, which can be retracted via the launcher’s micro-winch."></textarea>
                             <label for="gear_description" data-i18n="gear_description">Description</label>
                           </div>
                         </div>
                       </div>
                       <div class="repeating__view">
                         <div class="gear__view">
-                          <article class="bubble gear">
+                          <article class="bubble bubble__gear">
                             <input class="bubble__controller" name="attr_gear_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <label class="gear__check">
-                                <input class="checkbox--scribble" name="attr_gear_check" id="gear_check" value="on" type="checkbox"/><span class="gear__name" name="attr_gear_name"></span>
+                                <input class="checkbox--scribble" id="gear_check" name="attr_gear_check" type="checkbox" value="on"/><span class="gear__name" name="attr_gear_name"></span>
                               </label>
                               <div class="bubble__controls">
                                 <button class="broadcast bubble__broadcast" name="roll_gear-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{gear}}} {{^{gear_name}=@{gear_name}}} {{^{gear_cost}=@{gear_cost}}} {{^{gear_description}=@{gear_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
@@ -306,31 +306,34 @@
                 <input class="style__hidden" name="attr_style" type="hidden"/>
                 <div class="style__track">
                   <label class="style__checkbox style__checkbox--0">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="0" type="radio"/><span class="visually-hidden" data-i18n="style_0">0 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="0"/><span class="visually-hidden" data-i18n="style_0">0 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--1">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="1" type="radio"/><span class="visually-hidden" data-i18n="style_1">1 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="1"/><span class="visually-hidden" data-i18n="style_1">1 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--2">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="2" type="radio"/><span class="visually-hidden" data-i18n="style_2">2 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="2"/><span class="visually-hidden" data-i18n="style_2">2 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--3">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="3" type="radio"/><span class="visually-hidden" data-i18n="style_3">3 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="3"/><span class="visually-hidden" data-i18n="style_3">3 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--4">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="4" type="radio"/><span class="visually-hidden" data-i18n="style_4">4 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="4"/><span class="visually-hidden" data-i18n="style_4">4 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--5">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="5" type="radio"/><span class="visually-hidden" data-i18n="style_5">5 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="5"/><span class="visually-hidden" data-i18n="style_5">5 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--6">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="6" type="radio"/><span class="visually-hidden" data-i18n="style_6">6 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="6"/><span class="visually-hidden" data-i18n="style_6">6 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--7">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="7" type="radio"/><span class="visually-hidden" data-i18n="style_7">7 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="7"/><span class="visually-hidden" data-i18n="style_7">7 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--8">
-                    <input class="checkbox--circle" name="attr_style" id="style" value="8" type="radio"/><span class="visually-hidden" data-i18n="style_8">8 style</span>
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="8"/><span class="visually-hidden" data-i18n="style_8">8 style</span>
+                  </label>
+                  <label class="style__checkbox style__checkbox--9">
+                    <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="9"/><span class="visually-hidden" data-i18n="style_9">9 style</span>
                   </label>
                 </div><span name="attr_style_run_bonus"></span>
               </div>
@@ -350,28 +353,28 @@
                 <input name="attr_attitude_kick" type="hidden"/>
                 <div class="attitude__clickies">
                   <label class="attitude__boost attitude__boost--1">
-                    <input name="attr_attitude_boost_1" id="attitude_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_1">Attitude Boost 1</span>
+                    <input id="attitude_boost_1" name="attr_attitude_boost_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_boost_1">Attitude Boost 1</span>
                   </label>
                   <label class="attitude__boost attitude__boost--2">
-                    <input name="attr_attitude_boost_2" id="attitude_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_2">Attitude Boost 2</span>
+                    <input id="attitude_boost_2" name="attr_attitude_boost_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_boost_2">Attitude Boost 2</span>
                   </label>
                   <label class="attitude__boost attitude__boost--3">
-                    <input name="attr_attitude_boost_3" id="attitude_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_3">Attitude Boost 3</span>
+                    <input id="attitude_boost_3" name="attr_attitude_boost_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_boost_3">Attitude Boost 3</span>
                   </label>
                   <label class="attitude__boost attitude__boost--4">
-                    <input name="attr_attitude_boost_4" id="attitude_boost_4" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_boost_4">Attitude Boost 4</span>
+                    <input id="attitude_boost_4" name="attr_attitude_boost_4" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_boost_4">Attitude Boost 4</span>
                   </label>
                   <label class="attitude__kick attitude__kick--1">
-                    <input name="attr_attitude_kick_1" id="attitude_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_1">Attitude Kick 1</span>
+                    <input id="attitude_kick_1" name="attr_attitude_kick_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_kick_1">Attitude Kick 1</span>
                   </label>
                   <label class="attitude__kick attitude__kick--2">
-                    <input name="attr_attitude_kick_2" id="attitude_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_2">Attitude Kick 2</span>
+                    <input id="attitude_kick_2" name="attr_attitude_kick_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_kick_2">Attitude Kick 2</span>
                   </label>
                   <label class="attitude__kick attitude__kick--3">
-                    <input name="attr_attitude_kick_3" id="attitude_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_3">Attitude Kick 3</span>
+                    <input id="attitude_kick_3" name="attr_attitude_kick_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_kick_3">Attitude Kick 3</span>
                   </label>
                   <label class="attitude__kick attitude__kick--4">
-                    <input name="attr_attitude_kick_4" id="attitude_kick_4" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="attitude_kick_4">Attitude Kick 4</span>
+                    <input id="attitude_kick_4" name="attr_attitude_kick_4" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="attitude_kick_4">Attitude Kick 4</span>
                   </label>
                 </div>
               </div>
@@ -410,26 +413,26 @@
                         <div class="row traits__edit">
                           <input name="attr_trait_autogen" type="hidden"/>
                           <div class="traits__field trait_check col-1">
-                            <input class="checkbox--scribble" name="attr_trait_check" id="trait_check" value="on" type="checkbox"/>
+                            <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/>
                             <label class="visually-hidden" for="trait_check" data-i18n="trait_check">Select trait</label>
                           </div>
                           <div class="traits__field trait_name col-11">
-                            <input class="traits__trait_name traits__input--text" name="attr_trait_name" id="trait_name" type="text" data-i18n-placeholder="placeholder_trait_name" placeholder="Patient"/>
+                            <input class="traits__trait_name traits__input--text" data-i18n-placeholder="placeholder_trait_name" id="trait_name" name="attr_trait_name" placeholder="Patient" type="text"/>
                             <label class="visually-hidden" for="trait_name" data-i18n="trait_name">trait</label>
                           </div>
                           <div class="traits__field trait_description ">
-                            <textarea class="traits__trait_description traits__input--textarea" name="attr_trait_description" data-i18n-placeholder="placeholder_trait_description" placeholder="When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action."></textarea>
+                            <textarea class="traits__trait_description traits__input--textarea" data-i18n-placeholder="placeholder_trait_description" name="attr_trait_description" placeholder="When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action."></textarea>
                             <label for="trait_description" data-i18n="trait_description">Description</label>
                           </div>
                         </div>
                       </div>
                       <div class="repeating__view">
                         <div class="traits__view">
-                          <article class="bubble trait">
+                          <article class="bubble bubble__trait">
                             <input class="bubble__controller" name="attr_trait_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <label class="traits__check">
-                                <input class="checkbox--scribble" name="attr_trait_check" id="trait_check" value="on" type="checkbox"/><span class="trait__name" name="attr_trait_name"></span>
+                                <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/><span class="trait__name" name="attr_trait_name"></span>
                               </label>
                               <div class="bubble__controls">
                                 <button class="broadcast bubble__broadcast" name="roll_trait-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{traits}}} {{^{trait_name}=@{trait_name}}} {{^{trait_description}=@{trait_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
@@ -470,31 +473,31 @@
                 <input class="trouble__hidden" name="attr_trouble" type="hidden"/>
                 <div class="trouble__track">
                   <label class="trouble__checkbox trouble__checkbox--0">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="0" type="radio"/><span class="visually-hidden" data-i18n="trouble_0">0 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="0"/><span class="visually-hidden" data-i18n="trouble_0">0 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--1">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="1" type="radio"/><span class="visually-hidden" data-i18n="trouble_1">1 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="1"/><span class="visually-hidden" data-i18n="trouble_1">1 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--2">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="2" type="radio"/><span class="visually-hidden" data-i18n="trouble_2">2 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="2"/><span class="visually-hidden" data-i18n="trouble_2">2 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--3">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="3" type="radio"/><span class="visually-hidden" data-i18n="trouble_3">3 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="3"/><span class="visually-hidden" data-i18n="trouble_3">3 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--4">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="4" type="radio"/><span class="visually-hidden" data-i18n="trouble_4">4 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="4"/><span class="visually-hidden" data-i18n="trouble_4">4 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--5">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="5" type="radio"/><span class="visually-hidden" data-i18n="trouble_5">5 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="5"/><span class="visually-hidden" data-i18n="trouble_5">5 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--6">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="6" type="radio"/><span class="visually-hidden" data-i18n="trouble_6">6 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="6"/><span class="visually-hidden" data-i18n="trouble_6">6 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--7">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="7" type="radio"/><span class="visually-hidden" data-i18n="trouble_7">7 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="7"/><span class="visually-hidden" data-i18n="trouble_7">7 trouble</span>
                   </label>
                   <label class="trouble__checkbox trouble__checkbox--8">
-                    <input class="checkbox--circle" name="attr_trouble" id="trouble" value="8" type="radio"/><span class="visually-hidden" data-i18n="trouble_8">8 trouble</span>
+                    <input class="checkbox--circle" id="trouble" name="attr_trouble" type="radio" value="8"/><span class="visually-hidden" data-i18n="trouble_8">8 trouble</span>
                   </label>
                 </div>
                 <div class="trouble__actions">
@@ -520,22 +523,22 @@
                 <input name="attr_turbo_kick" type="hidden"/>
                 <div class="turbo__clickies">
                   <label class="turbo__boost turbo__boost--1">
-                    <input name="attr_turbo_boost_1" id="turbo_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_1">Turbo Boost 1</span>
+                    <input id="turbo_boost_1" name="attr_turbo_boost_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_boost_1">Turbo Boost 1</span>
                   </label>
                   <label class="turbo__boost turbo__boost--2">
-                    <input name="attr_turbo_boost_2" id="turbo_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_2">Turbo Boost 2</span>
+                    <input id="turbo_boost_2" name="attr_turbo_boost_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_boost_2">Turbo Boost 2</span>
                   </label>
                   <label class="turbo__boost turbo__boost--3">
-                    <input name="attr_turbo_boost_3" id="turbo_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_boost_3">Turbo Boost 3</span>
+                    <input id="turbo_boost_3" name="attr_turbo_boost_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_boost_3">Turbo Boost 3</span>
                   </label>
                   <label class="turbo__kick turbo__kick--1">
-                    <input name="attr_turbo_kick_1" id="turbo_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_1">Turbo Kick 1</span>
+                    <input id="turbo_kick_1" name="attr_turbo_kick_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_kick_1">Turbo Kick 1</span>
                   </label>
                   <label class="turbo__kick turbo__kick--2">
-                    <input name="attr_turbo_kick_2" id="turbo_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_2">Turbo Kick 2</span>
+                    <input id="turbo_kick_2" name="attr_turbo_kick_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_kick_2">Turbo Kick 2</span>
                   </label>
                   <label class="turbo__kick turbo__kick--3">
-                    <input name="attr_turbo_kick_3" id="turbo_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="turbo_kick_3">Turbo Kick 3</span>
+                    <input id="turbo_kick_3" name="attr_turbo_kick_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="turbo_kick_3">Turbo Kick 3</span>
                   </label>
                 </div>
               </div>
@@ -546,7 +549,7 @@
             <input class="minimizer__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
             <div class="panel__wrapper">
               <div class="panel__header signature__header">
-                <input class="header__signature header__input--text signature__title" name="attr_signature" id="signature" type="text" data-i18n-placeholder="placeholder_signature" placeholder="Signature"/>
+                <input class="header__signature header__input--text signature__title" data-i18n-placeholder="placeholder_signature" id="signature" name="attr_signature" placeholder="Signature" type="text"/>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_signature-minimizer" type="action">
                     <input class="minimizer-toggle__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
@@ -564,15 +567,15 @@
                 <div class="editor">
                   <div class="editor__edit signature__edit">
                     <div class="signature--field">
-                      <textarea class="signatures__signature_description signatures__input--textarea" name="attr_signature_description" data-i18n-placeholder="placeholder_signature_description" placeholder="Negafriction is just what it sounds like: complete nonsense."></textarea>
+                      <textarea class="signatures__signature_description signatures__input--textarea" data-i18n-placeholder="placeholder_signature_description" name="attr_signature_description" placeholder="Negafriction is just what it sounds like: complete nonsense."></textarea>
                       <label data-i18n="signature_description">Description</label>
                     </div>
                     <div class="signature--field">
-                      <textarea class="signatures__signature_function signatures__input--textarea" name="attr_signature_function" data-i18n-placeholder="placeholder_signature_function" placeholder="Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath)."></textarea>
+                      <textarea class="signatures__signature_function signatures__input--textarea" data-i18n-placeholder="placeholder_signature_function" name="attr_signature_function" placeholder="Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath)."></textarea>
                       <label data-i18n="signature_function">Function</label>
                     </div>
                     <div class="signature--field">
-                      <input class="signatures__signature_look signatures__input--text" name="attr_signature_look" id="signature_look" type="text" data-i18n-placeholder="placeholder_signature_look" placeholder="hardlight katana"/>
+                      <input class="signatures__signature_look signatures__input--text" data-i18n-placeholder="placeholder_signature_look" id="signature_look" name="attr_signature_look" placeholder="hardlight katana" type="text"/>
                       <label data-i18n="signature_look">Look</label>
                     </div>
                   </div>
@@ -615,10 +618,10 @@
                   <div class="editor__edit mods__edit">
                     <div class="mods__turbo">
                       <label class="mods__check">
-                        <input class="checkbox--scribble" name="attr_turbo_boost" id="turbo_boost" value="on" type="checkbox"/><span data-i18n="mod_turbo_boost">Add +1 boost</span>
+                        <input class="checkbox--scribble" id="turbo_boost" name="attr_turbo_boost" type="checkbox" value="on"/><span data-i18n="mod_turbo_boost">Add +1 boost</span>
                       </label>
                       <label class="mods__check">
-                        <input class="checkbox--scribble" name="attr_turbo_kick" id="turbo_kick" value="on" type="checkbox"/><span data-i18n="mod_turbo_kick">Add +1 kick</span>
+                        <input class="checkbox--scribble" id="turbo_kick" name="attr_turbo_kick" type="checkbox" value="on"/><span data-i18n="mod_turbo_kick">Add +1 kick</span>
                       </label>
                     </div>
                   </div>
@@ -646,30 +649,30 @@
                         <div class="row mods__edit">
                           <input name="attr_mod_autogen" type="hidden"/>
                           <div class="mods__field mod_check col-1">
-                            <input class="checkbox--scribble" name="attr_mod_check" id="mod_check" value="on" type="checkbox"/>
+                            <input class="checkbox--scribble" id="mod_check" name="attr_mod_check" type="checkbox" value="on"/>
                             <label class="visually-hidden" for="mod_check" data-i18n="mod_check">Select mod</label>
                           </div>
                           <div class="mods__field mod_name col-11">
-                            <input class="mods__mod_name mods__input--text" name="attr_mod_name" id="mod_name" type="text" data-i18n-placeholder="placeholder_mod_name" placeholder="Slip Rattle"/>
+                            <input class="mods__mod_name mods__input--text" data-i18n-placeholder="placeholder_mod_name" id="mod_name" name="attr_mod_name" placeholder="Slip Rattle" type="text"/>
                             <label class="visually-hidden" for="mod_name" data-i18n="mod_name">mod</label>
                           </div>
                           <div class="mods__field mod_cost ">
-                            <input class="mods__mod_cost mods__input--text" name="attr_mod_cost" id="mod_cost" type="text" data-i18n-placeholder="placeholder_mod_cost" placeholder="1 coil, 1 disc"/>
+                            <input class="mods__mod_cost mods__input--text" data-i18n-placeholder="placeholder_mod_cost" id="mod_cost" name="attr_mod_cost" placeholder="1 coil, 1 disc" type="text"/>
                             <label for="mod_cost" data-i18n="mod_cost">Cost</label>
                           </div>
                           <div class="mods__field mod_description ">
-                            <textarea class="mods__mod_description mods__input--textarea" name="attr_mod_description" data-i18n-placeholder="placeholder_mod_description" placeholder="Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse."></textarea>
+                            <textarea class="mods__mod_description mods__input--textarea" data-i18n-placeholder="placeholder_mod_description" name="attr_mod_description" placeholder="Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse."></textarea>
                             <label for="mod_description" data-i18n="mod_description">Description</label>
                           </div>
                         </div>
                       </div>
                       <div class="repeating__view">
-                        <article class="bubble mod">
+                        <article class="bubble bubble__mod">
                           <input class="bubble__controller" name="attr_mod_collapse" value="0" type="hidden"/>
                           <div class="bubble__header">
                             <div class="mods__view">
                               <label class="mods__check">
-                                <input class="checkbox--scribble" name="attr_mod_check" id="mod_check" value="on" type="checkbox"/><span class="mod__name" name="attr_mod_name"></span>
+                                <input class="checkbox--scribble" id="mod_check" name="attr_mod_check" type="checkbox" value="on"/><span class="mod__name" name="attr_mod_name"></span>
                               </label>
                             </div>
                             <div class="bubble__controls">
@@ -709,13 +712,13 @@
                   <label class="components__component--header" data-i18n="lenses">Lenses</label>
                   <div class="components__component--track">
                     <label class="component__checkbox component__checkbox--1">
-                      <input name="attr_lenses" id="lenses" value="1" type="checkbox"/><span class="visually-hidden" data-i18n="lenses_1">1 Lenses</span>
+                      <input id="lenses" name="attr_lenses" type="checkbox" value="1"/><span class="visually-hidden" data-i18n="lenses_1">1 Lenses</span>
                     </label>
                     <label class="component__checkbox component__checkbox--2">
-                      <input name="attr_lenses" id="lenses" value="2" type="checkbox"/><span class="visually-hidden" data-i18n="lenses_2">2 Lenses</span>
+                      <input id="lenses" name="attr_lenses" type="checkbox" value="2"/><span class="visually-hidden" data-i18n="lenses_2">2 Lenses</span>
                     </label>
                     <label class="component__checkbox component__checkbox--3">
-                      <input name="attr_lenses" id="lenses" value="3" type="checkbox"/><span class="visually-hidden" data-i18n="lenses_3">3 Lenses</span>
+                      <input id="lenses" name="attr_lenses" type="checkbox" value="3"/><span class="visually-hidden" data-i18n="lenses_3">3 Lenses</span>
                     </label>
                   </div>
                 </div>
@@ -723,13 +726,13 @@
                   <label class="components__component--header" data-i18n="coils">Coils</label>
                   <div class="components__component--track">
                     <label class="component__checkbox component__checkbox--1">
-                      <input name="attr_coils" id="coils" value="1" type="checkbox"/><span class="visually-hidden" data-i18n="coils_1">1 Coils</span>
+                      <input id="coils" name="attr_coils" type="checkbox" value="1"/><span class="visually-hidden" data-i18n="coils_1">1 Coils</span>
                     </label>
                     <label class="component__checkbox component__checkbox--2">
-                      <input name="attr_coils" id="coils" value="2" type="checkbox"/><span class="visually-hidden" data-i18n="coils_2">2 Coils</span>
+                      <input id="coils" name="attr_coils" type="checkbox" value="2"/><span class="visually-hidden" data-i18n="coils_2">2 Coils</span>
                     </label>
                     <label class="component__checkbox component__checkbox--3">
-                      <input name="attr_coils" id="coils" value="3" type="checkbox"/><span class="visually-hidden" data-i18n="coils_3">3 Coils</span>
+                      <input id="coils" name="attr_coils" type="checkbox" value="3"/><span class="visually-hidden" data-i18n="coils_3">3 Coils</span>
                     </label>
                   </div>
                 </div>
@@ -737,13 +740,13 @@
                   <label class="components__component--header" data-i18n="discs">Discs</label>
                   <div class="components__component--track">
                     <label class="component__checkbox component__checkbox--1">
-                      <input name="attr_discs" id="discs" value="1" type="checkbox"/><span class="visually-hidden" data-i18n="discs_1">1 Discs</span>
+                      <input id="discs" name="attr_discs" type="checkbox" value="1"/><span class="visually-hidden" data-i18n="discs_1">1 Discs</span>
                     </label>
                     <label class="component__checkbox component__checkbox--2">
-                      <input name="attr_discs" id="discs" value="2" type="checkbox"/><span class="visually-hidden" data-i18n="discs_2">2 Discs</span>
+                      <input id="discs" name="attr_discs" type="checkbox" value="2"/><span class="visually-hidden" data-i18n="discs_2">2 Discs</span>
                     </label>
                     <label class="component__checkbox component__checkbox--3">
-                      <input name="attr_discs" id="discs" value="3" type="checkbox"/><span class="visually-hidden" data-i18n="discs_3">3 Discs</span>
+                      <input id="discs" name="attr_discs" type="checkbox" value="3"/><span class="visually-hidden" data-i18n="discs_3">3 Discs</span>
                     </label>
                   </div>
                 </div>
@@ -751,13 +754,13 @@
                   <label class="components__component--header" data-i18n="gems">Gems</label>
                   <div class="components__component--track">
                     <label class="component__checkbox component__checkbox--1">
-                      <input name="attr_gems" id="gems" value="1" type="checkbox"/><span class="visually-hidden" data-i18n="gems_1">1 Gems</span>
+                      <input id="gems" name="attr_gems" type="checkbox" value="1"/><span class="visually-hidden" data-i18n="gems_1">1 Gems</span>
                     </label>
                     <label class="component__checkbox component__checkbox--2">
-                      <input name="attr_gems" id="gems" value="2" type="checkbox"/><span class="visually-hidden" data-i18n="gems_2">2 Gems</span>
+                      <input id="gems" name="attr_gems" type="checkbox" value="2"/><span class="visually-hidden" data-i18n="gems_2">2 Gems</span>
                     </label>
                     <label class="component__checkbox component__checkbox--3">
-                      <input name="attr_gems" id="gems" value="3" type="checkbox"/><span class="visually-hidden" data-i18n="gems_3">3 Gems</span>
+                      <input id="gems" name="attr_gems" type="checkbox" value="3"/><span class="visually-hidden" data-i18n="gems_3">3 Gems</span>
                     </label>
                   </div>
                 </div>
@@ -805,17 +808,17 @@
                         <div class="repeating__edit">
                           <div class="row notes__edit">
                             <div class="notes__field note_name ">
-                              <input class="notes__note_name notes__input--text" name="attr_note_name" id="note_name" type="text" data-i18n-placeholder="placeholder_note_name" placeholder="broke mom's trust"/>
+                              <input class="notes__note_name notes__input--text" data-i18n-placeholder="placeholder_note_name" id="note_name" name="attr_note_name" placeholder="broke mom's trust" type="text"/>
                               <label class="visually-hidden" for="note_name" data-i18n="note_name">Note</label>
                             </div>
                             <div class="notes__field note_description ">
-                              <textarea class="notes__note_description notes__input--textarea" name="attr_note_description" data-i18n-placeholder="placeholder_note_description" placeholder="Description"></textarea>
+                              <textarea class="notes__note_description notes__input--textarea" data-i18n-placeholder="placeholder_note_description" name="attr_note_description" placeholder="Description"></textarea>
                               <label for="note_description" data-i18n="note_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble note">
+                          <article class="bubble bubble__note">
                             <input class="bubble__controller" name="attr_note_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="notes__view"><span class="note__name" name="attr_note_name"></span>
@@ -877,68 +880,68 @@
                             <input name="attr_track_size" type="hidden"/>
                             <input name="attr_track_display" type="hidden"/>
                             <div class="tracks__field track_name ">
-                              <input class="tracks__track_name tracks__input--text" name="attr_track_name" id="track_name" type="text" data-i18n-placeholder="placeholder_track_name" placeholder="SKATE"/>
+                              <input class="tracks__track_name tracks__input--text" data-i18n-placeholder="placeholder_track_name" id="track_name" name="attr_track_name" placeholder="SKATE" type="text"/>
                               <label class="visually-hidden" for="track_name" data-i18n="track_name">Track</label>
                             </div>
                             <div class="tracks__field track_description ">
-                              <textarea class="tracks__track_description tracks__input--textarea" name="attr_track_description" data-i18n-placeholder="placeholder_track_description" placeholder="Description"></textarea>
+                              <textarea class="tracks__track_description tracks__input--textarea" data-i18n-placeholder="placeholder_track_description" name="attr_track_description" placeholder="Description"></textarea>
                               <label for="track_description" data-i18n="track_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble track">
+                          <article class="bubble bubble__track">
                             <input class="bubble__controller" name="attr_track_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="tracks__view">
                                 <div class="tracks__progress-track">
                                   <input class="track__letter-exists" name="attr_track_letter_1" type="hidden"/>
                                   <label class="track__progress track__progress--1" for="track_marker_1">
-                                    <input class="track__marker" name="attr_track_marker_1" id="track_marker_1" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_1"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_1">Track 1</span>
+                                    <input class="track__marker" id="track_marker_1" name="attr_track_marker_1" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_1"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_1">Track 1</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_2" type="hidden"/>
                                   <label class="track__progress track__progress--2" for="track_marker_2">
-                                    <input class="track__marker" name="attr_track_marker_2" id="track_marker_2" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_2"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_2">Track 2</span>
+                                    <input class="track__marker" id="track_marker_2" name="attr_track_marker_2" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_2"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_2">Track 2</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_3" type="hidden"/>
                                   <label class="track__progress track__progress--3" for="track_marker_3">
-                                    <input class="track__marker" name="attr_track_marker_3" id="track_marker_3" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_3"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_3">Track 3</span>
+                                    <input class="track__marker" id="track_marker_3" name="attr_track_marker_3" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_3"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_3">Track 3</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_4" type="hidden"/>
                                   <label class="track__progress track__progress--4" for="track_marker_4">
-                                    <input class="track__marker" name="attr_track_marker_4" id="track_marker_4" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_4"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_4">Track 4</span>
+                                    <input class="track__marker" id="track_marker_4" name="attr_track_marker_4" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_4"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_4">Track 4</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_5" type="hidden"/>
                                   <label class="track__progress track__progress--5" for="track_marker_5">
-                                    <input class="track__marker" name="attr_track_marker_5" id="track_marker_5" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_5"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_5">Track 5</span>
+                                    <input class="track__marker" id="track_marker_5" name="attr_track_marker_5" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_5"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_5">Track 5</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_6" type="hidden"/>
                                   <label class="track__progress track__progress--6" for="track_marker_6">
-                                    <input class="track__marker" name="attr_track_marker_6" id="track_marker_6" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_6"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_6">Track 6</span>
+                                    <input class="track__marker" id="track_marker_6" name="attr_track_marker_6" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_6"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_6">Track 6</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_7" type="hidden"/>
                                   <label class="track__progress track__progress--7" for="track_marker_7">
-                                    <input class="track__marker" name="attr_track_marker_7" id="track_marker_7" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_7"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_7">Track 7</span>
+                                    <input class="track__marker" id="track_marker_7" name="attr_track_marker_7" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_7"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_7">Track 7</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_8" type="hidden"/>
                                   <label class="track__progress track__progress--8" for="track_marker_8">
-                                    <input class="track__marker" name="attr_track_marker_8" id="track_marker_8" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_8"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_8">Track 8</span>
+                                    <input class="track__marker" id="track_marker_8" name="attr_track_marker_8" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_8"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_8">Track 8</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_9" type="hidden"/>
                                   <label class="track__progress track__progress--9" for="track_marker_9">
-                                    <input class="track__marker" name="attr_track_marker_9" id="track_marker_9" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_9"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_9">Track 9</span>
+                                    <input class="track__marker" id="track_marker_9" name="attr_track_marker_9" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_9"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_9">Track 9</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_10" type="hidden"/>
                                   <label class="track__progress track__progress--10" for="track_marker_10">
-                                    <input class="track__marker" name="attr_track_marker_10" id="track_marker_10" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_10"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_10">Track 10</span>
+                                    <input class="track__marker" id="track_marker_10" name="attr_track_marker_10" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_10"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_10">Track 10</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_11" type="hidden"/>
                                   <label class="track__progress track__progress--11" for="track_marker_11">
-                                    <input class="track__marker" name="attr_track_marker_11" id="track_marker_11" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_11"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_11">Track 11</span>
+                                    <input class="track__marker" id="track_marker_11" name="attr_track_marker_11" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_11"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_11">Track 11</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_12" type="hidden"/>
                                   <label class="track__progress track__progress--12" for="track_marker_12">
-                                    <input class="track__marker" name="attr_track_marker_12" id="track_marker_12" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_12"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_12">Track 12</span>
+                                    <input class="track__marker" id="track_marker_12" name="attr_track_marker_12" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_12"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_12">Track 12</span>
                                   </label>
                                 </div>
                               </div>
@@ -1004,34 +1007,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1089,34 +1092,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1174,34 +1177,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1259,34 +1262,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1344,34 +1347,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1429,34 +1432,34 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/>
+                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
                               <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" name="attr_downtime_name" id="downtime_name" type="text" data-i18n-placeholder="placeholder_downtime_name" placeholder="Name"/>
+                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
                               <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" name="attr_downtime_cost" id="downtime_cost" type="text" data-i18n-placeholder="placeholder_downtime_cost" placeholder="Cost"/>
+                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
                               <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" name="attr_downtime_description" data-i18n-placeholder="placeholder_downtime_description" placeholder="Description"></textarea>
+                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
                               <label for="downtime_description" data-i18n="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" name="attr_downtime_result" id="downtime_result" type="text" data-i18n-placeholder="placeholder_downtime_result" placeholder="Result"/>
+                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
                               <label for="downtime_result" data-i18n="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble downtime">
+                          <article class="bubble bubble__downtime">
                             <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
-                                  <input class="checkbox--scribble" name="attr_downtime_check" id="downtime_check" value="on" type="checkbox"/><span class="downtime__name" name="attr_downtime_name"></span>
+                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
@@ -1522,18 +1525,18 @@
                         <div class="repeating__edit">
                           <div class="row legacy__edit">
                             <div class="legacy__field legacy_name ">
-                              <input class="legacy__legacy_name legacy__input--text" name="attr_legacy_name" id="legacy_name" type="text" data-i18n-placeholder="placeholder_legacy_name" placeholder="viral video of 1080"/>
+                              <input class="legacy__legacy_name legacy__input--text" data-i18n-placeholder="placeholder_legacy_name" id="legacy_name" name="attr_legacy_name" placeholder="viral video of 1080" type="text"/>
                               <label for="legacy_name" data-i18n="legacy_name">Legacy</label>
                             </div>
                             <div class="legacy__field legacy_description ">
-                              <textarea class="legacy__legacy_description legacy__input--textarea" name="attr_legacy_description" data-i18n-placeholder="placeholder_legacy_description" placeholder="Description"></textarea>
+                              <textarea class="legacy__legacy_description legacy__input--textarea" data-i18n-placeholder="placeholder_legacy_description" name="attr_legacy_description" placeholder="Description"></textarea>
                               <label for="legacy_description" data-i18n="legacy_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <div class="legacy__view">
-                            <article class="bubble legacy">
+                            <article class="bubble bubble__legacy">
                               <input class="bubble__controller" name="attr_legacy_collapse" value="0" type="hidden"/>
                               <div class="bubble__header"><span class="legacy__name" name="attr_legacy_name"></span>
                                 <div class="bubble__controls">
@@ -1590,18 +1593,18 @@
                         <div class="repeating__edit">
                           <div class="row doom__edit">
                             <div class="doom__field doom_name ">
-                              <input class="doom__doom_name doom__input--text" name="attr_doom_name" id="doom_name" type="text" data-i18n-placeholder="placeholder_doom_name" placeholder="broke mom's trust"/>
+                              <input class="doom__doom_name doom__input--text" data-i18n-placeholder="placeholder_doom_name" id="doom_name" name="attr_doom_name" placeholder="broke mom's trust" type="text"/>
                               <label for="doom_name" data-i18n="doom_name">doom</label>
                             </div>
                             <div class="doom__field doom_description ">
-                              <textarea class="doom__doom_description doom__input--textarea" name="attr_doom_description" data-i18n-placeholder="placeholder_doom_description" placeholder="Description"></textarea>
+                              <textarea class="doom__doom_description doom__input--textarea" data-i18n-placeholder="placeholder_doom_description" name="attr_doom_description" placeholder="Description"></textarea>
                               <label for="doom_description" data-i18n="doom_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <div class="doom__view">
-                            <article class="bubble doom">
+                            <article class="bubble bubble__doom">
                               <input class="bubble__controller" name="attr_doom_collapse" value="0" type="hidden"/>
                               <div class="bubble__header"><span class="doom__name" name="attr_doom_name"></span>
                                 <div class="bubble__controls">
@@ -1657,15 +1660,15 @@
                   <div class="editor__edit header__edit">
                     <div>
                       <label for="character_name" data-i18n="character_name">Name</label>
-                      <input class="header__character_name header__input--text" name="attr_character_name" id="character_name" type="text" data-i18n-placeholder="placeholder_character_name" placeholder="Farrah"/>
+                      <input class="header__character_name header__input--text" data-i18n-placeholder="placeholder_character_name" id="character_name" name="attr_character_name" placeholder="Farrah" type="text"/>
                     </div>
                     <div>
                       <label for="brands" data-i18n="brands">Brands</label>
-                      <input class="header__brands header__input--text" name="attr_brands" id="brands" type="text" data-i18n-placeholder="placeholder_brands" placeholder="good kids, weirdos"/>
+                      <input class="header__brands header__input--text" data-i18n-placeholder="placeholder_brands" id="brands" name="attr_brands" placeholder="good kids, weirdos" type="text"/>
                     </div>
                     <div>
                       <label for="hangouts" data-i18n="hangouts">Hangouts</label>
-                      <input class="header__hangouts header__input--text" name="attr_hangouts" id="hangouts" type="text" data-i18n-placeholder="placeholder_hangouts" placeholder="the gas station"/>
+                      <input class="header__hangouts header__input--text" data-i18n-placeholder="placeholder_hangouts" id="hangouts" name="attr_hangouts" placeholder="the gas station" type="text"/>
                     </div>
                   </div>
                   <div class="editor__view header__view">
@@ -1690,17 +1693,17 @@
               <div class="blob__header fractures__header">
                 <h2 class="blob__title fractures__title" data-i18n="fractures">Fractures</h2>
                 <div class="blob__controls">
-                  <button class="broadcast broadcast" name="roll_fractures-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{fractures}}} {{^{fracture_1}=@{fracture_1}}} {{^{fracture_2}=@{fracture_2}}} {{^{fracture_3}=@{fracture_3}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                  <button class="broadcast broadcast" name="roll_fractures-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{fractures}}} {{^{fracture_1}=@{fracture_1}}} {{^{fracture_2}=@{fracture_2}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                 </div>
               </div>
               <div class="blob__content fractures__content">
                 <div class="fractures__boxes">
                   <div class="fractures__box fractures__box--fracture_1">
-                    <input class="fractures__fracture_1 fractures__input--text" name="attr_fracture_1" id="fracture_1" type="text" data-i18n-placeholder="placeholder_fracture_1" placeholder="super bruised ribs"/>
+                    <input class="fractures__fracture_1 fractures__input--text" data-i18n-placeholder="placeholder_fracture_1" id="fracture_1" name="attr_fracture_1" placeholder="super bruised ribs" type="text"/>
                     <label class="visually-hidden" for="fracture_1" data-i18n="fracture_1">Fracture 1</label>
                   </div>
                   <div class="fractures__box fractures__box--fracture_2">
-                    <input class="fractures__fracture_2 fractures__input--text" name="attr_fracture_2" id="fracture_2" type="text" data-i18n-placeholder="placeholder_fracture_2" placeholder="frustrated"/>
+                    <input class="fractures__fracture_2 fractures__input--text" data-i18n-placeholder="placeholder_fracture_2" id="fracture_2" name="attr_fracture_2" placeholder="frustrated" type="text"/>
                     <label class="visually-hidden" for="fracture_2" data-i18n="fracture_2">Fracture 2</label>
                   </div>
                 </div>
@@ -1723,22 +1726,22 @@
                 <input name="attr_hype_kick" type="hidden"/>
                 <div class="hype__clickies">
                   <label class="hype__boost hype__boost--1">
-                    <input name="attr_hype_boost_1" id="hype_boost_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_1">Hype Boost 1</span>
+                    <input id="hype_boost_1" name="attr_hype_boost_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_boost_1">Hype Boost 1</span>
                   </label>
                   <label class="hype__boost hype__boost--2">
-                    <input name="attr_hype_boost_2" id="hype_boost_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_2">Hype Boost 2</span>
+                    <input id="hype_boost_2" name="attr_hype_boost_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_boost_2">Hype Boost 2</span>
                   </label>
                   <label class="hype__boost hype__boost--3">
-                    <input name="attr_hype_boost_3" id="hype_boost_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_boost_3">Hype Boost 3</span>
+                    <input id="hype_boost_3" name="attr_hype_boost_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_boost_3">Hype Boost 3</span>
                   </label>
                   <label class="hype__kick hype__kick--1">
-                    <input name="attr_hype_kick_1" id="hype_kick_1" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_1">Hype Kick 1</span>
+                    <input id="hype_kick_1" name="attr_hype_kick_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_kick_1">Hype Kick 1</span>
                   </label>
                   <label class="hype__kick hype__kick--2">
-                    <input name="attr_hype_kick_2" id="hype_kick_2" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_2">Hype Kick 2</span>
+                    <input id="hype_kick_2" name="attr_hype_kick_2" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_kick_2">Hype Kick 2</span>
                   </label>
                   <label class="hype__kick hype__kick--3">
-                    <input name="attr_hype_kick_3" id="hype_kick_3" value="on" type="checkbox"/><span class="visually-hidden" data-i18n="hype_kick_3">Hype Kick 3</span>
+                    <input id="hype_kick_3" name="attr_hype_kick_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_kick_3">Hype Kick 3</span>
                   </label>
                 </div>
               </div>
@@ -1757,37 +1760,37 @@
                 <input class="style__hidden" name="attr_crew_style" type="hidden"/>
                 <div class="style__track">
                   <label class="style__checkbox style__checkbox--0">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="0" type="radio"/><span class="visually-hidden" data-i18n="style_0">0 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="0"/><span class="visually-hidden" data-i18n="style_0">0 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--1">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="1" type="radio"/><span class="visually-hidden" data-i18n="style_1">1 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="1"/><span class="visually-hidden" data-i18n="style_1">1 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--2">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="2" type="radio"/><span class="visually-hidden" data-i18n="style_2">2 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="2"/><span class="visually-hidden" data-i18n="style_2">2 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--3">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="3" type="radio"/><span class="visually-hidden" data-i18n="style_3">3 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="3"/><span class="visually-hidden" data-i18n="style_3">3 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--4">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="4" type="radio"/><span class="visually-hidden" data-i18n="style_4">4 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="4"/><span class="visually-hidden" data-i18n="style_4">4 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--5">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="5" type="radio"/><span class="visually-hidden" data-i18n="style_5">5 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="5"/><span class="visually-hidden" data-i18n="style_5">5 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--6">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="6" type="radio"/><span class="visually-hidden" data-i18n="style_6">6 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="6"/><span class="visually-hidden" data-i18n="style_6">6 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--7">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="7" type="radio"/><span class="visually-hidden" data-i18n="style_7">7 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="7"/><span class="visually-hidden" data-i18n="style_7">7 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--8">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="8" type="radio"/><span class="visually-hidden" data-i18n="style_8">8 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="8"/><span class="visually-hidden" data-i18n="style_8">8 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--9">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="9" type="radio"/><span class="visually-hidden" data-i18n="style_9">9 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="9"/><span class="visually-hidden" data-i18n="style_9">9 style</span>
                   </label>
                   <label class="style__checkbox style__checkbox--10">
-                    <input class="checkbox--circle" name="attr_crew_style" id="crew_style" value="10" type="radio"/><span class="visually-hidden" data-i18n="style_10">10 style</span>
+                    <input class="checkbox--circle" id="crew_style" name="attr_crew_style" type="radio" value="10"/><span class="visually-hidden" data-i18n="style_10">10 style</span>
                   </label>
                 </div>
               </div>
@@ -1815,6 +1818,20 @@
               <div class="panel__content fame__content">
                 <div class="editor">
                   <div class="editor__edit fame__edit">
+                    <div class="fame__hype">
+                      <label class="fame__check">
+                        <input class="checkbox--scribble" id="hype_boost_1" name="attr_hype_boost_1" type="checkbox" value="on"/><span data-i18n="fame_hype_boost_1">Add +1 boost</span>
+                      </label>
+                      <label class="fame__check">
+                        <input class="checkbox--scribble" id="hype_kick_1" name="attr_hype_kick_1" type="checkbox" value="on"/><span data-i18n="fame_hype_kick_1">Add +1 kick</span>
+                      </label>
+                      <label class="fame__check">
+                        <input class="checkbox--scribble" id="hype_boost_2" name="attr_hype_boost_2" type="checkbox" value="on"/><span data-i18n="fame_hype_boost_2">Add +1 boost</span>
+                      </label>
+                      <label class="fame__check">
+                        <input class="checkbox--scribble" id="hype_kick_2" name="attr_hype_kick_2" type="checkbox" value="on"/><span data-i18n="fame_hype_kick_2">Add +1 kick</span>
+                      </label>
+                    </div>
                   </div>
                   <div class="editor__view fame__view">
                   </div>
@@ -1863,17 +1880,17 @@
                         <div class="repeating__edit">
                           <div class="row notes__edit">
                             <div class="notes__field note_name ">
-                              <input class="notes__note_name notes__input--text" name="attr_note_name" id="note_name" type="text" data-i18n-placeholder="placeholder_note_name" placeholder="broke mom's trust"/>
+                              <input class="notes__note_name notes__input--text" data-i18n-placeholder="placeholder_note_name" id="note_name" name="attr_note_name" placeholder="broke mom's trust" type="text"/>
                               <label class="visually-hidden" for="note_name" data-i18n="note_name">Note</label>
                             </div>
                             <div class="notes__field note_description ">
-                              <textarea class="notes__note_description notes__input--textarea" name="attr_note_description" data-i18n-placeholder="placeholder_note_description" placeholder="Description"></textarea>
+                              <textarea class="notes__note_description notes__input--textarea" data-i18n-placeholder="placeholder_note_description" name="attr_note_description" placeholder="Description"></textarea>
                               <label for="note_description" data-i18n="note_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble note">
+                          <article class="bubble bubble__note">
                             <input class="bubble__controller" name="attr_note_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="notes__view"><span class="note__name" name="attr_note_name"></span>
@@ -1935,68 +1952,68 @@
                             <input name="attr_track_size" type="hidden"/>
                             <input name="attr_track_display" type="hidden"/>
                             <div class="tracks__field track_name ">
-                              <input class="tracks__track_name tracks__input--text" name="attr_track_name" id="track_name" type="text" data-i18n-placeholder="placeholder_track_name" placeholder="SKATE"/>
+                              <input class="tracks__track_name tracks__input--text" data-i18n-placeholder="placeholder_track_name" id="track_name" name="attr_track_name" placeholder="SKATE" type="text"/>
                               <label class="visually-hidden" for="track_name" data-i18n="track_name">Track</label>
                             </div>
                             <div class="tracks__field track_description ">
-                              <textarea class="tracks__track_description tracks__input--textarea" name="attr_track_description" data-i18n-placeholder="placeholder_track_description" placeholder="Description"></textarea>
+                              <textarea class="tracks__track_description tracks__input--textarea" data-i18n-placeholder="placeholder_track_description" name="attr_track_description" placeholder="Description"></textarea>
                               <label for="track_description" data-i18n="track_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble track">
+                          <article class="bubble bubble__track">
                             <input class="bubble__controller" name="attr_track_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="tracks__view">
                                 <div class="tracks__progress-track">
                                   <input class="track__letter-exists" name="attr_track_letter_1" type="hidden"/>
                                   <label class="track__progress track__progress--1" for="track_marker_1">
-                                    <input class="track__marker" name="attr_track_marker_1" id="track_marker_1" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_1"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_1">Track 1</span>
+                                    <input class="track__marker" id="track_marker_1" name="attr_track_marker_1" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_1"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_1">Track 1</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_2" type="hidden"/>
                                   <label class="track__progress track__progress--2" for="track_marker_2">
-                                    <input class="track__marker" name="attr_track_marker_2" id="track_marker_2" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_2"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_2">Track 2</span>
+                                    <input class="track__marker" id="track_marker_2" name="attr_track_marker_2" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_2"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_2">Track 2</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_3" type="hidden"/>
                                   <label class="track__progress track__progress--3" for="track_marker_3">
-                                    <input class="track__marker" name="attr_track_marker_3" id="track_marker_3" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_3"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_3">Track 3</span>
+                                    <input class="track__marker" id="track_marker_3" name="attr_track_marker_3" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_3"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_3">Track 3</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_4" type="hidden"/>
                                   <label class="track__progress track__progress--4" for="track_marker_4">
-                                    <input class="track__marker" name="attr_track_marker_4" id="track_marker_4" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_4"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_4">Track 4</span>
+                                    <input class="track__marker" id="track_marker_4" name="attr_track_marker_4" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_4"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_4">Track 4</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_5" type="hidden"/>
                                   <label class="track__progress track__progress--5" for="track_marker_5">
-                                    <input class="track__marker" name="attr_track_marker_5" id="track_marker_5" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_5"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_5">Track 5</span>
+                                    <input class="track__marker" id="track_marker_5" name="attr_track_marker_5" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_5"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_5">Track 5</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_6" type="hidden"/>
                                   <label class="track__progress track__progress--6" for="track_marker_6">
-                                    <input class="track__marker" name="attr_track_marker_6" id="track_marker_6" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_6"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_6">Track 6</span>
+                                    <input class="track__marker" id="track_marker_6" name="attr_track_marker_6" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_6"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_6">Track 6</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_7" type="hidden"/>
                                   <label class="track__progress track__progress--7" for="track_marker_7">
-                                    <input class="track__marker" name="attr_track_marker_7" id="track_marker_7" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_7"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_7">Track 7</span>
+                                    <input class="track__marker" id="track_marker_7" name="attr_track_marker_7" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_7"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_7">Track 7</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_8" type="hidden"/>
                                   <label class="track__progress track__progress--8" for="track_marker_8">
-                                    <input class="track__marker" name="attr_track_marker_8" id="track_marker_8" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_8"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_8">Track 8</span>
+                                    <input class="track__marker" id="track_marker_8" name="attr_track_marker_8" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_8"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_8">Track 8</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_9" type="hidden"/>
                                   <label class="track__progress track__progress--9" for="track_marker_9">
-                                    <input class="track__marker" name="attr_track_marker_9" id="track_marker_9" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_9"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_9">Track 9</span>
+                                    <input class="track__marker" id="track_marker_9" name="attr_track_marker_9" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_9"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_9">Track 9</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_10" type="hidden"/>
                                   <label class="track__progress track__progress--10" for="track_marker_10">
-                                    <input class="track__marker" name="attr_track_marker_10" id="track_marker_10" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_10"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_10">Track 10</span>
+                                    <input class="track__marker" id="track_marker_10" name="attr_track_marker_10" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_10"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_10">Track 10</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_11" type="hidden"/>
                                   <label class="track__progress track__progress--11" for="track_marker_11">
-                                    <input class="track__marker" name="attr_track_marker_11" id="track_marker_11" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_11"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_11">Track 11</span>
+                                    <input class="track__marker" id="track_marker_11" name="attr_track_marker_11" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_11"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_11">Track 11</span>
                                   </label>
                                   <input class="track__letter-exists" name="attr_track_letter_12" type="hidden"/>
                                   <label class="track__progress track__progress--12" for="track_marker_12">
-                                    <input class="track__marker" name="attr_track_marker_12" id="track_marker_12" value="on" type="checkbox"/><span class="track__letter" name="attr_track_letter_12"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_12">Track 12</span>
+                                    <input class="track__marker" id="track_marker_12" name="attr_track_marker_12" type="checkbox" value="on"/><span class="track__letter" name="attr_track_letter_12"></span><span class="track__marked">X</span><span class="visually-hidden" data-i18n="track_marker_12">Track 12</span>
                                   </label>
                                 </div>
                               </div>
@@ -2030,6 +2047,8 @@
             <h2 class="blade__title" data-i18n="factions">Factions</h2>
           </button>
           <div class="blade__wrapper">
+            <input name="attr_load_factions" value="0" type="hidden"/>
+            <button class="crew__action crew--factions" name="act_load-factions" type="action"><span data-i18n="load_factions">Load Factions</span></button>
             <section class="panel crew-factions faction">
               <input class="editor__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
               <input class="minimizer__controller" name="attr_crew-factions_minimizer" value="0" type="hidden"/>
@@ -2061,8 +2080,9 @@
                       <div class="repeating__wrapper">
                         <div class="repeating__edit">
                           <div class="row faction__edit">
+                            <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
-                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
                               <label for="faction_name" data-i18n="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
@@ -2070,7 +2090,7 @@
                                 <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
                                 <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
                                 <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
                                 <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
                                 <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
                                 <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
@@ -2079,13 +2099,13 @@
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
-                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
                               <label for="faction_description" data-i18n="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble faction">
+                          <article class="bubble bubble__faction">
                             <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
@@ -2143,8 +2163,9 @@
                       <div class="repeating__wrapper">
                         <div class="repeating__edit">
                           <div class="row faction__edit">
+                            <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
-                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
                               <label for="faction_name" data-i18n="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
@@ -2152,7 +2173,7 @@
                                 <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
                                 <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
                                 <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
                                 <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
                                 <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
                                 <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
@@ -2161,13 +2182,13 @@
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
-                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
                               <label for="faction_description" data-i18n="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble faction">
+                          <article class="bubble bubble__faction">
                             <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
@@ -2225,8 +2246,9 @@
                       <div class="repeating__wrapper">
                         <div class="repeating__edit">
                           <div class="row faction__edit">
+                            <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
-                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
                               <label for="faction_name" data-i18n="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
@@ -2234,7 +2256,7 @@
                                 <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
                                 <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
                                 <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
                                 <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
                                 <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
                                 <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
@@ -2243,13 +2265,13 @@
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
-                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
                               <label for="faction_description" data-i18n="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble faction">
+                          <article class="bubble bubble__faction">
                             <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
@@ -2307,8 +2329,9 @@
                       <div class="repeating__wrapper">
                         <div class="repeating__edit">
                           <div class="row faction__edit">
+                            <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
-                              <input class="faction__faction_name faction__input--text" name="attr_faction_name" id="faction_name" type="text" data-i18n-placeholder="placeholder_faction_name" placeholder="Faction"/>
+                              <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
                               <label for="faction_name" data-i18n="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
@@ -2316,7 +2339,7 @@
                                 <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
                                 <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
                                 <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" value="±0" selected="selected">Neutral (±0)</option>
+                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
                                 <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
                                 <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
                                 <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
@@ -2325,13 +2348,13 @@
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
-                              <textarea class="faction__faction_description faction__input--textarea" name="attr_faction_description" data-i18n-placeholder="placeholder_faction_description" placeholder="Description"></textarea>
+                              <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
                               <label for="faction_description" data-i18n="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
-                          <article class="bubble faction">
+                          <article class="bubble bubble__faction">
                             <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
@@ -2371,8 +2394,8 @@
       </aside>
     </main>
     <footer class="footer">
-      <input name="attr_sheet_version" value="0" type="hidden"/><span class="visually-hidden" data-i18n="sheet_version">Version</span><span name="attr_sheet_version"></span>
-      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span>
+      <input name="attr_sheet_version" type="hidden" value="0"/><span class="visually-hidden" data-i18n="sheet_version">Version</span><span name="attr_sheet_version"></span>
+      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span><span class="translation" data-i18n="brb">BRB</span><span class="translation" data-i18n="brb_description">A crew of straight-laced, athletic, and super competitive laserbladers.</span><span class="translation" data-i18n="jet_collective">Jet Collective</span><span class="translation" data-i18n="jet_collective_description">A large crew of inclusive activists with an addiction to petty drama.</span><span class="translation" data-i18n="null_range">Null Range</span><span class="translation" data-i18n="null_range_description">An obnoxious, anti-authoritarian crew of older kids from Hillview.</span><span class="translation" data-i18n="lazy_bunny">Lazy Bunny</span><span class="translation" data-i18n="lazy_bunny_description">Super mainstream, super broish, super nice live-streamers having their moment.</span><span class="translation" data-i18n="the_wicks">The Wicks</span><span class="translation" data-i18n="the_wicks_description">A crew of young, rowdy, disenfranchised up-and-comers.</span><span class="translation" data-i18n="miper">Miper</span><span class="translation" data-i18n="miper_description">A sleek, idealistic big-tech company.</span><span class="translation" data-i18n="hardecker">Hardecker.</span><span class="translation" data-i18n="hardecker_description">A clueless blue-collar brand that’s just been made cool.</span><span class="translation" data-i18n="wilkies">Wilkie’s</span><span class="translation" data-i18n="wilkies_description">Candy, toys, energy drinks, x-treme sports.</span><span class="translation" data-i18n="scram_cat">Scram Cat</span><span class="translation" data-i18n="scram_cat_description">The original indie slugblasting shop, in the process of becoming a Miper subsidiary.</span><span class="translation" data-i18n="fust">FUST</span><span class="translation" data-i18n="fust_description">Last real indie sponsor, owned/operated by total a-holes.</span><span class="translation" data-i18n="dara">DARA</span><span class="translation" data-i18n="dara_description">Big, mysterious research facility. Its Rescue division act as Hillview’s portal cops.</span><span class="translation" data-i18n="the_arborists">The Arborists</span><span class="translation" data-i18n="the_arborists_description">An ancient sect of planeswalkers from Thennis Spar.</span><span class="translation" data-i18n="shimmer">Shimmer</span><span class="translation" data-i18n="shimmer_description">Transversal criminal syndicate.</span><span class="translation" data-i18n="doorways">Doorways</span><span class="translation" data-i18n="doorways_description">Concerned parent group from Hillview.</span><span class="translation" data-i18n="the_old_guard">The Old Guard</span><span class="translation" data-i18n="the_old_guard_description">Promoters, magazine editors, and retired slugblasters.</span><span class="translation" data-i18n="the_thrashers">The Thrashers</span><span class="translation" data-i18n="the_thrashers_description">The partiers, hipsters, and artists. They value authenticity, aesthetic, and attitude.</span><span class="translation" data-i18n="the_heads">The Heads</span><span class="translation" data-i18n="the_heads_description">The nerds, athletes, and aficionados. They value skill and innovation.</span><span class="translation" data-i18n="the_mavens">The Mavens</span><span class="translation" data-i18n="the_mavens_description">The activists, punks, and die-hards. They value community and standing for something.</span><span class="translation" data-i18n="the_freaks">The Freaks</span><span class="translation" data-i18n="the_freaks_description">The ravers, crusties, and oddballs. They value originality and expression.</span><span class="translation" data-i18n="the_normies">The Normies</span><span class="translation" data-i18n="the_normies_description">The mainstreamers, pre-teens, and basics. They value fun.</span>
       </div>
     </footer>
   </div>
@@ -2659,22 +2682,10 @@ const G_CONSTANTS = {
 const G_PLAYBOOKS = {
   grit: {
     attitude: { boost: 3, kick: 1 },
-    traits: [
-      'patient',
-      'sacrifice_your_body',
-      'diligent',
-      'walk_it_off',
-      'skill',
-      'personal_growth',
-    ],
+    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill', 'personal_growth'],
     gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
     beat: { grinding: '2_style', origin_story: '3_style', sharpened: '4_style' },
-    arc: [
-      { a_goal: '1_style' },
-      { setbacks: '2_style' },
-      { quitting: '4_trouble' },
-      { perseverance: '3_style' },
-    ],
+    arc: [{ a_goal: '1_style' }, { setbacks: '2_style' }, { quitting: '4_trouble' }, { perseverance: '3_style' }],
     vibes: [
       'one_song_on_repeat',
       'never_smile',
@@ -2716,14 +2727,7 @@ const G_PLAYBOOKS = {
 
 const G_SIGNATURES = {
   negafriction_sword: {
-    mods: [
-      'slip_rattle',
-      'field_projector',
-      'ref_coating',
-      'negafriction_wake',
-      'subdimensional_edge',
-      'kitbashed',
-    ],
+    mods: ['slip_rattle', 'field_projector', 'ref_coating', 'negafriction_wake', 'subdimensional_edge', 'kitbashed'],
     looks: [],
   },
   gravity_blaster: {},
@@ -2778,6 +2782,134 @@ const G_EXTRA_GEAR = [
   'link_patch_duo',
   'slam_patch',
 ];
+
+const G_FACTIONS = {
+  crew: ['brb', 'jet_collective', 'null_range', 'lazy_bunny', 'the_wicks'],
+  sponsor: ['miper', 'hardecker', 'wilkies', 'scram_cat', 'fust'],
+  authority: ['dara', 'the_arborists', 'shimmer', 'doorways', 'the_old_guard'],
+  crowd: ['the_thrashers', 'the_heads', 'the_mavens', 'the_freaks', 'the_normies'],
+};
+
+const G_FACTION_FIELDSET = [
+  {
+    section: 'repeating_crew-factions',
+    fields: ['faction_name', 'faction_description', 'faction_autogen'],
+  },
+];
+
+const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
+
+const attributes = {
+  '_reporder_repeating_crew-factions': ['-nmgprevgublcxcngb9c', '-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj'],
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_name': 'Null Range',
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_description':
+    'An obnoxious, anti-authoritarian crew of older kids from Hillview.',
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_autogen': '',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_name': 'The Wicks',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_description':
+    'A crew of young, rowdy, disenfranchised up-and-comers.',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_autogen': '',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_name': 'BRB',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_description': '',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_autogen': '',
+};
+
+const sections = {
+  'repeating_crew-factions': ['-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj', '-nmgprevgublcxcngb9c'],
+};
+  /**
+ * Checks if a repeating fieldset is empty by counting the
+ * number of sections inside the fieldset.
+ * @param {string} fieldset
+ */
+const isFieldsetEmpty = (fieldset) => {
+  getSectionIDs(`repeating_${fieldset}`, (sections) => {
+    setAttrs({ [`${fieldset}_empty`]: sections.length });
+  });
+};
+
+/**
+  Gets all attributes, both repeating and non-repeating.
+  Default sectionDetails to a shallow clone of the global G_DEFAULT_REPEATING;
+  We're cloning because we'll be manipulating the array.
+  @param sectionDetails:  an object containing the idArrays for each
+    repeating section, sorted based on their current order.
+    Example:
+      const G_DEFAULT_REPEATING = [
+        { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
+        { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
+      ];
+  @param getArray: an object containing all the attribute values
+  @returns
+    @param attributes: similar to getAttrs; object containing field names as key and values.
+    @param sections: similar to getSectionIDs; object containing fieldset name
+      as key and array of IDs as value.
+**/
+const getAllAttrs = function (callback, sectionDetails = [], getArray = []) {
+  getSections(getArray, sectionDetails, (getArr, sections) => {
+    getAttrs(getArr, (attributes) => {
+      // order the sections
+      orderSections(attributes, sections);
+      // call the callback function to finally do what we wanted to do.
+      callback(attributes, sections);
+    });
+  });
+};
+
+/**
+  Gets the rowIDs for all the sections passed to it,
+  and assembles an array of repeating attributes to get
+  Does this via a work queue or burndown set up
+  Arguments are the same as for getAllAttrs with the addition of sections
+  @param sections: accumulates the idArrays for each section
+**/
+const getSections = function (getArray = [], sectionDetails = [], callback, sections = {}) {
+  // grab the first section to work;
+  let section = sectionDetails.shift();
+  getSectionIDs(section.section, (idArray) => {
+    // store the idArray for use later on if needed.
+    sections[section.section] = [...idArray];
+
+    // add the sections reporder to the getArray so that we can order the idArray later.
+    getArray.push(`_reporder_${section.section}`);
+    // iterate through the ids
+    idArray.forEach((id) => {
+      // Iterate through each of the fields for the repeating section
+      section.fields.forEach((field) => {
+        // add the repeating attribute for this id to the getArray
+        getArray.push(`${section.section}_${id}_${field}`);
+      });
+    });
+    if (sectionDetails[0]) {
+      // If there's another section to work through, go through the burndown again
+      getSections(getArray, sectionDetails, callback, sections);
+    } else {
+      // If no sections are left, call the callback
+      callback(getArray, sections);
+    }
+  });
+};
+
+// The next three functions are only used for the ID ordering.
+// orders the section id arrays to match the repOrder attribute
+const orderSections = function (attributes, sections) {
+  Object.keys(sections).forEach((section) => {
+    attributes[`_reporder_${section}`] = commaArray(attributes[`_reporder_${section}`]);
+    orderSection(attributes[`_reporder_${section}`], sections[section]);
+  });
+};
+
+// splits a comma delimited string into an array
+const commaArray = function (string = '') {
+  return string.toLowerCase().split(/\s*,\s*/);
+};
+
+// orders a single ID array
+const orderSection = function (repOrder, IDs = []) {
+  IDs.sort((a, b) => {
+    return repOrder.indexOf(a.toLowerCase()) - repOrder.indexOf(b.toLowerCase());
+  });
+};
   const getSectionID = (eventInfo) => eventInfo.sourceAttribute.split('_').at(2);
 
 const doNumcontrol = (numcontrol, step, min = null, max = null) => {
@@ -2800,7 +2932,7 @@ const doNumcontrol = (numcontrol, step, min = null, max = null) => {
 
 const nopeTrouble = () => {
   getAttrs(['trouble', 'trouble_max'], (values) => {
-    const max = +values.trouble_max || 8;
+    const max = +values.trouble_max || G_CONSTANTS.trouble_max;
     const current = +values.trouble || 0;
     const newValue = Math.min(current + 2, max);
     setAttrs({ trouble: newValue });
@@ -2928,6 +3060,39 @@ const importFieldset = (fieldset, data) => {
     setAttrs(update);
   });
 };
+
+const loadFactions = () => {
+  Object.keys(G_FACTIONS).forEach((factions) => {
+    const section = `repeating_${factions}-factions`;
+    const sectionDetails = { ...G_FACTION_FIELDSET.at(0) };
+    sectionDetails.section = section;
+
+    getAllAttrs(
+      (values, sections) => {
+        const update = {};
+        const createdIds = [];
+
+        G_FACTIONS[factions].forEach((faction) => {
+          let rowId = generateRowID();
+          while (rowId in createdIds) {
+            rowId = generateRowID();
+          }
+          createdIds.push(rowId);
+
+          const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
+          update[repeatingPrefix + 'autogen'] = 1;
+          update[repeatingPrefix + 'name'] = getTranslationByKey(faction);
+          update[repeatingPrefix + 'description'] = getTranslationByKey(faction + '_description');
+        });
+
+        setAttrs(update);
+      },
+      [{ ...sectionDetails }]
+    );
+
+    setAttrs({ load_factions: 1 }, { silent: true });
+  });
+};
   // Switch between sheet modes
 G_SHEET_MODES.forEach((mode) => {
   on(`clicked:${mode}`, (eventInfo) => {
@@ -2966,9 +3131,7 @@ G_BLADES.forEach((toggle) => {
 
 // Update empty fieldsets
 G_REPEATING_FIELDSETS.forEach((fieldset) => {
-  on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) =>
-    isFieldsetEmpty(fieldset)
-  );
+  on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) => isFieldsetEmpty(fieldset));
 });
 
 // Load personality data
@@ -2983,6 +3146,21 @@ on(`change:signature`, (eventInfo) => {
   let signature = eventInfo.newValue;
   signature = signature.trim().replace(' ', '_').toLowerCase();
   if (signature) loadSignature(signature);
+});
+
+// Load faction data
+on('clicked:load-factions', () => loadFactions());
+const factionAutogen = Object.keys(G_FACTIONS)
+  .flatMap((section) => G_FACTION_AUTOGEN.map((field) => `change:repeating_${section}-factions`))
+  .join(' ');
+on(factionAutogen, (eventInfo) => {
+  const autogen = eventInfo.sourceAttribute.split('_').slice(0, 4).join('_') + '_autogen';
+  getAttrs([autogen], (values) => {
+    if (values[autogen] && eventInfo.sourceType === 'player') {
+      console.log(eventInfo);
+      setAttrs({ [autogen]: '' }, { silent: true });
+    }
+  });
 });
 
 // Style & Trouble
@@ -3000,98 +3178,16 @@ Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
     makeTrackString(sectionId);
   });
 });
-  /**
- * Checks if a repeating fieldset is empty by counting the
- * number of sections inside the fieldset.
- * @param {string} fieldset
- */
-const isFieldsetEmpty = (fieldset) => {
-  getSectionIDs(`repeating_${fieldset}`, (sections) => {
-    setAttrs({ [`${fieldset}_empty`]: sections.length });
-  });
-};
 
-/**
-  Gets all attributes, both repeating and non-repeating.
-  Default sectionDetails to a shallow clone of the global G_DEFAULT_REPEATING;
-  We're cloning because we'll be manipulating the array.
-  @param sectionDetails:  an object containing the idArrays for each
-    repeating section, sorted based on their current order.
-    Example:
-      const G_DEFAULT_REPEATING = [
-        { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
-        { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
-      ];
-  @param getArray: an object containing all the attribute values
-  @returns
-    @param attributes: similar to getAttrs; object containing field names as key and values.
-    @param sections: similar to getSectionIDs; object containing fieldset name
-      as key and array of IDs as value.
-**/
-const getAllAttrs = function (callback, sectionDetails = [], getArray = []) {
-  getSections(getArray, sectionDetails, (getArr, sections) => {
-    getAttrs(getArr, (attributes) => {
-      // order the sections
-      orderSections(attributes, sections);
-      // call the callback function to finally do what we wanted to do.
-      callback(attributes, sections);
-    });
-  });
-};
-
-/**
-  Gets the rowIDs for all the sections passed to it,
-  and assembles an array of repeating attributes to get
-  Does this via a work queue or burndown set up
-  Arguments are the same as for getAllAttrs with the addition of sections
-  @param sections: accumulates the idArrays for each section
-**/
-const getSections = function (getArray = [], sectionDetails = [], callback, sections = {}) {
-  // grab the first section to work;
-  let section = sectionDetails.shift();
-  getSectionIDs(section.section, (idArray) => {
-    // store the idArray for use later on if needed.
-    sections[section.section] = [...idArray];
-
-    // add the sections reporder to the getArray so that we can order the idArray later.
-    getArray.push(`_reporder_${section.section}`);
-    // iterate through the ids
-    idArray.forEach((id) => {
-      // Iterate through each of the fields for the repeating section
-      section.fields.forEach((field) => {
-        // add the repeating attribute for this id to the getArray
-        getArray.push(`${section.section}_${id}_${field}`);
-      });
-    });
-    if (sectionDetails[0]) {
-      // If there's another section to work through, go through the burndown again
-      getSections(getArray, sectionDetails, callback, sections);
-    } else {
-      // If no sections are left, call the callback
-      callback(getArray, sections);
-    }
-  });
-};
-
-// The next three functions are only used for the ID ordering.
-// orders the section id arrays to match the repOrder attribute
-const orderSections = function (attributes, sections) {
-  Object.keys(sections).forEach((section) => {
-    attributes[`_reporder_${section}`] = commaArray(attributes[`_reporder_${section}`]);
-    orderSection(attributes[`_reporder_${section}`], sections[section]);
-  });
-};
-
-// splits a comma delimited string into an array
-const commaArray = function (string = '') {
-  return string.toLowerCase().split(/\s*,\s*/);
-};
-
-// orders a single ID array
-const orderSection = function (repOrder, IDs = []) {
-  IDs.sort((a, b) => {
-    return repOrder.indexOf(a.toLowerCase()) - repOrder.indexOf(b.toLowerCase());
-  });
-};
+on(`sheet:opened`, () => {
+  getAllAttrs(
+    (attributes, sections) => {
+      console.log(attributes);
+      console.log(sections);
+    },
+    [...G_FACTION_FIELDSET],
+    [...G_BLADES]
+  );
+});
 
 </script>

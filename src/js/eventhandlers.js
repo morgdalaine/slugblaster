@@ -36,9 +36,7 @@ G_BLADES.forEach((toggle) => {
 
 // Update empty fieldsets
 G_REPEATING_FIELDSETS.forEach((fieldset) => {
-  on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) =>
-    isFieldsetEmpty(fieldset)
-  );
+  on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) => isFieldsetEmpty(fieldset));
 });
 
 // Load personality data
@@ -55,6 +53,21 @@ on(`change:signature`, (eventInfo) => {
   if (signature) loadSignature(signature);
 });
 
+// Load faction data
+on('clicked:load-factions', () => loadFactions());
+const factionAutogen = Object.keys(G_FACTIONS)
+  .flatMap((section) => G_FACTION_AUTOGEN.map((field) => `change:repeating_${section}-factions`))
+  .join(' ');
+on(factionAutogen, (eventInfo) => {
+  const autogen = eventInfo.sourceAttribute.split('_').slice(0, 4).join('_') + '_autogen';
+  getAttrs([autogen], (values) => {
+    if (values[autogen] && eventInfo.sourceType === 'player') {
+      console.log(eventInfo);
+      setAttrs({ [autogen]: '' }, { silent: true });
+    }
+  });
+});
+
 // Style & Trouble
 on(`clicked:nope`, (eventInfo) => nopeTrouble());
 
@@ -69,4 +82,15 @@ Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
     const sectionId = getSectionID(eventInfo);
     makeTrackString(sectionId);
   });
+});
+
+on(`sheet:opened`, () => {
+  getAllAttrs(
+    (attributes, sections) => {
+      console.log(attributes);
+      console.log(sections);
+    },
+    [...G_FACTION_FIELDSET],
+    [...G_BLADES]
+  );
 });

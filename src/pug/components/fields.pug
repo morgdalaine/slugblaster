@@ -16,7 +16,7 @@ mixin field(field)
       +action(field)
 
     when 'hidden'
-      input(name=`attr_${name}`, value=value, type='hidden')&attributes(attributes)
+      input(name=`attr_${name}`, type='hidden', value=value)&attributes(attributes)
 
     when 'calculated'
       - placeholder = placeholder || 0;
@@ -26,54 +26,63 @@ mixin field(field)
             +span(field).el-input__inner
 
     when 'select'
-      select(name=`attr_${name}`, readonly=readonly, class=klass)&attributes(attributes)
+      select(class=klass, name=`attr_${name}`, readonly=readonly)&attributes(attributes)
         each option in field.options
           - const isSelected = option.value === value || option.selected;
           - const isHidden = option.hidden ? true : false;
           - value = option.value || option.name;
-          option(data-i18n=`opt_${option.name}`, value=value, selected=isSelected, hidden=isHidden)= option.text
+          option(data-i18n=`opt_${option.name}`, hidden=isHidden, selected=isSelected, value=value)= option.text
 
     when 'checkbox'
     when 'radio'
       - if (type === 'checkbox') value = value || 'on';
-      input(name=`attr_${name}`, id=id, checked=selected, value=value, type=type)&attributes(attributes)
+      input(checked=selected, id=id, name=`attr_${name}`, type=type, value=value)&attributes(attributes)
 
     when 'number'
       - placeholder = placeholder || 0;
-      input(name=`attr_${name}`, value=value, placeholder=placeholder, min=min, max=max, type=type)&attributes(attributes)
+      input(
+        inputmode='numeric',
+        max=max,
+        min=min,
+        name=`attr_${name}`,
+        pattern='[0-9]+',
+        placeholder=placeholder,
+        type=type,
+        value=value
+      )&attributes(attributes)
 
     when 'textarea'
       textarea(
-        name=`attr_${name}`,
-        value=value,
-        readonly=readonly,
+        class=klass,
         data-i18n-placeholder=`placeholder_${name}`,
+        name=`attr_${name}`,
         placeholder=placeholder,
-        class=klass
+        readonly=readonly,
+        value=value
       )&attributes(attributes)
 
     when 'text'
     default
       input(
-        name=`attr_${name}`,
-        id=id,
-        type=type,
-        value=value,
+        class=klass,
         data-i18n-placeholder=`placeholder_${name}`,
+        id=id,
+        name=`attr_${name}`,
         placeholder=placeholder,
         readonly=readonly,
-        class=klass
+        type=type,
+        value=value
       )&attributes(attributes)
 
 mixin span(field)
   - const klass = '';
   - const dynamic_i18n = field.dynamic ? 'data-i18n-dynamic' : null;
-  span(name=`attr_${field.name}`, data-i18n-dynamic=dynamic_i18n, class!=klass)&attributes(attributes)
+  span(class!=klass, data-i18n-dynamic=dynamic_i18n, name=`attr_${field.name}`)&attributes(attributes)
 
 mixin action(btn)
   - let { name, label, type, blockName } = btn;
   - let klass = `${blockName}__action ${blockName}--${name}`;
-  button(name=`act_${name}`, class=klass, type='action')&attributes(attributes)
+  button(class=klass, name=`act_${name}`, type='action')&attributes(attributes)
     +block('content', true)
       span(class=`${blockName}__action--label`, data-i18n=name)= label
 

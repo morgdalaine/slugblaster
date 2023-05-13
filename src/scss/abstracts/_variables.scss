@@ -41,18 +41,18 @@ $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
 // Fonts
 $font-title: 'Knewave', 'Comic Sans MS', serif !default;
-$font-nav: 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-nav: 'Silkscreen', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-playbook: 'Knewave', 'Comic Sans MS', serif !default;
-$font-nav-tab: 'Sofia Sans Condensed', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
+$font-nav-tab: 'Ubuntu', 'Sofia Sans Condensed', 'Radio Canada', sans-serif !default;
 
-$font-label: 'Radio Canada', 'Poppins', 'Sofia Sans', 'Ubuntu', 'Nunito', sans-serif !default;
-$font-body: 'Radio Canada', 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-// $font-input: 'Radio Canada', 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-input: 'Gloria Hallelujah', 'Architects Daughter', 'Comic Sans MS', cursive !default;
+$font-label: 'Radio Canada', 'Poppins', 'Ubuntu', 'Nunito', sans-serif !default;
+$font-body: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
+// $font-input: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
+$font-input: 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-action: 'Coiny', 'Comic Sans MS', serif !default;
-$font-header: 'Radio Canada', 'Poppins', 'Sofia Sans', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Gloria Hallelujah', 'Architects Daughter', 'Comic Sans MS', cursive !default;
-$font-dice: 'DotGothic16', monospace !default;
+$font-header: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
+$font-handwritten: 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-dice: 'Silkscreen', 'DotGothic16', monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
@@ -105,22 +105,25 @@ $breakpoints: (
 $black: #292828;
 $white: #fff;
 
+$kp-linear-gradient1: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+$kp-linear-gradient2: linear-gradient(to right, #00f260, #0575e6);
+
 // https://coolors.co/7151a0-f281b3-008495-01acef-ffd45c-292828
-$purple: #7151a0;
+$purple: #8c70b1;
 $purple-light: tint-color($purple, 20%);
 $purple-dark: shade-color($purple, 20%);
 
-$pink: #f281b3;
+$pink: #f180b3;
 $pink-light: tint-color($pink, 20%);
 $pink-dark: shade-color($pink, 20%);
 
-$hotpink: #eb008b;
+$magenta: #ec008b;
 
-$teal: #008495;
+$teal: #008395;
 $teal-light: tint-color($teal, 20%);
 $teal-dark: shade-color($teal, 20%);
 
-$blue: #01acef;
+$blue: #00adef;
 $blue-light: tint-color($blue, 20%);
 $blue-dark: shade-color($blue, 20%);
 
@@ -128,15 +131,18 @@ $red: #ef4b31;
 $red-light: tint-color($red, 20%);
 $red-dark: shade-color($red, 20%);
 
-$yellow: #ffd45c;
+$yellow: #ffd456;
 $yellow-light: tint-color($yellow, 20%);
 $yellow-dark: shade-color($yellow, 20%);
 
-$green: #19a56f;
+$green: #2fb996;
 $green-light: tint-color($green, 20%);
 $green-dark: shade-color($green, 20%);
 
 $foreground: var(--foreground);
+
+// google sheet custom colors
+// https://coolors.co/82ffc4-ff7cd3-fe5a30-00b0ef-cbff2c-78419f-fbff82-b4a7d6-b3e028
 
 // Breakpoints
 $grid-breakpoints: (

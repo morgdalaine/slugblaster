@@ -2,9 +2,9 @@
   $this: '.faction';
   background-color: hsl(random(360) 80% 80% / 80%);
 
-  + .panel {
-    margin-top: $p-md;
-  }
+  // + .panel {
+  //   margin-top: $p-md;
+  // }
 
   &__edit,
   &__view {

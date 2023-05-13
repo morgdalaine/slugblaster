@@ -3,11 +3,11 @@ mixin makeFactionFieldset(fieldset)
   +panel({ name: fieldset.name, title: fieldset.title }).faction
     +block('content')
       +repeating(fieldset.name)
-        - const { broadcast, repeating } = factions;
+        - const { broadcast, hidden, repeating } = factions;
         - const [name, relationship, desc] = repeating;
         +block('edit')
           .row.faction__edit
-            //- each field in hidden
+            each field in hidden
               +field(field)
             each field in repeating
               - const hideLabel = ['faction_check'].includes(field.name);

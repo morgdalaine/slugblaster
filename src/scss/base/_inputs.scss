@@ -21,7 +21,7 @@ textarea {
   &:active,
   &:hover,
   &:focus {
-    outline: 0;
+    outline: transparent;
 
     background-color: $input-background-active;
     color: $input-color-active;
@@ -316,7 +316,7 @@ label {
 //   width: 1.25em;
 //   aspect-ratio: 1;
 
-//   outline: 0;
+//   outline: transparent;
 
 //   appearance: none;
 
@@ -328,7 +328,7 @@ label {
 //   }
 
 //   &:focus {
-//     outline: 0;
+//     outline: transparent;
 //   }
 // }
 

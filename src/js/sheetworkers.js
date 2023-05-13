@@ -20,7 +20,7 @@ const doNumcontrol = (numcontrol, step, min = null, max = null) => {
 
 const nopeTrouble = () => {
   getAttrs(['trouble', 'trouble_max'], (values) => {
-    const max = +values.trouble_max || 8;
+    const max = +values.trouble_max || G_CONSTANTS.trouble_max;
     const current = +values.trouble || 0;
     const newValue = Math.min(current + 2, max);
     setAttrs({ trouble: newValue });
@@ -146,5 +146,38 @@ const importFieldset = (fieldset, data) => {
     });
 
     setAttrs(update);
+  });
+};
+
+const loadFactions = () => {
+  Object.keys(G_FACTIONS).forEach((factions) => {
+    const section = `repeating_${factions}-factions`;
+    const sectionDetails = { ...G_FACTION_FIELDSET.at(0) };
+    sectionDetails.section = section;
+
+    getAllAttrs(
+      (values, sections) => {
+        const update = {};
+        const createdIds = [];
+
+        G_FACTIONS[factions].forEach((faction) => {
+          let rowId = generateRowID();
+          while (rowId in createdIds) {
+            rowId = generateRowID();
+          }
+          createdIds.push(rowId);
+
+          const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
+          update[repeatingPrefix + 'autogen'] = 1;
+          update[repeatingPrefix + 'name'] = getTranslationByKey(faction);
+          update[repeatingPrefix + 'description'] = getTranslationByKey(faction + '_description');
+        });
+
+        setAttrs(update);
+      },
+      [{ ...sectionDetails }]
+    );
+
+    setAttrs({ load_factions: 1 }, { silent: true });
   });
 };

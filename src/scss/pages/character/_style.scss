@@ -21,6 +21,10 @@
     display: grid;
     font-size: 1rem;
 
+    &:nth-of-type(3n + 1) {
+      margin-right: $m-md;
+    }
+
     input {
       appearance: none;
       outline: none;

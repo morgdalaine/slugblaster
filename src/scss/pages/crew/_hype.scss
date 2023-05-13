@@ -31,14 +31,14 @@
     }
 
     input {
-      outline: 0;
+      outline: transparent;
       appearance: none;
 
       &:checked {
         opacity: 0.5;
       }
       &:focus {
-        outline: 0;
+        outline: transparent;
       }
     }
   }

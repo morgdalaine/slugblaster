@@ -62,22 +62,10 @@ const G_CONSTANTS = {
 const G_PLAYBOOKS = {
   grit: {
     attitude: { boost: 3, kick: 1 },
-    traits: [
-      'patient',
-      'sacrifice_your_body',
-      'diligent',
-      'walk_it_off',
-      'skill',
-      'personal_growth',
-    ],
+    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill', 'personal_growth'],
     gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
     beat: { grinding: '2_style', origin_story: '3_style', sharpened: '4_style' },
-    arc: [
-      { a_goal: '1_style' },
-      { setbacks: '2_style' },
-      { quitting: '4_trouble' },
-      { perseverance: '3_style' },
-    ],
+    arc: [{ a_goal: '1_style' }, { setbacks: '2_style' }, { quitting: '4_trouble' }, { perseverance: '3_style' }],
     vibes: [
       'one_song_on_repeat',
       'never_smile',
@@ -119,14 +107,7 @@ const G_PLAYBOOKS = {
 
 const G_SIGNATURES = {
   negafriction_sword: {
-    mods: [
-      'slip_rattle',
-      'field_projector',
-      'ref_coating',
-      'negafriction_wake',
-      'subdimensional_edge',
-      'kitbashed',
-    ],
+    mods: ['slip_rattle', 'field_projector', 'ref_coating', 'negafriction_wake', 'subdimensional_edge', 'kitbashed'],
     looks: [],
   },
   gravity_blaster: {},
@@ -181,3 +162,38 @@ const G_EXTRA_GEAR = [
   'link_patch_duo',
   'slam_patch',
 ];
+
+const G_FACTIONS = {
+  crew: ['brb', 'jet_collective', 'null_range', 'lazy_bunny', 'the_wicks'],
+  sponsor: ['miper', 'hardecker', 'wilkies', 'scram_cat', 'fust'],
+  authority: ['dara', 'the_arborists', 'shimmer', 'doorways', 'the_old_guard'],
+  crowd: ['the_thrashers', 'the_heads', 'the_mavens', 'the_freaks', 'the_normies'],
+};
+
+const G_FACTION_FIELDSET = [
+  {
+    section: 'repeating_crew-factions',
+    fields: ['faction_name', 'faction_description', 'faction_autogen'],
+  },
+];
+
+const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
+
+const attributes = {
+  '_reporder_repeating_crew-factions': ['-nmgprevgublcxcngb9c', '-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj'],
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_name': 'Null Range',
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_description':
+    'An obnoxious, anti-authoritarian crew of older kids from Hillview.',
+  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_autogen': '',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_name': 'The Wicks',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_description':
+    'A crew of young, rowdy, disenfranchised up-and-comers.',
+  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_autogen': '',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_name': 'BRB',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_description': '',
+  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_autogen': '',
+};
+
+const sections = {
+  'repeating_crew-factions': ['-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj', '-nmgprevgublcxcngb9c'],
+};

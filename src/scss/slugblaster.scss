@@ -2,19 +2,26 @@
 @use 'sass:math';
 @use 'sass:map';
 
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+// Sans-Serif
 @import url('https://fonts.googleapis.com/css?family=Radio+Canada:300:400:700&display=swap');
+
+// Handwriting
+// https://fonts.google.com/?query=Kimberly+Geswein
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+// Special
 @import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:300:400:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Material+Icons&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=DotGothic16&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mogra&display=swap');
+
+// @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Material+Icons&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Poppins:300:400:700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=DotGothic16&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300:400:700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Sofia+Sans:300:400:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300:400:700&display=swap');
 
 // 1. Configuration and helpers
 @import 'abstracts/functions';
