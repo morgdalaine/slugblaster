@@ -19,9 +19,19 @@
       outline: $input-border-active;
     }
   }
+
+  &[value='options'] {
+    ~ * .options {
+      display: grid;
+    }
+    ~ * .nav--options {
+      outline: $input-border-active;
+    }
+  }
 }
 
 .character,
-.crew {
+.crew,
+.options {
   display: none;
 }

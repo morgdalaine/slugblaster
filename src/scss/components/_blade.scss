@@ -16,10 +16,11 @@
 
   &__title {
     font-size: $font-h2;
+    letter-spacing: 2px;
     // font-variant: small-caps;
     text-transform: uppercase;
     font-family: $font-header;
-    font-weight: 700;
+    font-weight: normal;
 
     &::before {
       content: '_';

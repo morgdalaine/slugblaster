@@ -10,6 +10,7 @@ textarea {
 
   font-family: $font-input;
   font-size: $input-font-size;
+  line-height: $input-font-size;
   color: $input-color;
 
   transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in,
@@ -49,6 +50,7 @@ select {
 
     font-family: $font-input;
     font-size: $input-font-size;
+    line-height: $input-font-size;
   }
 }
 

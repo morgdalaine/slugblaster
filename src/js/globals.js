@@ -1,4 +1,4 @@
-const G_SHEET_MODES = ['character', 'crew'];
+const G_SHEET_MODES = ['character', 'crew', 'options'];
 
 const G_EDITORS = [
   'angst-arc',

@@ -31,8 +31,10 @@
 
   &__title {
     font-size: $font-h2;
+    line-height: $font-h2;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-family: $font-header;
-    font-weight: 700;
+    font-weight: normal;
   }
 }

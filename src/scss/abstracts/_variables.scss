@@ -40,18 +40,18 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
 // Fonts
-$font-title: 'Knewave', 'Comic Sans MS', serif !default;
-$font-nav: 'Silkscreen', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
-$font-playbook: 'Knewave', 'Comic Sans MS', serif !default;
-$font-nav-tab: 'Ubuntu', 'Sofia Sans Condensed', 'Radio Canada', sans-serif !default;
+$font-title: 'One Direction', 'Hate Your Writing', 'Playpen Sans', 'Comic Sans MS', serif !default;
+$font-nav: 'Silkscreen', 'DotGothic16', 'Comic Sans MS', cursive !default;
+$font-playbook: 'One Direction', 'Permanent Marker', 'Comic Sans MS', serif !default;
+$font-nav-tab: 'Tiny5', 'Jersey 10', 'DotGothic16', 'Comic Sans MS', serif !default;
 
 $font-label: 'Radio Canada', 'Poppins', 'Ubuntu', 'Nunito', sans-serif !default;
 $font-body: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
 // $font-input: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-input: 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-input: 'Hate Your Writing', 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-action: 'Coiny', 'Comic Sans MS', serif !default;
-$font-header: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-header: 'Permanent Marker', 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
+$font-handwritten: 'Hate Your Writing', 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-dice: 'Silkscreen', 'DotGothic16', monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -108,7 +108,22 @@ $white: #fff;
 $kp-linear-gradient1: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
 $kp-linear-gradient2: linear-gradient(to right, #00f260, #0575e6);
 
-// https://coolors.co/7151a0-f281b3-008495-01acef-ffd45c-292828
+
+
+// Primary
+// Purple #8c70b1
+// Pink #f180b3
+// Green #2fb996
+// Blue #00adef
+// Gold #ffd456
+
+// Secondary
+// Magenta #ec008b
+// Turquoise #008395
+// And then lighter versions of primary sometimes too (like a lighter pink on a purple background)
+
+
+// https://coolors.co/8c70b1-f180b3-2fb996-00adef-ffd456-ec008b-008395-292828
 $purple: #8c70b1;
 $purple-light: tint-color($purple, 20%);
 $purple-dark: shade-color($purple, 20%);

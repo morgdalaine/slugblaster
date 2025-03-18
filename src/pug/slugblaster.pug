@@ -10,6 +10,7 @@ include components/_mixins
 
     include layout/character
     include layout/crew
+    include layout/options
 
     footer.footer
       - const version = data.global.sheet_version;
@@ -18,61 +19,6 @@ include components/_mixins
       +span(version)
 
       include abstracts/translations
-
-      //- .fonts
-        h2(style='font: 1.25rem "Architects Daughter"') Architects Daughter; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "DotGothic16"') DotGothic16; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Gloria Hallelujah"') Gloria Hallelujah; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Knewave"') Knewave; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Lato"') Lato; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Poppins"') Poppins; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Roboto"') Roboto; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Sofia Sans Condensed"') Sofia Sans Condensed; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Sofia Sans"') Sofia Sans; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Ubuntu"') Ubuntu; Sphinx of black quartz judge my vow 1 2 3 4 5 6
-
-      //- div(style='display: flex; gap: 0.25rem')
-        div
-          div(style='background: #8d74b3; width: 4rem; aspect-ratio: 1', title='purple-light')
-          div(style='background: #7151a0; width: 4rem; aspect-ratio: 1', title='purple')
-          div(style='background: #5a4180; width: 4rem; aspect-ratio: 1', title='purple-dark')
-        div
-          div(style='background: #f59ac2; width: 4rem; aspect-ratio: 1', title='pink-light')
-          div(style='background: #f281b3; width: 4rem; aspect-ratio: 1', title='pink')
-          div(style='background: #c2678f; width: 4rem; aspect-ratio: 1', title='pink-dark')
-        div(style='background: #eb008b; width: 4rem; aspect-ratio: 1', title='hot-pink')
-        div
-          div(style='background: #339daa; width: 4rem; aspect-ratio: 1', title='teal-light')
-          div(style='background: #008495; width: 4rem; aspect-ratio: 1', title='teal')
-          div(style='background: #006a77; width: 4rem; aspect-ratio: 1', title='teal-dark')
-        div
-          div(style='background: #34bdf2; width: 4rem; aspect-ratio: 1', title='blue-light')
-          div(style='background: #01acef; width: 4rem; aspect-ratio: 1', title='blue')
-          div(style='background: #018abf; width: 4rem; aspect-ratio: 1', title='blue-dark')
-        div
-          div(style='background: #f26f5a; width: 4rem; aspect-ratio: 1', title='red-light')
-          div(style='background: #ef4b31; width: 4rem; aspect-ratio: 1', title='red')
-          div(style='background: #bf3c27; width: 4rem; aspect-ratio: 1', title='red-dark')
-        div
-          div(style='background: #ffdd7d; width: 4rem; aspect-ratio: 1', title='yellow-light')
-          div(style='background: #ffd45c; width: 4rem; aspect-ratio: 1', title='yellow')
-          div(style='background: #ccaa4a; width: 4rem; aspect-ratio: 1', title='yellow-dark')
-        div
-          div(style='background: #47b78c; width: 4rem; aspect-ratio: 1', title='green-light')
-          div(style='background: #19a56f; width: 4rem; aspect-ratio: 1', title='green')
-          div(style='background: #148459; width: 4rem; aspect-ratio: 1', title='green-dark')
-        div
-          div(style='background: #fff; width: 4rem; height: 2.4rem', title='white')
-          div(
-            style='background: rgb(237, 237, 237); width: 4rem; height: 2.4rem',
-            title='light-grey'
-          )
-          div(
-            style='background: rgb(153, 153, 153); width: 4rem; height: 2.4rem',
-            title='mid-grey'
-          )
-          div(style='background: rgb(68, 68, 68); width: 4rem; height: 2.4rem', title='dark-grey')
-          div(style='background: #292828; width: 4rem; height: 2.4rem', title='black')
 
 include templates/mixins
 include templates/rolltemplates

@@ -30,7 +30,8 @@ html {
 
     .nav-tabs {
       padding-top: $p-sm;
-      margin-bottom: $m-sm;
+      margin-left: $p-sm;
+      margin-bottom: 0; // $m-sm;
       border: none;
       // border-bottom: $nav-tab-border;
 
@@ -47,13 +48,14 @@ html {
 
         > a {
           border: none !important;
-          padding-block: $p-sm;
+          padding-block: $p-lg $p-sm;
           padding-inline: $p-md;
 
           font-family: $font-nav-tab;
           font-size: $font-xl;
-          font-weight: 700;
+          font-weight: normal;
           text-transform: uppercase;
+          letter-spacing: 2px;
 
           // background-color: rgb($teal-light, 0.2);
 
