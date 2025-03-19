@@ -1,6 +1,6 @@
 .legacy {
   $this: '.legacy';
-  background-color: hsl(random(360) 80% 80% / 80%);
+  background-color: transparent; // hsl(random(360) 80% 80% / 80%);
 
   &__edit,
   &__view {

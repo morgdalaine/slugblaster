@@ -1,11 +1,14 @@
 -
   data = {};
+  data.global = {};
+  data.options = {};
   data.character = {};
   data.crew = {};
   data.common = {};
-  data.options = {};
+  data.translation = {};
 
 include data/global.data.pug
+include data/options.data.pug
 
 include data/character.data.pug
 include data/character/downtime.data.pug
@@ -22,8 +25,6 @@ include data/crew.data.pug
 include data/crew/fractures.data.pug
 include data/crew/factions.data.pug
 
--
-  data.translation = {};
 
 include data/translations/personalities.translation.pug
 include data/translations/gear.translation.pug

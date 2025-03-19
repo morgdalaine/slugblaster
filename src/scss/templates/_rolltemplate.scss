@@ -97,6 +97,7 @@
       }
       &--dice {
         display: flex;
+        flex-wrap: wrap;
         gap: $grid-gutter;
         align-items: center;
         justify-content: space-evenly;

@@ -11,8 +11,8 @@
   &__header,
   &__content {
     padding: $p-sm;
-    background-color: rgb(0, 0, 0, 0.1);
-    background-image: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
+    // background-color: rgb(0, 0, 0, 0.1);
+    // background-image: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
   }
 
   &__header {
@@ -26,6 +26,8 @@
 
     display: grid;
     grid-template-columns: 1fr auto;
+
+    border-bottom: 4px solid black;
   }
 
   &__title {

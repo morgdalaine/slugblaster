@@ -23,11 +23,11 @@
   --input-color-disabled: #{$grey-mid};
 
   // Buttons
-  --button-background: #{rgb($purple, 0.8)};
-  --button-background-active: #{rgb($purple-dark, 0.8)};
-  --button-background-hover: #{rgb($purple-light, 0.8)};
+  --button-background: #{rgb($teal, 0.8)};
+  --button-background-active: #{rgb($teal-dark, 0.8)};
+  --button-background-hover: #{rgb($teal-light, 0.8)};
 
-  --button-color: #{$yellow};
-  --button-color-active: #{$yellow-light};
-  --button-color-hover: #{$yellow};
+  --button-color: #{$white};
+  --button-color-active: #{$white};
+  --button-color-hover: #{$white};
 }

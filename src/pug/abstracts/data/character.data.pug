@@ -30,10 +30,25 @@
           { name: 'chill', text: 'The Chill' },
           { name: 'custom', text: 'Custom' },
         ],
-        type: 'text',
+        type: 'select',
         blockName: 'header',
       },
       fields: [
+        {
+          name: 'personality',
+          label: 'Personality',
+          placeholder: 'Personality',
+          options: [
+            { name: 'grit', text: 'The Grit' },
+            { name: 'guts', text: 'The Guts' },
+            { name: 'smarts', text: 'The Smarts' },
+            { name: 'heart', text: 'The Heart' },
+            { name: 'chill', text: 'The Chill' },
+            { name: 'custom', text: 'Custom' },
+          ],
+          type: 'select',
+          blockName: 'header',
+        },
         {
           name: 'character_name',
           label: 'Name',
@@ -94,7 +109,7 @@
       hidden: [{ name: 'trouble', type: 'hidden', blockName: 'trouble' }],
       actions: [
         { name: 'nope', label: 'Nope!', type: 'action', blockName: 'trouble' },
-        { name: 'disaster', label: 'Disaster', type: 'action', blockName: 'trouble' },
+        { name: 'disaster', label: 'Roll Disaster', type: 'action', blockName: 'trouble' },
       ],
       track: Array.from(Array(9).keys(), (i) => ({
         name: 'trouble',
@@ -128,7 +143,7 @@
       repeating: [
         {
           name: 'doom_name',
-          label: 'doom',
+          label: 'Doom',
           placeholder: "broke mom's trust",
           type: 'text',
           blockName: 'doom',

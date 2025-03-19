@@ -4,6 +4,10 @@
   color: $white;
   background-color: $teal;
 
+  &__header {
+    border-color: transparent;
+  }
+
   &__clickies {
     display: flex;
     gap: 0 $grid-gutter-col;
