@@ -7,10 +7,22 @@
 // border-color: var(--dark-primary-highlight);
 // color: var(--dark-primarytext);
 
-
 .charactersheet.tab-pane.charsheet {
-  background-color: hotpink;
-  background-image: image('nasty-photocopy.png');;
+  position: relative;
+  &::before {
+    background-image: image('nasty-photocopy.png');
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
 }
 
 div#tab-content.tab-content .attributesabilities {
