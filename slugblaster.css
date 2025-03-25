@@ -120,6 +120,11 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   font: normal 1rem/1.4 "Radio Canada", "Poppins", "Ubuntu", sans-serif;
 }
 
+.charactersheet.tab-pane.charsheet {
+  background-color: hotpink;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy.png");
+}
+
 div#tab-content.tab-content .attributesabilities {
   min-width: 525px;
 }
@@ -250,7 +255,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll {
   display: grid;
   gap: 0.5rem 0.5rem;
-  background-color: hsla(11, 80%, 80%, 0.8);
+  background-color: hsla(355, 80%, 80%, 0.8);
 }
 .sheet-rolltemplate-slugcast .sheet-roll *,
 .sheet-rolltemplate-slugblaster .sheet-roll * {
@@ -261,7 +266,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__header,
 .sheet-rolltemplate-slugblaster .sheet-roll__content {
   padding: 0.5rem;
-  background-image: linear-gradient(to right, hsla(228, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(325, 80%, 80%, 0.8), transparent);
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header,
 .sheet-rolltemplate-slugblaster .sheet-roll__header {
@@ -316,7 +321,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(86, 80%, 80%), hsl(266, 80%, 80%), hsl(284, 80%, 80%));
+  background-image: radial-gradient(hsl(333, 80%, 80%), hsl(301, 80%, 80%), hsl(43, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -660,7 +665,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(274, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(307, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -689,7 +694,7 @@ html .charsheet .slugblaster .blade {
   flex-direction: column;
   row-gap: 0.5rem;
   min-width: 3rem;
-  background-image: linear-gradient(to top, hsla(335, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to top, hsla(68, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;

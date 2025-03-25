@@ -7,6 +7,12 @@
 // border-color: var(--dark-primary-highlight);
 // color: var(--dark-primarytext);
 
+
+.charactersheet.tab-pane.charsheet {
+  background-color: hotpink;
+  background-image: image('nasty-photocopy.png');;
+}
+
 div#tab-content.tab-content .attributesabilities {
   min-width: 525px;
 
