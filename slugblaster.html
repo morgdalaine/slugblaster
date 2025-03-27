@@ -61,10 +61,10 @@
                       </div>
                       <div class="dicetray__field dicetray_dare ">
                         <select class="dicetray__dicetray_dare dicetray__input--select checkbox--scribble" name="attr_dicetray_dare">
-                          <option data-i18n="opt_choose_dare" selected="selected" value="choose_dare">choose dare...</option>
-                          <option data-i18n="opt_plus_1d6" value="plus_1d6">+1d6</option>
-                          <option data-i18n="opt_plus_kick" value="plus_kick">1 kick</option>
-                          <option data-i18n="opt_clear_trouble" value="clear_trouble">clear 1 trouble</option>
+                          <option data-i18n="choose_dare" selected="selected" value="choose_dare">choose dare...</option>
+                          <option data-i18n="plus_1d6" value="plus_1d6">+1d6</option>
+                          <option data-i18n="plus_kick" value="plus_kick">1 kick</option>
+                          <option data-i18n="clear_trouble" value="clear_trouble">clear 1 trouble</option>
                         </select>
                         <label for="dicetray_dare" data-i18n="dicetray_dare">Dare</label>
                       </div>
@@ -85,7 +85,8 @@
             <input class="editor__controller" name="attr_header_editor" value="on" type="hidden"/>
             <input class="minimizer__controller" name="attr_header_minimizer" value="0" type="hidden"/>
             <div class="panel__wrapper">
-              <div class="panel__header header__header"><span class="header__title" name="attr_personality"></span>
+              <div class="panel__header header__header">
+                <input name="attr_personality" type="hidden"/><span class="header__title" data-i18n-dynamic="data-i18n-dynamic" name="attr_personality"></span><span class="header__title--custom" name="attr_personality_custom"></span>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_header-minimizer" type="action">
                     <input class="minimizer-toggle__controller" name="attr_header_minimizer" value="0" type="hidden"/>
@@ -102,46 +103,48 @@
               <div class="panel__content header__content">
                 <div class="editor">
                   <div class="editor__edit header__edit">
-                    <div>
+                    <input name="attr_personality" type="hidden"/>
+                    <div class="header__personality">
                       <label for="personality" data-i18n="personality">Personality</label>
                       <select class="header__personality header__input--select" name="attr_personality">
-                        <option data-i18n="opt_grit" value="grit">The Grit</option>
-                        <option data-i18n="opt_guts" value="guts">The Guts</option>
-                        <option data-i18n="opt_smarts" value="smarts">The Smarts</option>
-                        <option data-i18n="opt_heart" value="heart">The Heart</option>
-                        <option data-i18n="opt_chill" value="chill">The Chill</option>
-                        <option data-i18n="opt_custom" value="custom">Custom</option>
+                        <option data-i18n="grit" value="grit">The Grit</option>
+                        <option data-i18n="guts" value="guts">The Guts</option>
+                        <option data-i18n="smarts" value="smarts">The Smarts</option>
+                        <option data-i18n="heart" value="heart">The Heart</option>
+                        <option data-i18n="chill" value="chill">The Chill</option>
+                        <option data-i18n="custom" value="custom">Custom</option>
                       </select>
                     </div>
-                    <div>
+                    <div class="header__personality--custom">
+                      <label for="personality_custom" data-i18n="personality_custom">Custom Personality</label>
+                      <input class="header__personality_custom header__input--text" data-i18n-placeholder="placeholder_personality_custom" id="personality_custom" name="attr_personality_custom" placeholder="Custom Personality" type="text"/>
+                    </div>
+                    <div class="header__character_name">
                       <label for="character_name" data-i18n="character_name">Name</label>
                       <input class="header__character_name header__input--text" data-i18n-placeholder="placeholder_character_name" id="character_name" name="attr_character_name" placeholder="Farrah" type="text"/>
                     </div>
-                    <div>
+                    <div class="header__look">
                       <label for="look" data-i18n="look">Look</label>
                       <input class="header__look header__input--text" data-i18n-placeholder="placeholder_look" id="look" name="attr_look" placeholder="all black, muted, chains" type="text"/>
                     </div>
-                    <div>
+                    <div class="header__family">
                       <label for="family" data-i18n="family">Family</label>
                       <input class="header__family header__input--text" data-i18n-placeholder="placeholder_family" id="family" name="attr_family" placeholder="strict" type="text"/>
                     </div>
-                    <div>
+                    <div class="header__bond">
                       <label for="bond" data-i18n="bond">Bond</label>
                       <input class="header__bond header__input--text" data-i18n-placeholder="placeholder_bond" id="bond" name="attr_bond" placeholder="natural chemistry" type="text"/>
                     </div>
-                    <div>
+                    <div class="header__vibes">
                       <label for="vibes" data-i18n="vibes">Vibes</label>
                       <input class="header__vibes header__input--text" data-i18n-placeholder="placeholder_vibes" id="vibes" name="attr_vibes" placeholder="space cadet" type="text"/>
                     </div>
-                    <div>
+                    <div class="header__stickers">
                       <label for="stickers" data-i18n="stickers">Stickers, etc.</label>
                       <input class="header__stickers header__input--text" data-i18n-placeholder="placeholder_stickers" id="stickers" name="attr_stickers" placeholder="'Skate and/or Die' beside a cat in a box" type="text"/>
                     </div>
                   </div>
                   <div class="editor__view header__view">
-                    <div><span name="attr_personality"></span>
-                      <label data-i18n="personality">Personality</label>
-                    </div>
                     <div><span name="attr_character_name"></span>
                       <label data-i18n="character_name">Name</label>
                     </div>
@@ -561,7 +564,7 @@
             <input class="minimizer__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
             <div class="panel__wrapper">
               <div class="panel__header signature__header">
-                <input class="header__signature header__input--text signature__title" data-i18n-placeholder="placeholder_signature" id="signature" name="attr_signature" placeholder="Signature" type="text"/>
+                <input name="attr_signature" type="hidden"/><span class="signature__title" data-i18n-dynamic="data-i18n-dynamic" name="attr_signature"></span><span class="signature__title--custom" name="attr_signature_custom"></span>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_signature-minimizer" type="action">
                     <input class="minimizer-toggle__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
@@ -578,27 +581,50 @@
               <div class="panel__content signature__content">
                 <div class="editor">
                   <div class="editor__edit signature__edit">
-                    <div class="signature--field">
+                    <input name="attr_signature" type="hidden"/>
+                    <div class="signature__signature">
+                      <label for="signature" data-i18n="signature">signature</label>
+                      <select class="header__signature header__input--select" name="attr_signature">
+                        <option data-i18n="gravity_blaster" value="gravity_blaster">Gravity Blaster</option>
+                        <option data-i18n="hardlight_board" value="hardlight_board">Hardlight Board</option>
+                        <option data-i18n="hyperoptic_visor" value="hyperoptic_visor">Hyperoptic Visor</option>
+                        <option data-i18n="kinetic_deck" value="kinetic_deck">Kinetic Deck</option>
+                        <option data-i18n="negafriction_sword" value="negafriction_sword">Negafriction Sword</option>
+                        <option data-i18n="photonic_jacket" value="photonic_jacket">Photonic Jacket</option>
+                        <option data-i18n="powered_armour" value="powered_armour">Powered Armour</option>
+                        <option data-i18n="reality_cannon" value="reality_cannon">Reality Cannon</option>
+                        <option data-i18n="riftninja_sneakers" value="riftninja_sneakers">Riftninja Sneakers</option>
+                        <option data-i18n="robotic_companion" value="robotic_companion">Robotic Companion</option>
+                        <option data-i18n="skipmode_runners" value="skipmode_runners">Skipmode Runners</option>
+                        <option data-i18n="voidwear_backpack" value="voidwear_backpack">Voidwear Backpack</option>
+                        <option data-i18n="custom" value="custom">Custom</option>
+                      </select>
+                    </div>
+                    <div class="signature__signature--custom">
+                      <label for="signature_custom" data-i18n="signature_custom">Custom signature</label>
+                      <input class="signatures__signature_custom signatures__input--text" data-i18n-placeholder="placeholder_signature_custom" id="signature_custom" name="attr_signature_custom" placeholder="Custom signature" type="text"/>
+                    </div>
+                    <div class="signature__signature_description">
+                      <label for="signature_description" data-i18n="signature_description">Description</label>
                       <textarea class="signatures__signature_description signatures__input--textarea" data-i18n-placeholder="placeholder_signature_description" name="attr_signature_description" placeholder="Negafriction is just what it sounds like: complete nonsense."></textarea>
-                      <label data-i18n="signature_description">Description</label>
                     </div>
-                    <div class="signature--field">
+                    <div class="signature__signature_function">
+                      <label for="signature_function" data-i18n="signature_function">Function</label>
                       <textarea class="signatures__signature_function signatures__input--textarea" data-i18n-placeholder="placeholder_signature_function" name="attr_signature_function" placeholder="Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath)."></textarea>
-                      <label data-i18n="signature_function">Function</label>
                     </div>
-                    <div class="signature--field">
+                    <div class="signature__signature_look">
+                      <label for="signature_look" data-i18n="signature_look">Look</label>
                       <input class="signatures__signature_look signatures__input--text" data-i18n-placeholder="placeholder_signature_look" id="signature_look" name="attr_signature_look" placeholder="hardlight katana" type="text"/>
-                      <label data-i18n="signature_look">Look</label>
                     </div>
                   </div>
                   <div class="editor__view signature__view">
-                    <div class="signature--field"><span name="attr_signature_description"></span>
+                    <div><span name="attr_signature_description"></span>
                       <label data-i18n="signature_description">Description</label>
                     </div>
-                    <div class="signature--field"><span name="attr_signature_function"></span>
+                    <div><span name="attr_signature_function"></span>
                       <label data-i18n="signature_function">Function</label>
                     </div>
-                    <div class="signature--field"><span name="attr_signature_look"></span>
+                    <div><span name="attr_signature_look"></span>
                       <label data-i18n="signature_look">Look</label>
                     </div>
                   </div>
@@ -2099,14 +2125,14 @@
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
-                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
-                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
-                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
-                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
-                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
-                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
-                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                                <option data-i18n="faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
+                                <option data-i18n="faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
@@ -2182,14 +2208,14 @@
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
-                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
-                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
-                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
-                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
-                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
-                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
-                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                                <option data-i18n="faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
+                                <option data-i18n="faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
@@ -2265,14 +2291,14 @@
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
-                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
-                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
-                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
-                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
-                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
-                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
-                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                                <option data-i18n="faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
+                                <option data-i18n="faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
@@ -2348,14 +2374,14 @@
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
-                                <option data-i18n="opt_faction_relationship_ally" value="+3">Ally (+3)</option>
-                                <option data-i18n="opt_faction_relationship_tight" value="+2">Tight (+2)</option>
-                                <option data-i18n="opt_faction_relationship_friendly" value="+1">Friendly (+1)</option>
-                                <option data-i18n="opt_faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
-                                <option data-i18n="opt_faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
-                                <option data-i18n="opt_faction_relationship_rivals" value="-2">Rivals (-2)</option>
-                                <option data-i18n="opt_faction_relationship_enemy" value="-3">Enemy (-3)</option>
-                                <option data-i18n="opt_faction_relationship_unstable" value="!!">Unstable (!!)</option>
+                                <option data-i18n="faction_relationship_ally" value="+3">Ally (+3)</option>
+                                <option data-i18n="faction_relationship_tight" value="+2">Tight (+2)</option>
+                                <option data-i18n="faction_relationship_friendly" value="+1">Friendly (+1)</option>
+                                <option data-i18n="faction_relationship_neutral" selected="selected" value="±0">Neutral (±0)</option>
+                                <option data-i18n="faction_relationship_unfriendly" value="-1">Unfriendly (-1)</option>
+                                <option data-i18n="faction_relationship_rivals" value="-2">Rivals (-2)</option>
+                                <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
+                                <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
                               <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
                             </div>
@@ -2472,66 +2498,66 @@
       <div class="sheet-roll__results">
         <div class="sheet-roll__results--roll">{{ roll }}</div>
         <div class="sheet-roll__results--dice">{{#die1}}{{#rollBetween() computed::die1 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die1 1 1}}{{#rollBetween() computed::die1 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die1 2 2}}{{#rollBetween() computed::die1 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die1 3 3}}{{#rollBetween() computed::die1 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die1 4 4}}{{#rollBetween() computed::die1 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die1 5 5}}{{#rollBetween() computed::die1 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die1 6 6}}{{/die1}}{{#die2}}{{#rollBetween() computed::die2 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die2 1 1}}{{#rollBetween() computed::die2 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die2 2 2}}{{#rollBetween() computed::die2 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die2 3 3}}{{#rollBetween() computed::die2 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die2 4 4}}{{#rollBetween() computed::die2 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die2 5 5}}{{#rollBetween() computed::die2 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die2 6 6}}{{/die2}}{{#die3}}{{#rollBetween() computed::die3 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die3 1 1}}{{#rollBetween() computed::die3 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die3 2 2}}{{#rollBetween() computed::die3 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die3 3 3}}{{#rollBetween() computed::die3 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die3 4 4}}{{#rollBetween() computed::die3 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die3 5 5}}{{#rollBetween() computed::die3 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die3 6 6}}{{/die3}}{{#die4}}{{#rollBetween() computed::die4 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die4 1 1}}{{#rollBetween() computed::die4 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die4 2 2}}{{#rollBetween() computed::die4 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die4 3 3}}{{#rollBetween() computed::die4 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die4 4 4}}{{#rollBetween() computed::die4 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die4 5 5}}{{#rollBetween() computed::die4 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die4 6 6}}{{/die4}}{{#die5}}{{#rollBetween() computed::die5 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die5 1 1}}{{#rollBetween() computed::die5 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die5 2 2}}{{#rollBetween() computed::die5 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die5 3 3}}{{#rollBetween() computed::die5 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die5 4 4}}{{#rollBetween() computed::die5 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die5 5 5}}{{#rollBetween() computed::die5 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die5 6 6}}{{/die5}}{{#die6}}{{#rollBetween() computed::die6 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die6 1 1}}{{#rollBetween() computed::die6 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die6 2 2}}{{#rollBetween() computed::die6 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die6 3 3}}{{#rollBetween() computed::die6 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die6 4 4}}{{#rollBetween() computed::die6 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die6 5 5}}{{#rollBetween() computed::die6 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die6 6 6}}{{/die6}}{{#die7}}{{#rollBetween() computed::die7 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die7 1 1}}{{#rollBetween() computed::die7 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die7 2 2}}{{#rollBetween() computed::die7 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die7 3 3}}{{#rollBetween() computed::die7 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die7 4 4}}{{#rollBetween() computed::die7 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die7 5 5}}{{#rollBetween() computed::die7 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die7 6 6}}{{/die7}}{{#die8}}{{#rollBetween() computed::die8 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die8 1 1}}{{#rollBetween() computed::die8 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die8 2 2}}{{#rollBetween() computed::die8 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die8 3 3}}{{#rollBetween() computed::die8 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die8 4 4}}{{#rollBetween() computed::die8 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die8 5 5}}{{#rollBetween() computed::die8 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die8 6 6}}{{/die8}}{{#die9}}{{#rollBetween() computed::die9 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die9 1 1}}{{#rollBetween() computed::die9 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die9 2 2}}{{#rollBetween() computed::die9 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die9 3 3}}{{#rollBetween() computed::die9 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die9 4 4}}{{#rollBetween() computed::die9 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die9 5 5}}{{#rollBetween() computed::die9 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die9 6 6}}{{/die9}}{{#die10}}{{#rollBetween() computed::die10 1 1}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1</span></div>{{/rollBetween() computed::die10 1 1}}{{#rollBetween() computed::die10 2 2}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2</span></div>{{/rollBetween() computed::die10 2 2}}{{#rollBetween() computed::die10 3 3}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3</span></div>{{/rollBetween() computed::die10 3 3}}{{#rollBetween() computed::die10 4 4}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4</span></div>{{/rollBetween() computed::die10 4 4}}{{#rollBetween() computed::die10 5 5}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5</span></div>{{/rollBetween() computed::die10 5 5}}{{#rollBetween() computed::die10 6 6}}
-          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6</span></div>{{/rollBetween() computed::die10 6 6}}{{/die10}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die1 1 1}}{{#rollBetween() computed::die1 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die1 2 2}}{{#rollBetween() computed::die1 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die1 3 3}}{{#rollBetween() computed::die1 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die1 4 4}}{{#rollBetween() computed::die1 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die1 5 5}}{{#rollBetween() computed::die1 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die1 6 6}}{{/die1}}{{#die2}}{{#rollBetween() computed::die2 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die2 1 1}}{{#rollBetween() computed::die2 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die2 2 2}}{{#rollBetween() computed::die2 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die2 3 3}}{{#rollBetween() computed::die2 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die2 4 4}}{{#rollBetween() computed::die2 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die2 5 5}}{{#rollBetween() computed::die2 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die2 6 6}}{{/die2}}{{#die3}}{{#rollBetween() computed::die3 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die3 1 1}}{{#rollBetween() computed::die3 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die3 2 2}}{{#rollBetween() computed::die3 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die3 3 3}}{{#rollBetween() computed::die3 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die3 4 4}}{{#rollBetween() computed::die3 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die3 5 5}}{{#rollBetween() computed::die3 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die3 6 6}}{{/die3}}{{#die4}}{{#rollBetween() computed::die4 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die4 1 1}}{{#rollBetween() computed::die4 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die4 2 2}}{{#rollBetween() computed::die4 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die4 3 3}}{{#rollBetween() computed::die4 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die4 4 4}}{{#rollBetween() computed::die4 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die4 5 5}}{{#rollBetween() computed::die4 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die4 6 6}}{{/die4}}{{#die5}}{{#rollBetween() computed::die5 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die5 1 1}}{{#rollBetween() computed::die5 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die5 2 2}}{{#rollBetween() computed::die5 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die5 3 3}}{{#rollBetween() computed::die5 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die5 4 4}}{{#rollBetween() computed::die5 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die5 5 5}}{{#rollBetween() computed::die5 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die5 6 6}}{{/die5}}{{#die6}}{{#rollBetween() computed::die6 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die6 1 1}}{{#rollBetween() computed::die6 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die6 2 2}}{{#rollBetween() computed::die6 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die6 3 3}}{{#rollBetween() computed::die6 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die6 4 4}}{{#rollBetween() computed::die6 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die6 5 5}}{{#rollBetween() computed::die6 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die6 6 6}}{{/die6}}{{#die7}}{{#rollBetween() computed::die7 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die7 1 1}}{{#rollBetween() computed::die7 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die7 2 2}}{{#rollBetween() computed::die7 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die7 3 3}}{{#rollBetween() computed::die7 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die7 4 4}}{{#rollBetween() computed::die7 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die7 5 5}}{{#rollBetween() computed::die7 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die7 6 6}}{{/die7}}{{#die8}}{{#rollBetween() computed::die8 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die8 1 1}}{{#rollBetween() computed::die8 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die8 2 2}}{{#rollBetween() computed::die8 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die8 3 3}}{{#rollBetween() computed::die8 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die8 4 4}}{{#rollBetween() computed::die8 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die8 5 5}}{{#rollBetween() computed::die8 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die8 6 6}}{{/die8}}{{#die9}}{{#rollBetween() computed::die9 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die9 1 1}}{{#rollBetween() computed::die9 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die9 2 2}}{{#rollBetween() computed::die9 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die9 3 3}}{{#rollBetween() computed::die9 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die9 4 4}}{{#rollBetween() computed::die9 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die9 5 5}}{{#rollBetween() computed::die9 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die9 6 6}}{{/die9}}{{#die10}}{{#rollBetween() computed::die10 1 1}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die10 1 1}}{{#rollBetween() computed::die10 2 2}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die10 2 2}}{{#rollBetween() computed::die10 3 3}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--3">3<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-03.svg"/></span></div>{{/rollBetween() computed::die10 3 3}}{{#rollBetween() computed::die10 4 4}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--4">4<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-04.svg"/></span></div>{{/rollBetween() computed::die10 4 4}}{{#rollBetween() computed::die10 5 5}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--5">5<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-05.svg"/></span></div>{{/rollBetween() computed::die10 5 5}}{{#rollBetween() computed::die10 6 6}}
+          <div class="sheet-roll__die"><span class="sheet-roll__die--6">6<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-06.svg"/></span></div>{{/rollBetween() computed::die10 6 6}}{{/die10}}
         </div>
         <div class="sheet-roll__results--label">
           <label data-i18n="dice_pool">Dice Pool</label>
@@ -2972,127 +2998,136 @@ const orderSection = function (repOrder, IDs = []) {
     return repOrder.indexOf(a.toLowerCase()) - repOrder.indexOf(b.toLowerCase());
   });
 };
-  const getSectionID = (eventInfo) => eventInfo.sourceAttribute.split('_').at(2);
+  const getSectionID = (eventInfo) => eventInfo.sourceAttribute.split("_").at(2);
 
 const doNumcontrol = (numcontrol, step, min = null, max = null) => {
-  getAttrs([numcontrol, numcontrol + '_max'], (values) => {
-    let value = +values[numcontrol] || 0;
-    value += step;
+	getAttrs([numcontrol, `${numcontrol}_max`], (values) => {
+		let value = +values[numcontrol] || 0;
+		value += step;
 
-    if (min !== null) value = Math.max(value, min);
+		if (min !== null) value = Math.max(value, min);
 
-    if (max !== null) {
-      if (isNaN(max)) {
-        let value_max = +values[max];
-        value = Math.min(value, value_max);
-      } else value = Math.min(value, max);
-    }
+		if (max !== null) {
+			if (Number.isNaN(max)) {
+				const value_max = +values[max];
+				value = Math.min(value, value_max);
+			} else value = Math.min(value, max);
+		}
 
-    setAttrs({ [numcontrol]: value });
-  });
+		setAttrs({ [numcontrol]: value });
+	});
 };
 
 const nopeTrouble = () => {
-  getAttrs(['trouble', 'trouble_max'], (values) => {
-    const max = +values.trouble_max || G_CONSTANTS.trouble_max;
-    const current = +values.trouble || 0;
-    const newValue = Math.min(current + 2, max);
-    setAttrs({ trouble: newValue });
-  });
+	getAttrs(["trouble", "trouble_max"], (values) => {
+		const max = +values.trouble_max || G_CONSTANTS.trouble_max;
+		const current = +values.trouble || 0;
+		const newValue = Math.min(current + 2, max);
+		setAttrs({ trouble: newValue });
+	});
 };
 
 const makeTrack = (sectionId) => {
-  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
-  const request = [repeatingPrefix + 'track_name'];
-  getAttrs(request, (values) => {
-    const update = {};
-    const trackName = values[repeatingPrefix + 'track_name'];
-    update[repeatingPrefix + 'track_name'] = trackName.trim().toUpperCase();
-    update[repeatingPrefix + 'track_size'] = trackName.length;
+	const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+	const request = [`${repeatingPrefix}track_name`];
+	getAttrs(request, (values) => {
+		const update = {};
+		const trackName = values[`${repeatingPrefix}track_name`];
+		update[`${repeatingPrefix}track_name`] = trackName.trim().toUpperCase();
+		update[`${repeatingPrefix}track_size`] = trackName.length;
 
-    for (let index = 0; index < G_CONSTANTS.progress_track_max; index++) {
-      const key = repeatingPrefix + 'track_letter_' + (index + 1);
-      const letter = trackName[index];
+		for (let index = 0; index < G_CONSTANTS.progress_track_max; index++) {
+			const key = `${repeatingPrefix}track_letter_${index + 1}`;
+			const letter = trackName[index];
 
-      update[key] = letter ? letter.toUpperCase() : '';
-      if (!letter) update[repeatingPrefix + 'track_marker_' + (index + 1)] = 0;
-    }
+			update[key] = letter ? letter.toUpperCase() : "";
+			if (!letter) update[`${repeatingPrefix}track_marker_${index + 1}`] = 0;
+		}
 
-    setAttrs(update);
-  });
+		setAttrs(update);
+	});
 };
 
 const makeTrackString = (sectionId) => {
-  const repeatingPrefix = `repeating_tracks_${sectionId}_`;
-  const markers = Array.from(
-    Array(G_CONSTANTS.progress_track_max).keys(),
-    (index) => `track_marker_${index + 1}`
-  );
+	const repeatingPrefix = `repeating_tracks_${sectionId}_`;
+	const markers = Array.from(
+		Array(G_CONSTANTS.progress_track_max).keys(),
+		(index) => `track_marker_${index + 1}`,
+	);
 
-  const request = ['track_name', 'track_size', ...markers].map((r) => repeatingPrefix + r);
-  getAttrs(request, (values) => {
-    const update = {};
-    const trackName = values[repeatingPrefix + 'track_name'];
-    const trackDisplay = Array(trackName.length);
-    let trackCompleted = 0;
+	const request = ["track_name", "track_size", ...markers].map(
+		(r) => repeatingPrefix + r,
+	);
+	getAttrs(request, (values) => {
+		const update = {};
+		const trackName = values[`${repeatingPrefix}track_name`];
+		const trackDisplay = Array(trackName.length);
+		let trackCompleted = 0;
 
-    Array.from(trackName, (letter, index) => {
-      const marked = values[repeatingPrefix + 'track_marker_' + (index + 1)];
+		Array.from(trackName, (letter, index) => {
+			const marked = values[`${repeatingPrefix}track_marker_${index + 1}`];
 
-      trackDisplay[index] = marked === 'on' ? 'X' : trackName[index];
-      if (marked === 'on') trackCompleted++;
-    });
+			trackDisplay[index] = marked === "on" ? "X" : trackName[index];
+			if (marked === "on") trackCompleted++;
+		});
 
-    update[repeatingPrefix + 'track_display'] = trackDisplay.join(' ');
-    update[repeatingPrefix + 'track_completed'] = trackCompleted;
-    setAttrs(update);
-  });
+		update[`${repeatingPrefix}track_display`] = trackDisplay.join(" ");
+		update[`${repeatingPrefix}track_completed`] = trackCompleted;
+		setAttrs(update);
+	});
 };
 
-const loadPersonality = (personality) => {
-  const isValid = G_PLAYBOOKS.hasOwnProperty(personality);
-  if (!isValid) return;
+const loadPersonality = (field) => {
+	const personality = field.trim().replace(" ", "_").toLowerCase();
+	const isValid = Object.hasOwn(G_PLAYBOOKS, personality);
 
-  const update = {};
-  const data = G_PLAYBOOKS[personality];
+	console.debug(personality, isValid)
 
-  // personal gear
-  data.gear.forEach((gear, index) => {
-    const personalGear = `personal_gear_${index + 1}_name`;
-    update[personalGear] = gear;
-  });
+	if (!isValid) { return; }
 
-  // attitude
-  const { boost, kick } = data.attitude;
-  update.attitude_boost = boost;
-  update.attitude_kick = kick;
-  update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`);
+	const update = {};
+	const data = G_PLAYBOOKS[personality];
 
-  // style & trouble
-  update.style_run_bonus = getTranslationByKey(`${personality}_style`);
+	// personal gear
+	data.gear.forEach((gear, index) => {
+		const personalGear = `personal_gear_${index + 1}_name`;
+		update[personalGear] = gear;
+	});
 
-  // traits
-  // importFieldset('traits', data.traits);
+	// attitude
+	const { boost, kick } = data.attitude;
+	update.attitude_boost = boost;
+	update.attitude_kick = kick;
+	update.attitude_subtitle =
+		getTranslationByKey(`${personality}_attitude`) || "";
 
-  setAttrs(update);
+	// style & trouble
+	update.style_run_bonus = getTranslationByKey(`${personality}_style`) || "";
+
+	// traits
+	// importFieldset('traits', data.traits);
+
+	setAttrs(update);
 };
 
 const loadSignature = (signature) => {
-  const isValid = G_SIGNATURES.hasOwnProperty(signature);
-  if (!isValid) return;
+	const isValid = Object.hasOwn(G_SIGNATURES, signature);
+	if (!isValid) return;
 
-  const update = {};
-  const data = G_SIGNATURES[signature];
+	const update = {};
+	const data = G_SIGNATURES[signature];
 
-  // text stuff
-  update.signature_function = getTranslationByKey(`${signature}_function`);
-  update.signature_description = getTranslationByKey(`${signature}_description`);
+	// text stuff
+	update.signature_function = getTranslationByKey(`${signature}_function`);
+	update.signature_description = getTranslationByKey(
+		`${signature}_description`,
+	);
 
-  // mods
-  // importFieldset('mods', data.mods);
+	// mods
+	// importFieldset('mods', data.mods);
 
-  //
-  setAttrs(update);
+	//
+	setAttrs(update);
 };
 
 // https://wiki.roll20.net/Sheet_Worker_Scripts#WARNING
@@ -3103,68 +3138,72 @@ const loadSignature = (signature) => {
  * @param {*} data
  */
 const importFieldset = (fieldset, data) => {
-  getSectionIDs(`repeating_${fieldset}`, (sections) => {
-    const update = {};
+	getSectionIDs(`repeating_${fieldset}`, (sections) => {
+		const update = {};
 
-    data.forEach((key) => {
-      let rowId = generateRowID();
-      while (rowId in sections) {
-        rowId = generateRowID();
-      }
-      sections.push(rowId);
+		for (const key of data) {
+			let rowId = generateRowID();
+			while (rowId in sections) {
+				rowId = generateRowID();
+			}
+			sections.push(rowId);
 
-      const repeatingPrefix = `repeating_${fieldset}_${rowId}_trait_`;
-      update[repeatingPrefix + 'name'] = getTranslationByKey(key);
-      update[repeatingPrefix + 'description'] = getTranslationByKey(key + '_description');
-      update[repeatingPrefix + 'autogen'] = 1;
-    });
+			const repeatingPrefix = `repeating_${fieldset}_${rowId}_trait_`;
+			update[`${repeatingPrefix}name`] = getTranslationByKey(key);
+			update[`${repeatingPrefix}description`] = getTranslationByKey(
+				`${key}_description`,
+			);
+			update[`${repeatingPrefix}autogen`] = 1;
+		}
 
-    setAttrs(update);
-  });
+		setAttrs(update);
+	});
 };
 
 const loadFactions = () => {
-  Object.keys(G_FACTIONS).forEach((factions) => {
-    const section = `repeating_${factions}-factions`;
-    const sectionDetails = { ...G_FACTION_FIELDSET.at(0) };
-    sectionDetails.section = section;
+	for (const factions of Object.keys(G_FACTIONS)) {
+		const section = `repeating_${factions}-factions`;
+		const sectionDetails = { ...G_FACTION_FIELDSET.at(0) };
+		sectionDetails.section = section;
 
-    getAllAttrs(
-      (values, sections) => {
-        const update = {};
-        const createdIds = [];
+		getAllAttrs(
+			(values, sections) => {
+				const update = {};
+				const createdIds = [];
 
-        G_FACTIONS[factions].forEach((faction) => {
-          let rowId = generateRowID();
-          while (rowId in createdIds) {
-            rowId = generateRowID();
-          }
-          createdIds.push(rowId);
+				for (const faction of G_FACTIONS[factions]) {
+					let rowId = generateRowID();
+					while (rowId in createdIds) {
+						rowId = generateRowID();
+					}
+					createdIds.push(rowId);
 
-          const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
-          update[repeatingPrefix + 'autogen'] = 1;
-          update[repeatingPrefix + 'name'] = getTranslationByKey(faction);
-          update[repeatingPrefix + 'description'] = getTranslationByKey(faction + '_description');
-        });
+					const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
+					update[`${repeatingPrefix}autogen`] = 1;
+					update[`${repeatingPrefix}name`] = getTranslationByKey(faction);
+					update[`${repeatingPrefix}description`] = getTranslationByKey(
+						`${faction}_description`,
+					);
+				}
 
-        setAttrs(update);
-      },
-      [{ ...sectionDetails }]
-    );
+				setAttrs(update);
+			},
+			[{ ...sectionDetails }],
+		);
 
-    setAttrs({ load_factions: 1 }, { silent: true });
-  });
+		setAttrs({ load_factions: 1 }, { silent: true });
+	}
 };
   // Switch between sheet modes
-G_SHEET_MODES.forEach((mode) => {
+for (const mode of G_SHEET_MODES) {
   on(`clicked:${mode}`, (eventInfo) => {
     setAttrs({ sheet_mode: mode });
   });
-});
+};
 
 // Edit / View panel modes
 // QUESTION: should the editor and minimizer be linked?
-G_EDITORS.forEach((toggle) => {
+for (const toggle of G_EDITORS) {
   on(`clicked:${toggle}-editor`, (eventInfo) => {
     getAttrs([`${toggle}_editor`, `${toggle}_minimizer`], (values) => {
       const isMinimized = values[`${toggle}_minimized`] === 'on';
@@ -3180,31 +3219,31 @@ G_EDITORS.forEach((toggle) => {
       setAttrs({ [`${toggle}_minimizer`]: value });
     });
   });
-});
+};
 
-G_BLADES.forEach((toggle) => {
+for (const toggle of G_BLADES) {
   on(`clicked:${toggle}-blade`, (eventInfo) => {
     getAttrs([`${toggle}_blade`], (values) => {
       const value = values[`${toggle}_blade`] === '0' ? 'on' : '0';
       setAttrs({ [`${toggle}_blade`]: value });
     });
   });
-});
+};
 
 // Update empty fieldsets
-G_REPEATING_FIELDSETS.forEach((fieldset) => {
+for (const fieldset of G_REPEATING_FIELDSETS) {
   on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) => isFieldsetEmpty(fieldset));
-});
+};
 
 // Load personality data
-on(`change:personality`, (eventInfo) => {
-  let personality = eventInfo.newValue;
-  personality = personality.trim().replace(' ', '_').toLowerCase();
-  if (personality) loadPersonality(personality);
+on("change:personality change:personality_custom", (eventInfo) => {
+  console.debug(eventInfo)
+	let personality = eventInfo.newValue;
+	if (personality) loadPersonality(personality);
 });
 
 // Load signature data
-on(`change:signature`, (eventInfo) => {
+on('change:signature', (eventInfo) => {
   let signature = eventInfo.newValue;
   signature = signature.trim().replace(' ', '_').toLowerCase();
   if (signature) loadSignature(signature);
@@ -3216,7 +3255,7 @@ const factionAutogen = Object.keys(G_FACTIONS)
   .flatMap((section) => G_FACTION_AUTOGEN.map((field) => `change:repeating_${section}-factions`))
   .join(' ');
 on(factionAutogen, (eventInfo) => {
-  const autogen = eventInfo.sourceAttribute.split('_').slice(0, 4).join('_') + '_autogen';
+  const autogen = `${eventInfo.sourceAttribute.split('_').slice(0, 4).join('_')}_autogen`;
   getAttrs([autogen], (values) => {
     if (values[autogen] && eventInfo.sourceType === 'player') {
       console.log(eventInfo);
@@ -3226,10 +3265,10 @@ on(factionAutogen, (eventInfo) => {
 });
 
 // Style & Trouble
-on(`clicked:nope`, (eventInfo) => nopeTrouble());
+on('clicked:nope', (eventInfo) => nopeTrouble());
 
 // Progress Tracks / SKATE / tracks
-on(`change:repeating_tracks:track_name clicked:repeating_tracks:track-reset`, (eventInfo) => {
+on('change:repeating_tracks:track_name clicked:repeating_tracks:track-reset', (eventInfo) => {
   const sectionId = getSectionID(eventInfo);
   makeTrack(sectionId);
 });
@@ -3241,7 +3280,7 @@ Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
   });
 });
 
-on(`sheet:opened`, () => {
+on('sheet:opened', () => {
   getAllAttrs(
     (attributes, sections) => {
       console.log(attributes);

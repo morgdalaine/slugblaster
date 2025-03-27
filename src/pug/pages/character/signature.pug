@@ -1,24 +1,27 @@
-- const signature = data.signature;
 +panel({ name: 'signature' })
-  - const [fnc, desc, look] = signature.fields;
+  - const { hidden, signature, custom, fields } = data.signature;
   +block('header')
-    +field(signature.signature).signature__title
+    each field in hidden
+        +hidden(field)
+    +span(signature).signature__title
+    +span(custom).signature__title--custom
   +block('content')
-    //- .signature--field
-    //-   +span(fnc)
-    //-   label(data-i18n=fnc.name)= fnc.label
-    //- .signature--field
-    //-   +span(desc)
-    //-   label(data-i18n=desc.name)= desc.label
-
     +editorblock('signature')
       +block('edit')
-        each field in signature.fields
-          .signature--field
+        each field in hidden
+            +hidden(field)
+        each field in fields
+          div(class=`signature__${field.name}`)
+            label(for=field.name, data-i18n=field.name)= field.label
             +field(field)
-            label(data-i18n=field.name)= field.label
+
+          if field.name === "signature"
+            .signature__signature--custom
+              label(for=custom.name, data-i18n=custom.name)= custom.label
+              +field(custom)
       +block('view')
-        each field in signature.fields
-          .signature--field
+        each field in fields.slice(1)
+          - const divClass = field.span ? `col-${field.span}` : '';
+          div(class=divClass)
             +span(field)
             label(data-i18n=field.name)= field.label

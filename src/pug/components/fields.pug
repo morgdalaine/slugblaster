@@ -1,3 +1,8 @@
+mixin hidden(field, value)
+  input(name=`attr_${field}`, type='hidden', value=value)&attributes(attributes)
+
+
+
 mixin field(field)
   -
     let { name, type, readonly, value, placeholder, min, max, size, selected, blockName } = field;
@@ -31,7 +36,7 @@ mixin field(field)
           - const isSelected = option.value === value || option.selected;
           - const isHidden = option.hidden ? true : false;
           - value = option.value || option.name;
-          option(data-i18n=`opt_${option.name}`, hidden=isHidden, selected=isSelected, value=value)= option.text
+          option(data-i18n=option.name, hidden=isHidden, selected=isSelected, value=value)= option.text
 
     when 'checkbox'
     when 'radio'

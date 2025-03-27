@@ -132,7 +132,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -238,6 +237,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   /**
    * Basic typography style for copy text
    */
+  position: relative;
 }
 .sheet-rolltemplate-slugcast label,
 .sheet-rolltemplate-slugblaster label {
@@ -264,11 +264,27 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .translation {
   display: none;
 }
+.sheet-rolltemplate-slugcast::after,
+.sheet-rolltemplate-slugblaster::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy.png");
+  z-index: 1;
+}
 .sheet-rolltemplate-slugcast .sheet-roll,
 .sheet-rolltemplate-slugblaster .sheet-roll {
+  position: relative;
   display: grid;
   gap: 0.5rem 0.5rem;
-  background-color: hsla(222, 80%, 80%, 0.8);
+  z-index: 2;
 }
 .sheet-rolltemplate-slugcast .sheet-roll *,
 .sheet-rolltemplate-slugblaster .sheet-roll * {
@@ -279,13 +295,14 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__header,
 .sheet-rolltemplate-slugblaster .sheet-roll__content {
   padding: 0.5rem;
-  background-image: linear-gradient(to right, hsla(200, 80%, 80%, 0.8), transparent);
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header,
 .sheet-rolltemplate-slugblaster .sheet-roll__header {
   display: flex;
   flex-wrap: wrap;
   gap: 0 0.5rem;
+  background-color: #006977;
+  color: #fff;
   justify-content: flex-end;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header span,
@@ -298,11 +315,17 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__header--character_name {
   font-weight: 700;
 }
+.sheet-rolltemplate-slugcast .sheet-roll__content,
+.sheet-rolltemplate-slugblaster .sheet-roll__content {
+  display: grid;
+  gap: 0.5rem 0.5rem;
+}
 .sheet-rolltemplate-slugcast .sheet-roll__title,
 .sheet-rolltemplate-slugblaster .sheet-roll__title {
   font-family: "One Direction", "Hate Your Writing", "Playpen Sans", "Comic Sans MS", serif;
   font-size: 2rem;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__subtitle,
 .sheet-rolltemplate-slugblaster .sheet-roll__subtitle {
@@ -334,7 +357,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(67, 80%, 80%), hsl(133, 80%, 80%), hsl(147, 80%, 80%));
+  background-image: radial-gradient(hsl(137, 80%, 80%), hsl(2, 80%, 80%), hsl(235, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -375,13 +398,83 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   aspect-ratio: 1;
   text-align: center;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__die span,
-.sheet-rolltemplate-slugblaster .sheet-roll__die span {
+.sheet-rolltemplate-slugcast .sheet-roll__die--1,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--1 {
   padding: 0;
   margin: 0;
   font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--1 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--1 img {
+  border-radius: 4px;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--2,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--2 {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", "DotGothic16", monospace;
+  font-size: 2rem;
+  line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--2 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--2 img {
+  border-radius: 4px;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--3,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--3 {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", "DotGothic16", monospace;
+  font-size: 2rem;
+  line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--3 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--3 img {
+  border-radius: 4px;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--4,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--4 {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", "DotGothic16", monospace;
+  font-size: 2rem;
+  line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--4 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--4 img {
+  border-radius: 4px;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--5,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--5 {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", "DotGothic16", monospace;
+  font-size: 2rem;
+  line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--5 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--5 img {
+  border-radius: 4px;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--6,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--6 {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", "DotGothic16", monospace;
+  font-size: 2rem;
+  line-height: normal;
+  font-size: 0;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__die--6 img,
+.sheet-rolltemplate-slugblaster .sheet-roll__die--6 img {
+  border-radius: 4px;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__die--1, .sheet-rolltemplate-slugcast .sheet-roll__die--2, .sheet-rolltemplate-slugcast .sheet-roll__die--3,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--1,
@@ -678,7 +771,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(352, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(255, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -707,7 +800,7 @@ html .charsheet .slugblaster .blade {
   flex-direction: column;
   row-gap: 0.5rem;
   min-width: 3rem;
-  background-image: linear-gradient(to top, hsla(8, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to top, hsla(204, 80%, 80%, 0.8), hsla(0, 0%, 100%, 0.8));
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;
@@ -1085,7 +1178,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -1101,7 +1194,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
   padding: 0.5rem;
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .repeating__delete {
   min-height: 2rem;
@@ -1207,7 +1300,7 @@ html .charsheet .slugblaster .character .attitude__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .components {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -1244,7 +1337,7 @@ html .charsheet .slugblaster .character .components .component__checkbox input:c
   background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
 }
 html .charsheet .slugblaster .character .dicetray {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .dicetray__content {
   display: grid;
@@ -1266,7 +1359,7 @@ html .charsheet .slugblaster .character .dicetray__action {
   flex: 1;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -1276,7 +1369,7 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .downtime + .panel {
   margin-top: 0.5rem;
@@ -1299,15 +1392,15 @@ html .charsheet .slugblaster .character .downtime__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .header {
-  background-color: transparent;
+  background-color: white;
 }
-html .charsheet .slugblaster .character .header__title[type=text] {
+html .charsheet .slugblaster .character .header__title, html .charsheet .slugblaster .character .header__title--custom {
   font-size: 2rem;
   font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
   letter-spacing: 2px;
@@ -1317,8 +1410,18 @@ html .charsheet .slugblaster .character .header__title[type=text] {
 html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblaster .character .header__view {
   gap: 0.5rem 0.5rem;
 }
+html .charsheet .slugblaster .character .header__personality--custom, html .charsheet .slugblaster .character .header__title--custom {
+  display: none;
+}
+html .charsheet .slugblaster .character .header input[name=attr_personality][value=custom] ~ .header__title {
+  display: none !important;
+}
+html .charsheet .slugblaster .character .header input[name=attr_personality][value=custom] ~ .header__title--custom,
+html .charsheet .slugblaster .character .header input[name=attr_personality][value=custom] ~ .header__personality--custom {
+  display: block;
+}
 html .charsheet .slugblaster .character .legacy {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -1328,7 +1431,7 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -1343,9 +1446,9 @@ html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: transparent;
+  background-color: white;
 }
-html .charsheet .slugblaster .character .signature__title[type=text] {
+html .charsheet .slugblaster .character .signature__title, html .charsheet .slugblaster .character .signature__title--custom {
   font-size: 2rem;
   font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
   letter-spacing: 2px;
@@ -1353,10 +1456,20 @@ html .charsheet .slugblaster .character .signature__title[type=text] {
   height: auto;
 }
 html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugblaster .character .signature__view {
-  row-gap: 0.5rem;
+  gap: 0.5rem 0.5rem;
+}
+html .charsheet .slugblaster .character .signature__signature--custom, html .charsheet .slugblaster .character .signature__title--custom {
+  display: none;
+}
+html .charsheet .slugblaster .character .signature input[name=attr_signature][value=custom] ~ .signature__title {
+  display: none !important;
+}
+html .charsheet .slugblaster .character .signature input[name=attr_signature][value=custom] ~ .signature__title--custom,
+html .charsheet .slugblaster .character .signature input[name=attr_signature][value=custom] ~ .signature__signature--custom {
+  display: block;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -1374,7 +1487,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
   display: none;
@@ -1414,7 +1527,7 @@ html .charsheet .slugblaster .character .style__checkbox--0 input {
   background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
@@ -1423,7 +1536,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
   display: none;
@@ -1525,7 +1638,7 @@ html .charsheet .slugblaster .character .turbo__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .character .notes {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .notes__edit, html .charsheet .slugblaster .character .notes__view {
   gap: 0.5rem 0.5rem;
@@ -1534,7 +1647,7 @@ html .charsheet .slugblaster .character .notes .note__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .tracks {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .character .tracks__edit, html .charsheet .slugblaster .character .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -1621,7 +1734,7 @@ html .charsheet .slugblaster .crew input[name*=load_factions]:not([value="0"]) +
   display: none;
 }
 html .charsheet .slugblaster .crew .faction {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .faction__edit, html .charsheet .slugblaster .crew .faction__view {
   gap: 0.5rem 0.5rem;
@@ -1639,7 +1752,7 @@ html .charsheet .slugblaster .crew .faction .faction__relationship {
   text-align: center;
 }
 html .charsheet .slugblaster .crew .fame {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .fame__edit, html .charsheet .slugblaster .crew .fame__view {
   gap: 0.5rem 0.5rem;
@@ -1651,7 +1764,7 @@ html .charsheet .slugblaster .crew .fame__edit .fame__hype {
   align-items: center;
 }
 html .charsheet .slugblaster .crew .fractures {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .fractures__boxes {
   display: grid;
@@ -1665,7 +1778,7 @@ html .charsheet .slugblaster .crew .fractures__input--text[type=text]:active, ht
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .crew .header {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .header__title[type=text] {
   font-size: 2rem;
@@ -1720,7 +1833,7 @@ html .charsheet .slugblaster .crew .hype__kick input {
   background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
 }
 html .charsheet .slugblaster .crew .style {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .crew .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
   display: none;
@@ -1762,7 +1875,7 @@ html .charsheet .slugblaster .crew .style__checkbox--0 input {
   background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
 }
 html .charsheet .slugblaster .crew .notes {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .notes__edit, html .charsheet .slugblaster .crew .notes__view {
   gap: 0.5rem 0.5rem;
@@ -1771,7 +1884,7 @@ html .charsheet .slugblaster .crew .notes .note__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .crew .tracks {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .crew .tracks__edit, html .charsheet .slugblaster .crew .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -2486,7 +2599,7 @@ html .charsheet .slugblaster .colspan-12 {
   grid-column: span 12;
 }
 html .charsheet .slugblaster .tophat {
-  background-color: transparent;
+  background-color: white;
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;
@@ -2526,7 +2639,7 @@ html .charsheet .slugblaster .nav__action span {
   white-space: nowrap;
 }
 html .charsheet .slugblaster .footer {
-  background-color: transparent;
+  background-color: white;
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {

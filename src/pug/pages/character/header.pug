@@ -1,16 +1,27 @@
 +panel({ name: 'header' })
-  - const { personality, fields } = character.header;
+  - const { hidden, personality, custom, fields } = character.header;
   +block('header')
+    //- TODO work with custom value
+    each field in hidden
+        +hidden(field)
     +span(personality).header__title
+    +span(custom).header__title--custom
   +block('content')
     +editorblock('header')
       +block('edit')
+        each field in hidden
+            +hidden(field)
         each field in fields
-          div
+          div(class=`header__${field.name}`)
             label(for=field.name, data-i18n=field.name)= field.label
             +field(field)
+
+          if field.name === "personality"
+            .header__personality--custom
+              label(for=custom.name, data-i18n=custom.name)= custom.label
+              +field(custom)
       +block('view')
-        each field in fields
+        each field in fields.slice(1)
           - const divClass = field.span ? `col-${field.span}` : '';
           div(class=divClass)
             +span(field)

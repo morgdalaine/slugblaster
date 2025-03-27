@@ -1,13 +1,13 @@
 // Switch between sheet modes
-G_SHEET_MODES.forEach((mode) => {
+for (const mode of G_SHEET_MODES) {
   on(`clicked:${mode}`, (eventInfo) => {
     setAttrs({ sheet_mode: mode });
   });
-});
+};
 
 // Edit / View panel modes
 // QUESTION: should the editor and minimizer be linked?
-G_EDITORS.forEach((toggle) => {
+for (const toggle of G_EDITORS) {
   on(`clicked:${toggle}-editor`, (eventInfo) => {
     getAttrs([`${toggle}_editor`, `${toggle}_minimizer`], (values) => {
       const isMinimized = values[`${toggle}_minimized`] === 'on';
@@ -23,31 +23,31 @@ G_EDITORS.forEach((toggle) => {
       setAttrs({ [`${toggle}_minimizer`]: value });
     });
   });
-});
+};
 
-G_BLADES.forEach((toggle) => {
+for (const toggle of G_BLADES) {
   on(`clicked:${toggle}-blade`, (eventInfo) => {
     getAttrs([`${toggle}_blade`], (values) => {
       const value = values[`${toggle}_blade`] === '0' ? 'on' : '0';
       setAttrs({ [`${toggle}_blade`]: value });
     });
   });
-});
+};
 
 // Update empty fieldsets
-G_REPEATING_FIELDSETS.forEach((fieldset) => {
+for (const fieldset of G_REPEATING_FIELDSETS) {
   on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) => isFieldsetEmpty(fieldset));
-});
+};
 
 // Load personality data
-on(`change:personality`, (eventInfo) => {
-  let personality = eventInfo.newValue;
-  personality = personality.trim().replace(' ', '_').toLowerCase();
-  if (personality) loadPersonality(personality);
+on("change:personality change:personality_custom", (eventInfo) => {
+  console.debug(eventInfo)
+	let personality = eventInfo.newValue;
+	if (personality) loadPersonality(personality);
 });
 
 // Load signature data
-on(`change:signature`, (eventInfo) => {
+on('change:signature', (eventInfo) => {
   let signature = eventInfo.newValue;
   signature = signature.trim().replace(' ', '_').toLowerCase();
   if (signature) loadSignature(signature);
@@ -59,7 +59,7 @@ const factionAutogen = Object.keys(G_FACTIONS)
   .flatMap((section) => G_FACTION_AUTOGEN.map((field) => `change:repeating_${section}-factions`))
   .join(' ');
 on(factionAutogen, (eventInfo) => {
-  const autogen = eventInfo.sourceAttribute.split('_').slice(0, 4).join('_') + '_autogen';
+  const autogen = `${eventInfo.sourceAttribute.split('_').slice(0, 4).join('_')}_autogen`;
   getAttrs([autogen], (values) => {
     if (values[autogen] && eventInfo.sourceType === 'player') {
       console.log(eventInfo);
@@ -69,10 +69,10 @@ on(factionAutogen, (eventInfo) => {
 });
 
 // Style & Trouble
-on(`clicked:nope`, (eventInfo) => nopeTrouble());
+on('clicked:nope', (eventInfo) => nopeTrouble());
 
 // Progress Tracks / SKATE / tracks
-on(`change:repeating_tracks:track_name clicked:repeating_tracks:track-reset`, (eventInfo) => {
+on('change:repeating_tracks:track_name clicked:repeating_tracks:track-reset', (eventInfo) => {
   const sectionId = getSectionID(eventInfo);
   makeTrack(sectionId);
 });
@@ -84,7 +84,7 @@ Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
   });
 });
 
-on(`sheet:opened`, () => {
+on('sheet:opened', () => {
   getAllAttrs(
     (attributes, sections) => {
       console.log(attributes);

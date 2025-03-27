@@ -18,19 +18,17 @@
     //- finish run clean up button?
     personalities: ['grit', 'guts', 'smarts', 'heart', 'chill'],
     header: {
+      hidden: ['personality'],
       personality: {
         name: 'personality',
-        label: 'Personality',
-        placeholder: 'Personality',
-        options: [
-          { name: 'grit', text: 'The Grit' },
-          { name: 'guts', text: 'The Guts' },
-          { name: 'smarts', text: 'The Smarts' },
-          { name: 'heart', text: 'The Heart' },
-          { name: 'chill', text: 'The Chill' },
-          { name: 'custom', text: 'Custom' },
-        ],
-        type: 'select',
+        dynamic: true,
+        blockName: 'header',
+      },
+      custom: {
+        name: 'personality_custom',
+        label: 'Custom Personality',
+        placeholder: 'Custom Personality',
+        type: 'text',
         blockName: 'header',
       },
       fields: [
@@ -88,7 +86,7 @@
       ],
     },
     attitude: {
-      subtitle: { name: 'attitude_subtitle', type: 'span', blockName: 'attitude' },
+      subtitle: { name: 'attitude_subtitle', type: 'text', blockName: 'attitude' },
       fields: [
         { name: 'attitude_boost', label: 'Attitude Boost', type: 'hidden', blockName: 'attitude' },
         { name: 'attitude_kick', label: 'Attitude Kick', type: 'hidden', blockName: 'attitude' },
@@ -96,7 +94,7 @@
     },
     style: {
       hidden: [{ name: 'style', type: 'hidden', blockName: 'style' }],
-      subtitle: { name: 'style_run_bonus', type: 'span', blockName: 'style' },
+      subtitle: { name: 'style_run_bonus', type: 'text', blockName: 'style' },
       track: Array.from(Array(10).keys(), (i) => ({
         name: 'style',
         label: `${i} style`,

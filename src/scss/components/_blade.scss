@@ -5,7 +5,7 @@
   flex-direction: column;
   row-gap: $grid-gutter-row;
   min-width: 3rem;
-  background-image: linear-gradient(to top, hsl(random(360) 80% 80% / 80%), transparent);
+  background-image: linear-gradient(to top, hsla(random(360) 80% 80% / 80%), hsla(0, 0%, 100%, 0.8));
 
   &__wrapper {
     display: grid;
