@@ -3,7 +3,7 @@ for (const mode of G_SHEET_MODES) {
   on(`clicked:${mode}`, (eventInfo) => {
     setAttrs({ sheet_mode: mode });
   });
-};
+}
 
 // Edit / View panel modes
 // QUESTION: should the editor and minimizer be linked?
@@ -23,7 +23,7 @@ for (const toggle of G_EDITORS) {
       setAttrs({ [`${toggle}_minimizer`]: value });
     });
   });
-};
+}
 
 for (const toggle of G_BLADES) {
   on(`clicked:${toggle}-blade`, (eventInfo) => {
@@ -32,18 +32,18 @@ for (const toggle of G_BLADES) {
       setAttrs({ [`${toggle}_blade`]: value });
     });
   });
-};
+}
 
 // Update empty fieldsets
 for (const fieldset of G_REPEATING_FIELDSETS) {
   on(`change:repeating_${fieldset} remove:repeating_${fieldset}`, async (eventInfo) => isFieldsetEmpty(fieldset));
-};
+}
 
 // Load personality data
-on("change:personality change:personality_custom", (eventInfo) => {
-  console.debug(eventInfo)
-	let personality = eventInfo.newValue;
-	if (personality) loadPersonality(personality);
+on('change:personality change:personality_custom', (eventInfo) => {
+  console.debug(eventInfo);
+  let personality = eventInfo.newValue;
+  if (personality) loadPersonality(personality);
 });
 
 // Load signature data
