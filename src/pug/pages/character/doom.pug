@@ -12,7 +12,7 @@
             - const labelClass = hideLabel ? 'visually-hidden' : null;
             .doom__field(class=`${field.name} ${divClass}`)
               +field(field)
-              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+              label(class=labelClass, data-i18n=field.name, for=field.name)= field.label
 
       +block('view')
         .doom__view

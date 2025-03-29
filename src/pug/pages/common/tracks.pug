@@ -17,7 +17,7 @@
                 +field(field)
               else
                 +field(field).checkbox--scribble
-              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+              label(class=labelClass, data-i18n=field.name, for=field.name)= field.label
 
       +block('view')
         +bubble({ name: 'track', broadcast })
@@ -31,7 +31,7 @@
                   - letter.name = `${letter.name}_${index}`;
                   - marker.name = `${marker.name}_${index}`;
                   +field(letter).track__letter-exists
-                  label.track__progress(for=marker.name, class=`track__progress--${index}`)
+                  label.track__progress(class=`track__progress--${index}`, for=marker.name)
                     +field(marker).track__marker
                     +span(letter).track__letter
                     span.track__marked X

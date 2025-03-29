@@ -31,7 +31,7 @@
             .mods__field(class=`${field.name} ${divClass}`)
               unless field.type === "checkbox"
                 +field(field)
-                label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+                label(class=labelClass, data-i18n=field.name, for=field.name)= field.label
               else
                 label(for=field.name)
                   +field(field)

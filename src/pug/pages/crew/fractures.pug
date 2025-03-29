@@ -8,4 +8,4 @@
       each field, index in fields
         .fractures__box(class=`fractures__box--${field.name}`)
           +field(field)
-          label.visually-hidden(for=field.name, data-i18n=field.name)= field.label
+          label.visually-hidden(data-i18n=field.name, for=field.name)= field.label

@@ -1,6 +1,6 @@
 mixin edittoggle(name)
   button.edit-toggle(name=`act_${name}-editor`, type='action')
-    input.edit-toggle__controller(name=`attr_${name}_editor`, value='on', type='hidden')
+    input.edit-toggle__controller(name=`attr_${name}_editor`, type='hidden', value='on')
     .edit-toggle__edit
       span.visually-hidden(data-i18n='view') View
       span.pictos(aria-hidden='true') *
@@ -10,7 +10,7 @@ mixin edittoggle(name)
 
 mixin minitoggle(name)
   button.minimizer-toggle(name=`act_${name}-minimizer`, type='action')
-    input.minimizer-toggle__controller(name=`attr_${name}_minimizer`, value='0', type='hidden')
+    input.minimizer-toggle__controller(name=`attr_${name}_minimizer`, type='hidden', value='0')
     .minimizer-toggle__edit
       span.visually-hidden(data-i18n='maximize') Maximize
       span.pictos(aria-hidden='true') &

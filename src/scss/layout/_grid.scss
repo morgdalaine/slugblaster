@@ -44,8 +44,7 @@
 
 // bootstrap grid
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @media // (width: map.get($grid-breakpoints, $breakpoint)),
-    (min-width: map.get($grid-breakpoints, $breakpoint)) {
+  @media (min-width: map.get($grid-breakpoints, $breakpoint)) {
     @for $i from 1 through $grid-columns {
       .col-#{$breakpoint}-#{$i} {
         position: initial;
@@ -58,8 +57,7 @@
       display: none;
     }
   }
-  @media // (width: map.get($grid-breakpoints, $breakpoint)),
-    (max-width: map.get($grid-breakpoints, $breakpoint)) {
+  @media (max-width: map.get($grid-breakpoints, $breakpoint)) {
     .hide-#{$breakpoint} {
       display: none;
     }

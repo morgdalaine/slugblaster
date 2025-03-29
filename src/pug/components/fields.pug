@@ -1,8 +1,6 @@
 mixin hidden(field, value)
   input(name=`attr_${field}`, type='hidden', value=value)&attributes(attributes)
 
-
-
 mixin field(field)
   -
     let { name, type, readonly, value, placeholder, min, max, size, selected, blockName } = field;

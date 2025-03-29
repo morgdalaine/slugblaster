@@ -19,7 +19,7 @@
     #{$this}__turbo {
       font-weight: 700;
 
-      input[name*="turbo"][value="0"] + div {
+      input[name*='turbo'][value='0'] + div {
         display: none;
       }
       // input[name*="turbo"][value="on"] + div {

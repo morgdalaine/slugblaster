@@ -2,22 +2,22 @@
   - const { hidden, signature, custom, fields } = data.signature;
   +block('header')
     each field in hidden
-        +hidden(field)
+      +hidden(field)
     +span(signature).signature__title
     +span(custom).signature__title--custom
   +block('content')
     +editorblock('signature')
       +block('edit')
         each field in hidden
-            +hidden(field)
+          +hidden(field)
         each field in fields
           div(class=`signature__${field.name}`)
-            label(for=field.name, data-i18n=field.name)= field.label
+            label(data-i18n=field.name, for=field.name)= field.label
             +field(field)
 
           if field.name === "signature"
             .signature__signature--custom
-              label(for=custom.name, data-i18n=custom.name)= custom.label
+              label(data-i18n=custom.name, for=custom.name)= custom.label
               +field(custom)
       +block('view')
         each field in fields.slice(1)

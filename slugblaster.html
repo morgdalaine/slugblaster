@@ -3,8 +3,8 @@
 <div class="slugblaster">
   <div class="slugblaster__wrapper">
     <section class="blob tophat">
-      <input class="editor__controller" name="attr_tophat_editor" value="on" type="hidden"/>
-      <input class="minimizer__controller" name="attr_tophat_minimizer" value="0" type="hidden"/>
+      <input class="editor__controller" name="attr_tophat_editor" type="hidden" value="on"/>
+      <input class="minimizer__controller" name="attr_tophat_minimizer" type="hidden" value="0"/>
       <div class="blob__wrapper">
         <div class="blob__content tophat__content">
           <ul class="nav">
@@ -28,14 +28,14 @@
       <section class="character__main">
         <section class="character__col">
           <section class="panel dicetray">
-            <input class="editor__controller" name="attr_dicetray_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_dicetray_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_dicetray_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_dicetray_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header dicetray__header">
                 <h2 class="panel__title dicetray__title" data-i18n="dicetray">Dice Tray</h2>
                 <div class="panel__controls">
                   <button class="edit-toggle" name="act_dicetray-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_dicetray_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_dicetray_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -53,11 +53,11 @@
                     <div class="row dicetray__edit">
                       <div class="dicetray__field dicetray_boosts col-6">
                         <input class="checkbox--scribble" inputmode="numeric" min="0" name="attr_dicetray_boosts" pattern="[0-9]+" placeholder="0" type="number"/>
-                        <label for="dicetray_boosts" data-i18n="dicetray_boosts">Boost</label>
+                        <label data-i18n="dicetray_boosts" for="dicetray_boosts">Boost</label>
                       </div>
                       <div class="dicetray__field dicetray_kicks col-6">
                         <input class="checkbox--scribble" inputmode="numeric" min="0" name="attr_dicetray_kicks" pattern="[0-9]+" placeholder="0" type="number"/>
-                        <label for="dicetray_kicks" data-i18n="dicetray_kicks">Kick</label>
+                        <label data-i18n="dicetray_kicks" for="dicetray_kicks">Kick</label>
                       </div>
                       <div class="dicetray__field dicetray_dare ">
                         <select class="dicetray__dicetray_dare dicetray__input--select checkbox--scribble" name="attr_dicetray_dare">
@@ -66,7 +66,7 @@
                           <option data-i18n="plus_kick" value="plus_kick">1 kick</option>
                           <option data-i18n="clear_trouble" value="clear_trouble">clear 1 trouble</option>
                         </select>
-                        <label for="dicetray_dare" data-i18n="dicetray_dare">Dare</label>
+                        <label data-i18n="dicetray_dare" for="dicetray_dare">Dare</label>
                       </div>
                       <div class="dicetray__field dicetray_reset ">
                         <label for="dicetray_reset">
@@ -82,19 +82,19 @@
             </div>
           </section>
           <section class="panel header">
-            <input class="editor__controller" name="attr_header_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_header_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_header_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_header_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header header__header">
                 <input name="attr_personality" type="hidden"/><span class="header__title" data-i18n-dynamic="data-i18n-dynamic" name="attr_personality"></span><span class="header__title--custom" name="attr_personality_custom"></span>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_header-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_header_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_header_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_header-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_header_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_header_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -105,7 +105,7 @@
                   <div class="editor__edit header__edit">
                     <input name="attr_personality" type="hidden"/>
                     <div class="header__personality">
-                      <label for="personality" data-i18n="personality">Personality</label>
+                      <label data-i18n="personality" for="personality">Personality</label>
                       <select class="header__personality header__input--select" name="attr_personality">
                         <option data-i18n="grit" value="grit">The Grit</option>
                         <option data-i18n="guts" value="guts">The Guts</option>
@@ -116,31 +116,31 @@
                       </select>
                     </div>
                     <div class="header__personality--custom">
-                      <label for="personality_custom" data-i18n="personality_custom">Custom Personality</label>
+                      <label data-i18n="personality_custom" for="personality_custom">Custom Personality</label>
                       <input class="header__personality_custom header__input--text" data-i18n-placeholder="placeholder_personality_custom" id="personality_custom" name="attr_personality_custom" placeholder="Custom Personality" type="text"/>
                     </div>
                     <div class="header__character_name">
-                      <label for="character_name" data-i18n="character_name">Name</label>
+                      <label data-i18n="character_name" for="character_name">Name</label>
                       <input class="header__character_name header__input--text" data-i18n-placeholder="placeholder_character_name" id="character_name" name="attr_character_name" placeholder="Farrah" type="text"/>
                     </div>
                     <div class="header__look">
-                      <label for="look" data-i18n="look">Look</label>
+                      <label data-i18n="look" for="look">Look</label>
                       <input class="header__look header__input--text" data-i18n-placeholder="placeholder_look" id="look" name="attr_look" placeholder="all black, muted, chains" type="text"/>
                     </div>
                     <div class="header__family">
-                      <label for="family" data-i18n="family">Family</label>
+                      <label data-i18n="family" for="family">Family</label>
                       <input class="header__family header__input--text" data-i18n-placeholder="placeholder_family" id="family" name="attr_family" placeholder="strict" type="text"/>
                     </div>
                     <div class="header__bond">
-                      <label for="bond" data-i18n="bond">Bond</label>
+                      <label data-i18n="bond" for="bond">Bond</label>
                       <input class="header__bond header__input--text" data-i18n-placeholder="placeholder_bond" id="bond" name="attr_bond" placeholder="natural chemistry" type="text"/>
                     </div>
                     <div class="header__vibes">
-                      <label for="vibes" data-i18n="vibes">Vibes</label>
+                      <label data-i18n="vibes" for="vibes">Vibes</label>
                       <input class="header__vibes header__input--text" data-i18n-placeholder="placeholder_vibes" id="vibes" name="attr_vibes" placeholder="space cadet" type="text"/>
                     </div>
                     <div class="header__stickers">
-                      <label for="stickers" data-i18n="stickers">Stickers, etc.</label>
+                      <label data-i18n="stickers" for="stickers">Stickers, etc.</label>
                       <input class="header__stickers header__input--text" data-i18n-placeholder="placeholder_stickers" id="stickers" name="attr_stickers" placeholder="'Skate and/or Die' beside a cat in a box" type="text"/>
                     </div>
                   </div>
@@ -169,47 +169,47 @@
             </div>
           </section>
           <section class="blob slams">
-            <input class="editor__controller" name="attr_slams_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_slams_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_slams_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_slams_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header slams__header">
                 <h2 class="blob__title slams__title" data-i18n="slams">Slams</h2>
                 <div class="blob__controls">
-                  <button class="broadcast broadcast" name="roll_slams-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{slams}}} {{^{slam_1}=@{slam_1}}} {{^{slam_2}=@{slam_2}}} {{^{slam_3}=@{slam_3}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                  <button class="broadcast broadcast" name="roll_slams-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{slams}}} {{^{slam_1}=@{slam_1}}} {{^{slam_2}=@{slam_2}}} {{^{slam_3}=@{slam_3}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                 </div>
               </div>
               <div class="blob__content slams__content">
                 <div class="slams__boxes">
                   <div class="slams__box slams__box--slam_1">
                     <input class="slams__slam_1 slams__input--text" data-i18n-placeholder="placeholder_slam_1" id="slam_1" name="attr_slam_1" placeholder="super bruised ribs" type="text"/>
-                    <label class="visually-hidden" for="slam_1" data-i18n="slam_1">Super Slam</label>
+                    <label class="visually-hidden" data-i18n="slam_1" for="slam_1">Super Slam</label>
                   </div>
                   <div class="slams__box slams__box--slam_2">
                     <input class="slams__slam_2 slams__input--text" data-i18n-placeholder="placeholder_slam_2" id="slam_2" name="attr_slam_2" placeholder="frustrated" type="text"/>
-                    <label class="visually-hidden" for="slam_2" data-i18n="slam_2">Slam 1</label>
+                    <label class="visually-hidden" data-i18n="slam_2" for="slam_2">Slam 1</label>
                   </div>
                   <div class="slams__box slams__box--slam_3">
                     <input class="slams__slam_3 slams__input--text" data-i18n-placeholder="placeholder_slam_3" id="slam_3" name="attr_slam_3" placeholder="slimed" type="text"/>
-                    <label class="visually-hidden" for="slam_3" data-i18n="slam_3">Slam 2</label>
+                    <label class="visually-hidden" data-i18n="slam_3" for="slam_3">Slam 2</label>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           <section class="panel gear">
-            <input class="editor__controller" name="attr_gear_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_gear_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_gear_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header gear__header">
                 <h2 class="panel__title gear__title" data-i18n="gear">Gear</h2>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_gear-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_gear_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_gear-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_gear_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_gear_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -240,13 +240,13 @@
             </div>
           </section>
           <section class="blob gear">
-            <input class="editor__controller" name="attr_gear_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_gear_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_gear_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_gear_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__content gear__content">
                 <div class="repeating">
-                  <input class="repeating__is-empty" name="attr_gear_empty" value="0" type="hidden"/>
-                  <input class="repeating__controller" name="attr_gear_editor" value="on" type="hidden"/>
+                  <input class="repeating__is-empty" name="attr_gear_empty" type="hidden" value="0"/>
+                  <input class="repeating__controller" name="attr_gear_editor" type="hidden" value="on"/>
                   <div class="repeating__empty">
                     <div class="repeating__header"><span data-i18n="none_gear_repeating">None gear with left beef</span></div>
                     <div class="repeating__subtitle"></div>
@@ -278,13 +278,13 @@
                       <div class="repeating__view">
                         <div class="gear__view">
                           <article class="bubble bubble__gear">
-                            <input class="bubble__controller" name="attr_gear_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_gear_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <label class="gear__check">
                                 <input class="checkbox--scribble" id="gear_check" name="attr_gear_check" type="checkbox" value="on"/><span class="gear__name" name="attr_gear_name"></span>
                               </label>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_gear-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{gear}}} {{^{gear_name}=@{gear_name}}} {{^{gear_cost}=@{gear_cost}}} {{^{gear_description}=@{gear_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_gear-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{gear}}} {{^{gear_name}=@{gear_name}}} {{^{gear_cost}=@{gear_cost}}} {{^{gear_description}=@{gear_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_gear_collapse">
                                   <input name="attr_gear_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -310,8 +310,8 @@
         </section>
         <section class="character__col">
           <section class="blob style">
-            <input class="editor__controller" name="attr_style_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_style_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_style_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_style_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header style__header">
                 <h2 class="blob__title style__title" data-i18n="style">Style</h2>
@@ -356,8 +356,8 @@
             </div>
           </section>
           <section class="blob attitude">
-            <input class="editor__controller" name="attr_attitude_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_attitude_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_attitude_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_attitude_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header attitude__header">
                 <h2 class="blob__title attitude__title" data-i18n="attitude">Attitude</h2>
@@ -397,19 +397,19 @@
             </div>
           </section>
           <section class="panel traits">
-            <input class="editor__controller" name="attr_traits_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_traits_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_traits_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_traits_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header traits__header">
                 <h2 class="panel__title traits__title" data-i18n="traits">Traits</h2>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_traits-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_traits_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_traits_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_traits-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_traits_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_traits_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -417,8 +417,8 @@
               </div>
               <div class="panel__content traits__content">
                 <div class="repeating">
-                  <input class="repeating__is-empty" name="attr_traits_empty" value="0" type="hidden"/>
-                  <input class="repeating__controller" name="attr_traits_editor" value="on" type="hidden"/>
+                  <input class="repeating__is-empty" name="attr_traits_empty" type="hidden" value="0"/>
+                  <input class="repeating__controller" name="attr_traits_editor" type="hidden" value="on"/>
                   <div class="repeating__empty">
                     <div class="repeating__header"><span data-i18n="none_traits_repeating">None traits with left beef</span></div>
                     <div class="repeating__subtitle"></div>
@@ -430,28 +430,28 @@
                           <input name="attr_trait_autogen" type="hidden"/>
                           <div class="traits__field trait_check col-1">
                             <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/>
-                            <label class="visually-hidden" for="trait_check" data-i18n="trait_check">Select trait</label>
+                            <label class="visually-hidden" data-i18n="trait_check" for="trait_check">Select trait</label>
                           </div>
                           <div class="traits__field trait_name col-11">
                             <input class="traits__trait_name traits__input--text" data-i18n-placeholder="placeholder_trait_name" id="trait_name" name="attr_trait_name" placeholder="Patient" type="text"/>
-                            <label class="visually-hidden" for="trait_name" data-i18n="trait_name">trait</label>
+                            <label class="visually-hidden" data-i18n="trait_name" for="trait_name">trait</label>
                           </div>
                           <div class="traits__field trait_description ">
                             <textarea class="traits__trait_description traits__input--textarea" data-i18n-placeholder="placeholder_trait_description" name="attr_trait_description" placeholder="When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action."></textarea>
-                            <label for="trait_description" data-i18n="trait_description">Description</label>
+                            <label data-i18n="trait_description" for="trait_description">Description</label>
                           </div>
                         </div>
                       </div>
                       <div class="repeating__view">
                         <div class="traits__view">
                           <article class="bubble bubble__trait">
-                            <input class="bubble__controller" name="attr_trait_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_trait_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <label class="traits__check">
                                 <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/><span class="trait__name" name="attr_trait_name"></span>
                               </label>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_trait-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{traits}}} {{^{trait_name}=@{trait_name}}} {{^{trait_description}=@{trait_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_trait-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{traits}}} {{^{trait_name}=@{trait_name}}} {{^{trait_description}=@{trait_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_trait_collapse">
                                   <input name="attr_trait_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -477,8 +477,8 @@
         </section>
         <section class="character__col">
           <section class="blob trouble">
-            <input class="editor__controller" name="attr_trouble_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_trouble_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_trouble_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_trouble_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header trouble__header">
                 <h2 class="blob__title trouble__title" data-i18n="trouble">Trouble</h2>
@@ -526,8 +526,8 @@
             </div>
           </section>
           <section class="blob turbo">
-            <input class="editor__controller" name="attr_turbo_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_turbo_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_turbo_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_turbo_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header turbo__header">
                 <h2 class="blob__title turbo__title" data-i18n="turbo">Turbo</h2>
@@ -561,19 +561,19 @@
             </div>
           </section>
           <section class="panel signature">
-            <input class="editor__controller" name="attr_signature_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_signature_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_signature_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header signature__header">
                 <input name="attr_signature" type="hidden"/><span class="signature__title" data-i18n-dynamic="data-i18n-dynamic" name="attr_signature"></span><span class="signature__title--custom" name="attr_signature_custom"></span>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_signature-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_signature_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_signature_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_signature-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_signature_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_signature_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -584,7 +584,7 @@
                   <div class="editor__edit signature__edit">
                     <input name="attr_signature" type="hidden"/>
                     <div class="signature__signature">
-                      <label for="signature" data-i18n="signature">signature</label>
+                      <label data-i18n="signature" for="signature">signature</label>
                       <select class="header__signature header__input--select" name="attr_signature">
                         <option data-i18n="gravity_blaster" value="gravity_blaster">Gravity Blaster</option>
                         <option data-i18n="hardlight_board" value="hardlight_board">Hardlight Board</option>
@@ -602,19 +602,19 @@
                       </select>
                     </div>
                     <div class="signature__signature--custom">
-                      <label for="signature_custom" data-i18n="signature_custom">Custom signature</label>
+                      <label data-i18n="signature_custom" for="signature_custom">Custom signature</label>
                       <input class="signatures__signature_custom signatures__input--text" data-i18n-placeholder="placeholder_signature_custom" id="signature_custom" name="attr_signature_custom" placeholder="Custom signature" type="text"/>
                     </div>
                     <div class="signature__signature_description">
-                      <label for="signature_description" data-i18n="signature_description">Description</label>
+                      <label data-i18n="signature_description" for="signature_description">Description</label>
                       <textarea class="signatures__signature_description signatures__input--textarea" data-i18n-placeholder="placeholder_signature_description" name="attr_signature_description" placeholder="Negafriction is just what it sounds like: complete nonsense."></textarea>
                     </div>
                     <div class="signature__signature_function">
-                      <label for="signature_function" data-i18n="signature_function">Function</label>
+                      <label data-i18n="signature_function" for="signature_function">Function</label>
                       <textarea class="signatures__signature_function signatures__input--textarea" data-i18n-placeholder="placeholder_signature_function" name="attr_signature_function" placeholder="Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath)."></textarea>
                     </div>
                     <div class="signature__signature_look">
-                      <label for="signature_look" data-i18n="signature_look">Look</label>
+                      <label data-i18n="signature_look" for="signature_look">Look</label>
                       <input class="signatures__signature_look signatures__input--text" data-i18n-placeholder="placeholder_signature_look" id="signature_look" name="attr_signature_look" placeholder="hardlight katana" type="text"/>
                     </div>
                   </div>
@@ -634,19 +634,19 @@
             </div>
           </section>
           <section class="panel mods">
-            <input class="editor__controller" name="attr_mods_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_mods_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_mods_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header mods__header">
                 <h2 class="panel__title mods__title" data-i18n="mods">Mods</h2>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_mods-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_mods_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_mods-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_mods_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_mods_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -677,13 +677,13 @@
             </div>
           </section>
           <section class="blob mods">
-            <input class="editor__controller" name="attr_mods_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_mods_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_mods_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_mods_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__content mods__content">
                 <div class="repeating">
-                  <input class="repeating__is-empty" name="attr_mods_empty" value="0" type="hidden"/>
-                  <input class="repeating__controller" name="attr_mods_editor" value="on" type="hidden"/>
+                  <input class="repeating__is-empty" name="attr_mods_empty" type="hidden" value="0"/>
+                  <input class="repeating__controller" name="attr_mods_editor" type="hidden" value="on"/>
                   <div class="repeating__empty">
                     <div class="repeating__header"><span data-i18n="none_mods_repeating">None mods with left beef</span></div>
                     <div class="repeating__subtitle"></div>
@@ -700,21 +700,21 @@
                           </div>
                           <div class="mods__field mod_name col-11">
                             <input class="mods__mod_name mods__input--text" data-i18n-placeholder="placeholder_mod_name" id="mod_name" name="attr_mod_name" placeholder="Slip Rattle" type="text"/>
-                            <label class="visually-hidden" for="mod_name" data-i18n="mod_name">mod</label>
+                            <label class="visually-hidden" data-i18n="mod_name" for="mod_name">mod</label>
                           </div>
                           <div class="mods__field mod_cost ">
                             <input class="mods__mod_cost mods__input--text" data-i18n-placeholder="placeholder_mod_cost" id="mod_cost" name="attr_mod_cost" placeholder="1 coil, 1 disc" type="text"/>
-                            <label for="mod_cost" data-i18n="mod_cost">Cost</label>
+                            <label data-i18n="mod_cost" for="mod_cost">Cost</label>
                           </div>
                           <div class="mods__field mod_description ">
                             <textarea class="mods__mod_description mods__input--textarea" data-i18n-placeholder="placeholder_mod_description" name="attr_mod_description" placeholder="Roll to teleport in-universe by slicing spacetime. If you can’t see your destination, potential problems are worse."></textarea>
-                            <label for="mod_description" data-i18n="mod_description">Description</label>
+                            <label data-i18n="mod_description" for="mod_description">Description</label>
                           </div>
                         </div>
                       </div>
                       <div class="repeating__view">
                         <article class="bubble bubble__mod">
-                          <input class="bubble__controller" name="attr_mod_collapse" value="0" type="hidden"/>
+                          <input class="bubble__controller" name="attr_mod_collapse" type="hidden" value="0"/>
                           <div class="bubble__header">
                             <div class="mods__view">
                               <label class="mods__check">
@@ -722,7 +722,7 @@
                               </label>
                             </div>
                             <div class="bubble__controls">
-                              <button class="broadcast bubble__broadcast" name="roll_mod-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{mods}}} {{^{mod_name}=@{mod_name}}} {{^{mod_cost}=@{mod_cost}}} {{^{mod_description}=@{mod_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                              <button class="broadcast bubble__broadcast" name="roll_mod-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{mods}}} {{^{mod_name}=@{mod_name}}} {{^{mod_cost}=@{mod_cost}}} {{^{mod_description}=@{mod_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                               <label class="bubble__expand" for="attr_mod_collapse">
                                 <input name="attr_mod_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                               </label>
@@ -745,8 +745,8 @@
             </div>
           </section>
           <section class="blob components">
-            <input class="editor__controller" name="attr_components_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_components_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_components_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_components_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header components__header">
                 <h2 class="blob__title components__title" data-i18n="components">Components</h2>
@@ -833,25 +833,25 @@
       </section>
       <aside class="character__blades">
         <aside class="blade diary">
-          <input class="blade-toggle__controller" name="attr_diary_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_diary_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_diary-blade" type="action">
             <h2 class="blade__title" data-i18n="diary">Diary</h2>
           </button>
           <div class="blade__wrapper">
             <section class="panel notes">
-              <input class="editor__controller" name="attr_notes_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_notes_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_notes_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header notes__header">
                   <h2 class="panel__title notes__title" data-i18n="notes">notes</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_notes-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_notes_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_notes-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_notes_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -859,8 +859,8 @@
                 </div>
                 <div class="panel__content notes__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_notes_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_notes_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_notes_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_notes_repeating">None notes with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -871,22 +871,22 @@
                           <div class="row notes__edit">
                             <div class="notes__field note_name ">
                               <input class="notes__note_name notes__input--text" data-i18n-placeholder="placeholder_note_name" id="note_name" name="attr_note_name" placeholder="broke mom's trust" type="text"/>
-                              <label class="visually-hidden" for="note_name" data-i18n="note_name">Note</label>
+                              <label class="visually-hidden" data-i18n="note_name" for="note_name">Note</label>
                             </div>
                             <div class="notes__field note_description ">
                               <textarea class="notes__note_description notes__input--textarea" data-i18n-placeholder="placeholder_note_description" name="attr_note_description" placeholder="Description"></textarea>
-                              <label for="note_description" data-i18n="note_description">Description</label>
+                              <label data-i18n="note_description" for="note_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__note">
-                            <input class="bubble__controller" name="attr_note_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_note_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="notes__view"><span class="note__name" name="attr_note_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_note-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{notes}}} {{^{note_name}=@{note_name}}} {{^{note_description}=@{note_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_note-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{notes}}} {{^{note_name}=@{note_name}}} {{^{note_description}=@{note_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_note_collapse">
                                   <input name="attr_note_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -908,19 +908,19 @@
               </div>
             </section>
             <section class="panel tracks">
-              <input class="editor__controller" name="attr_tracks_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_tracks_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_tracks_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header tracks__header">
                   <h2 class="panel__title tracks__title" data-i18n="tracks">Tracks</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_tracks-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_tracks_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_tracks-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_tracks_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_tracks_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -928,8 +928,8 @@
                 </div>
                 <div class="panel__content tracks__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_tracks_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_tracks_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_tracks_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_tracks_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_tracks_repeating">None tracks with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -943,17 +943,17 @@
                             <input name="attr_track_display" type="hidden"/>
                             <div class="tracks__field track_name ">
                               <input class="tracks__track_name tracks__input--text" data-i18n-placeholder="placeholder_track_name" id="track_name" name="attr_track_name" placeholder="SKATE" type="text"/>
-                              <label class="visually-hidden" for="track_name" data-i18n="track_name">Track</label>
+                              <label class="visually-hidden" data-i18n="track_name" for="track_name">Track</label>
                             </div>
                             <div class="tracks__field track_description ">
                               <textarea class="tracks__track_description tracks__input--textarea" data-i18n-placeholder="placeholder_track_description" name="attr_track_description" placeholder="Description"></textarea>
-                              <label for="track_description" data-i18n="track_description">Description</label>
+                              <label data-i18n="track_description" for="track_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__track">
-                            <input class="bubble__controller" name="attr_track_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_track_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="tracks__view">
                                 <div class="tracks__progress-track">
@@ -1008,7 +1008,7 @@
                                 </div>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_track-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=@{track_display}}} {{^{track_name}=@{track_name} (@{track_completed}/@{track_size})}} {{^{track_description}=@{track_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_track-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=@{track_display}}} {{^{track_name}=@{track_name} (@{track_completed}/@{track_size})}} {{^{track_description}=@{track_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_track_collapse">
                                   <input name="attr_track_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1032,25 +1032,25 @@
           </div>
         </aside>
         <aside class="blade downtimes">
-          <input class="blade-toggle__controller" name="attr_downtimes_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_downtimes_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_downtimes-blade" type="action">
             <h2 class="blade__title" data-i18n="downtimes">Downtime</h2>
           </button>
           <div class="blade__wrapper">
             <section class="panel trait-beats downtime">
-              <input class="editor__controller" name="attr_trait-beats_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_trait-beats_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_trait-beats_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_trait-beats_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header trait-beats__header">
                   <h2 class="panel__title trait-beats__title" data-i18n="trait-beats">Trait Beats</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_trait-beats-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_trait-beats_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_trait-beats_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_trait-beats-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_trait-beats_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_trait-beats_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1058,8 +1058,8 @@
                 </div>
                 <div class="panel__content trait-beats__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_trait-beats_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_trait-beats_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_trait-beats_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_trait-beats_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_trait-beats_repeating">None trait beats with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1070,29 +1070,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1100,7 +1100,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1123,19 +1123,19 @@
               </div>
             </section>
             <section class="panel personality-arc downtime">
-              <input class="editor__controller" name="attr_personality-arc_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_personality-arc_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_personality-arc_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_personality-arc_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header personality-arc__header">
                   <h2 class="panel__title personality-arc__title" data-i18n="personality-arc">Personality Arc</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_personality-arc-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_personality-arc_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_personality-arc_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_personality-arc-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_personality-arc_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_personality-arc_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1143,8 +1143,8 @@
                 </div>
                 <div class="panel__content personality-arc__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_personality-arc_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_personality-arc_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_personality-arc_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_personality-arc_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_personality-arc_repeating">None personality arc with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1155,29 +1155,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1185,7 +1185,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1208,19 +1208,19 @@
               </div>
             </section>
             <section class="panel family-arc downtime">
-              <input class="editor__controller" name="attr_family-arc_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_family-arc_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_family-arc_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_family-arc_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header family-arc__header">
                   <h2 class="panel__title family-arc__title" data-i18n="family-arc">Family Arc</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_family-arc-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_family-arc_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_family-arc_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_family-arc-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_family-arc_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_family-arc_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1228,8 +1228,8 @@
                 </div>
                 <div class="panel__content family-arc__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_family-arc_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_family-arc_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_family-arc_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_family-arc_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_family-arc_repeating">None family arc with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1240,29 +1240,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1270,7 +1270,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1293,19 +1293,19 @@
               </div>
             </section>
             <section class="panel angst-arc downtime">
-              <input class="editor__controller" name="attr_angst-arc_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_angst-arc_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_angst-arc_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_angst-arc_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header angst-arc__header">
                   <h2 class="panel__title angst-arc__title" data-i18n="angst-arc">Angst Arc</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_angst-arc-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_angst-arc_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_angst-arc_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_angst-arc-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_angst-arc_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_angst-arc_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1313,8 +1313,8 @@
                 </div>
                 <div class="panel__content angst-arc__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_angst-arc_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_angst-arc_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_angst-arc_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_angst-arc_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_angst-arc_repeating">None angst arc with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1325,29 +1325,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1355,7 +1355,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1378,19 +1378,19 @@
               </div>
             </section>
             <section class="panel crew-beats downtime">
-              <input class="editor__controller" name="attr_crew-beats_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_crew-beats_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_crew-beats_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_crew-beats_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header crew-beats__header">
                   <h2 class="panel__title crew-beats__title" data-i18n="crew-beats">Crew Beats</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_crew-beats-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_crew-beats_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_crew-beats_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_crew-beats-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_crew-beats_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_crew-beats_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1398,8 +1398,8 @@
                 </div>
                 <div class="panel__content crew-beats__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_crew-beats_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_crew-beats_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_crew-beats_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_crew-beats_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_crew-beats_repeating">None crew beats with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1410,29 +1410,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1440,7 +1440,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1463,19 +1463,19 @@
               </div>
             </section>
             <section class="panel other-beats downtime">
-              <input class="editor__controller" name="attr_other-beats_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_other-beats_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_other-beats_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_other-beats_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header other-beats__header">
                   <h2 class="panel__title other-beats__title" data-i18n="other-beats">Other Beats</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_other-beats-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_other-beats_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_other-beats_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_other-beats-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_other-beats_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_other-beats_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1483,8 +1483,8 @@
                 </div>
                 <div class="panel__content other-beats__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_other-beats_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_other-beats_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_other-beats_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_other-beats_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_other-beats_repeating">None other beats with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1495,29 +1495,29 @@
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
                               <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" for="downtime_check" data-i18n="downtime_check">Check</label>
+                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" for="downtime_name" data-i18n="downtime_name">Name</label>
+                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
                             </div>
                             <div class="downtime__field downtime_cost ">
                               <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label for="downtime_cost" data-i18n="downtime_cost">Cost</label>
+                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
                             </div>
                             <div class="downtime__field downtime_description ">
                               <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label for="downtime_description" data-i18n="downtime_description">Description</label>
+                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
                             </div>
                             <div class="downtime__field downtime_result ">
                               <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label for="downtime_result" data-i18n="downtime_result">Result</label>
+                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="downtime__view">
                                 <label class="downtime__check">
@@ -1525,7 +1525,7 @@
                                 </label><span class="downtime__cost" name="attr_downtime_cost"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_downtime_collapse">
                                   <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1550,25 +1550,25 @@
           </div>
         </aside>
         <aside class="blade epilogue">
-          <input class="blade-toggle__controller" name="attr_epilogue_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_epilogue_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_epilogue-blade" type="action">
             <h2 class="blade__title" data-i18n="epilogue">Epilogue</h2>
           </button>
           <div class="blade__wrapper">
             <section class="panel legacy">
-              <input class="editor__controller" name="attr_legacy_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_legacy_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_legacy_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_legacy_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header legacy__header">
                   <h2 class="panel__title legacy__title" data-i18n="legacy">legacy</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_legacy-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_legacy_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_legacy_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_legacy-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_legacy_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_legacy_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1576,8 +1576,8 @@
                 </div>
                 <div class="panel__content legacy__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_legacy_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_legacy_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_legacy_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_legacy_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_legacy_repeating">None legacy with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1588,21 +1588,21 @@
                           <div class="row legacy__edit">
                             <div class="legacy__field legacy_name ">
                               <input class="legacy__legacy_name legacy__input--text" data-i18n-placeholder="placeholder_legacy_name" id="legacy_name" name="attr_legacy_name" placeholder="viral video of 1080" type="text"/>
-                              <label for="legacy_name" data-i18n="legacy_name">Legacy</label>
+                              <label data-i18n="legacy_name" for="legacy_name">Legacy</label>
                             </div>
                             <div class="legacy__field legacy_description ">
                               <textarea class="legacy__legacy_description legacy__input--textarea" data-i18n-placeholder="placeholder_legacy_description" name="attr_legacy_description" placeholder="Description"></textarea>
-                              <label for="legacy_description" data-i18n="legacy_description">Description</label>
+                              <label data-i18n="legacy_description" for="legacy_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <div class="legacy__view">
                             <article class="bubble bubble__legacy">
-                              <input class="bubble__controller" name="attr_legacy_collapse" value="0" type="hidden"/>
+                              <input class="bubble__controller" name="attr_legacy_collapse" type="hidden" value="0"/>
                               <div class="bubble__header"><span class="legacy__name" name="attr_legacy_name"></span>
                                 <div class="bubble__controls">
-                                  <button class="broadcast bubble__broadcast" name="roll_legacy-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{legacy}}} {{^{legacy_name}=@{legacy_name}}} {{^{legacy_description}=@{legacy_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                  <button class="broadcast bubble__broadcast" name="roll_legacy-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{legacy}}} {{^{legacy_name}=@{legacy_name}}} {{^{legacy_description}=@{legacy_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                   <label class="bubble__expand" for="attr_legacy_collapse">
                                     <input name="attr_legacy_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                   </label>
@@ -1624,19 +1624,19 @@
               </div>
             </section>
             <section class="panel doom">
-              <input class="editor__controller" name="attr_doom_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_doom_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_doom_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_doom_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header doom__header">
                   <h2 class="panel__title doom__title" data-i18n="doom">doom</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_doom-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_doom_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_doom_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_doom-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_doom_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_doom_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1644,8 +1644,8 @@
                 </div>
                 <div class="panel__content doom__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_doom_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_doom_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_doom_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_doom_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_doom_repeating">None doom with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1656,21 +1656,21 @@
                           <div class="row doom__edit">
                             <div class="doom__field doom_name ">
                               <input class="doom__doom_name doom__input--text" data-i18n-placeholder="placeholder_doom_name" id="doom_name" name="attr_doom_name" placeholder="broke mom's trust" type="text"/>
-                              <label for="doom_name" data-i18n="doom_name">Doom</label>
+                              <label data-i18n="doom_name" for="doom_name">Doom</label>
                             </div>
                             <div class="doom__field doom_description ">
                               <textarea class="doom__doom_description doom__input--textarea" data-i18n-placeholder="placeholder_doom_description" name="attr_doom_description" placeholder="Description"></textarea>
-                              <label for="doom_description" data-i18n="doom_description">Description</label>
+                              <label data-i18n="doom_description" for="doom_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <div class="doom__view">
                             <article class="bubble bubble__doom">
-                              <input class="bubble__controller" name="attr_doom_collapse" value="0" type="hidden"/>
+                              <input class="bubble__controller" name="attr_doom_collapse" type="hidden" value="0"/>
                               <div class="bubble__header"><span class="doom__name" name="attr_doom_name"></span>
                                 <div class="bubble__controls">
-                                  <button class="broadcast bubble__broadcast" name="roll_doom-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{doom}}} {{^{doom_name}=@{doom_name}}} {{^{doom_description}=@{doom_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                  <button class="broadcast bubble__broadcast" name="roll_doom-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{doom}}} {{^{doom_name}=@{doom_name}}} {{^{doom_description}=@{doom_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                   <label class="bubble__expand" for="attr_doom_collapse">
                                     <input name="attr_doom_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                   </label>
@@ -1699,19 +1699,19 @@
       <section class="crew__main">
         <section class="crew__col">
           <section class="panel header-crew">
-            <input class="editor__controller" name="attr_header-crew_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_header-crew_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_header-crew_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_header-crew_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header header-crew__header">
                 <h2 class="panel__title header-crew__title" data-i18n="header-crew">The Crew</h2>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_header-crew-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_header-crew_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_header-crew_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_header-crew-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_header-crew_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_header-crew_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -1721,15 +1721,15 @@
                 <div class="editor">
                   <div class="editor__edit header__edit">
                     <div>
-                      <label for="character_name" data-i18n="character_name">Name</label>
+                      <label data-i18n="character_name" for="character_name">Name</label>
                       <input class="header__character_name header__input--text" data-i18n-placeholder="placeholder_character_name" id="character_name" name="attr_character_name" placeholder="Farrah" type="text"/>
                     </div>
                     <div>
-                      <label for="brands" data-i18n="brands">Brands</label>
+                      <label data-i18n="brands" for="brands">Brands</label>
                       <input class="header__brands header__input--text" data-i18n-placeholder="placeholder_brands" id="brands" name="attr_brands" placeholder="good kids, weirdos" type="text"/>
                     </div>
                     <div>
-                      <label for="hangouts" data-i18n="hangouts">Hangouts</label>
+                      <label data-i18n="hangouts" for="hangouts">Hangouts</label>
                       <input class="header__hangouts header__input--text" data-i18n-placeholder="placeholder_hangouts" id="hangouts" name="attr_hangouts" placeholder="the gas station" type="text"/>
                     </div>
                   </div>
@@ -1749,24 +1749,24 @@
             </div>
           </section>
           <section class="blob fractures">
-            <input class="editor__controller" name="attr_fractures_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_fractures_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_fractures_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_fractures_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header fractures__header">
                 <h2 class="blob__title fractures__title" data-i18n="fractures">Fractures</h2>
                 <div class="blob__controls">
-                  <button class="broadcast broadcast" name="roll_fractures-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{fractures}}} {{^{fracture_1}=@{fracture_1}}} {{^{fracture_2}=@{fracture_2}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                  <button class="broadcast broadcast" name="roll_fractures-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{fractures}}} {{^{fracture_1}=@{fracture_1}}} {{^{fracture_2}=@{fracture_2}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                 </div>
               </div>
               <div class="blob__content fractures__content">
                 <div class="fractures__boxes">
                   <div class="fractures__box fractures__box--fracture_1">
                     <input class="fractures__fracture_1 fractures__input--text" data-i18n-placeholder="placeholder_fracture_1" id="fracture_1" name="attr_fracture_1" placeholder="super bruised ribs" type="text"/>
-                    <label class="visually-hidden" for="fracture_1" data-i18n="fracture_1">Fracture 1</label>
+                    <label class="visually-hidden" data-i18n="fracture_1" for="fracture_1">Fracture 1</label>
                   </div>
                   <div class="fractures__box fractures__box--fracture_2">
                     <input class="fractures__fracture_2 fractures__input--text" data-i18n-placeholder="placeholder_fracture_2" id="fracture_2" name="attr_fracture_2" placeholder="frustrated" type="text"/>
-                    <label class="visually-hidden" for="fracture_2" data-i18n="fracture_2">Fracture 2</label>
+                    <label class="visually-hidden" data-i18n="fracture_2" for="fracture_2">Fracture 2</label>
                   </div>
                 </div>
               </div>
@@ -1775,8 +1775,8 @@
         </section>
         <section class="crew__col">
           <section class="blob hype">
-            <input class="editor__controller" name="attr_hype_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_hype_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_hype_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_hype_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header hype__header">
                 <h2 class="blob__title hype__title" data-i18n="hype">Hype</h2>
@@ -1810,8 +1810,8 @@
             </div>
           </section>
           <section class="blob style">
-            <input class="editor__controller" name="attr_style_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_style_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_style_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_style_minimizer" type="hidden" value="0"/>
             <div class="blob__wrapper">
               <div class="blob__header style__header">
                 <h2 class="blob__title style__title" data-i18n="style">Style</h2>
@@ -1859,19 +1859,19 @@
             </div>
           </section>
           <section class="panel fame">
-            <input class="editor__controller" name="attr_fame_editor" value="on" type="hidden"/>
-            <input class="minimizer__controller" name="attr_fame_minimizer" value="0" type="hidden"/>
+            <input class="editor__controller" name="attr_fame_editor" type="hidden" value="on"/>
+            <input class="minimizer__controller" name="attr_fame_minimizer" type="hidden" value="0"/>
             <div class="panel__wrapper">
               <div class="panel__header fame__header">
                 <h2 class="panel__title fame__title" data-i18n="fame">Fame</h2>
                 <div class="panel__controls">
                   <button class="minimizer-toggle" name="act_fame-minimizer" type="action">
-                    <input class="minimizer-toggle__controller" name="attr_fame_minimizer" value="0" type="hidden"/>
+                    <input class="minimizer-toggle__controller" name="attr_fame_minimizer" type="hidden" value="0"/>
                     <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                     <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                   </button>
                   <button class="edit-toggle" name="act_fame-editor" type="action">
-                    <input class="edit-toggle__controller" name="attr_fame_editor" value="on" type="hidden"/>
+                    <input class="edit-toggle__controller" name="attr_fame_editor" type="hidden" value="on"/>
                     <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                     <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                   </button>
@@ -1905,25 +1905,25 @@
       </section>
       <aside class="crew__blades">
         <aside class="blade diary">
-          <input class="blade-toggle__controller" name="attr_diary_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_diary_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_diary-blade" type="action">
             <h2 class="blade__title" data-i18n="diary">Diary</h2>
           </button>
           <div class="blade__wrapper">
             <section class="panel notes">
-              <input class="editor__controller" name="attr_notes_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_notes_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_notes_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header notes__header">
                   <h2 class="panel__title notes__title" data-i18n="notes">notes</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_notes-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_notes_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_notes_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_notes-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_notes_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -1931,8 +1931,8 @@
                 </div>
                 <div class="panel__content notes__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_notes_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_notes_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_notes_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_notes_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_notes_repeating">None notes with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -1943,22 +1943,22 @@
                           <div class="row notes__edit">
                             <div class="notes__field note_name ">
                               <input class="notes__note_name notes__input--text" data-i18n-placeholder="placeholder_note_name" id="note_name" name="attr_note_name" placeholder="broke mom's trust" type="text"/>
-                              <label class="visually-hidden" for="note_name" data-i18n="note_name">Note</label>
+                              <label class="visually-hidden" data-i18n="note_name" for="note_name">Note</label>
                             </div>
                             <div class="notes__field note_description ">
                               <textarea class="notes__note_description notes__input--textarea" data-i18n-placeholder="placeholder_note_description" name="attr_note_description" placeholder="Description"></textarea>
-                              <label for="note_description" data-i18n="note_description">Description</label>
+                              <label data-i18n="note_description" for="note_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__note">
-                            <input class="bubble__controller" name="attr_note_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_note_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="notes__view"><span class="note__name" name="attr_note_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_note-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{notes}}} {{^{note_name}=@{note_name}}} {{^{note_description}=@{note_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_note-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{notes}}} {{^{note_name}=@{note_name}}} {{^{note_description}=@{note_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_note_collapse">
                                   <input name="attr_note_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -1980,19 +1980,19 @@
               </div>
             </section>
             <section class="panel tracks">
-              <input class="editor__controller" name="attr_tracks_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_tracks_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_tracks_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header tracks__header">
                   <h2 class="panel__title tracks__title" data-i18n="tracks">Tracks</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_tracks-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_tracks_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_tracks_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_tracks-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_tracks_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_tracks_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -2000,8 +2000,8 @@
                 </div>
                 <div class="panel__content tracks__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_tracks_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_tracks_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_tracks_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_tracks_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_tracks_repeating">None tracks with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -2015,17 +2015,17 @@
                             <input name="attr_track_display" type="hidden"/>
                             <div class="tracks__field track_name ">
                               <input class="tracks__track_name tracks__input--text" data-i18n-placeholder="placeholder_track_name" id="track_name" name="attr_track_name" placeholder="SKATE" type="text"/>
-                              <label class="visually-hidden" for="track_name" data-i18n="track_name">Track</label>
+                              <label class="visually-hidden" data-i18n="track_name" for="track_name">Track</label>
                             </div>
                             <div class="tracks__field track_description ">
                               <textarea class="tracks__track_description tracks__input--textarea" data-i18n-placeholder="placeholder_track_description" name="attr_track_description" placeholder="Description"></textarea>
-                              <label for="track_description" data-i18n="track_description">Description</label>
+                              <label data-i18n="track_description" for="track_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__track">
-                            <input class="bubble__controller" name="attr_track_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_track_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="tracks__view">
                                 <div class="tracks__progress-track">
@@ -2080,7 +2080,7 @@
                                 </div>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_track-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=@{track_display}}} {{^{track_name}=@{track_name} (@{track_completed}/@{track_size})}} {{^{track_description}=@{track_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_track-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=@{track_display}}} {{^{track_name}=@{track_name} (@{track_completed}/@{track_size})}} {{^{track_description}=@{track_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_track_collapse">
                                   <input name="attr_track_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -2104,27 +2104,27 @@
           </div>
         </aside>
         <aside class="blade factions">
-          <input class="blade-toggle__controller" name="attr_factions_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_factions_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_factions-blade" type="action">
             <h2 class="blade__title" data-i18n="factions">Factions</h2>
           </button>
           <div class="blade__wrapper">
-            <input name="attr_load_factions" value="0" type="hidden"/>
+            <input name="attr_load_factions" type="hidden" value="0"/>
             <button class="crew__action crew--factions" name="act_load-factions" type="action"><span data-i18n="load_factions">Load Factions</span></button>
             <section class="panel crew-factions faction">
-              <input class="editor__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_crew-factions_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_crew-factions_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_crew-factions_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header crew-factions__header">
                   <h2 class="panel__title crew-factions__title" data-i18n="crew-factions">Crews</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_crew-factions-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_crew-factions_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_crew-factions_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_crew-factions-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_crew-factions_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -2132,8 +2132,8 @@
                 </div>
                 <div class="panel__content crew-factions__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_crew-factions_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_crew-factions_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_crew-factions_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_crew-factions_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_crew-factions_repeating">None crew factions with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -2145,7 +2145,7 @@
                             <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
                               <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
-                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                              <label data-i18n="faction_name" for="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
@@ -2158,22 +2158,22 @@
                                 <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
                                 <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
-                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                              <label data-i18n="faction_relationship" for="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
                               <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
-                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                              <label data-i18n="faction_description" for="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__faction">
-                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_faction_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_faction_collapse">
                                   <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -2195,19 +2195,19 @@
               </div>
             </section>
             <section class="panel authority-factions faction">
-              <input class="editor__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_authority-factions_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_authority-factions_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_authority-factions_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header authority-factions__header">
                   <h2 class="panel__title authority-factions__title" data-i18n="authority-factions">Authorities</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_authority-factions-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_authority-factions_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_authority-factions_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_authority-factions-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_authority-factions_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -2215,8 +2215,8 @@
                 </div>
                 <div class="panel__content authority-factions__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_authority-factions_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_authority-factions_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_authority-factions_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_authority-factions_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_authority-factions_repeating">None authority factions with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -2228,7 +2228,7 @@
                             <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
                               <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
-                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                              <label data-i18n="faction_name" for="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
@@ -2241,22 +2241,22 @@
                                 <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
                                 <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
-                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                              <label data-i18n="faction_relationship" for="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
                               <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
-                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                              <label data-i18n="faction_description" for="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__faction">
-                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_faction_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_faction_collapse">
                                   <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -2278,19 +2278,19 @@
               </div>
             </section>
             <section class="panel sponsor-factions faction">
-              <input class="editor__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_sponsor-factions_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_sponsor-factions_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_sponsor-factions_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header sponsor-factions__header">
                   <h2 class="panel__title sponsor-factions__title" data-i18n="sponsor-factions">Sponsors</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_sponsor-factions-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_sponsor-factions_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_sponsor-factions_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_sponsor-factions-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_sponsor-factions_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -2298,8 +2298,8 @@
                 </div>
                 <div class="panel__content sponsor-factions__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_sponsor-factions_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_sponsor-factions_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_sponsor-factions_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_sponsor-factions_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_sponsor-factions_repeating">None sponsor factions with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -2311,7 +2311,7 @@
                             <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
                               <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
-                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                              <label data-i18n="faction_name" for="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
@@ -2324,22 +2324,22 @@
                                 <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
                                 <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
-                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                              <label data-i18n="faction_relationship" for="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
                               <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
-                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                              <label data-i18n="faction_description" for="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__faction">
-                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_faction_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_faction_collapse">
                                   <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -2361,19 +2361,19 @@
               </div>
             </section>
             <section class="panel crowd-factions faction">
-              <input class="editor__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
-              <input class="minimizer__controller" name="attr_crowd-factions_minimizer" value="0" type="hidden"/>
+              <input class="editor__controller" name="attr_crowd-factions_editor" type="hidden" value="on"/>
+              <input class="minimizer__controller" name="attr_crowd-factions_minimizer" type="hidden" value="0"/>
               <div class="panel__wrapper">
                 <div class="panel__header crowd-factions__header">
                   <h2 class="panel__title crowd-factions__title" data-i18n="crowd-factions">Crowds</h2>
                   <div class="panel__controls">
                     <button class="minimizer-toggle" name="act_crowd-factions-minimizer" type="action">
-                      <input class="minimizer-toggle__controller" name="attr_crowd-factions_minimizer" value="0" type="hidden"/>
+                      <input class="minimizer-toggle__controller" name="attr_crowd-factions_minimizer" type="hidden" value="0"/>
                       <div class="minimizer-toggle__edit"><span class="visually-hidden" data-i18n="maximize">Maximize</span><span class="pictos" aria-hidden="true">&</span></div>
                       <div class="minimizer-toggle__view"><span class="visually-hidden" data-i18n="minimize">Minimize</span><span class="pictos" aria-hidden="true">_</span></div>
                     </button>
                     <button class="edit-toggle" name="act_crowd-factions-editor" type="action">
-                      <input class="edit-toggle__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
+                      <input class="edit-toggle__controller" name="attr_crowd-factions_editor" type="hidden" value="on"/>
                       <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos" aria-hidden="true">*</span></div>
                       <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos" aria-hidden="true">p</span></div>
                     </button>
@@ -2381,8 +2381,8 @@
                 </div>
                 <div class="panel__content crowd-factions__content">
                   <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_crowd-factions_empty" value="0" type="hidden"/>
-                    <input class="repeating__controller" name="attr_crowd-factions_editor" value="on" type="hidden"/>
+                    <input class="repeating__is-empty" name="attr_crowd-factions_empty" type="hidden" value="0"/>
+                    <input class="repeating__controller" name="attr_crowd-factions_editor" type="hidden" value="on"/>
                     <div class="repeating__empty">
                       <div class="repeating__header"><span data-i18n="none_crowd-factions_repeating">None crowd factions with left beef</span></div>
                       <div class="repeating__subtitle"></div>
@@ -2394,7 +2394,7 @@
                             <input name="attr_faction_autogen" type="hidden"/>
                             <div class="faction__field faction_name col-8">
                               <input class="faction__faction_name faction__input--text" data-i18n-placeholder="placeholder_faction_name" id="faction_name" name="attr_faction_name" placeholder="Faction" type="text"/>
-                              <label for="faction_name" data-i18n="faction_name">Faction Name</label>
+                              <label data-i18n="faction_name" for="faction_name">Faction Name</label>
                             </div>
                             <div class="faction__field faction_relationship col-4">
                               <select class="faction__faction_relationship faction__input--select" name="attr_faction_relationship">
@@ -2407,22 +2407,22 @@
                                 <option data-i18n="faction_relationship_enemy" value="-3">Enemy (-3)</option>
                                 <option data-i18n="faction_relationship_unstable" value="!!">Unstable (!!)</option>
                               </select>
-                              <label for="faction_relationship" data-i18n="faction_relationship">Relationship</label>
+                              <label data-i18n="faction_relationship" for="faction_relationship">Relationship</label>
                             </div>
                             <div class="faction__field faction_description ">
                               <textarea class="faction__faction_description faction__input--textarea" data-i18n-placeholder="placeholder_faction_description" name="attr_faction_description" placeholder="Description"></textarea>
-                              <label for="faction_description" data-i18n="faction_description">Description</label>
+                              <label data-i18n="faction_description" for="faction_description">Description</label>
                             </div>
                           </div>
                         </div>
                         <div class="repeating__view">
                           <article class="bubble bubble__faction">
-                            <input class="bubble__controller" name="attr_faction_collapse" value="0" type="hidden"/>
+                            <input class="bubble__controller" name="attr_faction_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <div class="faction__view"><span class="faction__relationship" name="attr_faction_relationship"></span><span class="faction__name" name="attr_faction_name"></span>
                               </div>
                               <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}" type="roll"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
+                                <button class="broadcast bubble__broadcast" name="roll_faction-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{factions}}} {{^{faction_name}=@{faction_name}}} {{^{faction_relationship}=@{faction_relationship}}} {{^{faction_description}=@{faction_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
                                 <label class="bubble__expand" for="attr_faction_collapse">
                                   <input name="attr_faction_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
                                 </label>
@@ -2446,7 +2446,7 @@
           </div>
         </aside>
         <aside class="blade multiverse">
-          <input class="blade-toggle__controller" name="attr_multiverse_blade" value="0" type="hidden"/>
+          <input class="blade-toggle__controller" name="attr_multiverse_blade" type="hidden" value="0"/>
           <button class="blade-toggle" name="act_multiverse-blade" type="action">
             <h2 class="blade__title" data-i18n="multiverse">The Multiverse</h2>
           </button>
@@ -2457,7 +2457,7 @@
     </main>
     <main class="options">
       <section class="options__main">
-        <aside style="width: 250px;float: right;text-align: start;background: #008abf;color: white;font-weight: 700;padding: 1rem;border-radius: 0px;">
+        <aside style="width: 250px; float: right; text-align: start; background: #008abf; color: white; font-weight: 700; padding: 1rem; border-radius: 0px">
           <p>
             You are small.<br><br>You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.<br><br>You are also big.<br><br>Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.<br><br>You are someone’s world.</p>
         </aside>

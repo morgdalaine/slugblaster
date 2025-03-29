@@ -119,12 +119,13 @@
     }
 
     &__result {
-        text-align: justify;
-        font-family: $font-handwritten;
-&--label {
+      text-align: justify;
+      font-family: $font-handwritten;
+      &--label {
         font-weight: 700;
         text-transform: uppercase;
-    }}
+      }
+    }
 
     &__die {
       background-color: $black;

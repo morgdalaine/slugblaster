@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(76, 80%, 80%), hsl(219, 80%, 80%), hsl(253, 80%, 80%));
+  background-image: radial-gradient(hsl(218, 80%, 80%), hsl(318, 80%, 80%), hsl(192, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(177, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(151, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
