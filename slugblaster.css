@@ -357,7 +357,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(137, 80%, 80%), hsl(2, 80%, 80%), hsl(235, 80%, 80%));
+  background-image: radial-gradient(hsl(225, 80%, 80%), hsl(282, 80%, 80%), hsl(359, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -771,7 +771,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(255, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(157, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -800,7 +800,7 @@ html .charsheet .slugblaster .blade {
   flex-direction: column;
   row-gap: 0.5rem;
   min-width: 3rem;
-  background-image: linear-gradient(to top, hsla(204, 80%, 80%, 0.8), hsla(0, 0%, 100%, 0.8));
+  background-image: linear-gradient(to top, hsla(317, 80%, 80%, 0.8), hsla(0, 0%, 100%, 0.8));
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;
@@ -1318,11 +1318,20 @@ html .charsheet .slugblaster .character .components__component--track {
   align-items: center;
   justify-content: center;
 }
-html .charsheet .slugblaster .character .components .component__checkbox {
+html .charsheet .slugblaster .character .components__component--track .component__value[value="2"] ~ .component__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+}
+html .charsheet .slugblaster .character .components__component--track .component__value[value="3"] ~ .component__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+}
+html .charsheet .slugblaster .character .components__component--track .component__value[value="3"] ~ .component__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+}
+html .charsheet .slugblaster .character .component__checkbox {
   display: grid;
   font-size: 1rem;
 }
-html .charsheet .slugblaster .character .components .component__checkbox input {
+html .charsheet .slugblaster .character .component__checkbox input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1333,8 +1342,21 @@ html .charsheet .slugblaster .character .components .component__checkbox input {
   background-size: contain;
   background-image: url("https://www.svgrepo.com/show/448352/circle.svg");
 }
-html .charsheet .slugblaster .character .components .component__checkbox input:checked {
+html .charsheet .slugblaster .character .component__checkbox input:checked {
   background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+}
+html .charsheet .slugblaster .character .component__checkbox--0 {
+  padding-right: 0.5rem;
+  border-right: 2px solid var(--text-color, rgb(34, 34, 34));
+}
+html .charsheet .slugblaster .character .component__checkbox--0 input {
+  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+}
+html .charsheet .slugblaster .character .component__checkbox--0 input:checked {
+  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+}
+html .charsheet .slugblaster .character .component__value[value="0"] ~ .component__checkbox--0, html .charsheet .slugblaster .character .component__value:not([value]) ~ .component__checkbox--0 {
+  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg") !important;
 }
 html .charsheet .slugblaster .character .dicetray {
   background-color: white;
@@ -1489,7 +1511,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
 html .charsheet .slugblaster .character .style {
   background-color: white;
 }
-html .charsheet .slugblaster .character .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .character .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
+html .charsheet .slugblaster .character .style input[name=attr_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .character .style input[name=attr_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
 }
 html .charsheet .slugblaster .character .style__track {
@@ -1526,6 +1548,114 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
 html .charsheet .slugblaster .character .style__checkbox--0 input {
   background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
 }
+html .charsheet .slugblaster .character .style input[name=attr_style][value="2"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="3"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="3"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--8 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
 html .charsheet .slugblaster .character .traits {
   background-color: white;
 }
@@ -1538,7 +1668,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
 html .charsheet .slugblaster .character .trouble {
   background-color: white;
 }
-html .charsheet .slugblaster .character .trouble .trouble__hidden[value="0"] ~ * .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble .trouble__hidden:not([value]) ~ * .trouble__checkbox--0 {
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="0"] ~ .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble input[name=attr_trouble]:not([value]) ~ .trouble__checkbox--0 {
   display: none;
 }
 html .charsheet .slugblaster .character .trouble__track {
@@ -1580,6 +1710,90 @@ html .charsheet .slugblaster .character .trouble__checkbox--8 input {
 }
 html .charsheet .slugblaster .character .trouble__checkbox--8 input:checked {
   background-image: url("https://www.svgrepo.com/show/448199/alert-triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="2"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="3"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="3"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+}
+html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
 }
 html .charsheet .slugblaster .character .trouble__actions {
   display: flex;
@@ -1835,7 +2049,7 @@ html .charsheet .slugblaster .crew .hype__kick input {
 html .charsheet .slugblaster .crew .style {
   background-color: white;
 }
-html .charsheet .slugblaster .crew .style .style__hidden[value="0"] ~ * .style__checkbox--0, html .charsheet .slugblaster .crew .style .style__hidden:not([value]) ~ * .style__checkbox--0 {
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .crew .style input[name=attr_crew_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
 }
 html .charsheet .slugblaster .crew .style__track {
@@ -1873,6 +2087,141 @@ html .charsheet .slugblaster .crew .style__checkbox--0 {
 }
 html .charsheet .slugblaster .crew .style__checkbox--0 input {
   background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="2"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="3"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="3"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--8 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--9 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--8 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--7 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--6 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--5 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--4 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--3 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--2 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+}
+html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--1 input {
+  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
 }
 html .charsheet .slugblaster .crew .notes {
   background-color: white;

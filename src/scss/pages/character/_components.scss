@@ -1,6 +1,6 @@
 .components {
   $this: '.components';
-  background-color: transparent; // hsl(random(360) 80% 80% / 80%);
+  background-color: white; // hsl(random(360) 80% 80% / 80%);
 
   &__content {
     display: grid;
@@ -19,9 +19,26 @@
       gap: 0 $grid-gutter-col;
       align-items: center;
       justify-content: center;
+
+      // fill in previous radios
+      @each $selected in 1, 2, 3 {
+        @each $fill in 3, 2, 1 {
+          @if $fill < $selected {
+            .component__value[value='#{$selected}'] {
+              ~ .component__checkbox--#{$fill} input {
+                background-image: url('https://www.svgrepo.com/show/448206/circle.svg');
+              }
+            }
+          }
+        }
+      }
     }
   }
-  .component__checkbox {
+}
+
+.component {
+  $this: '.component';
+  &__checkbox {
     display: grid;
     font-size: 1rem;
 
@@ -37,6 +54,26 @@
 
       &:checked {
         background-image: url('https://www.svgrepo.com/show/448206/circle.svg');
+      }
+    }
+
+    &--0 {
+      padding-right: $grid-gutter-col;
+      border-right: 2px solid $text-color;
+
+      input {
+        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+        &:checked {
+          background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+        }
+      }
+    }
+  }
+  &__value {
+    &[value='0'],
+    &:not([value]) {
+      ~ #{$this}__checkbox--0 {
+        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg') !important;
       }
     }
   }

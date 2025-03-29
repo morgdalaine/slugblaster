@@ -1,12 +1,12 @@
 .style {
   $this: '.style';
-  background-color: transparent; // hsl(random(360) 80% 80% / 80%);
+  background-color: white; // hsl(random(360) 80% 80% / 80%);
   // flex: 1;
 
-  .style__hidden {
+  input[name='attr_style'] {
     &[value='0'],
     &:not([value]) {
-      ~ * #{$this}__checkbox--0 {
+      ~ #{$this}__checkbox--0 {
         display: none;
       }
     }
@@ -48,6 +48,19 @@
 
       input {
         background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+      }
+    }
+  }
+
+  // fill in previous radios
+  @each $selected in 1, 2, 3, 4, 5, 6, 7, 8, 9 {
+    @each $fill in 9, 8, 7, 6, 5, 4, 3, 2, 1 {
+      @if $fill < $selected {
+        input[name='attr_style'][value='#{$selected}'] {
+          ~ #{$this}__checkbox--#{$fill} input {
+            background-image: url('https://www.svgrepo.com/show/448209/diamond.svg');
+          }
+        }
       }
     }
   }

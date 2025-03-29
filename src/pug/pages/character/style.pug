@@ -2,9 +2,9 @@
 +blob({ name: 'style', title: 'Style' })
   +block('content')
     - const { subtitle, hidden, track } = style;
-    each field in hidden
-      +field(field).style__hidden
     .style__track
+      each field in hidden
+        +hidden(field.name)
       each radio in track
         label.style__checkbox(class=`style__checkbox--${radio.value}`)
           +field(radio).checkbox--circle
