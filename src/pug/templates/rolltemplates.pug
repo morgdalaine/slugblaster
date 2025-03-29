@@ -6,31 +6,40 @@ rolltemplate.sheet-rolltemplate-slugblaster
       span.sheet-roll__header--character_name {{ character }}
       +tags(['trick'])
         span.sheet-roll__header--trick(data-i18n='saying_check_it_and') Says “Check It” And
-      span.sheet-roll__header--take-action(data-i18n='takes_action') Takes Action
+      +tags(['^disaster'])
+        span.sheet-roll__header--take-action(data-i18n='takes_action') Takes Action
+      +tags(['disaster'])
+        span.sheet-roll__header--take-action(data-i18n='luck_runs_out') Luck Runs Out
+
     .sheet-roll__content
       .sheet-roll__title {{ title }}
       .sheet-roll__subtitle {{ subtitle }}
-      .sheet-roll__results
-        .sheet-roll__results--roll {{ roll }}
-        .sheet-roll__results--dice
-          each die in dices
-            +tags([die])
-              +displayDie(die)
-        .sheet-roll__results--label
-          label(data-i18n='dice_pool') Dice Pool
+      .sheet-roll__dice
+        each die in dices
+          +tags([die])
+            +displayDie(die)
 
       +tags(['action'])
         .sheet-roll__result
           +rollFunction([`rollBetween() roll 6 6`])
-            span(data-i18n='roll_success') Success!
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_success') Success!
+            | &nbsp;
             span(data-i18n='roll_success_description') You do it!
 
           +rollFunction([`rollBetween() roll 4 5`])
-            span(data-i18n='roll_mixed_success') Mixed success.
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_mixed_success') Mixed success.
+            | &nbsp;
             span(data-i18n='roll_mixed_success_description') You do it, but there’s a problem.
 
           +rollFunction([`rollBetween() roll 0 3`])
-            span(data-i18n='roll_failure') Failure.
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_failure') Failure.
+            | &nbsp;
             span(data-i18n='roll_failure_description') You don’t do it, and there’s a problem.
 
         .sheet-roll__modifiers
@@ -54,15 +63,24 @@ rolltemplate.sheet-rolltemplate-slugblaster
       +tags(['disaster'])
         .sheet-roll__result
           +rollFunction([`rollBetween() roll 6 6`])
-            span(data-i18n='roll_disaster_success') Easy street.
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_disaster_success') Easy street.
+            | &nbsp;
             span(data-i18n='roll_disaster_success_description') Avoid disaster and mark 1 style.
 
           +rollFunction([`rollBetween() roll 4 5`])
-            span(data-i18n='roll_disaster_mixed_success') Close call!
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_disaster_mixed_success') Close call!
+            | &nbsp;
             span(data-i18n='roll_disaster_mixed_success_description') Avoid disaster but mark 1 trouble.
 
           +rollFunction([`rollBetween() roll 0 3`])
-            span(data-i18n='roll_disaster_failure') Disaster strikes!
+            | {{ roll }}
+            | &nbsp;
+            span.sheet-roll__result--label(data-i18n='roll_disaster_failure') Disaster strikes!
+            | &nbsp;
             span(data-i18n='roll_disaster_failure_description') Something really bad happens (page 147). Mark doom.
 
 rolltemplate.sheet-rolltemplate-slugcast

@@ -285,9 +285,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   display: grid;
   gap: 0.5rem 0.5rem;
   z-index: 2;
-}
-.sheet-rolltemplate-slugcast .sheet-roll *,
-.sheet-rolltemplate-slugblaster .sheet-roll * {
   font-family: "Radio Canada", "Poppins", "Ubuntu", sans-serif;
   line-height: inherit;
 }
@@ -331,15 +328,17 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__subtitle {
   font-size: 1rem;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__results,
-.sheet-rolltemplate-slugblaster .sheet-roll__results {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr auto;
-  gap: 0 0.5rem;
+.sheet-rolltemplate-slugcast .sheet-roll__dice,
+.sheet-rolltemplate-slugblaster .sheet-roll__dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-content: center;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__results--roll,
-.sheet-rolltemplate-slugblaster .sheet-roll__results--roll {
+.sheet-rolltemplate-slugcast .sheet-roll__dice--roll,
+.sheet-rolltemplate-slugblaster .sheet-roll__dice--roll {
   display: grid;
   place-items: center;
   width: 5rem;
@@ -349,15 +348,15 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   outline: 1px solid #292828;
   outline-offset: 0;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__results--roll .inlinerollresult,
-.sheet-rolltemplate-slugblaster .sheet-roll__results--roll .inlinerollresult {
+.sheet-rolltemplate-slugcast .sheet-roll__dice--roll .inlinerollresult,
+.sheet-rolltemplate-slugblaster .sheet-roll__dice--roll .inlinerollresult {
   display: block;
   width: inherit;
   font-family: "One Direction", "Hate Your Writing", "Playpen Sans", "Comic Sans MS", serif;
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(225, 80%, 80%), hsl(282, 80%, 80%), hsl(359, 80%, 80%));
+  background-image: radial-gradient(hsl(66, 80%, 80%), hsl(257, 80%, 80%), hsl(95, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -365,30 +364,15 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #292828;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__results--dice,
-.sheet-rolltemplate-slugblaster .sheet-roll__results--dice {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.5rem;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.sheet-rolltemplate-slugcast .sheet-roll__results--label,
-.sheet-rolltemplate-slugblaster .sheet-roll__results--label {
-  text-align: center;
-}
-.sheet-rolltemplate-slugcast .sheet-roll__result span,
-.sheet-rolltemplate-slugblaster .sheet-roll__result span {
+.sheet-rolltemplate-slugcast .sheet-roll__result,
+.sheet-rolltemplate-slugblaster .sheet-roll__result {
+  text-align: justify;
   font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
 }
-.sheet-rolltemplate-slugcast .sheet-roll__result span:first-of-type,
-.sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type {
+.sheet-rolltemplate-slugcast .sheet-roll__result--label,
+.sheet-rolltemplate-slugblaster .sheet-roll__result--label {
   font-weight: 700;
   text-transform: uppercase;
-}
-.sheet-rolltemplate-slugcast .sheet-roll__result span:first-of-type::after,
-.sheet-rolltemplate-slugblaster .sheet-roll__result span:first-of-type::after {
-  content: " ";
 }
 .sheet-rolltemplate-slugcast .sheet-roll__die,
 .sheet-rolltemplate-slugblaster .sheet-roll__die {
@@ -514,13 +498,11 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 }
 .sheet-rolltemplate-slugcast .inlinerollresult,
 .sheet-rolltemplate-slugblaster .inlinerollresult {
-  border: none;
-  background-color: transparent;
+  border: none !important;
+  background-color: transparent !important;
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
-  font-size: 1.25rem;
-  line-height: normal;
+  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .inlinerollresult.fullcrit, .sheet-rolltemplate-slugcast .inlinerollresult.fullfail, .sheet-rolltemplate-slugcast .inlinerollresult.importantroll,
 .sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit,
@@ -771,7 +753,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(157, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(158, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -800,7 +782,7 @@ html .charsheet .slugblaster .blade {
   flex-direction: column;
   row-gap: 0.5rem;
   min-width: 3rem;
-  background-image: linear-gradient(to top, hsla(317, 80%, 80%, 0.8), hsla(0, 0%, 100%, 0.8));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(112, 90, 142, 0.8));
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;
