@@ -65,14 +65,16 @@
   }
   &__boost {
     input {
-      background-image: image('boost.svg');
-      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg');
+      background-image: image('boost.svg') !important;
+      background-size: contain;
+      width: 3rem;
     }
   }
   &__kick {
     input {
-      background-image: image('kick.svg');
-      background-image: url('https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg');
+      background-image: image('kick.svg') !important;
+      background-size: contain;
+      width: 3rem;
     }
   }
 }

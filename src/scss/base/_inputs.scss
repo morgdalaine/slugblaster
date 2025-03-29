@@ -13,8 +13,7 @@ textarea {
   line-height: $input-font-size;
   color: $input-color;
 
-  transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in,
-    padding 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in, padding 0.2s ease-in;
 
   padding-inline-start: $p-sm;
   padding-block: 1px;
@@ -98,10 +97,28 @@ span[name] {
   // }
 }
 
+div:has(> label input) {
+  align-self: center;
+}
+
 label {
-  input[type='checkbox'] + span {
-    margin-inline-start: $m-sm;
-    vertical-align: middle;
+  input[type='checkbox'] {
+    appearance: none;
+    outline: none;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('https://www.svgrepo.com/show/448629/square.svg');
+
+    &:checked {
+      background-image: url('https://www.svgrepo.com/show/448343/check-square.svg');
+    }
+
+    + span {
+      margin-inline-start: $m-sm;
+      vertical-align: middle;
+    }
   }
 }
 

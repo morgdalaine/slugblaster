@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(66, 80%, 80%), hsl(257, 80%, 80%), hsl(95, 80%, 80%));
+  background-image: radial-gradient(hsl(76, 80%, 80%), hsl(219, 80%, 80%), hsl(253, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -653,6 +653,23 @@ html .charsheet .slugblaster textarea {
 html .charsheet .slugblaster span[name] {
   white-space: pre-wrap;
 }
+html .charsheet .slugblaster div:has(> label input) {
+  align-self: center;
+}
+html .charsheet .slugblaster label input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://www.svgrepo.com/show/448629/square.svg");
+}
+html .charsheet .slugblaster label input[type=checkbox]:checked {
+  background-image: url("https://www.svgrepo.com/show/448343/check-square.svg");
+}
 html .charsheet .slugblaster label input[type=checkbox] + span {
   -webkit-margin-start: 0.25rem;
           margin-inline-start: 0.25rem;
@@ -753,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(158, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(177, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -1175,7 +1192,6 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 }
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
-  padding: 0.5rem;
   background-color: white;
 }
 html .charsheet .slugblaster .repeating__delete {
@@ -1274,12 +1290,14 @@ html .charsheet .slugblaster .character .attitude__boost input:focus, html .char
   outline: transparent;
 }
 html .charsheet .slugblaster .character .attitude__boost input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .character .attitude__kick input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .character .components {
   background-color: white;
@@ -1445,6 +1463,12 @@ html .charsheet .slugblaster .character .mods__edit .mods__turbo {
   flex-wrap: wrap;
   gap: 0.5rem 0.5rem;
   justify-content: space-between;
+}
+html .charsheet .slugblaster .character .mods__view .mods__turbo {
+  font-weight: 700;
+}
+html .charsheet .slugblaster .character .mods__view .mods__turbo input[name*=turbo][value="0"] + div {
+  display: none;
 }
 html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
@@ -1826,12 +1850,14 @@ html .charsheet .slugblaster .character .turbo__boost input:focus, html .charshe
   outline: transparent;
 }
 html .charsheet .slugblaster .character .turbo__boost input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .character .turbo__kick input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .character .notes {
   background-color: white;
@@ -2021,12 +2047,14 @@ html .charsheet .slugblaster .crew .hype__boost input:focus, html .charsheet .sl
   outline: transparent;
 }
 html .charsheet .slugblaster .crew .hype__boost input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/boost.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .crew .hype__kick input {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg");
-  background-image: url("https://game-icons.net/icons/ffffff/000000/1x1/sbed/electric.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg") !important;
+  background-size: contain;
+  width: 3rem;
 }
 html .charsheet .slugblaster .crew .style {
   background-color: white;

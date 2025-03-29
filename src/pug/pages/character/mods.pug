@@ -9,6 +9,11 @@
             label.mods__check
               +field(field).checkbox--scribble
               span(data-i18n='mod_' + field.name)= field.label
+      +block('view')
+        .mods__turbo
+          each field in fields
+            +hidden(field.name)
+            div(data-i18n='mod_' + field.name)= field.label
 
 +blob({ name: 'mods' })
   +block('content')
@@ -26,16 +31,18 @@
             .mods__field(class=`${field.name} ${divClass}`)
               unless field.type === "checkbox"
                 +field(field)
+                label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
               else
-                +field(field).checkbox--scribble
-              label(for=field.name, class=labelClass, data-i18n=field.name)= field.label
+                label(for=field.name)
+                  +field(field)
+                  span(class=labelClass, data-i18n=field.name)= field.label
 
       +block('view')
         +bubble({ name: 'mod', broadcast })
           +block('header')
             .mods__view
               label.mods__check
-                +field(check).checkbox--scribble
+                +field(check)
                 +span(name).mod__name
             +block('content')
               +span(cost)

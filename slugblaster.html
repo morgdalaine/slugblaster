@@ -257,8 +257,9 @@
                         <div class="row gear__edit">
                           <input name="attr_gear_autogen" type="hidden"/>
                           <div class="gear__field gear_check col-1">
-                            <input class="checkbox--scribble" id="gear_check" name="attr_gear_check" type="checkbox" value="on"/>
-                            <label class="visually-hidden" data-i18n="gear_check" for="gear_check">Select Gear</label>
+                            <label for="gear_check">
+                              <input id="gear_check" name="attr_gear_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="gear_check">Select Gear</span>
+                            </label>
                           </div>
                           <div class="gear__field gear_name col-11">
                             <input class="gear__gear_name gear__input--text" data-i18n-placeholder="placeholder_gear_name" id="gear_name" name="attr_gear_name" placeholder="grappling hook" type="text"/>
@@ -664,6 +665,12 @@
                     </div>
                   </div>
                   <div class="editor__view mods__view">
+                    <div class="mods__turbo">
+                      <input name="attr_turbo_boost" type="hidden"/>
+                      <div data-i18n="mod_turbo_boost">Add +1 boost</div>
+                      <input name="attr_turbo_kick" type="hidden"/>
+                      <div data-i18n="mod_turbo_kick">Add +1 kick</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -687,8 +694,9 @@
                         <div class="row mods__edit">
                           <input name="attr_mod_autogen" type="hidden"/>
                           <div class="mods__field mod_check col-1">
-                            <input class="checkbox--scribble" id="mod_check" name="attr_mod_check" type="checkbox" value="on"/>
-                            <label class="visually-hidden" for="mod_check" data-i18n="mod_check">Select mod</label>
+                            <label for="mod_check">
+                              <input id="mod_check" name="attr_mod_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="mod_check">Select mod</span>
+                            </label>
                           </div>
                           <div class="mods__field mod_name col-11">
                             <input class="mods__mod_name mods__input--text" data-i18n-placeholder="placeholder_mod_name" id="mod_name" name="attr_mod_name" placeholder="Slip Rattle" type="text"/>
@@ -710,7 +718,7 @@
                           <div class="bubble__header">
                             <div class="mods__view">
                               <label class="mods__check">
-                                <input class="checkbox--scribble" id="mod_check" name="attr_mod_check" type="checkbox" value="on"/><span class="mod__name" name="attr_mod_name"></span>
+                                <input id="mod_check" name="attr_mod_check" type="checkbox" value="on"/><span class="mod__name" name="attr_mod_name"></span>
                               </label>
                             </div>
                             <div class="bubble__controls">
