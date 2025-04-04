@@ -15,16 +15,18 @@
             .traits__field(class=`${field.name} ${divClass}`)
               unless field.type === "checkbox"
                 +field(field)
+                label(class=labelClass, data-i18n=field.name, for=field.name)= field.label
               else
-                +field(field).checkbox--scribble
-              label(class=labelClass, data-i18n=field.name, for=field.name)= field.label
+                label(for=field.name)
+                  +field(field)
+                  span(class=labelClass, data-i18n=field.name)= field.label
 
       +block('view')
         .traits__view
           +bubble({ name: 'trait', broadcast })
             +block('header')
               label.traits__check
-                +field(check).checkbox--scribble
+                +field(check)
                 +span(name).trait__name
             +block('content')
               +span(desc)
