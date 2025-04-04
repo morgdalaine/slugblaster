@@ -37,12 +37,72 @@
       ],
     },
     fame: {
-      fields: [
-        { name: 'hype_boost_1', label: 'Add +1 boost', type: 'checkbox', blockName: 'fame' },
-        { name: 'hype_kick_1', label: 'Add +1 kick', type: 'checkbox', blockName: 'fame' },
-        { name: 'hype_boost_2', label: 'Add +1 boost', type: 'checkbox', blockName: 'fame' },
-        { name: 'hype_kick_2', label: 'Add +1 kick', type: 'checkbox', blockName: 'fame' },
-      ],
-
+      ranks: {
+        nobodies: {
+          label: { name: 'nobodies', label: 'Nobodies', type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: 'masks', label: 'Masks (2 style)', type: 'checkbox', blockName: 'fame' },
+            { name: 'advanced_portal_tech', label: 'Advanced Portal Tech (2 style)', type: 'checkbox', blockName: 'fame' },
+          ],
+        },
+        up_and_comers: {
+          label: { name: "up_and_comers", label: "Up & Comers (5 style)", type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: "hazwear", label: "Hazwear (2 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "sticker_spotted", label: "Sticker Spotted (4 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "protective_fans", label: "Protective Fans (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "blurb", label: "Blurb (5 style)", type: 'checkbox', blockName: 'fame' },
+          ]
+        },
+        well_established: {
+          label: { name: "well_established", label: "Well-Established (7 style)", type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: "logic_binders", label: "Logic Binders (3 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "small_press_merch", label: "Small-Press Merch (4 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "improved_hangout", label: "Improved Hangout (4 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "diehard_fans", label: "Diehard Fans (5 style)", type: 'checkbox', blockName: 'fame' },
+          ]
+        },
+        major_players: {
+          label: { name: "major_players", label: "Major Players (9 style)", type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: "name_on_a_shoe", label: "Name on a Shoe (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "eponymous", label: "Eponymous (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "article", label: "Article (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "tastemaker_fans", label: "Tastemaker Fans (5 style)", type: 'checkbox', blockName: 'fame' },
+          ]
+        },
+        rising_stars: {
+          label: { name: "rising_stars", label: "Rising Stars (9 style)", type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: "quantum_hangout", label: "Quantum Hangout (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "image_rights", label: "Image Rights (5 style)", type: 'checkbox', blockName: 'fame' },
+            { name: "screaming_fans", label: "Screaming Fans (5 style) ", type: 'checkbox', blockName: 'fame' },
+            { name: "cover_story", label: "Cover Story (5 style)", type: 'checkbox', blockName: 'fame' },
+          ]
+        },
+        legends: {
+          label: { name: "legends", label: "Legends (11 style)", type: 'checkbox', blockName: 'fame' },
+          perks: [
+            { name: "you_did_it", label: "You did it", type: 'checkbox', blockName: 'fame' },
+          ]
+        },
+      },
+      hype: [
+        {
+          name: "hype_boost",
+          label: "Extra Boost",
+          type: "select",
+          blockname: "fame",
+          options:  Array.from(Array(3).keys(), (i) => ({ name: i, text: `+${i}`}))
+        },
+        {
+          name: "hype_kick",
+          label: "Extra Kick",
+          type: "select",
+          blockname: "fame",
+          options:  Array.from(Array(3).keys(), (i) => ({ name: i, text: `+${i}`}))
+        }
+      ]
     }
   }

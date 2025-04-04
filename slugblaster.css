@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(212, 80%, 80%), hsl(217, 80%, 80%), hsl(66, 80%, 80%));
+  background-image: radial-gradient(hsl(140, 80%, 80%), hsl(96, 80%, 80%), hsl(63, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(269, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(336, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -842,7 +842,6 @@ html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-
   position: absolute;
   top: 0.5rem;
   left: 45%;
-  transform: rotate(90deg) translateY(-50%);
   transform-origin: left top;
   white-space: nowrap;
 }
@@ -1202,7 +1201,7 @@ html .charsheet .slugblaster .repeating__delete {
 }
 html .charsheet .slugblaster .character {
   position: relative;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(2rem, auto);
   gap: 0.5rem 0.5rem;
 }
@@ -1224,6 +1223,7 @@ html .charsheet .slugblaster .character__col {
 html .charsheet .slugblaster .character__blades {
   display: flex;
   gap: 0.5rem;
+  flex-direction: column;
 }
 html .charsheet .slugblaster .character .attitude {
   color: #fff;
@@ -1930,7 +1930,6 @@ html .charsheet .slugblaster .character .tracks .track__letter-exists:not([value
 }
 html .charsheet .slugblaster .crew {
   position: relative;
-  grid-template-columns: 1fr auto;
   grid-auto-rows: minmax(2rem, auto);
   gap: 0.5rem 0.5rem;
 }
@@ -1952,6 +1951,7 @@ html .charsheet .slugblaster .crew__col {
 html .charsheet .slugblaster .crew__blades {
   display: flex;
   gap: 0.5rem;
+  flex-direction: column;
 }
 html .charsheet .slugblaster .crew input[name*=load_factions]:not([value="0"]) + .crew--factions {
   display: none;
@@ -1977,14 +1977,37 @@ html .charsheet .slugblaster .crew .faction .faction__relationship {
 html .charsheet .slugblaster .crew .fame {
   background-color: white;
 }
-html .charsheet .slugblaster .crew .fame__edit, html .charsheet .slugblaster .crew .fame__view {
+html .charsheet .slugblaster .crew .fame__edit .fame__ranks, html .charsheet .slugblaster .crew .fame__view .fame__ranks {
+  display: grid;
   gap: 0.5rem 0.5rem;
 }
-html .charsheet .slugblaster .crew .fame__edit .fame__hype {
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .crew .fame__edit .fame__ranks, html .charsheet .slugblaster .crew .fame__view .fame__ranks {
+    grid-template-columns: repeat(2, minmax(25%, 1fr));
+  }
+}
+html .charsheet .slugblaster .crew .fame__view input:not([value]) + span, html .charsheet .slugblaster .crew .fame__view input[value="0"] + span {
+  display: none;
+}
+html .charsheet .slugblaster .crew .fame__hypes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem 0.5rem;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(25%, 1fr));
+}
+html .charsheet .slugblaster .crew .fame__rank {
+  align-self: flex-start;
+}
+html .charsheet .slugblaster .crew .fame__rank--name {
+  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-size: 1.25rem;
+}
+html .charsheet .slugblaster .crew .fame__perk {
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+html .charsheet .slugblaster .crew .fame__perk--description {
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
 }
 html .charsheet .slugblaster .crew .fractures {
   background-color: white;
@@ -2016,15 +2039,24 @@ html .charsheet .slugblaster .crew .hype {
   color: #fff;
   background-color: #008395;
 }
+html .charsheet .slugblaster .crew .hype__header {
+  border-color: transparent;
+}
 html .charsheet .slugblaster .crew .hype__clickies {
   display: flex;
   gap: 0 0.5rem;
   margin-top: 1rem;
 }
-html .charsheet .slugblaster .crew .hype input[name=attr_hype_boost][value=on] ~ * .hype__boost--3 {
+html .charsheet .slugblaster .crew .hype input[name=attr_hype_boost][value="1"] ~ * .hype__boost--3 {
   display: grid;
 }
-html .charsheet .slugblaster .crew .hype input[name=attr_hype_kick][value=on] ~ * .hype__kick--3 {
+html .charsheet .slugblaster .crew .hype input[name=attr_hype_boost][value="2"] ~ * .hype__boost--3, html .charsheet .slugblaster .crew .hype input[name=attr_hype_boost][value="2"] ~ * .hype__boost--4 {
+  display: grid;
+}
+html .charsheet .slugblaster .crew .hype input[name=attr_hype_kick][value="1"] ~ * .hype__kick--2 {
+  display: grid;
+}
+html .charsheet .slugblaster .crew .hype input[name=attr_hype_kick][value="2"] ~ * .hype__kick--2, html .charsheet .slugblaster .crew .hype input[name=attr_hype_kick][value="2"] ~ * .hype__kick--3 {
   display: grid;
 }
 html .charsheet .slugblaster .crew .hype__boost, html .charsheet .slugblaster .crew .hype__kick {
@@ -2032,7 +2064,7 @@ html .charsheet .slugblaster .crew .hype__boost, html .charsheet .slugblaster .c
   width: 3rem;
   aspect-ratio: 1;
 }
-html .charsheet .slugblaster .crew .hype__boost--3, html .charsheet .slugblaster .crew .hype__kick--3 {
+html .charsheet .slugblaster .crew .hype__boost--3, html .charsheet .slugblaster .crew .hype__boost--4, html .charsheet .slugblaster .crew .hype__kick--3, html .charsheet .slugblaster .crew .hype__kick--4 {
   display: none;
 }
 html .charsheet .slugblaster .crew .hype__boost input, html .charsheet .slugblaster .crew .hype__kick input {
@@ -2056,6 +2088,9 @@ html .charsheet .slugblaster .crew .hype__kick input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/kick.svg") !important;
   background-size: contain;
   width: 3rem;
+}
+html .charsheet .slugblaster .crew .hype__kick--2 {
+  display: none;
 }
 html .charsheet .slugblaster .crew .style {
   background-color: white;

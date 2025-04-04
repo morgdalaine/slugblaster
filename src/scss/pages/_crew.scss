@@ -1,7 +1,7 @@
 .crew {
   $this: '.crew';
   position: relative;
-  grid-template-columns: 1fr auto;
+  // grid-template-columns: 1fr auto;
   grid-auto-rows: minmax(2rem, auto);
   gap: $grid-gutter;
 
@@ -27,6 +27,7 @@
   &__blades {
     display: flex;
     gap: $grid-gutter-row;
+    flex-direction: column;
   }
 
   input[name*='load_factions'] {

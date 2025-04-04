@@ -58,7 +58,7 @@
           position: absolute;
           top: $m-md;
           left: 45%;
-          transform: rotate(90deg) translateY(-50%);
+          // transform: rotate(90deg) translateY(-50%);
           transform-origin: left top;
           white-space: nowrap;
           &::before {

@@ -2,21 +2,27 @@
 +panel({ name: 'gear', title: 'Gear' })
   +block('content')
     +editorblock('gear')
-      - const { board, raygun } = gear;
+      - const { phone, board, raygun } = gear;
       +block('edit')
         .gear__item
-          label.gear__label(data-i18n=board.name)= board.label
-          +field(board)
+          label.gear__label(data-i18n=phone.name)= phone.label
+          +field(phone)
         .gear__item
           label.gear__label(data-i18n=raygun.name)= raygun.label
           +field(raygun)
+        .gear__item
+          label.gear__label(data-i18n=board.name)= board.label
+          +field(board)
       +block('view')
         .gear__item
-          +span(board)
-          label.gear__label(data-i18n=board.name)= board.label
+          +span(phone)
+          label.gear__label(data-i18n=phone.name)= phone.label
         .gear__item
           +span(raygun)
           label.gear__label(data-i18n=raygun.name)= raygun.label
+        .gear__item
+          +span(board)
+          label.gear__label(data-i18n=board.name)= board.label
 
 +blob({ name: 'gear'})
   +block('content')

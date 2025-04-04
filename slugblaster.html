@@ -219,20 +219,27 @@
                 <div class="editor">
                   <div class="editor__edit gear__edit">
                     <div class="gear__item">
-                      <label class="gear__label" data-i18n="your_board">Your Board</label>
-                      <input class="gear__your_board gear__input--text" data-i18n-placeholder="placeholder_your_board" id="your_board" name="attr_your_board" placeholder="street deck with hologram griptape" type="text"/>
+                      <label class="gear__label" data-i18n="your_phone">Your Phone</label>
+                      <input class="gear__your_phone gear__input--text" data-i18n-placeholder="placeholder_your_phone" id="your_phone" name="attr_your_phone" placeholder="touch-screen, stylus, keypad, scrollwheel, etc." type="text"/>
                     </div>
                     <div class="gear__item">
                       <label class="gear__label" data-i18n="your_raygun">Your Raygun</label>
                       <input class="gear__your_raygun gear__input--text" data-i18n-placeholder="placeholder_your_raygun" id="your_raygun" name="attr_your_raygun" placeholder="circuit-bent photon pistol" type="text"/>
                     </div>
+                    <div class="gear__item">
+                      <label class="gear__label" data-i18n="your_board">Your Board</label>
+                      <input class="gear__your_board gear__input--text" data-i18n-placeholder="placeholder_your_board" id="your_board" name="attr_your_board" placeholder="street deck with hologram griptape" type="text"/>
+                    </div>
                   </div>
                   <div class="editor__view gear__view">
-                    <div class="gear__item"><span name="attr_your_board"></span>
-                      <label class="gear__label" data-i18n="your_board">Your Board</label>
+                    <div class="gear__item"><span name="attr_your_phone"></span>
+                      <label class="gear__label" data-i18n="your_phone">Your Phone</label>
                     </div>
                     <div class="gear__item"><span name="attr_your_raygun"></span>
                       <label class="gear__label" data-i18n="your_raygun">Your Raygun</label>
+                    </div>
+                    <div class="gear__item"><span name="attr_your_board"></span>
+                      <label class="gear__label" data-i18n="your_board">Your Board</label>
                     </div>
                   </div>
                 </div>
@@ -1803,6 +1810,9 @@
                   <label class="hype__boost hype__boost--3">
                     <input id="hype_boost_3" name="attr_hype_boost_3" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_boost_3">Hype Boost 3</span>
                   </label>
+                  <label class="hype__boost hype__boost--4">
+                    <input id="hype_boost_4" name="attr_hype_boost_4" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_boost_4">Hype Boost 4</span>
+                  </label>
                   <label class="hype__kick hype__kick--1">
                     <input id="hype_kick_1" name="attr_hype_kick_1" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="hype_kick_1">Hype Kick 1</span>
                   </label>
@@ -1887,22 +1897,230 @@
               <div class="panel__content fame__content">
                 <div class="editor">
                   <div class="editor__edit fame__edit">
-                    <div class="fame__hype">
-                      <label class="fame__check">
-                        <input class="checkbox--scribble" id="hype_boost_1" name="attr_hype_boost_1" type="checkbox" value="on"/><span data-i18n="fame_hype_boost_1">Add +1 boost</span>
-                      </label>
-                      <label class="fame__check">
-                        <input class="checkbox--scribble" id="hype_kick_1" name="attr_hype_kick_1" type="checkbox" value="on"/><span data-i18n="fame_hype_kick_1">Add +1 kick</span>
-                      </label>
-                      <label class="fame__check">
-                        <input class="checkbox--scribble" id="hype_boost_2" name="attr_hype_boost_2" type="checkbox" value="on"/><span data-i18n="fame_hype_boost_2">Add +1 boost</span>
-                      </label>
-                      <label class="fame__check">
-                        <input class="checkbox--scribble" id="hype_kick_2" name="attr_hype_kick_2" type="checkbox" value="on"/><span data-i18n="fame_hype_kick_2">Add +1 kick</span>
-                      </label>
+                    <div class="fame__hypes">
+                      <div class="fame__hype">
+                        <select class="undefined__hype_boost undefined__input--select" name="attr_hype_boost">
+                          <option data-i18n="0" value="0">+0</option>
+                          <option data-i18n="1" value="1">+1</option>
+                          <option data-i18n="2" value="2">+2</option>
+                        </select>
+                        <label data-i18n="hype_boost" for="hype_boost">Extra Boost</label>
+                      </div>
+                      <div class="fame__hype">
+                        <select class="undefined__hype_kick undefined__input--select" name="attr_hype_kick">
+                          <option data-i18n="0" value="0">+0</option>
+                          <option data-i18n="1" value="1">+1</option>
+                          <option data-i18n="2" value="2">+2</option>
+                        </select>
+                        <label data-i18n="hype_kick" for="hype_kick">Extra Kick</label>
+                      </div>
+                    </div>
+                    <div class="fame__ranks">
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="nobodies">
+                          <input id="nobodies" name="attr_nobodies" type="checkbox" value="on"/><span data-i18n="nobodies">Nobodies</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="masks">
+                            <input id="masks" name="attr_masks" type="checkbox" value="on"/><span data-i18n="masks">Masks (2 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="advanced_portal_tech">
+                            <input id="advanced_portal_tech" name="attr_advanced_portal_tech" type="checkbox" value="on"/><span data-i18n="advanced_portal_tech">Advanced Portal Tech (2 style)</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="up_and_comers">
+                          <input id="up_and_comers" name="attr_up_and_comers" type="checkbox" value="on"/><span data-i18n="up_and_comers">Up &amp; Comers (5 style)</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="hazwear">
+                            <input id="hazwear" name="attr_hazwear" type="checkbox" value="on"/><span data-i18n="hazwear">Hazwear (2 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="sticker_spotted">
+                            <input id="sticker_spotted" name="attr_sticker_spotted" type="checkbox" value="on"/><span data-i18n="sticker_spotted">Sticker Spotted (4 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="protective_fans">
+                            <input id="protective_fans" name="attr_protective_fans" type="checkbox" value="on"/><span data-i18n="protective_fans">Protective Fans (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="blurb">
+                            <input id="blurb" name="attr_blurb" type="checkbox" value="on"/><span data-i18n="blurb">Blurb (5 style)</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="well_established">
+                          <input id="well_established" name="attr_well_established" type="checkbox" value="on"/><span data-i18n="well_established">Well-Established (7 style)</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="logic_binders">
+                            <input id="logic_binders" name="attr_logic_binders" type="checkbox" value="on"/><span data-i18n="logic_binders">Logic Binders (3 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="small_press_merch">
+                            <input id="small_press_merch" name="attr_small_press_merch" type="checkbox" value="on"/><span data-i18n="small_press_merch">Small-Press Merch (4 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="improved_hangout">
+                            <input id="improved_hangout" name="attr_improved_hangout" type="checkbox" value="on"/><span data-i18n="improved_hangout">Improved Hangout (4 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="diehard_fans">
+                            <input id="diehard_fans" name="attr_diehard_fans" type="checkbox" value="on"/><span data-i18n="diehard_fans">Diehard Fans (5 style)</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="major_players">
+                          <input id="major_players" name="attr_major_players" type="checkbox" value="on"/><span data-i18n="major_players">Major Players (9 style)</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="name_on_a_shoe">
+                            <input id="name_on_a_shoe" name="attr_name_on_a_shoe" type="checkbox" value="on"/><span data-i18n="name_on_a_shoe">Name on a Shoe (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="eponymous">
+                            <input id="eponymous" name="attr_eponymous" type="checkbox" value="on"/><span data-i18n="eponymous">Eponymous (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="article">
+                            <input id="article" name="attr_article" type="checkbox" value="on"/><span data-i18n="article">Article (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="tastemaker_fans">
+                            <input id="tastemaker_fans" name="attr_tastemaker_fans" type="checkbox" value="on"/><span data-i18n="tastemaker_fans">Tastemaker Fans (5 style)</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="rising_stars">
+                          <input id="rising_stars" name="attr_rising_stars" type="checkbox" value="on"/><span data-i18n="rising_stars">Rising Stars (9 style)</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="quantum_hangout">
+                            <input id="quantum_hangout" name="attr_quantum_hangout" type="checkbox" value="on"/><span data-i18n="quantum_hangout">Quantum Hangout (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="image_rights">
+                            <input id="image_rights" name="attr_image_rights" type="checkbox" value="on"/><span data-i18n="image_rights">Image Rights (5 style)</span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="screaming_fans">
+                            <input id="screaming_fans" name="attr_screaming_fans" type="checkbox" value="on"/><span data-i18n="screaming_fans">Screaming Fans (5 style) </span>
+                          </label>
+                        </div>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="cover_story">
+                            <input id="cover_story" name="attr_cover_story" type="checkbox" value="on"/><span data-i18n="cover_story">Cover Story (5 style)</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <label class="fame__rank--name" for="legends">
+                          <input id="legends" name="attr_legends" type="checkbox" value="on"/><span data-i18n="legends">Legends (11 style)</span>
+                        </label>
+                        <div class="fame__perk">
+                          <label class="fame__perk--name" for="you_did_it">
+                            <input id="you_did_it" name="attr_you_did_it" type="checkbox" value="on"/><span data-i18n="you_did_it">You did it</span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="editor__view fame__view">
+                    <div class="fame__ranks">
+                      <div class="fame__rank">
+                        <input name="attr_nobodies" type="hidden"/><span class="fame__rank--name" data-i18n="nobodies">Nobodies</span>
+                        <div class="fame__perk">
+                          <input name="attr_masks" type="hidden"/><span class="fame__perk--name" data-i18n="masks">Masks (2 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_advanced_portal_tech" type="hidden"/><span class="fame__perk--name" data-i18n="advanced_portal_tech">Advanced Portal Tech (2 style)</span>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <input name="attr_up_and_comers" type="hidden"/><span class="fame__rank--name" data-i18n="up_and_comers">Up &amp; Comers (5 style)</span>
+                        <div class="fame__perk">
+                          <input name="attr_hazwear" type="hidden"/><span class="fame__perk--name" data-i18n="hazwear">Hazwear (2 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_sticker_spotted" type="hidden"/><span class="fame__perk--name" data-i18n="sticker_spotted">Sticker Spotted (4 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_protective_fans" type="hidden"/><span class="fame__perk--name" data-i18n="protective_fans">Protective Fans (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_blurb" type="hidden"/><span class="fame__perk--name" data-i18n="blurb">Blurb (5 style)</span>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <input name="attr_well_established" type="hidden"/><span class="fame__rank--name" data-i18n="well_established">Well-Established (7 style)</span>
+                        <div class="fame__perk">
+                          <input name="attr_logic_binders" type="hidden"/><span class="fame__perk--name" data-i18n="logic_binders">Logic Binders (3 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_small_press_merch" type="hidden"/><span class="fame__perk--name" data-i18n="small_press_merch">Small-Press Merch (4 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_improved_hangout" type="hidden"/><span class="fame__perk--name" data-i18n="improved_hangout">Improved Hangout (4 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_diehard_fans" type="hidden"/><span class="fame__perk--name" data-i18n="diehard_fans">Diehard Fans (5 style)</span>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <input name="attr_major_players" type="hidden"/><span class="fame__rank--name" data-i18n="major_players">Major Players (9 style)</span>
+                        <div class="fame__perk">
+                          <input name="attr_name_on_a_shoe" type="hidden"/><span class="fame__perk--name" data-i18n="name_on_a_shoe">Name on a Shoe (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_eponymous" type="hidden"/><span class="fame__perk--name" data-i18n="eponymous">Eponymous (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_article" type="hidden"/><span class="fame__perk--name" data-i18n="article">Article (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_tastemaker_fans" type="hidden"/><span class="fame__perk--name" data-i18n="tastemaker_fans">Tastemaker Fans (5 style)</span>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <input name="attr_rising_stars" type="hidden"/><span class="fame__rank--name" data-i18n="rising_stars">Rising Stars (9 style)</span>
+                        <div class="fame__perk">
+                          <input name="attr_quantum_hangout" type="hidden"/><span class="fame__perk--name" data-i18n="quantum_hangout">Quantum Hangout (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_image_rights" type="hidden"/><span class="fame__perk--name" data-i18n="image_rights">Image Rights (5 style)</span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_screaming_fans" type="hidden"/><span class="fame__perk--name" data-i18n="screaming_fans">Screaming Fans (5 style) </span>
+                        </div>
+                        <div class="fame__perk">
+                          <input name="attr_cover_story" type="hidden"/><span class="fame__perk--name" data-i18n="cover_story">Cover Story (5 style)</span>
+                        </div>
+                      </div>
+                      <div class="fame__rank">
+                        <input name="attr_legends" type="hidden"/><span class="fame__rank--name" data-i18n="legends">Legends (11 style)</span>
+                        <div class="fame__perk">
+                          <input name="attr_you_did_it" type="hidden"/><span class="fame__perk--name" data-i18n="you_did_it">You did it</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2452,14 +2670,6 @@
             </section>
           </div>
         </aside>
-        <aside class="blade multiverse">
-          <input class="blade-toggle__controller" name="attr_multiverse_blade" type="hidden" value="0"/>
-          <button class="blade-toggle" name="act_multiverse-blade" type="action">
-            <h2 class="blade__title" data-i18n="multiverse">The Multiverse</h2>
-          </button>
-          <div class="blade__wrapper">
-          </div>
-        </aside>
       </aside>
     </main>
     <main class="options">
@@ -2514,7 +2724,7 @@
     </main>
     <footer class="footer">
       <input name="attr_sheet_version" type="hidden" value="0.0.0-alpha"/><span class="visually-hidden" data-i18n="sheet_version">Version</span><span name="attr_sheet_version"></span>
-      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="your_phone">your phone</span><span class="translation" data-i18n="your_phone_cost"></span><span class="translation" data-i18n="your_phone_description"></span><span class="translation" data-i18n="grappling_hook">grappling hook</span><span class="translation" data-i18n="grappling_hook_cost"></span><span class="translation" data-i18n="grappling_hook_description"></span><span class="translation" data-i18n="spacetime_ampimeter">spacetime ampimeter</span><span class="translation" data-i18n="spacetime_ampimeter_cost"></span><span class="translation" data-i18n="spacetime_ampimeter_description"></span><span class="translation" data-i18n="hacking_tools">hacking tools</span><span class="translation" data-i18n="hacking_tools_cost"></span><span class="translation" data-i18n="hacking_tools_description"></span><span class="translation" data-i18n="multiversal_maps">multiversal maps</span><span class="translation" data-i18n="multiversal_maps_cost"></span><span class="translation" data-i18n="multiversal_maps_description"></span><span class="translation" data-i18n="repair_tools">repair tools</span><span class="translation" data-i18n="repair_tools_cost"></span><span class="translation" data-i18n="repair_tools_description"></span><span class="translation" data-i18n="small_drone">a small drone</span><span class="translation" data-i18n="small_drone_cost"></span><span class="translation" data-i18n="small_drone_description"></span><span class="translation" data-i18n="pro_camera_gear">pro camera gear</span><span class="translation" data-i18n="pro_camera_gear_cost"></span><span class="translation" data-i18n="pro_camera_gear_description"></span><span class="translation" data-i18n="peel_back_kit">peel back kit</span><span class="translation" data-i18n="peel_back_kit_cost"></span><span class="translation" data-i18n="peel_back_kit_description"></span><span class="translation" data-i18n="hazwear">hazwear</span><span class="translation" data-i18n="hazwear_cost"></span><span class="translation" data-i18n="hazwear_description"></span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="backup_portaling_device_cost"></span><span class="translation" data-i18n="backup_portaling_device_description"></span><span class="translation" data-i18n="logic_binder">logic binder</span><span class="translation" data-i18n="logic_binder_cost"></span><span class="translation" data-i18n="logic_binder_description"></span><span class="translation" data-i18n="advanced_portal_tech">advanced portal tech</span><span class="translation" data-i18n="advanced_portal_tech_cost"></span><span class="translation" data-i18n="advanced_portal_tech_description"></span><span class="translation" data-i18n="hardecker_sludge_flares">Hardecker sludge flares</span><span class="translation" data-i18n="hardecker_sludge_flares_cost"></span><span class="translation" data-i18n="hardecker_sludge_flares_description"></span><span class="translation" data-i18n="hardlight_marker">hardlight marker</span><span class="translation" data-i18n="hardlight_marker_cost"></span><span class="translation" data-i18n="hardlight_marker_description"></span><span class="translation" data-i18n="maser_grenades">maser grenades</span><span class="translation" data-i18n="maser_grenades_cost"></span><span class="translation" data-i18n="maser_grenades_description"></span><span class="translation" data-i18n="smartcord">smartcord</span><span class="translation" data-i18n="smartcord_cost"></span><span class="translation" data-i18n="smartcord_description"></span><span class="translation" data-i18n="the_fust_mix">the FUST mix</span><span class="translation" data-i18n="the_fust_mix_cost"></span><span class="translation" data-i18n="the_fust_mix_description"></span><span class="translation" data-i18n="beam_filter">beam filter</span><span class="translation" data-i18n="beam_filter_cost"></span><span class="translation" data-i18n="beam_filter_description"></span><span class="translation" data-i18n="wilkies_gravity_stickers">Wilkie’S gravity stickers</span><span class="translation" data-i18n="wilkies_gravity_stickers_cost"></span><span class="translation" data-i18n="wilkies_gravity_stickers_description"></span><span class="translation" data-i18n="panic_energy_fuel_line">PANIC energy fuel-line</span><span class="translation" data-i18n="panic_energy_fuel_line_cost"></span><span class="translation" data-i18n="panic_energy_fuel_line_description"></span><span class="translation" data-i18n="fust_stasis_stickers">FUST stasis stickers</span><span class="translation" data-i18n="fust_stasis_stickers_cost"></span><span class="translation" data-i18n="fust_stasis_stickers_description"></span><span class="translation" data-i18n="aug_band">aug band</span><span class="translation" data-i18n="aug_band_cost"></span><span class="translation" data-i18n="aug_band_description"></span><span class="translation" data-i18n="particle_bond_tights">particle bond tights</span><span class="translation" data-i18n="particle_bond_tights_cost"></span><span class="translation" data-i18n="particle_bond_tights_description"></span><span class="translation" data-i18n="3d_printed_ablatine">3D-printed ablatine</span><span class="translation" data-i18n="3d_printed_ablatine_cost"></span><span class="translation" data-i18n="3d_printed_ablatine_description"></span><span class="translation" data-i18n="knock_off_scram_cat_tee">knock-off Scram Cat tee</span><span class="translation" data-i18n="knock_off_scram_cat_tee_cost"></span><span class="translation" data-i18n="knock_off_scram_cat_tee_description"></span><span class="translation" data-i18n="miper_escape_bag">Miper escape bag</span><span class="translation" data-i18n="miper_escape_bag_cost"></span><span class="translation" data-i18n="miper_escape_bag_description"></span><span class="translation" data-i18n="awf_bracelet">awf bracelet</span><span class="translation" data-i18n="awf_bracelet_cost"></span><span class="translation" data-i18n="awf_bracelet_description"></span><span class="translation" data-i18n="duraweave_jacket">duraweave jacket</span><span class="translation" data-i18n="duraweave_jacket_cost"></span><span class="translation" data-i18n="duraweave_jacket_description"></span><span class="translation" data-i18n="link_patch_duo">link patch duo</span><span class="translation" data-i18n="link_patch_duo_cost"></span><span class="translation" data-i18n="link_patch_duo_description"></span><span class="translation" data-i18n="slam_patch">slam patch</span><span class="translation" data-i18n="slam_patch_cost"></span><span class="translation" data-i18n="slam_patch_description"></span><span class="translation" data-i18n="brb">BRB</span><span class="translation" data-i18n="brb_description">A crew of straight-laced, athletic, and super competitive laserbladers.</span><span class="translation" data-i18n="jet_collective">Jet Collective</span><span class="translation" data-i18n="jet_collective_description">A large crew of inclusive activists with an addiction to petty drama.</span><span class="translation" data-i18n="null_range">Null Range</span><span class="translation" data-i18n="null_range_description">An obnoxious, anti-authoritarian crew of older kids from Hillview.</span><span class="translation" data-i18n="lazy_bunny">Lazy Bunny</span><span class="translation" data-i18n="lazy_bunny_description">Super mainstream, super broish, super nice live-streamers having their moment.</span><span class="translation" data-i18n="the_wicks">The Wicks</span><span class="translation" data-i18n="the_wicks_description">A crew of young, rowdy, disenfranchised up-and-comers.</span><span class="translation" data-i18n="miper">Miper</span><span class="translation" data-i18n="miper_description">A sleek, idealistic big-tech company.</span><span class="translation" data-i18n="hardecker">Hardecker.</span><span class="translation" data-i18n="hardecker_description">A clueless blue-collar brand that’s just been made cool.</span><span class="translation" data-i18n="wilkies">Wilkie’s</span><span class="translation" data-i18n="wilkies_description">Candy, toys, energy drinks, x-treme sports.</span><span class="translation" data-i18n="scram_cat">Scram Cat</span><span class="translation" data-i18n="scram_cat_description">The original indie slugblasting shop, in the process of becoming a Miper subsidiary.</span><span class="translation" data-i18n="fust">FUST</span><span class="translation" data-i18n="fust_description">Last real indie sponsor, owned/operated by total a-holes.</span><span class="translation" data-i18n="dara">DARA</span><span class="translation" data-i18n="dara_description">Big, mysterious research facility. Its Rescue division act as Hillview’s portal cops.</span><span class="translation" data-i18n="the_arborists">The Arborists</span><span class="translation" data-i18n="the_arborists_description">An ancient sect of planeswalkers from Thennis Spar.</span><span class="translation" data-i18n="shimmer">Shimmer</span><span class="translation" data-i18n="shimmer_description">Transversal criminal syndicate.</span><span class="translation" data-i18n="doorways">Doorways</span><span class="translation" data-i18n="doorways_description">Concerned parent group from Hillview.</span><span class="translation" data-i18n="the_old_guard">The Old Guard</span><span class="translation" data-i18n="the_old_guard_description">Promoters, magazine editors, and retired slugblasters.</span><span class="translation" data-i18n="the_thrashers">The Thrashers</span><span class="translation" data-i18n="the_thrashers_description">The partiers, hipsters, and artists. They value authenticity, aesthetic, and attitude.</span><span class="translation" data-i18n="the_heads">The Heads</span><span class="translation" data-i18n="the_heads_description">The nerds, athletes, and aficionados. They value skill and innovation.</span><span class="translation" data-i18n="the_mavens">The Mavens</span><span class="translation" data-i18n="the_mavens_description">The activists, punks, and die-hards. They value community and standing for something.</span><span class="translation" data-i18n="the_freaks">The Freaks</span><span class="translation" data-i18n="the_freaks_description">The ravers, crusties, and oddballs. They value originality and expression.</span><span class="translation" data-i18n="the_normies">The Normies</span><span class="translation" data-i18n="the_normies_description">The mainstreamers, pre-teens, and basics. They value fun.</span>
+      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="brb">BRB</span><span class="translation" data-i18n="brb_description">A crew of straight-laced, athletic, and super competitive laserbladers.</span><span class="translation" data-i18n="jet_collective">Jet Collective</span><span class="translation" data-i18n="jet_collective_description">A large crew of inclusive activists with an addiction to petty drama.</span><span class="translation" data-i18n="null_range">Null Range</span><span class="translation" data-i18n="null_range_description">An obnoxious, anti-authoritarian crew of older kids from Hillview.</span><span class="translation" data-i18n="lazy_bunny">Lazy Bunny</span><span class="translation" data-i18n="lazy_bunny_description">Super mainstream, super broish, super nice live-streamers having their moment.</span><span class="translation" data-i18n="the_wicks">The Wicks</span><span class="translation" data-i18n="the_wicks_description">A crew of young, rowdy, disenfranchised up-and-comers.</span><span class="translation" data-i18n="miper">Miper</span><span class="translation" data-i18n="miper_description">A sleek, idealistic big-tech company.</span><span class="translation" data-i18n="hardecker">Hardecker.</span><span class="translation" data-i18n="hardecker_description">A clueless blue-collar brand that’s just been made cool.</span><span class="translation" data-i18n="wilkies">Wilkie’s</span><span class="translation" data-i18n="wilkies_description">Candy, toys, energy drinks, x-treme sports.</span><span class="translation" data-i18n="scram_cat">Scram Cat</span><span class="translation" data-i18n="scram_cat_description">The original indie slugblasting shop, in the process of becoming a Miper subsidiary.</span><span class="translation" data-i18n="fust">FUST</span><span class="translation" data-i18n="fust_description">Last real indie sponsor, owned/operated by total a-holes.</span><span class="translation" data-i18n="dara">DARA</span><span class="translation" data-i18n="dara_description">Big, mysterious research facility. Its Rescue division act as Hillview’s portal cops.</span><span class="translation" data-i18n="the_arborists">The Arborists</span><span class="translation" data-i18n="the_arborists_description">An ancient sect of planeswalkers from Thennis Spar.</span><span class="translation" data-i18n="shimmer">Shimmer</span><span class="translation" data-i18n="shimmer_description">Transversal criminal syndicate.</span><span class="translation" data-i18n="doorways">Doorways</span><span class="translation" data-i18n="doorways_description">Concerned parent group from Hillview.</span><span class="translation" data-i18n="the_old_guard">The Old Guard</span><span class="translation" data-i18n="the_old_guard_description">Promoters, magazine editors, and retired slugblasters.</span><span class="translation" data-i18n="the_thrashers">The Thrashers</span><span class="translation" data-i18n="the_thrashers_description">The partiers, hipsters, and artists. They value authenticity, aesthetic, and attitude.</span><span class="translation" data-i18n="the_heads">The Heads</span><span class="translation" data-i18n="the_heads_description">The nerds, athletes, and aficionados. They value skill and innovation.</span><span class="translation" data-i18n="the_mavens">The Mavens</span><span class="translation" data-i18n="the_mavens_description">The activists, punks, and die-hards. They value community and standing for something.</span><span class="translation" data-i18n="the_freaks">The Freaks</span><span class="translation" data-i18n="the_freaks_description">The ravers, crusties, and oddballs. They value originality and expression.</span><span class="translation" data-i18n="the_normies">The Normies</span><span class="translation" data-i18n="the_normies_description">The mainstreamers, pre-teens, and basics. They value fun.</span>
       </div>
     </footer>
   </div>

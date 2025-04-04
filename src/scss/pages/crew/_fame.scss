@@ -1,18 +1,47 @@
+@use 'sass:map';
+
 .fame {
   $this: '.fame';
   background-color: white; // hsl(random(360) 80% 80% / 80%);
 
   &__edit,
   &__view {
-    gap: $grid-gutter;
+    #{$this}__ranks {
+      display: grid;
+      gap: $grid-gutter;
+
+      @media (min-width: map.get($grid-breakpoints, 'md')) {
+        grid-template-columns: repeat(2, minmax(25%, 1fr));
+      }
+    }
   }
 
-  &__edit {
-    #{$this}__hype {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: $grid-gutter;
-      align-items: center;
+  &__view {
+    input {
+      &:not([value]) + span,
+      &[value='0'] + span {
+        display: none;
+      }
+    }
+  }
+
+  &__hypes {
+    display: grid;
+    gap: $grid-gutter;
+    grid-template-columns: repeat(2, minmax(25%, 1fr));
+  }
+
+  &__rank {
+    align-self: flex-start;
+    &--name {
+      font-family: $font-playbook;
+      font-size: $font-h5;
+    }
+  }
+  &__perk {
+    margin-inline-start: $m-lg;
+    &--description {
+      padding-inline-start: $p-lg;
     }
   }
 }

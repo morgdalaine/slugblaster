@@ -3,7 +3,7 @@
 +blob({ name: 'hype', title: 'Hype' })
   +block('content')
     - const [boosts, kicks] = hype.fields;
-    - const four = Array.from(Array(3).keys(), (i) => i + 1);
+    - const four = Array.from(Array(4).keys(), (i) => i + 1);
     - const three = Array.from(Array(3).keys(), (i) => i + 1);
 
     span(data-i18n='hype_description') Do it for the crew and boost or kick as needed.
@@ -15,6 +15,7 @@
         - const field = { ...boosts };
         - field.type = 'checkbox';
         - field.name = `${field.name}_${index}`;
+        - console.log(index)
         label.hype__boost(class=`hype__boost--${index}`)
           +field(field)
           span.visually-hidden(data-i18n=field.name)= field.label + ' ' + index
