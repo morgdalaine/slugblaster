@@ -2670,12 +2670,40 @@
     </main>
     <main class="options">
       <section class="options__main">
-        <aside style="width: 250px; float: right; text-align: start; background: #008abf; color: white; font-weight: 700; padding: 1rem; border-radius: 0px">
+        <section class="options__col">
+          <div class="option options__override-attitude">
+            <label for="attitude_override">
+              <input id="attitude_override" name="attr_attitude_override" type="checkbox" value="on"/><span data-i18n="attitude_override">Override Attitude</span>
+            </label>
+            <div class="option__dropdowns--horizontal">
+              <input class="options-hide" name="attr_attitude_override" type="hidden"/>
+              <div class="option__dropdown">
+                <select class="options__attitude_boost_set options__input--select" name="attr_attitude_boost_set">
+                  <option data-i18n="0" value="0">+0</option>
+                  <option data-i18n="1" value="1">+1</option>
+                  <option data-i18n="2" value="2">+2</option>
+                  <option data-i18n="3" value="3">+3</option>
+                  <option data-i18n="4" value="4">+4</option>
+                </select>
+                <label data-i18n="attitude_boost_set" for="attitude_boost_set">Override Boost</label>
+              </div>
+              <div class="option__dropdown">
+                <select class="options__attitude_kick_set options__input--select" name="attr_attitude_kick_set">
+                  <option data-i18n="0" value="0">+0</option>
+                  <option data-i18n="1" value="1">+1</option>
+                  <option data-i18n="2" value="2">+2</option>
+                  <option data-i18n="3" value="3">+3</option>
+                  <option data-i18n="4" value="4">+4</option>
+                </select>
+                <label data-i18n="attitude_kick_set" for="attitude_kick_set">Override Kick</label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <aside class="a-heartfelt-word">
           <p>
             You are small.<br><br>You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.<br><br>You are also big.<br><br>Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.<br><br>You are someone’s world.</p>
-        </aside>
-        <section class="options__col">
-          <div style="display: flex; gap: 0.25rem">
+          <div style="display: none; gap: 0.25rem">
             <div>
               <div style="background: #a38dc1; width: 4rem; aspect-ratio: 1" title="purple-dark"></div>
               <div style="background: #8c70b1; width: 4rem; aspect-ratio: 1" title="purple"></div>
@@ -2715,7 +2743,7 @@
               <div style="background: #292828; width: 4rem; height: 2.4rem" title="black"></div>
             </div>
           </div>
-        </section>
+        </aside>
       </section>
     </main>
     <footer class="footer">
@@ -3013,6 +3041,8 @@ const G_REPEATING_FIELDSETS = [
   'crowd-factions',
 ];
 
+const G_OPTIONS = ["attitude_override"];
+
 const G_CONSTANTS = {
   trouble_max: 8,
   progress_track_max: 12,
@@ -3160,25 +3190,6 @@ const G_FACTION_FIELDSET = [
 ];
 
 const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
-
-const attributes = {
-  '_reporder_repeating_crew-factions': ['-nmgprevgublcxcngb9c', '-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj'],
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_name': 'Null Range',
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_description':
-    'An obnoxious, anti-authoritarian crew of older kids from Hillview.',
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_autogen': '',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_name': 'The Wicks',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_description':
-    'A crew of young, rowdy, disenfranchised up-and-comers.',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_autogen': '',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_name': 'BRB',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_description': '',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_autogen': '',
-};
-
-const sections = {
-  'repeating_crew-factions': ['-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj', '-nmgprevgublcxcngb9c'],
-};
   /**
  * Checks if a repeating fieldset is empty by counting the
  * number of sections inside the fieldset.
@@ -3346,18 +3357,29 @@ const makeTrackString = (sectionId) => {
   });
 };
 
+const setAttitude = (personality = undefined, custom = false) => {
+  getAttrs(['personality', 'attitude_override', 'attitude_boost_set', 'attitude_kick_set'], (values) => {
+    const update = {};
+
+    const data = G_PLAYBOOKS[personality ?? values.personality];
+
+    // attitude
+    if (custom || values.attitude_override === 'on') {
+      update.attitude_boost = values.attitude_boost_set;
+      update.attitude_kick = values.attitude_kick_set;
+    } else {
+      const { boost, kick } = data.attitude;
+      update.attitude_boost = boost;
+      update.attitude_kick = kick;
+    }
+
+    setAttrs(update, {}, () => {});
+  });
+};
+
 const loadPersonality = (field) => {
   const update = {};
   const personality = field.trim().replace(' ', '_').toLowerCase();
-  const isValid = Object.hasOwn(G_PLAYBOOKS, personality);
-
-  console.debug(personality, isValid);
-
-  // if (!isValid) {
-  //   update.attitude_subtitle = "";
-  //   update.style_run_bonus = "";
-	// 			return;
-  // }
 
   const data = G_PLAYBOOKS[personality];
 
@@ -3368,9 +3390,6 @@ const loadPersonality = (field) => {
   });
 
   // attitude
-  const { boost, kick } = data.attitude;
-  update.attitude_boost = boost;
-  update.attitude_kick = kick;
   update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`) || '';
 
   // style & trouble
@@ -3379,7 +3398,9 @@ const loadPersonality = (field) => {
   // traits
   // importFieldset('traits', data.traits);
 
-  setAttrs(update);
+  setAttrs(update, {}, () => {
+    setAttitude(personality);
+  });
 };
 
 const loadSignature = (signature) => {
@@ -3503,9 +3524,16 @@ for (const fieldset of G_REPEATING_FIELDSETS) {
 
 // Load personality data
 on('change:personality change:personality_custom', (eventInfo) => {
-  console.debug(eventInfo);
   const personality = eventInfo.newValue;
   if (personality) loadPersonality(personality);
+});
+
+on('change:attitude_override', (eventInfo) => {
+  setAttitude(undefined, eventInfo.newValue === 'on');
+});
+
+on('change:attitude_boost_set change:attitude_kick_set', (eventInfo) => {
+  setAttitude(undefined, true);
 });
 
 // Load signature data

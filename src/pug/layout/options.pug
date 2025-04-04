@@ -2,9 +2,22 @@
 
 main.options
   section.options__main
-    aside(
-      style='width: 250px; float: right; text-align: start; background: #008abf; color: white; font-weight: 700; padding: 1rem; border-radius: 0px'
-    )
+
+    section.options__col
+      .option.options__override-attitude
+        - const { override, selects } = options.attitude
+        label(for=override.name)
+          +field(override)
+          span(data-i18n=override.name)= override.label
+        .option__dropdowns--horizontal
+          +hidden(override.name).options-hide
+          each field in selects
+            .option__dropdown
+              +field(field)
+              label(data-i18n=field.name, for=field.name)= field.label
+
+
+    aside.a-heartfelt-word
       p
         | You are small.
         <br><br>
@@ -16,70 +29,7 @@ main.options
         <br><br>
         | You are someone’s world.
 
-    section.options__col
-      //- .fonts
-        h2(style='font: 1.25rem "Permanent Marker"')
-          | Permanent Marker
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Knewave"')
-          | Knewave
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Playpen Sans"')
-          | Playpen Sans
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Gloria Hallelujah"')
-          | Gloria Hallelujah
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Silkscreen"')
-          | Silkscreen
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "DotGothic16"')
-          | DotGothic16
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Jersey 10"')
-          | Jersey10
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Tiny5"')
-          | Tiny5
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Radio Canada"')
-          | Radio Canada
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-        h2(style='font: 1.25rem "Sofia Sans Condensed"')
-          | Sofia Sans Condensed
-          br
-          | Sphinx of black quartz judge my vow
-          br
-          | 1 2 3 4 5 6
-
-      div(style='display: flex; gap: 0.25rem')
+      div(style='display: none; gap: 0.25rem')
         div
           div(style='background: #a38dc1; width: 4rem; aspect-ratio: 1', title='purple-dark')
           div(style='background: #8c70b1; width: 4rem; aspect-ratio: 1', title='purple')

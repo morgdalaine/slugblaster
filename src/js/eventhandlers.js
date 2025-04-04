@@ -41,9 +41,16 @@ for (const fieldset of G_REPEATING_FIELDSETS) {
 
 // Load personality data
 on('change:personality change:personality_custom', (eventInfo) => {
-  console.debug(eventInfo);
   const personality = eventInfo.newValue;
   if (personality) loadPersonality(personality);
+});
+
+on('change:attitude_override', (eventInfo) => {
+  setAttitude(undefined, eventInfo.newValue === 'on');
+});
+
+on('change:attitude_boost_set change:attitude_kick_set', (eventInfo) => {
+  setAttitude(undefined, true);
 });
 
 // Load signature data

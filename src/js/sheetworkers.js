@@ -72,18 +72,29 @@ const makeTrackString = (sectionId) => {
   });
 };
 
+const setAttitude = (personality = undefined, custom = false) => {
+  getAttrs(['personality', 'attitude_override', 'attitude_boost_set', 'attitude_kick_set'], (values) => {
+    const update = {};
+
+    const data = G_PLAYBOOKS[personality ?? values.personality];
+
+    // attitude
+    if (custom || values.attitude_override === 'on') {
+      update.attitude_boost = values.attitude_boost_set;
+      update.attitude_kick = values.attitude_kick_set;
+    } else {
+      const { boost, kick } = data.attitude;
+      update.attitude_boost = boost;
+      update.attitude_kick = kick;
+    }
+
+    setAttrs(update, {}, () => {});
+  });
+};
+
 const loadPersonality = (field) => {
   const update = {};
   const personality = field.trim().replace(' ', '_').toLowerCase();
-  const isValid = Object.hasOwn(G_PLAYBOOKS, personality);
-
-  console.debug(personality, isValid);
-
-  // if (!isValid) {
-  //   update.attitude_subtitle = "";
-  //   update.style_run_bonus = "";
-	// 			return;
-  // }
 
   const data = G_PLAYBOOKS[personality];
 
@@ -94,9 +105,6 @@ const loadPersonality = (field) => {
   });
 
   // attitude
-  const { boost, kick } = data.attitude;
-  update.attitude_boost = boost;
-  update.attitude_kick = kick;
   update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`) || '';
 
   // style & trouble
@@ -105,7 +113,9 @@ const loadPersonality = (field) => {
   // traits
   // importFieldset('traits', data.traits);
 
-  setAttrs(update);
+  setAttrs(update, {}, () => {
+    setAttitude(personality);
+  });
 };
 
 const loadSignature = (signature) => {

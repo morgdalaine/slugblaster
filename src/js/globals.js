@@ -54,6 +54,8 @@ const G_REPEATING_FIELDSETS = [
   'crowd-factions',
 ];
 
+const G_OPTIONS = ["attitude_override"];
+
 const G_CONSTANTS = {
   trouble_max: 8,
   progress_track_max: 12,
@@ -201,22 +203,3 @@ const G_FACTION_FIELDSET = [
 ];
 
 const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
-
-const attributes = {
-  '_reporder_repeating_crew-factions': ['-nmgprevgublcxcngb9c', '-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj'],
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_name': 'Null Range',
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_description':
-    'An obnoxious, anti-authoritarian crew of older kids from Hillview.',
-  'repeating_crew-factions_-nmgl2wvnispwk-lxqtq_faction_autogen': '',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_name': 'The Wicks',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_description':
-    'A crew of young, rowdy, disenfranchised up-and-comers.',
-  'repeating_crew-factions_-nmglyljz7cdnce90suj_faction_autogen': '',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_name': 'BRB',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_description': '',
-  'repeating_crew-factions_-nmgprevgublcxcngb9c_faction_autogen': '',
-};
-
-const sections = {
-  'repeating_crew-factions': ['-nmgl2wvnispwk-lxqtq', '-nmglyljz7cdnce90suj', '-nmgprevgublcxcngb9c'],
-};
