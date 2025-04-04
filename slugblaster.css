@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(140, 80%, 80%), hsl(96, 80%, 80%), hsl(63, 80%, 80%));
+  background-image: radial-gradient(hsl(98, 80%, 80%), hsl(106, 80%, 80%), hsl(317, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(336, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(156, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -1232,10 +1232,9 @@ html .charsheet .slugblaster .character .attitude {
 html .charsheet .slugblaster .character .attitude__header {
   border-color: transparent;
 }
-html .charsheet .slugblaster .character .attitude__clickies {
-  display: flex;
-  gap: 0 0.5rem;
-  margin-top: 1rem;
+html .charsheet .slugblaster .character .attitude__content textarea.attitude__attitude_subtitle {
+  color: #fff;
+  background-color: transparent;
 }
 html .charsheet .slugblaster .character .attitude input[name=attr_attitude_boost][value="1"] ~ * .attitude__boost--1 {
   display: grid;
@@ -1272,6 +1271,11 @@ html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick]
 html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--3,
 html .charsheet .slugblaster .character .attitude input[name=attr_attitude_kick][value="4"] ~ * .attitude__kick--4 {
   display: grid;
+}
+html .charsheet .slugblaster .character .attitude__clickies {
+  display: flex;
+  gap: 0 0.5rem;
+  margin-top: 1rem;
 }
 html .charsheet .slugblaster .character .attitude__boost, html .charsheet .slugblaster .character .attitude__kick {
   display: none;

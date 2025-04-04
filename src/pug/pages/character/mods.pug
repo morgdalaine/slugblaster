@@ -9,7 +9,7 @@
             label.mods__check
               +field(field).checkbox--scribble
               span(data-i18n='mod_' + field.name)= field.label
-      +block('view')
+      //- +block('view')
         .mods__turbo
           each field in fields
             +hidden(field.name)

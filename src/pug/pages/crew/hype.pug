@@ -15,7 +15,6 @@
         - const field = { ...boosts };
         - field.type = 'checkbox';
         - field.name = `${field.name}_${index}`;
-        - console.log(index)
         label.hype__boost(class=`hype__boost--${index}`)
           +field(field)
           span.visually-hidden(data-i18n=field.name)= field.label + ' ' + index

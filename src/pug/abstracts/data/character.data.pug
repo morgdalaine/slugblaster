@@ -86,7 +86,7 @@
       ],
     },
     attitude: {
-      subtitle: { name: 'attitude_subtitle', type: 'text', blockName: 'attitude' },
+      subtitle: { name: 'attitude_subtitle', placeholder: "Select a playbook or add your own!", type: 'textarea', blockName: 'attitude' },
       fields: [
         { name: 'attitude_boost', label: 'Attitude Boost', type: 'hidden', blockName: 'attitude' },
         { name: 'attitude_kick', label: 'Attitude Kick', type: 'hidden', blockName: 'attitude' },
@@ -94,7 +94,7 @@
     },
     style: {
       hidden: [{ name: 'style', type: 'hidden', blockName: 'style' }],
-      subtitle: { name: 'style_run_bonus', type: 'text', blockName: 'style' },
+      subtitle: { name: 'style_run_bonus', placeholder: "Select a playbook or add your own!", type: 'textarea', blockName: 'style' },
       track: Array.from(Array(10).keys(), (i) => ({
         name: 'style',
         label: `${i} style`,

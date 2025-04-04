@@ -60,49 +60,72 @@ const G_CONSTANTS = {
 };
 
 const G_PLAYBOOKS = {
-  grit: {
-    attitude: { boost: 3, kick: 1 },
-    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill', 'personal_growth'],
-    gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
-    beat: { grinding: '2_style', origin_story: '3_style', sharpened: '4_style' },
-    arc: [{ a_goal: '1_style' }, { setbacks: '2_style' }, { quitting: '4_trouble' }, { perseverance: '3_style' }],
-    vibes: [
-      'one_song_on_repeat',
-      'never_smile',
-      'your_drink_matches_your_shoes',
-      'sleep_when_youre_dead',
-      'adult_in_residence',
-      'overachiever',
-    ],
-  },
-  guts: {
-    attitude: { boost: 1, kick: 3 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  smarts: {
-    attitude: { boost: 2, kick: 2 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  heart: {
-    attitude: { boost: 1, kick: 2 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  chill: {
-    attitude: { boost: 1, kick: 0 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
+	grit: {
+		attitude: { boost: 3, kick: 1 },
+		traits: [
+			"patient",
+			"sacrifice_your_body",
+			"diligent",
+			"walk_it_off",
+			"skill",
+			"personal_growth",
+		],
+		gear: ["something_everyone_else_forgot", "backup_portaling_device"],
+		beat: {
+			grinding: "2_style",
+			origin_story: "3_style",
+			sharpened: "4_style",
+		},
+		arc: [
+			{ a_goal: "1_style" },
+			{ setbacks: "2_style" },
+			{ quitting: "4_trouble" },
+			{ perseverance: "3_style" },
+		],
+		vibes: [
+			"one_song_on_repeat",
+			"never_smile",
+			"your_drink_matches_your_shoes",
+			"sleep_when_youre_dead",
+			"adult_in_residence",
+			"overachiever",
+		],
+	},
+	guts: {
+		attitude: { boost: 1, kick: 3 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	smarts: {
+		attitude: { boost: 2, kick: 2 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	heart: {
+		attitude: { boost: 1, kick: 2 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	chill: {
+		attitude: { boost: 1, kick: 0 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	custom: {
+		attitude: { boost: 3, kick: 3 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
 };
 
 const G_SIGNATURES = {

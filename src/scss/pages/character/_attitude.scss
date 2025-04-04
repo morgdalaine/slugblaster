@@ -8,10 +8,11 @@
     border-color: transparent;
   }
 
-  &__clickies {
-    display: flex;
-    gap: 0 $grid-gutter-col;
-    margin-top: $m-lg;
+  &__content {
+    textarea#{$this}__attitude_subtitle {
+      color: $white;
+      background-color: transparent;
+    }
   }
 
   @each $item in 'boost', 'kick' {
@@ -43,6 +44,12 @@
         }
       }
     }
+  }
+
+  &__clickies {
+    display: flex;
+    gap: 0 $grid-gutter-col;
+    margin-top: $m-lg;
   }
 
   &__boost,

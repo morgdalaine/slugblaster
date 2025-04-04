@@ -358,7 +358,8 @@
                   <label class="style__checkbox style__checkbox--9">
                     <input class="checkbox--circle" id="style" name="attr_style" type="radio" value="9"/><span class="visually-hidden" data-i18n="style_9">9 style</span>
                   </label>
-                </div><span name="attr_style_run_bonus"></span>
+                </div>
+                <textarea class="style__style_run_bonus style__input--textarea" data-i18n-placeholder="placeholder_style_run_bonus" name="attr_style_run_bonus" placeholder="Select a playbook or add your own!"></textarea>
               </div>
             </div>
           </section>
@@ -371,7 +372,8 @@
                 <div class="blob__controls">
                 </div>
               </div>
-              <div class="blob__content attitude__content"><span name="attr_attitude_subtitle"></span>
+              <div class="blob__content attitude__content">
+                <textarea class="attitude__attitude_subtitle attitude__input--textarea" data-i18n-placeholder="placeholder_attitude_subtitle" name="attr_attitude_subtitle" placeholder="Select a playbook or add your own!"></textarea>
                 <input name="attr_attitude_boost" type="hidden"/>
                 <input name="attr_attitude_kick" type="hidden"/>
                 <div class="attitude__clickies">
@@ -673,12 +675,6 @@
                     </div>
                   </div>
                   <div class="editor__view mods__view">
-                    <div class="mods__turbo">
-                      <input name="attr_turbo_boost" type="hidden"/>
-                      <div data-i18n="mod_turbo_boost">Add +1 boost</div>
-                      <input name="attr_turbo_kick" type="hidden"/>
-                      <div data-i18n="mod_turbo_kick">Add +1 kick</div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -2724,7 +2720,7 @@
     </main>
     <footer class="footer">
       <input name="attr_sheet_version" type="hidden" value="0.0.0-alpha"/><span class="visually-hidden" data-i18n="sheet_version">Version</span><span name="attr_sheet_version"></span>
-      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="brb">BRB</span><span class="translation" data-i18n="brb_description">A crew of straight-laced, athletic, and super competitive laserbladers.</span><span class="translation" data-i18n="jet_collective">Jet Collective</span><span class="translation" data-i18n="jet_collective_description">A large crew of inclusive activists with an addiction to petty drama.</span><span class="translation" data-i18n="null_range">Null Range</span><span class="translation" data-i18n="null_range_description">An obnoxious, anti-authoritarian crew of older kids from Hillview.</span><span class="translation" data-i18n="lazy_bunny">Lazy Bunny</span><span class="translation" data-i18n="lazy_bunny_description">Super mainstream, super broish, super nice live-streamers having their moment.</span><span class="translation" data-i18n="the_wicks">The Wicks</span><span class="translation" data-i18n="the_wicks_description">A crew of young, rowdy, disenfranchised up-and-comers.</span><span class="translation" data-i18n="miper">Miper</span><span class="translation" data-i18n="miper_description">A sleek, idealistic big-tech company.</span><span class="translation" data-i18n="hardecker">Hardecker.</span><span class="translation" data-i18n="hardecker_description">A clueless blue-collar brand that’s just been made cool.</span><span class="translation" data-i18n="wilkies">Wilkie’s</span><span class="translation" data-i18n="wilkies_description">Candy, toys, energy drinks, x-treme sports.</span><span class="translation" data-i18n="scram_cat">Scram Cat</span><span class="translation" data-i18n="scram_cat_description">The original indie slugblasting shop, in the process of becoming a Miper subsidiary.</span><span class="translation" data-i18n="fust">FUST</span><span class="translation" data-i18n="fust_description">Last real indie sponsor, owned/operated by total a-holes.</span><span class="translation" data-i18n="dara">DARA</span><span class="translation" data-i18n="dara_description">Big, mysterious research facility. Its Rescue division act as Hillview’s portal cops.</span><span class="translation" data-i18n="the_arborists">The Arborists</span><span class="translation" data-i18n="the_arborists_description">An ancient sect of planeswalkers from Thennis Spar.</span><span class="translation" data-i18n="shimmer">Shimmer</span><span class="translation" data-i18n="shimmer_description">Transversal criminal syndicate.</span><span class="translation" data-i18n="doorways">Doorways</span><span class="translation" data-i18n="doorways_description">Concerned parent group from Hillview.</span><span class="translation" data-i18n="the_old_guard">The Old Guard</span><span class="translation" data-i18n="the_old_guard_description">Promoters, magazine editors, and retired slugblasters.</span><span class="translation" data-i18n="the_thrashers">The Thrashers</span><span class="translation" data-i18n="the_thrashers_description">The partiers, hipsters, and artists. They value authenticity, aesthetic, and attitude.</span><span class="translation" data-i18n="the_heads">The Heads</span><span class="translation" data-i18n="the_heads_description">The nerds, athletes, and aficionados. They value skill and innovation.</span><span class="translation" data-i18n="the_mavens">The Mavens</span><span class="translation" data-i18n="the_mavens_description">The activists, punks, and die-hards. They value community and standing for something.</span><span class="translation" data-i18n="the_freaks">The Freaks</span><span class="translation" data-i18n="the_freaks_description">The ravers, crusties, and oddballs. They value originality and expression.</span><span class="translation" data-i18n="the_normies">The Normies</span><span class="translation" data-i18n="the_normies_description">The mainstreamers, pre-teens, and basics. They value fun.</span>
+      <div class="translations"><span class="translation" data-i18n="style_1">1 style</span><span class="translation" data-i18n="style_1_short">1s</span><span class="translation" data-i18n="trouble_1">1 trouble</span><span class="translation" data-i18n="trouble_1_short">1t</span><span class="translation" data-i18n="style_2">2 style</span><span class="translation" data-i18n="style_2_short">2s</span><span class="translation" data-i18n="trouble_2">2 trouble</span><span class="translation" data-i18n="trouble_2_short">2t</span><span class="translation" data-i18n="style_3">3 style</span><span class="translation" data-i18n="style_3_short">3s</span><span class="translation" data-i18n="trouble_3">3 trouble</span><span class="translation" data-i18n="trouble_3_short">3t</span><span class="translation" data-i18n="style_4">4 style</span><span class="translation" data-i18n="style_4_short">4s</span><span class="translation" data-i18n="trouble_4">4 trouble</span><span class="translation" data-i18n="trouble_4_short">4t</span><span class="translation" data-i18n="style_5">5 style</span><span class="translation" data-i18n="style_5_short">5s</span><span class="translation" data-i18n="trouble_5">5 trouble</span><span class="translation" data-i18n="trouble_5_short">5t</span><span class="translation" data-i18n="personal_growth">Personal Growth</span><span class="translation" data-i18n="personal_growth_description">A trait from another personality. How are you changing? Who are you learning from?</span><span class="translation" data-i18n="grit_attitude">Describe how your grit helps your action, then boost or kick as needed. Also, refill 1 attitude whenever you fail any action. When the going gets tough, ya know?</span><span class="translation" data-i18n="grit_style">Get +1 style after runs where you show toughness or focus.</span><span class="translation" data-i18n="something_everyone_else_forgot">something everyone else forgot</span><span class="translation" data-i18n="backup_portaling_device">backup portaling device</span><span class="translation" data-i18n="patient">Patient</span><span class="translation" data-i18n="patient_description">When you reveal how you’ve been waiting to act, get +1d6 or +1 kick on your action.</span><span class="translation" data-i18n="sacrifice_your_body">Sacrifice Your Body</span><span class="translation" data-i18n="sacrifice_your_body_description">Take a slam (exhausted, strained, etc.) to get +2d6 to your action. This slam can’t be noped or avoided in any way. You gotta actually take it, kid.</span><span class="translation" data-i18n="diligent">Diligent</span><span class="translation" data-i18n="diligent_description">You can reroll In the Lab. Also clear +1 trouble when Being Good once per downtime.</span><span class="translation" data-i18n="walk_it_off">Walk It Off</span><span class="translation" data-i18n="walk_it_off_description">You gain 1 extra slam box. Mark 1 style every time you take a slam.</span><span class="translation" data-i18n="skill">Skill</span><span class="translation" data-i18n="skill_description">You’ve spent hours and hours practicing ______________. If this would help you with an action, you can mark 1 trouble to upgrade a 1–3 result into a 4/5 result.</span><span class="translation" data-i18n="grinding">Grinding</span><span class="translation" data-i18n="grinding_cost"></span><span class="translation" data-i18n="grinding_result"></span><span class="translation" data-i18n="grinding_description">A scene where you work hard, prep carefully, wait patiently, fall and get back up, etc. +1 trait.</span><span class="translation" data-i18n="a_goal">A Goal</span><span class="translation" data-i18n="a_goal_cost">1_style</span><span class="translation" data-i18n="a_goal_result">+1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="a_goal_description">A montage where you work towards a goal. Practicing an impossible trick in the driveway, building something no one believes in, saving change in a jar, etc. +1 slam (tired, blistered, etc.)</span><span class="translation" data-i18n="setbacks">Setbacks</span><span class="translation" data-i18n="setbacks_cost">2_style</span><span class="translation" data-i18n="setbacks_result">+1 slam</span><span class="translation" data-i18n="setbacks_description">The work gets harder, progress slows, and now it’s raining. Your goal feels farther away than when you started, but you keep at it. +1 slam. What’s the crew think?</span><span class="translation" data-i18n="quitting">Quitting</span><span class="translation" data-i18n="quitting_cost">4_trouble</span><span class="translation" data-i18n="quitting_result">+1 doom, +1 fracture</span><span class="translation" data-i18n="quitting_description">The moment you finally give up. Why? What broke you? Who have you let down, besides yourself? +1 doom, +1 fracture.</span><span class="translation" data-i18n="perseverance">Perseverance</span><span class="translation" data-i18n="perseverance_cost">3_style</span><span class="translation" data-i18n="perseverance_result">−1 doom, −1 fracture, +2 legacy, +1 trait</span><span class="translation" data-i18n="perseverance_description">You get back up and keep going. You always do. Who believed in you? −1 doom, −1 fracture, +2 legacy, +1 trait.</span><span class="translation" data-i18n="one_song_on_repeat">one song on repeat</span><span class="translation" data-i18n="never_smile">never smile</span><span class="translation" data-i18n="your_drink_matches_your_shoes">your drink matches your shoes</span><span class="translation" data-i18n="sleep_when_youre_dead">sleep when you’re dead</span><span class="translation" data-i18n="adult_in_residence">adult-in-residence</span><span class="translation" data-i18n="overachiever">overachiever</span><span class="translation" data-i18n="guts_attitude">Describe how your guts help your action, then boost or kick as needed. Also, refill 1 attitude whenever you attempt a trick, even if you fail. Feel the rush?</span><span class="translation" data-i18n="guts_style">Get +1 style after runs where you show boldness or risk-taking.</span><span class="translation" data-i18n="smarts_attitude">Describe how your smarts help your action, then boost or kick as needed. If you fail, refill any attitude you just spent. You learn from failure.</span><span class="translation" data-i18n="smarts_style">+1 style after runs where you show curiosity or creativity.</span><span class="translation" data-i18n="heart_attitude">Describe how your heart helps your action, then boost or kick as needed. Also, anytime you (or a teammate you’re helping) succeed on any action, refill 1 attitude.</span><span class="translation" data-i18n="heart_style">+1 style after runs where you show passion or empathy.</span><span class="translation" data-i18n="chill_attitude">Sit back, relax, and get +1d6 to all your actions. Things just tend to work out.</span><span class="translation" data-i18n="chill_style">Get +1 style after runs where you show ease or flow.</span><span class="translation" data-i18n="custom_attitude">Add a custom attitude!</span><span class="translation" data-i18n="custom_style">What makes you unique?</span><span class="translation" data-i18n="kitbashed">Kitbashed</span><span class="translation" data-i18n="kitbashed_cost"></span><span class="translation" data-i18n="kitbashed_description">Buy a mod from another device.</span><span class="translation" data-i18n="power_cell">Power Cell</span><span class="translation" data-i18n="power_cell_cost">2 gems</span><span class="translation" data-i18n="power_cell_description">Turbo gains 1 kick.</span><span class="translation" data-i18n="stabilizer">Stabilizer</span><span class="translation" data-i18n="stabilizer_cost">1 coil, 1 disc</span><span class="translation" data-i18n="stabilizer_description">Turbo gains 1 boost.</span><span class="translation" data-i18n="negafriction_sword_function">Roll to slice, dice, chop, and stab things (or nonlethally smack them with the kinetically-charged sheath).</span><span class="translation" data-i18n="negafriction_sword_description">Negafriction is just what it sounds like: complete nonsense. Normally, friction converts kinetic energy into heat, causing objects to slow down and get warmer. But negafriction swords speed up and get cooler. Just like you!</span><span class="translation" data-i18n="slip_rattle">Slip Rattle</span><span class="translation" data-i18n="slip_rattle_cost">1 coil, 1 disc</span><span class="translation" data-i18n="slip_rattle_description">Roll to teleport inuniverse by slicing spacetime. If you can’t see your destination, potential problems are worse.</span><span class="translation" data-i18n="field_projector">Field Projector</span><span class="translation" data-i18n="field_projector_cost">1 lens, 1 coil</span><span class="translation" data-i18n="field_projector_description">Roll to temporarily remove the surface friction from a room-sized area near you.</span><span class="translation" data-i18n="ref_coating">Ref Coating</span><span class="translation" data-i18n="ref_coating_cost">1 lens, 1 gem</span><span class="translation" data-i18n="ref_coating_description">Avoid slams from lasers and other electromagnetic energy by marking 1 turbo, redirecting the attack wherever you wish.</span><span class="translation" data-i18n="negafriction_wake">Negafriction Wake</span><span class="translation" data-i18n="negafriction_wake_cost">1 disc, 1 gem</span><span class="translation" data-i18n="negafriction_wake_description">Roll to boost your speed as your sword accelerates through matter (even air) and pulls you along.</span><span class="translation" data-i18n="subdimensional_edge">Subdimensional Edge</span><span class="translation" data-i18n="subdimensional_edge_cost">2 gems, 1 lens, 1 coil</span><span class="translation" data-i18n="subdimensional_edge_description">You can roll to temporarily slice entire dimensions off of a target, turning a 3D object 2D, for example, or removing someone from the timestream. The target re-coheres after a minute or two. It’s not pleasant, but mostly harmless.</span><span class="translation" data-i18n="brb">BRB</span><span class="translation" data-i18n="brb_description">A crew of straight-laced, athletic, and super competitive laserbladers.</span><span class="translation" data-i18n="jet_collective">Jet Collective</span><span class="translation" data-i18n="jet_collective_description">A large crew of inclusive activists with an addiction to petty drama.</span><span class="translation" data-i18n="null_range">Null Range</span><span class="translation" data-i18n="null_range_description">An obnoxious, anti-authoritarian crew of older kids from Hillview.</span><span class="translation" data-i18n="lazy_bunny">Lazy Bunny</span><span class="translation" data-i18n="lazy_bunny_description">Super mainstream, super broish, super nice live-streamers having their moment.</span><span class="translation" data-i18n="the_wicks">The Wicks</span><span class="translation" data-i18n="the_wicks_description">A crew of young, rowdy, disenfranchised up-and-comers.</span><span class="translation" data-i18n="miper">Miper</span><span class="translation" data-i18n="miper_description">A sleek, idealistic big-tech company.</span><span class="translation" data-i18n="hardecker">Hardecker.</span><span class="translation" data-i18n="hardecker_description">A clueless blue-collar brand that’s just been made cool.</span><span class="translation" data-i18n="wilkies">Wilkie’s</span><span class="translation" data-i18n="wilkies_description">Candy, toys, energy drinks, x-treme sports.</span><span class="translation" data-i18n="scram_cat">Scram Cat</span><span class="translation" data-i18n="scram_cat_description">The original indie slugblasting shop, in the process of becoming a Miper subsidiary.</span><span class="translation" data-i18n="fust">FUST</span><span class="translation" data-i18n="fust_description">Last real indie sponsor, owned/operated by total a-holes.</span><span class="translation" data-i18n="dara">DARA</span><span class="translation" data-i18n="dara_description">Big, mysterious research facility. Its Rescue division act as Hillview’s portal cops.</span><span class="translation" data-i18n="the_arborists">The Arborists</span><span class="translation" data-i18n="the_arborists_description">An ancient sect of planeswalkers from Thennis Spar.</span><span class="translation" data-i18n="shimmer">Shimmer</span><span class="translation" data-i18n="shimmer_description">Transversal criminal syndicate.</span><span class="translation" data-i18n="doorways">Doorways</span><span class="translation" data-i18n="doorways_description">Concerned parent group from Hillview.</span><span class="translation" data-i18n="the_old_guard">The Old Guard</span><span class="translation" data-i18n="the_old_guard_description">Promoters, magazine editors, and retired slugblasters.</span><span class="translation" data-i18n="the_thrashers">The Thrashers</span><span class="translation" data-i18n="the_thrashers_description">The partiers, hipsters, and artists. They value authenticity, aesthetic, and attitude.</span><span class="translation" data-i18n="the_heads">The Heads</span><span class="translation" data-i18n="the_heads_description">The nerds, athletes, and aficionados. They value skill and innovation.</span><span class="translation" data-i18n="the_mavens">The Mavens</span><span class="translation" data-i18n="the_mavens_description">The activists, punks, and die-hards. They value community and standing for something.</span><span class="translation" data-i18n="the_freaks">The Freaks</span><span class="translation" data-i18n="the_freaks_description">The ravers, crusties, and oddballs. They value originality and expression.</span><span class="translation" data-i18n="the_normies">The Normies</span><span class="translation" data-i18n="the_normies_description">The mainstreamers, pre-teens, and basics. They value fun.</span>
       </div>
     </footer>
   </div>
@@ -3023,49 +3019,72 @@ const G_CONSTANTS = {
 };
 
 const G_PLAYBOOKS = {
-  grit: {
-    attitude: { boost: 3, kick: 1 },
-    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill', 'personal_growth'],
-    gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
-    beat: { grinding: '2_style', origin_story: '3_style', sharpened: '4_style' },
-    arc: [{ a_goal: '1_style' }, { setbacks: '2_style' }, { quitting: '4_trouble' }, { perseverance: '3_style' }],
-    vibes: [
-      'one_song_on_repeat',
-      'never_smile',
-      'your_drink_matches_your_shoes',
-      'sleep_when_youre_dead',
-      'adult_in_residence',
-      'overachiever',
-    ],
-  },
-  guts: {
-    attitude: { boost: 1, kick: 3 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  smarts: {
-    attitude: { boost: 2, kick: 2 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  heart: {
-    attitude: { boost: 1, kick: 2 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
-  chill: {
-    attitude: { boost: 1, kick: 0 },
-    traits: [],
-    gear: [],
-    beat: [''],
-    arc: [],
-  },
+	grit: {
+		attitude: { boost: 3, kick: 1 },
+		traits: [
+			"patient",
+			"sacrifice_your_body",
+			"diligent",
+			"walk_it_off",
+			"skill",
+			"personal_growth",
+		],
+		gear: ["something_everyone_else_forgot", "backup_portaling_device"],
+		beat: {
+			grinding: "2_style",
+			origin_story: "3_style",
+			sharpened: "4_style",
+		},
+		arc: [
+			{ a_goal: "1_style" },
+			{ setbacks: "2_style" },
+			{ quitting: "4_trouble" },
+			{ perseverance: "3_style" },
+		],
+		vibes: [
+			"one_song_on_repeat",
+			"never_smile",
+			"your_drink_matches_your_shoes",
+			"sleep_when_youre_dead",
+			"adult_in_residence",
+			"overachiever",
+		],
+	},
+	guts: {
+		attitude: { boost: 1, kick: 3 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	smarts: {
+		attitude: { boost: 2, kick: 2 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	heart: {
+		attitude: { boost: 1, kick: 2 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	chill: {
+		attitude: { boost: 1, kick: 0 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
+	custom: {
+		attitude: { boost: 3, kick: 3 },
+		traits: [],
+		gear: [],
+		beat: [""],
+		arc: [],
+	},
 };
 
 const G_SIGNATURES = {
@@ -3328,16 +3347,18 @@ const makeTrackString = (sectionId) => {
 };
 
 const loadPersonality = (field) => {
+  const update = {};
   const personality = field.trim().replace(' ', '_').toLowerCase();
   const isValid = Object.hasOwn(G_PLAYBOOKS, personality);
 
   console.debug(personality, isValid);
 
-  if (!isValid) {
-    return;
-  }
+  // if (!isValid) {
+  //   update.attitude_subtitle = "";
+  //   update.style_run_bonus = "";
+	// 			return;
+  // }
 
-  const update = {};
   const data = G_PLAYBOOKS[personality];
 
   // personal gear
@@ -3483,7 +3504,7 @@ for (const fieldset of G_REPEATING_FIELDSETS) {
 // Load personality data
 on('change:personality change:personality_custom', (eventInfo) => {
   console.debug(eventInfo);
-  let personality = eventInfo.newValue;
+  const personality = eventInfo.newValue;
   if (personality) loadPersonality(personality);
 });
 

@@ -42,7 +42,7 @@ for (const fieldset of G_REPEATING_FIELDSETS) {
 // Load personality data
 on('change:personality change:personality_custom', (eventInfo) => {
   console.debug(eventInfo);
-  let personality = eventInfo.newValue;
+  const personality = eventInfo.newValue;
   if (personality) loadPersonality(personality);
 });
 

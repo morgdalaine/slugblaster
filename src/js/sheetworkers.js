@@ -73,16 +73,18 @@ const makeTrackString = (sectionId) => {
 };
 
 const loadPersonality = (field) => {
+  const update = {};
   const personality = field.trim().replace(' ', '_').toLowerCase();
   const isValid = Object.hasOwn(G_PLAYBOOKS, personality);
 
   console.debug(personality, isValid);
 
-  if (!isValid) {
-    return;
-  }
+  // if (!isValid) {
+  //   update.attitude_subtitle = "";
+  //   update.style_run_bonus = "";
+	// 			return;
+  // }
 
-  const update = {};
   const data = G_PLAYBOOKS[personality];
 
   // personal gear
