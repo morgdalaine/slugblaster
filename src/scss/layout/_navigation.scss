@@ -1,6 +1,5 @@
 .tophat {
   $this: '.tophat';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
 
   &__content {
     display: flex;
@@ -21,6 +20,7 @@
   .nav {
     // flex: calc(40% - 1rem);
     width: calc(40% - 1rem);
+    background-color: white; // hsl(random(360) 80% 80% / 80%);
   }
 }
 
@@ -31,6 +31,12 @@
   gap: $grid-gutter;
   align-items: center;
   justify-content: space-between;
+
+  &::before,
+  &::after {
+    display: none;
+    content: "";
+  }
 
   > li {
     flex: 1;

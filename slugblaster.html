@@ -281,7 +281,7 @@
                             <input class="bubble__controller" name="attr_gear_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <label class="gear__check">
-                                <input class="checkbox--scribble" id="gear_check" name="attr_gear_check" type="checkbox" value="on"/><span class="gear__name" name="attr_gear_name"></span>
+                                <input id="gear_check" name="attr_gear_check" type="checkbox" value="on"/><span class="gear__name" name="attr_gear_name"></span>
                               </label>
                               <div class="bubble__controls">
                                 <button class="broadcast bubble__broadcast" name="roll_gear-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{gear}}} {{^{gear_name}=@{gear_name}}} {{^{gear_cost}=@{gear_cost}}} {{^{gear_description}=@{gear_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
@@ -429,8 +429,9 @@
                         <div class="row traits__edit">
                           <input name="attr_trait_autogen" type="hidden"/>
                           <div class="traits__field trait_check col-1">
-                            <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/>
-                            <label class="visually-hidden" data-i18n="trait_check" for="trait_check">Select trait</label>
+                            <label for="trait_check">
+                              <input id="trait_check" name="attr_trait_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="trait_check">Select trait</span>
+                            </label>
                           </div>
                           <div class="traits__field trait_name col-11">
                             <input class="traits__trait_name traits__input--text" data-i18n-placeholder="placeholder_trait_name" id="trait_name" name="attr_trait_name" placeholder="Patient" type="text"/>
@@ -448,7 +449,7 @@
                             <input class="bubble__controller" name="attr_trait_collapse" type="hidden" value="0"/>
                             <div class="bubble__header">
                               <label class="traits__check">
-                                <input class="checkbox--scribble" id="trait_check" name="attr_trait_check" type="checkbox" value="on"/><span class="trait__name" name="attr_trait_name"></span>
+                                <input id="trait_check" name="attr_trait_check" type="checkbox" value="on"/><span class="trait__name" name="attr_trait_name"></span>
                               </label>
                               <div class="bubble__controls">
                                 <button class="broadcast bubble__broadcast" name="roll_trait-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{traits}}} {{^{trait_name}=@{trait_name}}} {{^{trait_description}=@{trait_description}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
@@ -1069,8 +1070,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -1154,8 +1156,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -1239,8 +1242,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -1324,8 +1328,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -1409,8 +1414,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -1494,8 +1500,9 @@
                         <div class="repeating__edit">
                           <div class="row downtime__edit">
                             <div class="downtime__field downtime_check col-1">
-                              <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/>
-                              <label class="visually-hidden" data-i18n="downtime_check" for="downtime_check">Check</label>
+                              <label for="downtime_check">
+                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
+                              </label>
                             </div>
                             <div class="downtime__field downtime_name col-11">
                               <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
@@ -2634,22 +2641,22 @@
  */
 const makeRollTemplate = (params) => {
   const { title, subtitle, type, trick, dice, boosts, kicks } = params;
-  let roll = params.roll || '[[1d6]]';
+  const roll = params.roll || '[[1d6]]';
 
   const template = [
-    `&{template:slugblaster}`,
-    `{{character=@{character_name}}}`,
+    '&{template:slugblaster}',
+    '{{character=@{character_name}}}',
     `{{title=${title}}}`,
     `{{subtitle=${subtitle}}}`,
     `{{${type}=true}}`,
     `{{roll=${roll}}}`,
 
-    `{{result=[[0]]}}`,
+    '{{result=[[0]]}}',
   ];
 
   if (trick) template.push('{{trick=true}}');
   if (type === 'action') {
-    template.push(`{{@{dicetray_dare}=true}}`);
+    template.push('{{@{dicetray_dare}=true}}');
     template.push(`{{boosts=${boosts}}}`);
     template.push(`{{kicks=${kicks}}}`);
   }
@@ -2683,7 +2690,7 @@ const makeRoll = async (template) => {
 };
 
 const makeCharacterRoll = (trick = false) => {
-  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare'];
+  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare', 'dicetray_reset'];
   getAttrs(request, (values) => {
     const boosts = +values.dicetray_boosts || 0;
     const kicks = +values.dicetray_kicks || 0;
@@ -2704,6 +2711,14 @@ const makeCharacterRoll = (trick = false) => {
 
     const template = makeRollTemplate(params);
     makeRoll(template);
+
+    if (values.dicetray_reset === 'on') {
+      setAttrs({
+        dicetray_boosts: 0,
+        dicetray_kicks: 0,
+        dicetray_dare: '',
+      });
+    }
   });
 };
 

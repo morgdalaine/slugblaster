@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(218, 80%, 80%), hsl(318, 80%, 80%), hsl(192, 80%, 80%));
+  background-image: radial-gradient(hsl(212, 80%, 80%), hsl(217, 80%, 80%), hsl(66, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(151, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(269, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -940,6 +940,7 @@ html .charsheet .slugblaster .bubble__expand input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  opacity: 0;
 }
 html .charsheet .slugblaster button[type=action],
 html .charsheet .slugblaster button[type=roll] {
@@ -1999,16 +2000,16 @@ html .charsheet .slugblaster .crew .fractures__input--text[type=text] {
 html .charsheet .slugblaster .crew .fractures__input--text[type=text]:active, html .charsheet .slugblaster .crew .fractures__input--text[type=text]:hover, html .charsheet .slugblaster .crew .fractures__input--text[type=text]:focus {
   border: 2px solid var(--input-border-color-active);
 }
-html .charsheet .slugblaster .crew .header {
+html .charsheet .slugblaster .crew .header-crew {
   background-color: white;
 }
-html .charsheet .slugblaster .crew .header__title[type=text] {
+html .charsheet .slugblaster .crew .header-crew__title[type=text] {
   font-size: 2rem;
   font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
   text-transform: uppercase;
   height: auto;
 }
-html .charsheet .slugblaster .crew .header__edit, html .charsheet .slugblaster .crew .header__view {
+html .charsheet .slugblaster .crew .header-crew__edit, html .charsheet .slugblaster .crew .header-crew__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .crew .hype {
@@ -2957,9 +2958,6 @@ html .charsheet .slugblaster .colspan-12 {
   height: 100%;
   grid-column: span 12;
 }
-html .charsheet .slugblaster .tophat {
-  background-color: white;
-}
 html .charsheet .slugblaster .tophat__content {
   display: flex;
   flex-wrap: wrap;
@@ -2976,12 +2974,17 @@ html .charsheet .slugblaster .tophat__title {
 }
 html .charsheet .slugblaster .tophat .nav {
   width: calc(40% - 1rem);
+  background-color: white;
 }
 html .charsheet .slugblaster .nav {
   display: flex;
   gap: 0.5rem 0.5rem;
   align-items: center;
   justify-content: space-between;
+}
+html .charsheet .slugblaster .nav::before, html .charsheet .slugblaster .nav::after {
+  display: none;
+  content: "";
 }
 html .charsheet .slugblaster .nav > li {
   flex: 1;
