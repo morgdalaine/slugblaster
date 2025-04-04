@@ -5,22 +5,22 @@
  */
 const makeRollTemplate = (params) => {
   const { title, subtitle, type, trick, dice, boosts, kicks } = params;
-  let roll = params.roll || '[[1d6]]';
+  const roll = params.roll || '[[1d6]]';
 
   const template = [
-    `&{template:slugblaster}`,
-    `{{character=@{character_name}}}`,
+    '&{template:slugblaster}',
+    '{{character=@{character_name}}}',
     `{{title=${title}}}`,
     `{{subtitle=${subtitle}}}`,
     `{{${type}=true}}`,
     `{{roll=${roll}}}`,
 
-    `{{result=[[0]]}}`,
+    '{{result=[[0]]}}',
   ];
 
   if (trick) template.push('{{trick=true}}');
   if (type === 'action') {
-    template.push(`{{@{dicetray_dare}=true}}`);
+    template.push('{{@{dicetray_dare}=true}}');
     template.push(`{{boosts=${boosts}}}`);
     template.push(`{{kicks=${kicks}}}`);
   }
@@ -54,7 +54,7 @@ const makeRoll = async (template) => {
 };
 
 const makeCharacterRoll = (trick = false) => {
-  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare'];
+  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare', 'dicetray_reset'];
   getAttrs(request, (values) => {
     const boosts = +values.dicetray_boosts || 0;
     const kicks = +values.dicetray_kicks || 0;
@@ -75,6 +75,14 @@ const makeCharacterRoll = (trick = false) => {
 
     const template = makeRollTemplate(params);
     makeRoll(template);
+
+    if (values.dicetray_reset === 'on') {
+      setAttrs({
+        dicetray_boosts: 0,
+        dicetray_kicks: 0,
+        dicetray_dare: '',
+      });
+    }
   });
 };
 
