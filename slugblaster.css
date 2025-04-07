@@ -356,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(128, 80%, 80%), hsl(48, 80%, 80%), hsl(3, 80%, 80%));
+  background-image: radial-gradient(hsl(130, 80%, 80%), hsl(24, 80%, 80%), hsl(44, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(227, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(27, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -799,13 +799,11 @@ html .charsheet .slugblaster .blade {
   flex-direction: column;
   row-gap: 0.5rem;
   min-width: 3rem;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(112, 90, 142, 0.8));
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;
   row-gap: 0.5rem;
   overflow: hidden;
-  width: 25vw;
 }
 html .charsheet .slugblaster .blade__title {
   font-size: 2rem;
@@ -839,7 +837,6 @@ html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-
   height: 100%;
 }
 html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-toggle > .blade__title {
-  position: absolute;
   top: 0.5rem;
   left: 45%;
   transform-origin: left top;
@@ -2005,6 +2002,18 @@ html .charsheet .slugblaster .crew .fame__rank--name {
   font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
   font-size: 1.25rem;
 }
+html .charsheet .slugblaster .crew .fame__rank--style {
+  font-family: "Radio Canada", "Poppins", "Ubuntu", "Nunito", sans-serif;
+  font-size: 1rem;
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem;
+}
+html .charsheet .slugblaster .crew .fame__rank--style::before {
+  content: "(";
+}
+html .charsheet .slugblaster .crew .fame__rank--style::after {
+  content: ")";
+}
 html .charsheet .slugblaster .crew .fame__perk {
   -webkit-margin-start: 1rem;
           margin-inline-start: 1rem;
@@ -2391,6 +2400,11 @@ html .charsheet .slugblaster .options .a-heartfelt-word {
   font-weight: 700;
   padding: 1rem;
   border-radius: 0px;
+}
+@media (min-width: 768px) {
+  html .charsheet .slugblaster .diary .blade__wrapper, html .charsheet .slugblaster .downtimes .blade__wrapper, html .charsheet .slugblaster .epilogue .blade__wrapper, html .charsheet .slugblaster .factions .blade__wrapper {
+    grid-template-columns: repeat(2, minmax(25%, 1fr));
+  }
 }
 html .charsheet .slugblaster .container {
   background: transparent;

@@ -37,6 +37,17 @@
       font-family: $font-playbook;
       font-size: $font-h5;
     }
+    &--style {
+      font-family: $font-label;
+      font-size: $font-m;
+      padding-inline-start: $p-md;
+      &::before {
+        content: '(';
+      }
+      &::after {
+        content: ')';
+      }
+    }
   }
   &__perk {
     margin-inline-start: $m-lg;

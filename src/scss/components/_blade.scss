@@ -5,13 +5,13 @@
   flex-direction: column;
   row-gap: $grid-gutter-row;
   min-width: 3rem;
-  background-image: linear-gradient(rgba($white, 90%), rgba($purple-dark, 80%));
+  // background-image: linear-gradient(rgba($white, 90%), rgba($purple-dark, 80%));
 
   &__wrapper {
     display: grid;
     row-gap: $grid-gutter-row;
     overflow: hidden;
-    width: 25vw;
+    // width: 25vw;
   }
 
   &__title {
@@ -55,7 +55,7 @@
         height: 100%;
 
         > .blade__title {
-          position: absolute;
+          // position: absolute;
           top: $m-md;
           left: 45%;
           // transform: rotate(90deg) translateY(-50%);

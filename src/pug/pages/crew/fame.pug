@@ -10,11 +10,13 @@
               label(data-i18n=field.name, for=field.name)= field.label
         .fame__ranks
           each rank in fame.ranks
-            - const { label, perks, descriptions } = rank;
+            - const { label, style, perks, descriptions } = rank;
             .fame__rank
               label.fame__rank--name(for=label.name)
                 +field(label)
                 span(data-i18n=label.name)= label.label
+                if style
+                  span.fame__rank--style(data-i18n=style.name)= style.label
               each field in perks
                 .fame__perk
                   label.fame__perk--name(for=field.name)
