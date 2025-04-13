@@ -1,7 +1,6 @@
 +panel({ name: 'header' })
   - const { hidden, personality, custom, fields } = character.header;
   +block('header')
-    //- TODO work with custom value
     each field in hidden
       +hidden(field)
     +span(personality).header__title

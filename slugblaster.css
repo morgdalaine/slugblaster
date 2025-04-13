@@ -9,8 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Tiny5&display=swap");
 html {
   box-sizing: border-box;
-  font-size: 10px;
-  font-size: 69%;
+  font-size: 12px;
 }
 html .characterviewer,
 html .tab-content,
@@ -124,7 +123,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   position: relative;
 }
 .charactersheet.tab-pane.charsheet::before {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy.png");
   content: " ";
   display: block;
   position: absolute;
@@ -133,7 +131,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-position: 50% 0;
   background-size: cover;
 }
 
@@ -304,7 +301,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header span,
 .sheet-rolltemplate-slugblaster .sheet-roll__header span {
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
   font-size: 1.125rem;
   font-variant: small-caps;
 }
@@ -319,7 +316,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 }
 .sheet-rolltemplate-slugcast .sheet-roll__title,
 .sheet-rolltemplate-slugblaster .sheet-roll__title {
-  font-family: "One Direction", "Hate Your Writing", "Playpen Sans", "Comic Sans MS", serif;
+  font-family: "Playpen Sans", "Comic Sans MS", serif;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -352,11 +349,11 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__dice--roll .inlinerollresult {
   display: block;
   width: inherit;
-  font-family: "One Direction", "Hate Your Writing", "Playpen Sans", "Comic Sans MS", serif;
+  font-family: "Playpen Sans", "Comic Sans MS", serif;
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(130, 80%, 80%), hsl(24, 80%, 80%), hsl(44, 80%, 80%));
+  background-image: radial-gradient(hsl(79, 80%, 80%), hsl(141, 80%, 80%), hsl(311, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -367,7 +364,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugcast .sheet-roll__result,
 .sheet-rolltemplate-slugblaster .sheet-roll__result {
   text-align: justify;
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__result--label,
 .sheet-rolltemplate-slugblaster .sheet-roll__result--label {
@@ -502,7 +499,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   background-color: transparent !important;
   padding: 0;
   margin: 0;
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .inlinerollresult.fullcrit, .sheet-rolltemplate-slugcast .inlinerollresult.fullfail, .sheet-rolltemplate-slugcast .inlinerollresult.importantroll,
 .sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit,
@@ -573,7 +570,7 @@ html .charsheet .slugblaster textarea {
   height: 2.5rem;
   background-color: var(--input-background);
   border-bottom: 1px dashed var(--input-border-color);
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
   font-size: 1rem;
   line-height: 1rem;
   color: var(--input-color);
@@ -621,7 +618,7 @@ html .charsheet .slugblaster select option {
   background: var(--input-background);
   background-color: #ef4b31;
   color: var(--input-color);
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -770,7 +767,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(27, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(176, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -802,7 +799,7 @@ html .charsheet .slugblaster .blade {
 }
 html .charsheet .slugblaster .blade__wrapper {
   display: grid;
-  row-gap: 0.5rem;
+  gap: 0.5rem 0.5rem;
   overflow: hidden;
 }
 html .charsheet .slugblaster .blade__title {
@@ -826,6 +823,7 @@ html .charsheet .slugblaster .blade-toggle {
 }
 html .charsheet .slugblaster .blade-toggle[type=action] {
   background-color: transparent;
+  background-image: linear-gradient(90deg, #fff, rgba(112, 90, 142, 0.8));
   border-radius: 0;
   padding: 0.25rem;
   color: #292828;
@@ -1126,6 +1124,7 @@ html .charsheet .slugblaster .broadcast {
 }
 html .charsheet .slugblaster .panel {
   position: relative;
+  padding: 0.25rem;
 }
 html .charsheet .slugblaster .panel__wrapper {
   display: grid;
@@ -1174,7 +1173,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -1189,7 +1188,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 }
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .repeating__delete {
   min-height: 2rem;
@@ -1302,7 +1301,7 @@ html .charsheet .slugblaster .character .attitude__kick input {
   width: 3rem;
 }
 html .charsheet .slugblaster .character .components {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .components__content {
   display: grid;
@@ -1361,7 +1360,7 @@ html .charsheet .slugblaster .character .component__value[value="0"] ~ .componen
   background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg") !important;
 }
 html .charsheet .slugblaster .character .dicetray {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .dicetray__content {
   display: grid;
@@ -1383,7 +1382,7 @@ html .charsheet .slugblaster .character .dicetray__action {
   flex: 1;
 }
 html .charsheet .slugblaster .character .doom {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
@@ -1393,10 +1392,55 @@ html .charsheet .slugblaster .character .doom .doom__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .downtime {
-  background-color: white;
+  background-color: #fff;
 }
-html .charsheet .slugblaster .character .downtime + .panel {
-  margin-top: 0.5rem;
+html .charsheet .slugblaster .character .downtime .beats__custom {
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem;
+  align-items: center;
+}
+html .charsheet .slugblaster .character .downtime .beats + .beats__custom {
+  -webkit-margin-before: 2px;
+          margin-block-start: 2px;
+}
+html .charsheet .slugblaster .character .downtime .beats--chill {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=chill] ~ label.beats--chill {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime .beats--grit {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=grit] ~ label.beats--grit {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime .beats--guts {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=guts] ~ label.beats--guts {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime .beats--heart {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=heart] ~ label.beats--heart {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime .beats--smarts {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=smarts] ~ label.beats--smarts {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime .beats--custom {
+  display: none;
+}
+html .charsheet .slugblaster .character .downtime input[value=custom] ~ label.beats--custom {
+  display: block;
+}
+html .charsheet .slugblaster .character .downtime input[value=custom] ~ div.beats--custom {
+  display: grid;
 }
 html .charsheet .slugblaster .character .downtime__edit, html .charsheet .slugblaster .character .downtime__view {
   gap: 0.5rem 0.5rem;
@@ -1406,27 +1450,21 @@ html .charsheet .slugblaster .character .downtime__view {
   flex-wrap: wrap;
   gap: 0.5rem 0.5rem;
 }
-html .charsheet .slugblaster .character .downtime .downtime__name {
-  font-weight: 700;
-}
-html .charsheet .slugblaster .character .downtime__cost::before {
-  content: "(";
-}
-html .charsheet .slugblaster .character .downtime__cost::after {
-  content: ")";
+html .charsheet .slugblaster .character .downtime .editor__view input:not([value]) + span, html .charsheet .slugblaster .character .downtime .editor__view input[value="0"] + span {
+  display: none;
 }
 html .charsheet .slugblaster .character .gear {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .header {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .header__title, html .charsheet .slugblaster .character .header__title--custom {
   font-size: 2rem;
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   height: auto;
@@ -1445,7 +1483,7 @@ html .charsheet .slugblaster .character .header input[name=attr_personality][val
   display: block;
 }
 html .charsheet .slugblaster .character .legacy {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
@@ -1455,7 +1493,7 @@ html .charsheet .slugblaster .character .legacy .legacy__name {
   border-bottom: 1px dashed var(--input-border-color);
 }
 html .charsheet .slugblaster .character .mods {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -1476,11 +1514,11 @@ html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .signature {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .signature__title, html .charsheet .slugblaster .character .signature__title--custom {
   font-size: 2rem;
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   height: auto;
@@ -1499,7 +1537,7 @@ html .charsheet .slugblaster .character .signature input[name=attr_signature][va
   display: block;
 }
 html .charsheet .slugblaster .character .slams {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -1517,7 +1555,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text]:active, h
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .character .style {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .character .style input[name=attr_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
@@ -1665,7 +1703,7 @@ html .charsheet .slugblaster .character .style input[name=attr_style][value="9"]
   background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
 }
 html .charsheet .slugblaster .character .traits {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
@@ -1674,7 +1712,7 @@ html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .trouble {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="0"] ~ .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble input[name=attr_trouble]:not([value]) ~ .trouble__checkbox--0 {
   display: none;
@@ -1862,7 +1900,7 @@ html .charsheet .slugblaster .character .turbo__kick input {
   width: 3rem;
 }
 html .charsheet .slugblaster .character .notes {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .notes__edit, html .charsheet .slugblaster .character .notes__view {
   gap: 0.5rem 0.5rem;
@@ -1871,7 +1909,7 @@ html .charsheet .slugblaster .character .notes .note__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .character .tracks {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .character .tracks__edit, html .charsheet .slugblaster .character .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -1897,8 +1935,8 @@ html .charsheet .slugblaster .character .tracks .track__progress:hover, html .ch
 html .charsheet .slugblaster .character .tracks .track__letter,
 html .charsheet .slugblaster .character .tracks .track__marked {
   margin: 0;
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1954,11 +1992,14 @@ html .charsheet .slugblaster .crew__blades {
   gap: 0.5rem;
   flex-direction: column;
 }
+html .charsheet .slugblaster .crew__action {
+  grid-column: 1/-1;
+}
 html .charsheet .slugblaster .crew input[name*=load_factions]:not([value="0"]) + .crew--factions {
   display: none;
 }
 html .charsheet .slugblaster .crew .faction {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .faction__edit, html .charsheet .slugblaster .crew .faction__view {
   gap: 0.5rem 0.5rem;
@@ -1976,7 +2017,7 @@ html .charsheet .slugblaster .crew .faction .faction__relationship {
   text-align: center;
 }
 html .charsheet .slugblaster .crew .fame {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .fame__edit .fame__ranks, html .charsheet .slugblaster .crew .fame__view .fame__ranks {
   display: grid;
@@ -1999,7 +2040,7 @@ html .charsheet .slugblaster .crew .fame__rank {
   align-self: flex-start;
 }
 html .charsheet .slugblaster .crew .fame__rank--name {
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   font-size: 1.25rem;
 }
 html .charsheet .slugblaster .crew .fame__rank--style {
@@ -2023,7 +2064,7 @@ html .charsheet .slugblaster .crew .fame__perk--description {
           padding-inline-start: 1rem;
 }
 html .charsheet .slugblaster .crew .fractures {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .fractures__boxes {
   display: grid;
@@ -2037,11 +2078,11 @@ html .charsheet .slugblaster .crew .fractures__input--text[type=text]:active, ht
   border: 2px solid var(--input-border-color-active);
 }
 html .charsheet .slugblaster .crew .header-crew {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .header-crew__title[type=text] {
   font-size: 2rem;
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   text-transform: uppercase;
   height: auto;
 }
@@ -2106,7 +2147,7 @@ html .charsheet .slugblaster .crew .hype__kick--2 {
   display: none;
 }
 html .charsheet .slugblaster .crew .style {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .crew .style input[name=attr_crew_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
@@ -2283,7 +2324,7 @@ html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"
   background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
 }
 html .charsheet .slugblaster .crew .notes {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .notes__edit, html .charsheet .slugblaster .crew .notes__view {
   gap: 0.5rem 0.5rem;
@@ -2292,7 +2333,7 @@ html .charsheet .slugblaster .crew .notes .note__name {
   font-weight: 700;
 }
 html .charsheet .slugblaster .crew .tracks {
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .tracks__edit, html .charsheet .slugblaster .crew .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -2318,8 +2359,8 @@ html .charsheet .slugblaster .crew .tracks .track__progress:hover, html .charshe
 html .charsheet .slugblaster .crew .tracks .track__letter,
 html .charsheet .slugblaster .crew .tracks .track__marked {
   margin: 0;
-  font-family: "Hate Your Writing", "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
-  font-family: "One Direction", "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Permanent Marker", "Comic Sans MS", serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
   font-weight: 700;
@@ -3055,12 +3096,12 @@ html .charsheet .slugblaster .tophat__content {
 html .charsheet .slugblaster .tophat__title {
   flex: calc(60% - 1rem);
   font-size: 3rem;
-  font-family: "One Direction", "Hate Your Writing", "Playpen Sans", "Comic Sans MS", serif;
+  font-family: "Playpen Sans", "Comic Sans MS", serif;
   text-transform: uppercase;
 }
 html .charsheet .slugblaster .tophat .nav {
   width: calc(40% - 1rem);
-  background-color: white;
+  background-color: #fff;
 }
 html .charsheet .slugblaster .nav {
   display: flex;
@@ -3087,7 +3128,7 @@ html .charsheet .slugblaster .nav__action span {
   white-space: nowrap;
 }
 html .charsheet .slugblaster .footer {
-  background-color: white;
+  background-color: #fff;
   padding: 0.5rem;
 }
 html .charsheet .slugblaster .footer > span {

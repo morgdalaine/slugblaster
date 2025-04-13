@@ -1,6 +1,6 @@
 .mods {
   $this: '.mods';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
+  background-color: $white;
 
   &__edit,
   &__view {

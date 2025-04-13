@@ -40,23 +40,23 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
 // Fonts
-$font-title: 'One Direction', 'Hate Your Writing', 'Playpen Sans', 'Comic Sans MS', serif !default;
+$font-title: 'Playpen Sans', 'Comic Sans MS', serif !default;
 $font-nav: 'Silkscreen', 'DotGothic16', 'Comic Sans MS', cursive !default;
-$font-playbook: 'One Direction', 'Permanent Marker', 'Comic Sans MS', serif !default;
+$font-playbook: 'Permanent Marker', 'Comic Sans MS', serif !default;
 $font-nav-tab: 'Tiny5', 'Jersey 10', 'DotGothic16', 'Comic Sans MS', serif !default;
 
 $font-label: 'Radio Canada', 'Poppins', 'Ubuntu', 'Nunito', sans-serif !default;
 $font-body: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
 // $font-input: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-input: 'Hate Your Writing', 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-input: 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-action: 'Coiny', 'Comic Sans MS', serif !default;
 $font-header: 'Permanent Marker', 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Hate Your Writing', 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-handwritten: 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
 $font-dice: 'Silkscreen', 'DotGothic16', monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root: 10px;
+$font-size-root: 12px;
 $font-size-base: 1rem;
 
 $font-h1: $font-size-base * 2.5;

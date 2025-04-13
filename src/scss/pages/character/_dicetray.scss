@@ -1,6 +1,6 @@
 .dicetray {
   $this: '.dicetray';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
+  background-color: $white;
 
   &__content {
     display: grid;

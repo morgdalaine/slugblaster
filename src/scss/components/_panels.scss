@@ -1,6 +1,7 @@
 .panel {
   $this: '.panel';
   position: relative;
+  padding: $p-sm;
 
   &__wrapper {
     display: grid;

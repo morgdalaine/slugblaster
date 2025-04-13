@@ -5,15 +5,16 @@ rolltemplate.sheet-rolltemplate-slugblaster
     .sheet-roll__header
       span.sheet-roll__header--character_name {{ character }}
       +tags(['trick'])
-        span.sheet-roll__header--trick(data-i18n='saying_check_it_and') Says “Check It” And
+        span.sheet-roll__header--trick(data-i18n='saying_check_it_and') says “Check It” and
       +tags(['^disaster'])
         span.sheet-roll__header--take-action(data-i18n='takes_action') Takes Action
       +tags(['disaster'])
-        span.sheet-roll__header--take-action(data-i18n='luck_runs_out') Luck Runs Out
+        span.sheet-roll__header--take-action(data-i18n='luck_runs_out') runs out of Luck
 
     .sheet-roll__content
       .sheet-roll__title {{ title }}
-      .sheet-roll__subtitle {{ subtitle }}
+      +tags(['subtitle'])
+        .sheet-roll__subtitle {{ subtitle }}
       .sheet-roll__dice
         each die in dices
           +tags([die])

@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 .footer {
   $this: '.footer';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
+  background-color: $white;
 
   padding: $p-md;
 

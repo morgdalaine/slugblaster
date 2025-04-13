@@ -10,7 +10,7 @@ main.options
           +field(override)
           span(data-i18n=override.name)= override.label
         .option__dropdowns--horizontal
-          +hidden(override.name).options-hide
+          +hidden(override.name, 0).options-hide
           each field in selects
             .option__dropdown
               +field(field)

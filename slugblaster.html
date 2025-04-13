@@ -107,6 +107,7 @@
                     <div class="header__personality">
                       <label data-i18n="personality" for="personality">Personality</label>
                       <select class="header__personality header__input--select" name="attr_personality">
+                        <option data-i18n="select_playbook" value="select_playbook">Pick Your Personality</option>
                         <option data-i18n="grit" value="grit">The Grit</option>
                         <option data-i18n="guts" value="guts">The Guts</option>
                         <option data-i18n="smarts" value="smarts">The Smarts</option>
@@ -596,6 +597,7 @@
                     <div class="signature__signature">
                       <label data-i18n="signature" for="signature">signature</label>
                       <select class="header__signature header__input--select" name="attr_signature">
+                        <option data-i18n="select_signature" value="select_signature">Pick Your Signature</option>
                         <option data-i18n="gravity_blaster" value="gravity_blaster">Gravity Blaster</option>
                         <option data-i18n="hardlight_board" value="hardlight_board">Hardlight Board</option>
                         <option data-i18n="hyperoptic_visor" value="hyperoptic_visor">Hyperoptic Visor</option>
@@ -1061,68 +1063,47 @@
                   </div>
                 </div>
                 <div class="panel__content trait-beats__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_trait-beats_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_trait-beats_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_trait-beats_repeating">None trait beats with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
-                    </div>
-                    <fieldset class="repeating_trait-beats">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
+                  <div class="editor">
+                    <div class="editor__edit trait-beats__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats beats--chill" for="just_vibin">
+                        <input id="just_vibin" name="attr_just_vibin" type="checkbox" value="on"/><span data-i18n="just_vibin">Just Vibin' (2 style)</span>
+                      </label>
+                      <label class="beats beats--grit" for="grinding">
+                        <input id="grinding" name="attr_grinding" type="checkbox" value="on"/><span data-i18n="grinding">Grinding' (2 style)</span>
+                      </label>
+                      <label class="beats beats--guts" for="swagger">
+                        <input id="swagger" name="attr_swagger" type="checkbox" value="on"/><span data-i18n="swagger">Swagger (2 style)</span>
+                      </label>
+                      <label class="beats beats--heart" for="devotion">
+                        <input id="devotion" name="attr_devotion" type="checkbox" value="on"/><span data-i18n="devotion">Devotion (2 style)</span>
+                      </label>
+                      <label class="beats beats--smarts" for="research">
+                        <input id="research" name="attr_research" type="checkbox" value="on"/><span data-i18n="research">Research (2 style)</span>
+                      </label>
+                      <div class="beats__custom beats beats--custom">
+                        <label for="custom_trait_beat_checkbox">
+                          <input id="custom_trait_beat_checkbox" name="attr_custom_trait_beat_checkbox" type="checkbox" value="on"/>
+                        </label>
+                        <input class="beats beats--custom__custom_trait_beat beats beats--custom__input--text" data-i18n-placeholder="placeholder_custom_trait_beat" id="custom_trait_beat" name="attr_custom_trait_beat" placeholder="Custom Trait Beat" type="text"/>
                       </div>
-                    </fieldset>
+                      <label class="beats" for="origin_story">
+                        <input id="origin_story" name="attr_origin_story" type="checkbox" value="on"/><span data-i18n="origin_story">Origin Story (3 style)</span>
+                      </label>
+                      <label class="beats" for="sharpened">
+                        <input id="sharpened" name="attr_sharpened" type="checkbox" value="on"/><span data-i18n="sharpened">Sharpened (4 style)</span>
+                      </label>
+                    </div>
+                    <div class="editor__view trait-beats__view">
+                      <input name="attr_just_vibin" type="hidden"/><span data-i18n="just_vibin">Just Vibin' (2 style)</span>
+                      <input name="attr_grinding" type="hidden"/><span data-i18n="grinding">Grinding' (2 style)</span>
+                      <input name="attr_swagger" type="hidden"/><span data-i18n="swagger">Swagger (2 style)</span>
+                      <input name="attr_devotion" type="hidden"/><span data-i18n="devotion">Devotion (2 style)</span>
+                      <input name="attr_research" type="hidden"/><span data-i18n="research">Research (2 style)</span>
+                      <input name="attr_custom_trait_beat_checkbox" type="hidden"/><span name="attr_custom_trait_beat"></span>
+                      <input name="attr_origin_story" type="hidden"/><span data-i18n="origin_story">Origin Story (3 style)</span>
+                      <input name="attr_sharpened" type="hidden"/><span data-i18n="sharpened">Sharpened (4 style)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1147,68 +1128,120 @@
                   </div>
                 </div>
                 <div class="panel__content personality-arc__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_personality-arc_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_personality-arc_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_personality-arc_repeating">None personality arc with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
-                    </div>
-                    <fieldset class="repeating_personality-arc">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
+                  <div class="editor">
+                    <div class="editor__edit personality-arc__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats beats--chill" for="caught_in_a_plot">
+                        <input id="caught_in_a_plot" name="attr_caught_in_a_plot" type="checkbox" value="on"/><span data-i18n="caught_in_a_plot">Caught in a Plot (2 style)</span>
+                      </label>
+                      <label class="beats beats--chill" for="serendipity">
+                        <input id="serendipity" name="attr_serendipity" type="checkbox" value="on"/><span data-i18n="serendipity">Serendipity (1 style)</span>
+                      </label>
+                      <label class="beats beats--chill" for="in_too_deep">
+                        <input id="in_too_deep" name="attr_in_too_deep" type="checkbox" value="on"/><span data-i18n="in_too_deep">In Too Deep (4 trouble)</span>
+                      </label>
+                      <label class="beats beats--chill" for="somehow_works_out">
+                        <input id="somehow_works_out" name="attr_somehow_works_out" type="checkbox" value="on"/><span data-i18n="somehow_works_out">Somehow Works Out (3 style)</span>
+                      </label>
+                      <label class="beats beats--grit" for="a_goal">
+                        <input id="a_goal" name="attr_a_goal" type="checkbox" value="on"/><span data-i18n="a_goal">A Goal (1 style)</span>
+                      </label>
+                      <label class="beats beats--grit" for="setbacks">
+                        <input id="setbacks" name="attr_setbacks" type="checkbox" value="on"/><span data-i18n="setbacks">Setbacks (2 style)</span>
+                      </label>
+                      <label class="beats beats--grit" for="quitting">
+                        <input id="quitting" name="attr_quitting" type="checkbox" value="on"/><span data-i18n="quitting">Quitting (4 trouble)</span>
+                      </label>
+                      <label class="beats beats--grit" for="perseverance">
+                        <input id="perseverance" name="attr_perseverance" type="checkbox" value="on"/><span data-i18n="perseverance">Perseverance (3 style)</span>
+                      </label>
+                      <label class="beats beats--guts" for="spotlight">
+                        <input id="spotlight" name="attr_spotlight" type="checkbox" value="on"/><span data-i18n="spotlight">Spotlight (3 style)</span>
+                      </label>
+                      <label class="beats beats--guts" for="star_power">
+                        <input id="star_power" name="attr_star_power" type="checkbox" value="on"/><span data-i18n="star_power">Star Power (2 style)</span>
+                      </label>
+                      <label class="beats beats--guts" for="going_solo">
+                        <input id="going_solo" name="attr_going_solo" type="checkbox" value="on"/><span data-i18n="going_solo">Going Solo (4 trouble)</span>
+                      </label>
+                      <label class="beats beats--guts" for="the_i_in_team">
+                        <input id="the_i_in_team" name="attr_the_i_in_team" type="checkbox" value="on"/><span data-i18n="the_i_in_team">The I in Team (1 style)</span>
+                      </label>
+                      <label class="beats beats--heart" for="dalliance">
+                        <input id="dalliance" name="attr_dalliance" type="checkbox" value="on"/><span data-i18n="dalliance">Dalliance (2 style)</span>
+                      </label>
+                      <label class="beats beats--heart" for="catching_feelings">
+                        <input id="catching_feelings" name="attr_catching_feelings" type="checkbox" value="on"/><span data-i18n="catching_feelings">Catching Feelings (1 style)</span>
+                      </label>
+                      <label class="beats beats--heart" for="us_or_them">
+                        <input id="us_or_them" name="attr_us_or_them" type="checkbox" value="on"/><span data-i18n="us_or_them">Us or Them (4 trouble)</span>
+                      </label>
+                      <label class="beats beats--heart" for="love_conquers_all">
+                        <input id="love_conquers_all" name="attr_love_conquers_all" type="checkbox" value="on"/><span data-i18n="love_conquers_all">Love Conquers All (3 style)</span>
+                      </label>
+                      <label class="beats beats--smarts" for="inspiration">
+                        <input id="inspiration" name="attr_inspiration" type="checkbox" value="on"/><span data-i18n="inspiration">Inspiration (1 style)</span>
+                      </label>
+                      <label class="beats beats--smarts" for="results">
+                        <input id="results" name="attr_results" type="checkbox" value="on"/><span data-i18n="results">Results (2 style)</span>
+                      </label>
+                      <label class="beats beats--smarts" for="unintended_consequences">
+                        <input id="unintended_consequences" name="attr_unintended_consequences" type="checkbox" value="on"/><span data-i18n="unintended_consequences">Unintended Consequences (4 trouble)</span>
+                      </label>
+                      <label class="beats beats--smarts" for="full_realization">
+                        <input id="full_realization" name="attr_full_realization" type="checkbox" value="on"/><span data-i18n="full_realization">Full Realization (3 style)</span>
+                      </label>
+                      <div class="beats__custom beats beats--custom">
+                        <label for="custom_personality_arc_1_checkbox">
+                          <input id="custom_personality_arc_1_checkbox" name="attr_custom_personality_arc_1_checkbox" type="checkbox" value="on"/>
+                        </label>
+                        <input class="beats beats--custom__custom_personality_arc_1 beats beats--custom__input--text" data-i18n-placeholder="placeholder_custom_personality_arc_1" id="custom_personality_arc_1" name="attr_custom_personality_arc_1" placeholder="Custom Personality Arc" type="text"/>
                       </div>
-                    </fieldset>
+                      <div class="beats__custom beats beats--custom">
+                        <label for="custom_personality_arc_2_checkbox">
+                          <input id="custom_personality_arc_2_checkbox" name="attr_custom_personality_arc_2_checkbox" type="checkbox" value="on"/>
+                        </label>
+                        <input class="beats beats--custom__custom_personality_arc_2 beats beats--custom__input--text" data-i18n-placeholder="placeholder_custom_personality_arc_2" id="custom_personality_arc_2" name="attr_custom_personality_arc_2" placeholder="Custom Personality Arc" type="text"/>
+                      </div>
+                      <div class="beats__custom beats beats--custom">
+                        <label for="custom_personality_arc_3_checkbox">
+                          <input id="custom_personality_arc_3_checkbox" name="attr_custom_personality_arc_3_checkbox" type="checkbox" value="on"/>
+                        </label>
+                        <input class="beats beats--custom__custom_personality_arc_3 beats beats--custom__input--text" data-i18n-placeholder="placeholder_custom_personality_arc_3" id="custom_personality_arc_3" name="attr_custom_personality_arc_3" placeholder="Custom Personality Arc" type="text"/>
+                      </div>
+                      <div class="beats__custom beats beats--custom">
+                        <label for="custom_personality_arc_4_checkbox">
+                          <input id="custom_personality_arc_4_checkbox" name="attr_custom_personality_arc_4_checkbox" type="checkbox" value="on"/>
+                        </label>
+                        <input class="beats beats--custom__custom_personality_arc_4 beats beats--custom__input--text" data-i18n-placeholder="placeholder_custom_personality_arc_4" id="custom_personality_arc_4" name="attr_custom_personality_arc_4" placeholder="Custom Personality Arc" type="text"/>
+                      </div>
+                    </div>
+                    <div class="editor__view personality-arc__view">
+                      <input name="attr_caught_in_a_plot" type="hidden"/><span data-i18n="caught_in_a_plot">Caught in a Plot (2 style)</span>
+                      <input name="attr_serendipity" type="hidden"/><span data-i18n="serendipity">Serendipity (1 style)</span>
+                      <input name="attr_in_too_deep" type="hidden"/><span data-i18n="in_too_deep">In Too Deep (4 trouble)</span>
+                      <input name="attr_somehow_works_out" type="hidden"/><span data-i18n="somehow_works_out">Somehow Works Out (3 style)</span>
+                      <input name="attr_a_goal" type="hidden"/><span data-i18n="a_goal">A Goal (1 style)</span>
+                      <input name="attr_setbacks" type="hidden"/><span data-i18n="setbacks">Setbacks (2 style)</span>
+                      <input name="attr_quitting" type="hidden"/><span data-i18n="quitting">Quitting (4 trouble)</span>
+                      <input name="attr_perseverance" type="hidden"/><span data-i18n="perseverance">Perseverance (3 style)</span>
+                      <input name="attr_spotlight" type="hidden"/><span data-i18n="spotlight">Spotlight (3 style)</span>
+                      <input name="attr_star_power" type="hidden"/><span data-i18n="star_power">Star Power (2 style)</span>
+                      <input name="attr_going_solo" type="hidden"/><span data-i18n="going_solo">Going Solo (4 trouble)</span>
+                      <input name="attr_the_i_in_team" type="hidden"/><span data-i18n="the_i_in_team">The I in Team (1 style)</span>
+                      <input name="attr_dalliance" type="hidden"/><span data-i18n="dalliance">Dalliance (2 style)</span>
+                      <input name="attr_catching_feelings" type="hidden"/><span data-i18n="catching_feelings">Catching Feelings (1 style)</span>
+                      <input name="attr_us_or_them" type="hidden"/><span data-i18n="us_or_them">Us or Them (4 trouble)</span>
+                      <input name="attr_love_conquers_all" type="hidden"/><span data-i18n="love_conquers_all">Love Conquers All (3 style)</span>
+                      <input name="attr_inspiration" type="hidden"/><span data-i18n="inspiration">Inspiration (1 style)</span>
+                      <input name="attr_results" type="hidden"/><span data-i18n="results">Results (2 style)</span>
+                      <input name="attr_unintended_consequences" type="hidden"/><span data-i18n="unintended_consequences">Unintended Consequences (4 trouble)</span>
+                      <input name="attr_full_realization" type="hidden"/><span data-i18n="full_realization">Full Realization (3 style)</span>
+                      <input name="attr_custom_personality_arc_1_checkbox" type="hidden"/><span name="attr_custom_personality_arc_1"></span>
+                      <input name="attr_custom_personality_arc_2_checkbox" type="hidden"/><span name="attr_custom_personality_arc_2"></span>
+                      <input name="attr_custom_personality_arc_3_checkbox" type="hidden"/><span name="attr_custom_personality_arc_3"></span>
+                      <input name="attr_custom_personality_arc_4_checkbox" type="hidden"/><span name="attr_custom_personality_arc_4"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1233,68 +1266,28 @@
                   </div>
                 </div>
                 <div class="panel__content family-arc__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_family-arc_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_family-arc_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_family-arc_repeating">None family arc with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
+                  <div class="editor">
+                    <div class="editor__edit family-arc__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats" for="trouble_at_home">
+                        <input id="trouble_at_home" name="attr_trouble_at_home" type="checkbox" value="on"/><span data-i18n="trouble_at_home">Trouble at Home (2 trouble)</span>
+                      </label>
+                      <label class="beats" for="final_warning">
+                        <input id="final_warning" name="attr_final_warning" type="checkbox" value="on"/><span data-i18n="final_warning">Final Warning (3 trouble)</span>
+                      </label>
+                      <label class="beats" for="last_straw">
+                        <input id="last_straw" name="attr_last_straw" type="checkbox" value="on"/><span data-i18n="last_straw">Last Straw (4 trouble)</span>
+                      </label>
+                      <label class="beats" for="redemption">
+                        <input id="redemption" name="attr_redemption" type="checkbox" value="on"/><span data-i18n="redemption">Redemption (4 style)</span>
+                      </label>
                     </div>
-                    <fieldset class="repeating_family-arc">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
-                      </div>
-                    </fieldset>
+                    <div class="editor__view family-arc__view">
+                      <input name="attr_trouble_at_home" type="hidden"/><span data-i18n="trouble_at_home">Trouble at Home (2 trouble)</span>
+                      <input name="attr_final_warning" type="hidden"/><span data-i18n="final_warning">Final Warning (3 trouble)</span>
+                      <input name="attr_last_straw" type="hidden"/><span data-i18n="last_straw">Last Straw (4 trouble)</span>
+                      <input name="attr_redemption" type="hidden"/><span data-i18n="redemption">Redemption (4 style)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1319,68 +1312,28 @@
                   </div>
                 </div>
                 <div class="panel__content angst-arc__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_angst-arc_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_angst-arc_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_angst-arc_repeating">None angst arc with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
+                  <div class="editor">
+                    <div class="editor__edit angst-arc__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats" for="angst">
+                        <input id="angst" name="attr_angst" type="checkbox" value="on"/><span data-i18n="angst">Angst (2 trouble)</span>
+                      </label>
+                      <label class="beats" for="struggling">
+                        <input id="struggling" name="attr_struggling" type="checkbox" value="on"/><span data-i18n="struggling">Struggling (3 trouble)</span>
+                      </label>
+                      <label class="beats" for="darkness">
+                        <input id="darkness" name="attr_darkness" type="checkbox" value="on"/><span data-i18n="darkness">Darkness (4 trouble)</span>
+                      </label>
+                      <label class="beats" for="catharsis">
+                        <input id="catharsis" name="attr_catharsis" type="checkbox" value="on"/><span data-i18n="catharsis">Catharsis (4 style)</span>
+                      </label>
                     </div>
-                    <fieldset class="repeating_angst-arc">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
-                      </div>
-                    </fieldset>
+                    <div class="editor__view angst-arc__view">
+                      <input name="attr_angst" type="hidden"/><span data-i18n="angst">Angst (2 trouble)</span>
+                      <input name="attr_struggling" type="hidden"/><span data-i18n="struggling">Struggling (3 trouble)</span>
+                      <input name="attr_darkness" type="hidden"/><span data-i18n="darkness">Darkness (4 trouble)</span>
+                      <input name="attr_catharsis" type="hidden"/><span data-i18n="catharsis">Catharsis (4 style)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1405,68 +1358,28 @@
                   </div>
                 </div>
                 <div class="panel__content crew-beats__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_crew-beats_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_crew-beats_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_crew-beats_repeating">None crew beats with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
+                  <div class="editor">
+                    <div class="editor__edit crew-beats__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats" for="opportunity">
+                        <input id="opportunity" name="attr_opportunity" type="checkbox" value="on"/><span data-i18n="opportunity">Opportunity (2 style)</span>
+                      </label>
+                      <label class="beats" for="challenge">
+                        <input id="challenge" name="attr_challenge" type="checkbox" value="on"/><span data-i18n="challenge">Challenge (5 trouble)</span>
+                      </label>
+                      <label class="beats" for="fight">
+                        <input id="fight" name="attr_fight" type="checkbox" value="on"/><span data-i18n="fight">Fight (5 trouble)</span>
+                      </label>
+                      <label class="beats" for="make_up">
+                        <input id="make_up" name="attr_make_up" type="checkbox" value="on"/><span data-i18n="make_up">Make Up (5 style)</span>
+                      </label>
                     </div>
-                    <fieldset class="repeating_crew-beats">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
-                      </div>
-                    </fieldset>
+                    <div class="editor__view crew-beats__view">
+                      <input name="attr_opportunity" type="hidden"/><span data-i18n="opportunity">Opportunity (2 style)</span>
+                      <input name="attr_challenge" type="hidden"/><span data-i18n="challenge">Challenge (5 trouble)</span>
+                      <input name="attr_fight" type="hidden"/><span data-i18n="fight">Fight (5 trouble)</span>
+                      <input name="attr_make_up" type="hidden"/><span data-i18n="make_up">Make Up (5 style)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1491,68 +1404,32 @@
                   </div>
                 </div>
                 <div class="panel__content other-beats__content">
-                  <div class="repeating">
-                    <input class="repeating__is-empty" name="attr_other-beats_empty" type="hidden" value="0"/>
-                    <input class="repeating__controller" name="attr_other-beats_editor" type="hidden" value="on"/>
-                    <div class="repeating__empty">
-                      <div class="repeating__header"><span data-i18n="none_other-beats_repeating">None other beats with left beef</span></div>
-                      <div class="repeating__subtitle"></div>
+                  <div class="editor">
+                    <div class="editor__edit other-beats__edit">
+                      <input name="attr_personality" type="hidden"/>
+                      <label class="beats" for="being_good">
+                        <input id="being_good" name="attr_being_good" type="checkbox" value="on"/><span data-i18n="being_good">Being Good (1 style)</span>
+                      </label>
+                      <label class="beats" for="you_earned_it">
+                        <input id="you_earned_it" name="attr_you_earned_it" type="checkbox" value="on"/><span data-i18n="you_earned_it">You Earned It (5 style)</span>
+                      </label>
+                      <label class="beats" for="take_an_l">
+                        <input id="take_an_l" name="attr_take_an_l" type="checkbox" value="on"/><span data-i18n="take_an_l">Take an L (5 trouble)</span>
+                      </label>
+                      <label class="beats" for="in_the_lab">
+                        <input id="in_the_lab" name="attr_in_the_lab" type="checkbox" value="on"/><span data-i18n="in_the_lab">In the Lab (1 style)</span>
+                      </label>
+                      <label class="beats" for="portal_discovery">
+                        <input id="portal_discovery" name="attr_portal_discovery" type="checkbox" value="on"/><span data-i18n="portal_discovery">Portal Discovery (2 style)</span>
+                      </label>
                     </div>
-                    <fieldset class="repeating_other-beats">
-                      <div class="repeating__wrapper">
-                        <div class="repeating__edit">
-                          <div class="row downtime__edit">
-                            <div class="downtime__field downtime_check col-1">
-                              <label for="downtime_check">
-                                <input id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="visually-hidden" data-i18n="downtime_check">Check</span>
-                              </label>
-                            </div>
-                            <div class="downtime__field downtime_name col-11">
-                              <input class="downtime__downtime_name downtime__input--text" data-i18n-placeholder="placeholder_downtime_name" id="downtime_name" name="attr_downtime_name" placeholder="Name" type="text"/>
-                              <label class="visually-hidden" data-i18n="downtime_name" for="downtime_name">Name</label>
-                            </div>
-                            <div class="downtime__field downtime_cost ">
-                              <input class="downtime__downtime_cost downtime__input--text" data-i18n-placeholder="placeholder_downtime_cost" id="downtime_cost" name="attr_downtime_cost" placeholder="Cost" type="text"/>
-                              <label data-i18n="downtime_cost" for="downtime_cost">Cost</label>
-                            </div>
-                            <div class="downtime__field downtime_description ">
-                              <textarea class="downtime__downtime_description downtime__input--textarea" data-i18n-placeholder="placeholder_downtime_description" name="attr_downtime_description" placeholder="Description"></textarea>
-                              <label data-i18n="downtime_description" for="downtime_description">Description</label>
-                            </div>
-                            <div class="downtime__field downtime_result ">
-                              <input class="downtime__downtime_result downtime__input--text" data-i18n-placeholder="placeholder_downtime_result" id="downtime_result" name="attr_downtime_result" placeholder="Result" type="text"/>
-                              <label data-i18n="downtime_result" for="downtime_result">Result</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="repeating__view">
-                          <article class="bubble bubble__downtime">
-                            <input class="bubble__controller" name="attr_downtime_collapse" type="hidden" value="0"/>
-                            <div class="bubble__header">
-                              <div class="downtime__view">
-                                <label class="downtime__check">
-                                  <input class="checkbox--scribble" id="downtime_check" name="attr_downtime_check" type="checkbox" value="on"/><span class="downtime__name" name="attr_downtime_name"></span>
-                                </label><span class="downtime__cost" name="attr_downtime_cost"></span>
-                              </div>
-                              <div class="bubble__controls">
-                                <button class="broadcast bubble__broadcast" name="roll_downtime-broadcast" type="roll" value="&amp;{template:slugcast} {{character=@{character_name}}} {{title=^{downtime}}} {{^{downtime_name}=@{downtime_name}}} {{^{downtime_cost}=@{downtime_cost}}} {{^{downtime_description}=@{downtime_description}}} {{^{downtime_result}=@{downtime_result}}}"><span class="pictos">w</span><span class="visually-hidden" data-i18n="broadcast_to_chat">Broadcast to Chat</span></button>
-                                <label class="bubble__expand" for="attr_downtime_collapse">
-                                  <input name="attr_downtime_collapse" type="checkbox"/><span class="bubble__expand--collapse visually-hidden" data-i18n="collapse_content">Collapse Content</span><span class="bubble__expand--expand visually-hidden" data-i18n="expand_content">Expand Content</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="bubble__content">
-                              <div class="bubble__collapse"><span name="attr_downtime_result"></span>
-                                <label data-i18n="downtime_result">Result</label><span name="attr_downtime_description"></span>
-                                <label data-i18n="downtime_description">Description</label>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                        <div class="repeating__delete"><span class="downtime__name" name="attr_downtime_name"></span>
-                        </div>
-                      </div>
-                    </fieldset>
+                    <div class="editor__view other-beats__view">
+                      <input name="attr_being_good" type="hidden"/><span data-i18n="being_good">Being Good (1 style)</span>
+                      <input name="attr_you_earned_it" type="hidden"/><span data-i18n="you_earned_it">You Earned It (5 style)</span>
+                      <input name="attr_take_an_l" type="hidden"/><span data-i18n="take_an_l">Take an L (5 trouble)</span>
+                      <input name="attr_in_the_lab" type="hidden"/><span data-i18n="in_the_lab">In the Lab (1 style)</span>
+                      <input name="attr_portal_discovery" type="hidden"/><span data-i18n="portal_discovery">Portal Discovery (2 style)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1771,11 +1648,11 @@
               <div class="blob__content fractures__content">
                 <div class="fractures__boxes">
                   <div class="fractures__box fractures__box--fracture_1">
-                    <input class="fractures__fracture_1 fractures__input--text" data-i18n-placeholder="placeholder_fracture_1" id="fracture_1" name="attr_fracture_1" placeholder="super bruised ribs" type="text"/>
+                    <input class="fractures__fracture_1 fractures__input--text" data-i18n-placeholder="placeholder_fracture_1" id="fracture_1" name="attr_fracture_1" placeholder="going solo" type="text"/>
                     <label class="visually-hidden" data-i18n="fracture_1" for="fracture_1">Fracture 1</label>
                   </div>
                   <div class="fractures__box fractures__box--fracture_2">
-                    <input class="fractures__fracture_2 fractures__input--text" data-i18n-placeholder="placeholder_fracture_2" id="fracture_2" name="attr_fracture_2" placeholder="frustrated" type="text"/>
+                    <input class="fractures__fracture_2 fractures__input--text" data-i18n-placeholder="placeholder_fracture_2" id="fracture_2" name="attr_fracture_2" placeholder="catching feelings" type="text"/>
                     <label class="visually-hidden" data-i18n="fracture_2" for="fracture_2">Fracture 2</label>
                   </div>
                 </div>
@@ -2676,7 +2553,7 @@
               <input id="attitude_override" name="attr_attitude_override" type="checkbox" value="on"/><span data-i18n="attitude_override">Override Attitude</span>
             </label>
             <div class="option__dropdowns--horizontal">
-              <input class="options-hide" name="attr_attitude_override" type="hidden"/>
+              <input class="options-hide" name="attr_attitude_override" type="hidden" value="0"/>
               <div class="option__dropdown">
                 <select class="options__attitude_boost_set options__input--select" name="attr_attitude_boost_set">
                   <option data-i18n="0" value="0">+0</option>
@@ -2755,11 +2632,11 @@
 </div>
 <rolltemplate class="sheet-rolltemplate-slugblaster">
   <div class="sheet-roll">
-    <div class="sheet-roll__header"><span class="sheet-roll__header--character_name">{{ character }}</span>{{#trick}}<span class="sheet-roll__header--trick" data-i18n="saying_check_it_and">Says “Check It” And</span>{{/trick}}{{^disaster}}<span class="sheet-roll__header--take-action" data-i18n="takes_action">Takes Action</span>{{/disaster}}{{#disaster}}<span class="sheet-roll__header--take-action" data-i18n="luck_runs_out">Luck Runs Out</span>{{/disaster}}
+    <div class="sheet-roll__header"><span class="sheet-roll__header--character_name">{{ character }}</span>{{#trick}}<span class="sheet-roll__header--trick" data-i18n="saying_check_it_and">says “Check It” and</span>{{/trick}}{{^disaster}}<span class="sheet-roll__header--take-action" data-i18n="takes_action">Takes Action</span>{{/disaster}}{{#disaster}}<span class="sheet-roll__header--take-action" data-i18n="luck_runs_out">runs out of Luck</span>{{/disaster}}
     </div>
     <div class="sheet-roll__content">
-      <div class="sheet-roll__title">{{ title }}</div>
-      <div class="sheet-roll__subtitle">{{ subtitle }}</div>
+      <div class="sheet-roll__title">{{ title }}</div>{{#subtitle}}
+      <div class="sheet-roll__subtitle">{{ subtitle }}</div>{{/subtitle}}
       <div class="sheet-roll__dice">{{#die1}}{{#rollBetween() computed::die1 1 1}}
         <div class="sheet-roll__die"><span class="sheet-roll__die--1">1<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-01.svg"/></span></div>{{/rollBetween() computed::die1 1 1}}{{#rollBetween() computed::die1 2 2}}
         <div class="sheet-roll__die"><span class="sheet-roll__die--2">2<img src="https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/dice/dice-02.svg"/></span></div>{{/rollBetween() computed::die1 2 2}}{{#rollBetween() computed::die1 3 3}}
@@ -2878,15 +2755,14 @@ const makeRollTemplate = (params) => {
   const roll = params.roll || '[[1d6]]';
 
   const template = [
-    '&{template:slugblaster}',
-    '{{character=@{character_name}}}',
-    `{{title=${title}}}`,
-    `{{subtitle=${subtitle}}}`,
-    `{{${type}=true}}`,
-    `{{roll=${roll}}}`,
-
-    '{{result=[[0]]}}',
-  ];
+			"&{template:slugblaster}",
+			"{{character=@{character_name}}}",
+			`{{title=${title}}}`,
+			subtitle ? `{{subtitle=${subtitle}}}` : "",
+			`{{${type}=true}}`,
+			`{{roll=${roll}}}`,
+			"{{result=[[0]]}}",
+		];
 
   if (trick) template.push('{{trick=true}}');
   if (type === 'action') {
@@ -2933,8 +2809,8 @@ const makeCharacterRoll = (trick = false) => {
     const dice = 1 + boosts + (dare === 'plus_1d6' ? 1 : 0);
     const kick = 0 + kicks + (dare === 'plus_kick' ? 1 : 0);
     const params = {
-      title: 'Slugblaster Title',
-      subtitle: 'Slugblaster Subtitle',
+      title: 'Action Roll',
+      // subtitle: 'Slugblaster Subtitle',
       type: 'action',
       dice: dice,
       roll: `[[${dice}d6kh1sd]]`,

@@ -1,6 +1,6 @@
 .header-crew {
   $this: '.header-crew';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
+  background-color: $white;
 
   &__title {
     &[type='text'] {

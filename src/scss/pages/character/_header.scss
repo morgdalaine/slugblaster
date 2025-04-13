@@ -1,6 +1,6 @@
 .header {
   $this: '.header';
-  background-color: white; // hsl(random(360) 80% 80% / 80%);
+  background-color: $white;
 
   &__title,
   &__title--custom {

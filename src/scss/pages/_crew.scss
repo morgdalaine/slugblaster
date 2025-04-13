@@ -30,6 +30,9 @@
     flex-direction: column;
   }
 
+  &__action {
+    grid-column: 1/-1;
+  }
   input[name*='load_factions'] {
     &:not([value='0']) {
       + #{$this}--factions {

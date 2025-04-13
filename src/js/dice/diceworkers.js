@@ -8,15 +8,14 @@ const makeRollTemplate = (params) => {
   const roll = params.roll || '[[1d6]]';
 
   const template = [
-    '&{template:slugblaster}',
-    '{{character=@{character_name}}}',
-    `{{title=${title}}}`,
-    `{{subtitle=${subtitle}}}`,
-    `{{${type}=true}}`,
-    `{{roll=${roll}}}`,
-
-    '{{result=[[0]]}}',
-  ];
+			"&{template:slugblaster}",
+			"{{character=@{character_name}}}",
+			`{{title=${title}}}`,
+			subtitle ? `{{subtitle=${subtitle}}}` : "",
+			`{{${type}=true}}`,
+			`{{roll=${roll}}}`,
+			"{{result=[[0]]}}",
+		];
 
   if (trick) template.push('{{trick=true}}');
   if (type === 'action') {
@@ -63,8 +62,8 @@ const makeCharacterRoll = (trick = false) => {
     const dice = 1 + boosts + (dare === 'plus_1d6' ? 1 : 0);
     const kick = 0 + kicks + (dare === 'plus_kick' ? 1 : 0);
     const params = {
-      title: 'Slugblaster Title',
-      subtitle: 'Slugblaster Subtitle',
+      title: 'Action Roll',
+      // subtitle: 'Slugblaster Subtitle',
       type: 'action',
       dice: dice,
       roll: `[[${dice}d6kh1sd]]`,
