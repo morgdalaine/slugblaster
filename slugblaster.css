@@ -783,7 +783,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(254, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(336, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -2481,7 +2481,10 @@ html .charsheet .slugblaster .options .sheet-version > span[name]::before {
   content: "v";
 }
 @media (min-width: 768px) {
-  html .charsheet .slugblaster .diary .blade__wrapper, html .charsheet .slugblaster .downtimes .blade__wrapper, html .charsheet .slugblaster .epilogue .blade__wrapper, html .charsheet .slugblaster .factions .blade__wrapper {
+  html .charsheet .slugblaster .diary .blade__wrapper,
+  html .charsheet .slugblaster .downtimes .blade__wrapper,
+  html .charsheet .slugblaster .epilogue .blade__wrapper,
+  html .charsheet .slugblaster .factions .blade__wrapper {
     grid-template-columns: repeat(2, minmax(25%, 1fr));
   }
 }

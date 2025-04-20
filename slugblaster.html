@@ -2751,14 +2751,14 @@ const makeRollTemplate = (params) => {
   const roll = params.roll || '[[1d6]]';
 
   const template = [
-			"&{template:slugblaster}",
-			"{{character=@{character_name}}}",
-			`{{title=${title}}}`,
-			subtitle ? `{{subtitle=${subtitle}}}` : "",
-			`{{${type}=true}}`,
-			`{{roll=${roll}}}`,
-			"{{result=[[0]]}}",
-		];
+    '&{template:slugblaster}',
+    '{{character=@{character_name}}}',
+    `{{title=${title}}}`,
+    subtitle ? `{{subtitle=${subtitle}}}` : '',
+    `{{${type}=true}}`,
+    `{{roll=${roll}}}`,
+    '{{result=[[0]]}}',
+  ];
 
   if (trick) template.push('{{trick=true}}');
   if (type === 'action') {
@@ -2965,153 +2965,153 @@ const G_PLAYBOOKS = {
 };
 
 const G_SIGNATURES = {
-	gravity_blaster: {
-		mods: [
-			"endurance_engine",
-			"agility_pin",
-			"impulse_rig",
-			"gravity_spasm",
-			"field_inverter",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	hardlight_board: {
-		mods: [
-			"photon_vent",
-			"energy_lattice",
-			"photon_exciter",
-			"flicker_switch",
-			"matter_photonizer",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	hyperoptic_visor: {
-		mods: [
-			"realmware_lens",
-			"omniscience_aperture",
-			"spacetime_periscope",
-			"powered_crunk_filter",
-			"adv._neural_imaging",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	kinetic_deck: {
-		mods: [
-			"proximity_lock",
-			"stasis_anchor",
-			"density_pedal",
-			"inertial_vortex",
-			"dimensional_ballast",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	negafriction_sword: {
-		mods: [
-			"slip_rattle",
-			"field_projector",
-			"ref_coating",
-			"negafriction_wake",
-			"subdimensional_edge",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	photonic_jacket: {
-		mods: [
-			"flash_patterns",
-			"ambiance_panel",
-			"photo_bypass",
-			"hardlight_upscaling",
-			"concept_prism",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	powered_armour: {
-		mods: [
-			"heavy_duty_servos",
-			"weapons_system",
-			"mobility_booster",
-			"ablatine_plates",
-			"omega_engine",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	reality_cannon: {
-		mods: [
-			"parameter_dial",
-			"exponent_coil",
-			"subjectivity_diode",
-			"matter_lens",
-			"concept_inverter",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	riftninja_sneakers: {
-		mods: [
-			"hyperphaser",
-			"anti_negafriction_outsoles",
-			"powered_midsoles",
-			"reaction_switch",
-			"plane_haunt",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	robotic_companion: {
-		mods: [
-			"weapons",
-			"mobility_boosters",
-			"heavy_duty_servos",
-			"guardian_mode",
-			"neural_network",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	skipmode_runners: {
-		mods: [
-			"anti_negafriction_outsoles",
-			"energy_tenser",
-			"temporal_scrubber",
-			"chrono_clip",
-			"causality_hoop",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	voidwear_backpack: {
-		mods: [
-			"astral_intake",
-			"omni_siphon",
-			"chaos_vent",
-			"collapsible_panels",
-			"reversible_zipper",
-			"power_cell",
-			"stabilizer",
-			"kitbashed",
-		],
-	},
-	custom: {
-		mods: ["power_cell", "stabilizer", "kitbashed"],
-	},
+  gravity_blaster: {
+    mods: [
+      'endurance_engine',
+      'agility_pin',
+      'impulse_rig',
+      'gravity_spasm',
+      'field_inverter',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  hardlight_board: {
+    mods: [
+      'photon_vent',
+      'energy_lattice',
+      'photon_exciter',
+      'flicker_switch',
+      'matter_photonizer',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  hyperoptic_visor: {
+    mods: [
+      'realmware_lens',
+      'omniscience_aperture',
+      'spacetime_periscope',
+      'powered_crunk_filter',
+      'adv._neural_imaging',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  kinetic_deck: {
+    mods: [
+      'proximity_lock',
+      'stasis_anchor',
+      'density_pedal',
+      'inertial_vortex',
+      'dimensional_ballast',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  negafriction_sword: {
+    mods: [
+      'slip_rattle',
+      'field_projector',
+      'ref_coating',
+      'negafriction_wake',
+      'subdimensional_edge',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  photonic_jacket: {
+    mods: [
+      'flash_patterns',
+      'ambiance_panel',
+      'photo_bypass',
+      'hardlight_upscaling',
+      'concept_prism',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  powered_armour: {
+    mods: [
+      'heavy_duty_servos',
+      'weapons_system',
+      'mobility_booster',
+      'ablatine_plates',
+      'omega_engine',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  reality_cannon: {
+    mods: [
+      'parameter_dial',
+      'exponent_coil',
+      'subjectivity_diode',
+      'matter_lens',
+      'concept_inverter',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  riftninja_sneakers: {
+    mods: [
+      'hyperphaser',
+      'anti_negafriction_outsoles',
+      'powered_midsoles',
+      'reaction_switch',
+      'plane_haunt',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  robotic_companion: {
+    mods: [
+      'weapons',
+      'mobility_boosters',
+      'heavy_duty_servos',
+      'guardian_mode',
+      'neural_network',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  skipmode_runners: {
+    mods: [
+      'anti_negafriction_outsoles',
+      'energy_tenser',
+      'temporal_scrubber',
+      'chrono_clip',
+      'causality_hoop',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  voidwear_backpack: {
+    mods: [
+      'astral_intake',
+      'omni_siphon',
+      'chaos_vent',
+      'collapsible_panels',
+      'reversible_zipper',
+      'power_cell',
+      'stabilizer',
+      'kitbashed',
+    ],
+  },
+  custom: {
+    mods: ['power_cell', 'stabilizer', 'kitbashed'],
+  },
 };
 
 const G_EXTRA_GEAR = [
@@ -3215,98 +3215,92 @@ const G_ATTITUDE_TURBO = {
     ...Array.from(Array(4).keys(), (key) => `hype_kick_${key + 1}`),
   ],
 };
-  
-	/**
-	 * Checks if a repcontain (e.g. repeating_weapons) is empty.
-	 * This is calculated by looking at the length of IDs in fieldset.
-	 * @param {string} section name of a repeating fieldset (repcontainer)
-	 * @param {string} suffix attribute name as section_suffix (e.g. weapons_count)
-	 **/
-	const isFieldsetEmpty = (section, suffix = "empty") => {
-		getSectionIDs(section, (id) => {
-			setAttrs({ [`${section}_${suffix}`]: id.length });
-		});
-	}
+  /**
+ * Checks if a repcontain (e.g. repeating_weapons) is empty.
+ * This is calculated by looking at the length of IDs in fieldset.
+ * @param {string} section name of a repeating fieldset (repcontainer)
+ * @param {string} suffix attribute name as section_suffix (e.g. weapons_count)
+ **/
+const isFieldsetEmpty = (section, suffix = 'empty') => {
+  getSectionIDs(section, (id) => {
+    setAttrs({ [`${section}_${suffix}`]: id.length });
+  });
+};
 
-	/**
-	 * Combines [getAttrs()](https://wiki.roll20.net/Sheet_Worker_Scripts#getAttrs.28attributeNameArray.2C_callback.29)
-	 * and [getSectionIDs](https://wiki.roll20.net/Sheet_Worker_Scripts#getSectionIDs.28section_name.2Ccallback.29)
-	 * @param {Object} sectionDetails repeating section request
-	 *  @example
-	 *    // example of sectionDetails object
-	 *    const G_DEFAULT_REPEATING = [
-	 *      { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
-	 *      { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
-	 *    ];
-	 * @param {string[]} getArray optional global attribute request
-	 * @param {callback} callback
-	 * @returns {(Object|Object)}
-	 */
-	const getAllAttrs = (sectionDetails, getArray, callback) => {
-		const sectionClone = structuredClone(sectionDetails);
+/**
+ * Combines [getAttrs()](https://wiki.roll20.net/Sheet_Worker_Scripts#getAttrs.28attributeNameArray.2C_callback.29)
+ * and [getSectionIDs](https://wiki.roll20.net/Sheet_Worker_Scripts#getSectionIDs.28section_name.2Ccallback.29)
+ * @param {Object} sectionDetails repeating section request
+ *  @example
+ *    // example of sectionDetails object
+ *    const G_DEFAULT_REPEATING = [
+ *      { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
+ *      { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
+ *    ];
+ * @param {string[]} getArray optional global attribute request
+ * @param {callback} callback
+ * @returns {(Object|Object)}
+ */
+const getAllAttrs = (sectionDetails, getArray, callback) => {
+  const sectionClone = structuredClone(sectionDetails);
 
-    if (typeof callback !== "function") return;
+  if (typeof callback !== 'function') return;
 
-		getSections(getArray, sectionClone, (getArr, sections) => {
-			getAttrs(getArr, (attributes) => {
-				// call the callback function to finally do what we wanted to do.
-				callback(attributes, sections);
-			});
-		});
-	}
+  getSections(getArray, sectionClone, (getArr, sections) => {
+    getAttrs(getArr, (attributes) => {
+      // call the callback function to finally do what we wanted to do.
+      callback(attributes, sections);
+    });
+  });
+};
 
-	/**
-	 * Gets the rowIDs for all the sections passed to it,
-	 * and assembles an array of repeating attributes to get.
-	 * Does this via a work queue or burndown set up.
-	 * Arguments are the same as for getAllAttrs with the addition of sections.
-	 * @param {*} getArray
-	 * @param {*} sectionDetails
-	 * @param {callback} callback
-	 * @param {*} sections accumulates the idArrays for each section
-	 */
-	const getSections = (
-		getArray,
-		sectionDetails,
-		callback,
-		sections = {},
-	) => {
-		// grab the first section to work;
-		const section = sectionDetails.shift();
-		getSectionIDs(section.section, (idArray) => {
-			// store the idArray for use later on if needed.
-			sections[section.section] = [...idArray];
+/**
+ * Gets the rowIDs for all the sections passed to it,
+ * and assembles an array of repeating attributes to get.
+ * Does this via a work queue or burndown set up.
+ * Arguments are the same as for getAllAttrs with the addition of sections.
+ * @param {*} getArray
+ * @param {*} sectionDetails
+ * @param {callback} callback
+ * @param {*} sections accumulates the idArrays for each section
+ */
+const getSections = (getArray, sectionDetails, callback, sections = {}) => {
+  // grab the first section to work;
+  const section = sectionDetails.shift();
+  getSectionIDs(section.section, (idArray) => {
+    // store the idArray for use later on if needed.
+    sections[section.section] = [...idArray];
 
-			// add the sections reporder to the getArray so that we can order the idArray later.
-			getArray.push(`_reporder_${section.section}`);
-			// iterate through the ids
+    // add the sections reporder to the getArray so that we can order the idArray later.
+    getArray.push(`_reporder_${section.section}`);
+    // iterate through the ids
 
-      for (const id of idArray) {
-				// Iterate through each of the fields for the repeating section
-        for (const field of section.fields){
-					// add the repeating attribute for this id to the getArray
-					getArray.push(`${section.section}_${id}_${field}`);
-				}
-			}
+    for (const id of idArray) {
+      // Iterate through each of the fields for the repeating section
+      for (const field of section.fields) {
+        // add the repeating attribute for this id to the getArray
+        getArray.push(`${section.section}_${id}_${field}`);
+      }
+    }
 
-			if (sectionDetails[0]) {
-				// If there's another section to work through, go through the burndown again
-				getSections(getArray, sectionDetails, callback, sections);
-			} else {
-				// If no sections are left, call the callback
-				callback(getArray, sections);
-			}
-		});
-	}
+    if (sectionDetails[0]) {
+      // If there's another section to work through, go through the burndown again
+      getSections(getArray, sectionDetails, callback, sections);
+    } else {
+      // If no sections are left, call the callback
+      callback(getArray, sections);
+    }
+  });
+};
 
-	/**
-	 * Splits a comma delimited string into an array
-	 * @param {string} string
-	 * @returns {Array}
-	 */
-	const commaArray = (string = "") => {
-		return string.toLowerCase().split(/\s*,\s*/);
-	}
+/**
+ * Splits a comma delimited string into an array
+ * @param {string} string
+ * @returns {Array}
+ */
+const commaArray = (string = '') => {
+  return string.toLowerCase().split(/\s*,\s*/);
+};
   const getSectionID = (eventInfo) => eventInfo.sourceAttribute.split('_').at(2);
 
 const doNumcontrol = (numcontrol, step, min = null, max = null) => {
