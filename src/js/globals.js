@@ -78,7 +78,7 @@ const G_PLAYBOOKS = {
   guts: {
     attitude: { boost: 1, kick: 3 },
     traits: ['show_off', 'snake', 'double_dare', 'walking_disaster', 'raw_talent', 'personal_growth'],
-    gear: [],
+    gear: ['something_youre_not_supposed_to_have', 'a_portable_speaker'],
   },
   smarts: {
     attitude: { boost: 2, kick: 2 },
@@ -90,17 +90,17 @@ const G_PLAYBOOKS = {
       'know_how',
       'personal_growth',
     ],
-    gear: [],
+    gear: ['a_work_in_progress', 'a_vital_screenshot_or_image_file'],
   },
   heart: {
     attitude: { boost: 1, kick: 2 },
     traits: ['team_player', 'pep_talk', 'middle_finger', 'intuition', 'passion', 'personal_growth'],
-    gear: [],
+    gear: ['something_from_someone_special', 'an_important_pamphlet'],
   },
   chill: {
     attitude: { boost: 1, kick: 0 },
     traits: ['steezey', 'umm_guys', 'button_masher', 'lucky', 'quirk', 'personal_growth'],
-    gear: [],
+    gear: ['something_you_found_on_your_way_here', 'a_pet'],
   },
   custom: {
     attitude: { boost: 2, kick: 2 },
@@ -108,42 +108,153 @@ const G_PLAYBOOKS = {
 };
 
 const G_SIGNATURES = {
-  negafriction_sword: {
-    mods: ['slip_rattle', 'field_projector', 'ref_coating', 'negafriction_wake', 'subdimensional_edge', 'kitbashed'],
-  },
-  gravity_blaster: {
-    mods: [],
-  },
-  hardlight_board: {
-    mods: [],
-  },
-  hyperoptic_visor: {
-    mods: [],
-  },
-  kinetic_deck: {
-    mods: [],
-  },
-  photonic_jacket: {
-    mods: [],
-  },
-  powered_armour: {
-    mods: [],
-  },
-  reality_cannon: {
-    mods: [],
-  },
-  riftninja_sneakers: {
-    mods: [],
-  },
-  robotic_companion: {
-    mods: [],
-  },
-  skipmode_runners: {
-    mods: [],
-  },
-  voidwear_backpack: {
-    mods: [],
-  },
+	gravity_blaster: {
+		mods: [
+			"endurance_engine",
+			"agility_pin",
+			"impulse_rig",
+			"gravity_spasm",
+			"field_inverter",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	hardlight_board: {
+		mods: [
+			"photon_vent",
+			"energy_lattice",
+			"photon_exciter",
+			"flicker_switch",
+			"matter_photonizer",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	hyperoptic_visor: {
+		mods: [
+			"realmware_lens",
+			"omniscience_aperture",
+			"spacetime_periscope",
+			"powered_crunk_filter",
+			"adv._neural_imaging",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	kinetic_deck: {
+		mods: [
+			"proximity_lock",
+			"stasis_anchor",
+			"density_pedal",
+			"inertial_vortex",
+			"dimensional_ballast",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	negafriction_sword: {
+		mods: [
+			"slip_rattle",
+			"field_projector",
+			"ref_coating",
+			"negafriction_wake",
+			"subdimensional_edge",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	photonic_jacket: {
+		mods: [
+			"flash_patterns",
+			"ambiance_panel",
+			"photo_bypass",
+			"hardlight_upscaling",
+			"concept_prism",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	powered_armour: {
+		mods: [
+			"heavy_duty_servos",
+			"weapons_system",
+			"mobility_booster",
+			"ablatine_plates",
+			"omega_engine",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	reality_cannon: {
+		mods: [
+			"parameter_dial",
+			"exponent_coil",
+			"subjectivity_diode",
+			"matter_lens",
+			"concept_inverter",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	riftninja_sneakers: {
+		mods: [
+			"hyperphaser",
+			"anti_negafriction_outsoles",
+			"powered_midsoles",
+			"reaction_switch",
+			"plane_haunt",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	robotic_companion: {
+		mods: [
+			"weapons",
+			"mobility_boosters",
+			"heavy_duty_servos",
+			"guardian_mode",
+			"neural_network",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	skipmode_runners: {
+		mods: [
+			"anti_negafriction_outsoles",
+			"energy_tenser",
+			"temporal_scrubber",
+			"chrono_clip",
+			"causality_hoop",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	voidwear_backpack: {
+		mods: [
+			"astral_intake",
+			"omni_siphon",
+			"chaos_vent",
+			"collapsible_panels",
+			"reversible_zipper",
+			"power_cell",
+			"stabilizer",
+			"kitbashed",
+		],
+	},
+	custom: {
+		mods: ["power_cell", "stabilizer", "kitbashed"],
+	},
 };
 
 const G_EXTRA_GEAR = [
@@ -200,44 +311,50 @@ const G_AUTOGEN_FIELDSET = {
   traits: [
     {
       section: 'repeating_traits',
-      fields: ['trait_check', 'trait_name', 'trait_autogen', 'trait_description'],
+      fields: ['trait_autogen', 'trait_check', 'trait_name', 'trait_description'],
+    },
+  ],
+  gear: [
+    {
+      section: 'repeating_gear',
+      fields: ['gear_autogen', 'gear_check', 'gear_name', 'gear_cost', 'gear_description'],
     },
   ],
   factions: [
     {
       section: 'repeating_crew-factions',
-      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+      fields: ['faction_autogen', 'faction_name', 'faction_relationship', 'faction_description'],
     },
     {
       section: 'repeating_sponsor-factions',
-      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+      fields: ['faction_autogen', 'faction_name', 'faction_relationship', 'faction_description'],
     },
     {
       section: 'repeating_authority-factions',
-      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+      fields: ['faction_autogen', 'faction_name', 'faction_relationship', 'faction_description'],
     },
     {
       section: 'repeating_crowd-factions',
-      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+      fields: ['faction_autogen', 'faction_name', 'faction_relationship', 'faction_description'],
     },
   ],
   mods: [
     {
       section: 'repeating_mods',
-      fields: ['mod_check', 'mod_name', 'mod_cost', 'mod_autogen', 'mod_description'],
+      fields: ['mod_autogen', 'mod_check', 'mod_name', 'mod_cost', 'mod_description'],
     },
   ],
 };
 
 const G_ATTITUDE_TURBO = {
-	boosts: [
-		...Array.from(Array(4).keys(), (key) => `attitude_boost_${key + 1}`),
-		...Array.from(Array(4).keys(), (key) => `turbo_boost_${key + 1}`),
-		...Array.from(Array(4).keys(), (key) => `hype_boost_${key + 1}`),
-	],
-	kicks: [
-		...Array.from(Array(4).keys(), (key) => `attitude_kick_${key + 1}`),
-		...Array.from(Array(4).keys(), (key) => `turbo_kick_${key + 1}`),
-		...Array.from(Array(4).keys(), (key) => `hype_kick_${key + 1}`),
-	],
+  boosts: [
+    ...Array.from(Array(4).keys(), (key) => `attitude_boost_${key + 1}`),
+    ...Array.from(Array(4).keys(), (key) => `turbo_boost_${key + 1}`),
+    ...Array.from(Array(4).keys(), (key) => `hype_boost_${key + 1}`),
+  ],
+  kicks: [
+    ...Array.from(Array(4).keys(), (key) => `attitude_kick_${key + 1}`),
+    ...Array.from(Array(4).keys(), (key) => `turbo_kick_${key + 1}`),
+    ...Array.from(Array(4).keys(), (key) => `hype_kick_${key + 1}`),
+  ],
 };

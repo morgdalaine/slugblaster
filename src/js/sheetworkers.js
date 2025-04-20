@@ -98,12 +98,6 @@ const loadPersonality = (field) => {
 
   const data = G_PLAYBOOKS[personality];
 
-  // personal gear
-  data.gear.forEach((gear, index) => {
-    const personalGear = `personal_gear_${index + 1}_name`;
-    update[personalGear] = gear;
-  });
-
   // attitude
   update.attitude_subtitle = getTranslationByKey(`${personality}_attitude`) || '';
 
@@ -112,6 +106,9 @@ const loadPersonality = (field) => {
 
   // traits
   importFieldset('traits', 'trait', data.traits);
+
+  // personal gear
+  importFieldset('gear', 'gear', data.gear);
 
   setAttrs(update, {}, () => {
     setAttitude(personality);
@@ -126,11 +123,10 @@ const loadSignature = (signature) => {
   const data = G_SIGNATURES[signature];
 
   // text stuff
-  update.signature_function = getTranslationByKey(`${signature}_function`);
-  update.signature_description = getTranslationByKey(`${signature}_description`);
+  update.signature_function = getTranslationByKey(`${signature}_function`) || '';
+  update.signature_description = getTranslationByKey(`${signature}_description`) || '';
 
-  // TODO mod translations
-  // importFieldset('mods', 'mod', data.mods);
+  importFieldset('mods', 'mod', data.mods, ['cost']);
 
   setAttrs(update);
 };
@@ -142,7 +138,7 @@ const loadSignature = (signature) => {
  * @param {*} fieldset
  * @param {*} data
  */
-const importFieldset = (fieldset, prefix, data) => {
+const importFieldset = (fieldset, prefix, data, additionalFields = []) => {
   getAllAttrs(G_AUTOGEN_FIELDSET[fieldset], [], (attributes, sections) => {
     const update = {};
 
@@ -151,7 +147,7 @@ const importFieldset = (fieldset, prefix, data) => {
 
     // remove all autogen rows
     for (let rowId = 0; rowId < section.length; rowId++) {
-      const repItem  = `repeating_${fieldset}_${section[rowId]}`;
+      const repItem = `repeating_${fieldset}_${section[rowId]}`;
       if (attributes[`${repItem}_${prefix}_autogen`]) {
         removeRepeatingRow(repItem);
       }
@@ -162,9 +158,13 @@ const importFieldset = (fieldset, prefix, data) => {
       const rowId = createRowId(idArray);
       idArray.add(rowId);
       const repeating = `repeating_${fieldset}_${rowId}_${prefix}`;
-      update[`${repeating}_name`] = getTranslationByKey(key);
-      update[`${repeating}_description`] = getTranslationByKey(`${key}_description`);
       update[`${repeating}_autogen`] = 1;
+      update[`${repeating}_name`] = getTranslationByKey(key) || '';
+      update[`${repeating}_description`] = getTranslationByKey(`${key}_description`) || '';
+
+      for (const field of additionalFields) {
+        update[`${repeating}_${field}`] = getTranslationByKey(`${key}_${field}`) || '';
+      }
     }
 
     setAttrs(update);
@@ -198,8 +198,8 @@ const loadFactions = () => {
 
         const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
         update[`${repeatingPrefix}autogen`] = 1;
-        update[`${repeatingPrefix}name`] = getTranslationByKey(faction);
-        update[`${repeatingPrefix}description`] = getTranslationByKey(`${faction}_description`);
+        update[`${repeatingPrefix}name`] = getTranslationByKey(faction) || '';
+        update[`${repeatingPrefix}description`] = getTranslationByKey(`${faction}_description`) || '';
       }
 
       setAttrs(update);
