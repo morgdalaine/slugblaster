@@ -111,7 +111,7 @@ const loadPersonality = (field) => {
   update.style_run_bonus = getTranslationByKey(`${personality}_style`) || '';
 
   // traits
-  // importFieldset('traits', data.traits);
+  importFieldset('traits', 'trait', data.traits);
 
   setAttrs(update, {}, () => {
     setAttitude(personality);
@@ -130,38 +130,53 @@ const loadSignature = (signature) => {
   update.signature_description = getTranslationByKey(`${signature}_description`);
 
   // mods
-  // importFieldset('mods', data.mods);
+  importFieldset('mods', 'mod', data.mods);
 
-  //
   setAttrs(update);
 };
 
-// https://wiki.roll20.net/Sheet_Worker_Scripts#WARNING
 /**
  * Need to map from attribute data map to populate translations
  * getAllAttrs to leave user created rows in the repeating section
+ * https://wiki.roll20.net/Sheet_Worker_Scripts#WARNING
  * @param {*} fieldset
  * @param {*} data
  */
-const importFieldset = (fieldset, data) => {
-  getSectionIDs(`repeating_${fieldset}`, (sections) => {
+const importFieldset = (fieldset, prefix, data) => {
+  getAllAttrs(G_AUTOGEN_FIELDSET[fieldset], [], (attributes, sections) => {
     const update = {};
 
-    for (const key of data) {
-      let rowId = generateRowID();
-      while (rowId in sections) {
-        rowId = generateRowID();
-      }
-      sections.push(rowId);
+    const section = sections[`repeating_${fieldset}`];
+    const idArray = new Set(section) ?? new Set([]);
 
-      const repeatingPrefix = `repeating_${fieldset}_${rowId}_trait_`;
-      update[`${repeatingPrefix}name`] = getTranslationByKey(key);
-      update[`${repeatingPrefix}description`] = getTranslationByKey(`${key}_description`);
-      update[`${repeatingPrefix}autogen`] = 1;
+    // remove all autogen rows
+    for (let rowId = 0; rowId < section.length; rowId++) {
+      const repItem  = `repeating_${fieldset}_${section[rowId]}`;
+      if (attributes[`${repItem}_${prefix}_autogen`]) {
+        removeRepeatingRow(repItem);
+      }
+    }
+
+    // add new records
+    for (const key of data) {
+      const rowId = createRowId(idArray);
+      idArray.add(rowId);
+      const repeating = `repeating_${fieldset}_${rowId}_${prefix}`;
+      update[`${repeating}_name`] = getTranslationByKey(key);
+      update[`${repeating}_description`] = getTranslationByKey(`${key}_description`);
+      update[`${repeating}_autogen`] = 1;
     }
 
     setAttrs(update);
   });
+};
+
+const createRowId = (sections) => {
+  let rowId = generateRowID();
+  while (sections.has(rowId)) {
+    rowId = generateRowID();
+  }
+  return rowId;
 };
 
 const loadFactions = () => {
@@ -170,28 +185,25 @@ const loadFactions = () => {
     const sectionDetails = { ...G_FACTION_FIELDSET.at(0) };
     sectionDetails.section = section;
 
-    getAllAttrs(
-      (values, sections) => {
-        const update = {};
-        const createdIds = [];
+    getAllAttrs([{ ...sectionDetails }], [], (values, sections) => {
+      const update = {};
+      const createdIds = [];
 
-        for (const faction of G_FACTIONS[factions]) {
-          let rowId = generateRowID();
-          while (rowId in createdIds) {
-            rowId = generateRowID();
-          }
-          createdIds.push(rowId);
-
-          const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
-          update[`${repeatingPrefix}autogen`] = 1;
-          update[`${repeatingPrefix}name`] = getTranslationByKey(faction);
-          update[`${repeatingPrefix}description`] = getTranslationByKey(`${faction}_description`);
+      for (const faction of G_FACTIONS[factions]) {
+        let rowId = generateRowID();
+        while (rowId in createdIds) {
+          rowId = generateRowID();
         }
+        createdIds.push(rowId);
 
-        setAttrs(update);
-      },
-      [{ ...sectionDetails }]
-    );
+        const repeatingPrefix = `repeating_${factions}-factions_${rowId}_faction_`;
+        update[`${repeatingPrefix}autogen`] = 1;
+        update[`${repeatingPrefix}name`] = getTranslationByKey(faction);
+        update[`${repeatingPrefix}description`] = getTranslationByKey(`${faction}_description`);
+      }
+
+      setAttrs(update);
+    });
 
     setAttrs({ load_factions: 1 }, { silent: true });
   }

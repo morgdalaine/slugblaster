@@ -27,5 +27,7 @@
 
   &__action {
     flex: 1;
+    font-size: $font-xxl;
+    white-space: nowrap;
   }
 }

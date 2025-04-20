@@ -3,14 +3,7 @@
 // -----------------------------------------------------------------------------
 .footer {
   $this: '.footer';
-  background-color: $white;
 
   padding: $p-md;
 
-  > span {
-    opacity: 0.5;
-    &::before {
-      content: 'v';
-    }
-  }
 }

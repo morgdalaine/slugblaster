@@ -17,17 +17,23 @@ main.options
               label(data-i18n=field.name, for=field.name)= field.label
 
 
+      - const version = data.global.sheet_version;
+      .sheet-version
+        +field(version)
+        span.visually-hidden(data-i18n=version.name)= version.label
+        +span(version)
+
     aside.a-heartfelt-word
       p
-        | You are small.
+        span(data-i18n="you_are_small") You are small.
         <br><br>
-        | You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.
+        span(data-i18n="you_are_just_a_handful_of_parameters") You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.
         <br><br>
-        | You are also big.
+        span(data-i18n="you_are_also_big") You are also big.
         <br><br>
-        | Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.
+        span(data-i18n="your_intestines_are") Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.
         <br><br>
-        | You are someone’s world.
+        span(data-i18n="you_are_someones_world") You are someone’s world.
 
       div(style='display: none; gap: 0.25rem')
         div

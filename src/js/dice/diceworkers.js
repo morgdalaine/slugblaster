@@ -53,7 +53,7 @@ const makeRoll = async (template) => {
 };
 
 const makeCharacterRoll = (trick = false) => {
-  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare', 'dicetray_reset'];
+  const request = ['dicetray_boosts', 'dicetray_kicks', 'dicetray_dare'];
   getAttrs(request, (values) => {
     const boosts = +values.dicetray_boosts || 0;
     const kicks = +values.dicetray_kicks || 0;
@@ -75,13 +75,11 @@ const makeCharacterRoll = (trick = false) => {
     const template = makeRollTemplate(params);
     makeRoll(template);
 
-    if (values.dicetray_reset === 'on') {
-      setAttrs({
-        dicetray_boosts: 0,
-        dicetray_kicks: 0,
-        dicetray_dare: '',
-      });
-    }
+    setAttrs({
+      dicetray_boosts: 0,
+      dicetray_kicks: 0,
+      dicetray_dare: '',
+    });
   });
 };
 

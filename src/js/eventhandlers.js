@@ -53,6 +53,21 @@ on('change:attitude_boost_set change:attitude_kick_set', (eventInfo) => {
   setAttitude(undefined, true);
 });
 
+// Update dice tray from attitude, turbo, hype
+for (const [key, fields] of Object.entries(G_ATTITUDE_TURBO)) {
+  for (const field of fields) {
+    on(`change:${field}`, (eventInfo) => {
+      if (eventInfo.sourceType !== 'player') return;
+      getAttrs(['dicetray_boosts', 'dicetray_kicks'], (values) => {
+        const original = +values[`dicetray_${key}`] || 0;
+        const delta = eventInfo.newValue === 'on' ? 1 : -1;
+        const final = Math.max(0, original + delta);
+        setAttrs({ [`dicetray_${key}`]: final }, { silent: true });
+      });
+    });
+  }
+}
+
 // Load signature data
 on('change:signature', (eventInfo) => {
   let signature = eventInfo.newValue;
@@ -62,18 +77,18 @@ on('change:signature', (eventInfo) => {
 
 // Load faction data
 on('clicked:load-factions', () => loadFactions());
-const factionAutogen = Object.keys(G_FACTIONS)
-  .flatMap((section) => G_FACTION_AUTOGEN.map((field) => `change:repeating_${section}-factions`))
-  .join(' ');
-on(factionAutogen, (eventInfo) => {
-  const autogen = `${eventInfo.sourceAttribute.split('_').slice(0, 4).join('_')}_autogen`;
-  getAttrs([autogen], (values) => {
-    if (values[autogen] && eventInfo.sourceType === 'player') {
-      console.log(eventInfo);
+
+// Update Autogen rows
+for (const fieldset of Object.values(G_AUTOGEN_FIELDSET)) {
+  for (const { section, fields } of fieldset) {
+    const events = fields.map((field) => `change:${section}:${field}`).join(' ');
+    on(events, (eventInfo) => {
+      if (eventInfo.sourceType !== 'player') return;
+      const autogen = `${eventInfo.sourceAttribute.split('_').slice(0, 4).join('_')}_autogen`;
       setAttrs({ [autogen]: '' }, { silent: true });
-    }
-  });
-});
+    });
+  }
+}
 
 // Style & Trouble
 on('clicked:nope', (eventInfo) => nopeTrouble());
@@ -89,15 +104,4 @@ Array.from(Array(G_CONSTANTS.progress_track_max).keys(), (index) => {
     const sectionId = getSectionID(eventInfo);
     makeTrackString(sectionId);
   });
-});
-
-on('sheet:opened', () => {
-  getAllAttrs(
-    (attributes, sections) => {
-      console.log(attributes);
-      console.log(sections);
-    },
-    [...G_FACTION_FIELDSET],
-    [...G_BLADES]
-  );
 });

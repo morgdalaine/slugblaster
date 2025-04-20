@@ -1,93 +1,92 @@
-/**
- * Checks if a repeating fieldset is empty by counting the
- * number of sections inside the fieldset.
- * @param {string} fieldset
- */
-const isFieldsetEmpty = (fieldset) => {
-  getSectionIDs(`repeating_${fieldset}`, (sections) => {
-    setAttrs({ [`${fieldset}_empty`]: sections.length });
-  });
-};
 
-/**
-  Gets all attributes, both repeating and non-repeating.
-  Default sectionDetails to a shallow clone of the global G_DEFAULT_REPEATING;
-  We're cloning because we'll be manipulating the array.
-  @param sectionDetails:  an object containing the idArrays for each
-    repeating section, sorted based on their current order.
-    Example:
-      const G_DEFAULT_REPEATING = [
-        { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
-        { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
-      ];
-  @param getArray: an object containing all the attribute values
-  @returns
-    @param attributes: similar to getAttrs; object containing field names as key and values.
-    @param sections: similar to getSectionIDs; object containing fieldset name
-      as key and array of IDs as value.
-**/
-const getAllAttrs = function (callback, sectionDetails = [], getArray = []) {
-  getSections(getArray, sectionDetails, (getArr, sections) => {
-    getAttrs(getArr, (attributes) => {
-      // order the sections
-      orderSections(attributes, sections);
-      // call the callback function to finally do what we wanted to do.
-      callback(attributes, sections);
-    });
-  });
-};
+	/**
+	 * Checks if a repcontain (e.g. repeating_weapons) is empty.
+	 * This is calculated by looking at the length of IDs in fieldset.
+	 * @param {string} section name of a repeating fieldset (repcontainer)
+	 * @param {string} suffix attribute name as section_suffix (e.g. weapons_count)
+	 **/
+	const isFieldsetEmpty = (section, suffix = "empty") => {
+		getSectionIDs(section, (id) => {
+			setAttrs({ [`${section}_${suffix}`]: id.length });
+		});
+	}
 
-/**
-  Gets the rowIDs for all the sections passed to it,
-  and assembles an array of repeating attributes to get
-  Does this via a work queue or burndown set up
-  Arguments are the same as for getAllAttrs with the addition of sections
-  @param sections: accumulates the idArrays for each section
-**/
-const getSections = function (getArray = [], sectionDetails = [], callback, sections = {}) {
-  // grab the first section to work;
-  let section = sectionDetails.shift();
-  getSectionIDs(section.section, (idArray) => {
-    // store the idArray for use later on if needed.
-    sections[section.section] = [...idArray];
+	/**
+	 * Combines [getAttrs()](https://wiki.roll20.net/Sheet_Worker_Scripts#getAttrs.28attributeNameArray.2C_callback.29)
+	 * and [getSectionIDs](https://wiki.roll20.net/Sheet_Worker_Scripts#getSectionIDs.28section_name.2Ccallback.29)
+	 * @param {Object} sectionDetails repeating section request
+	 *  @example
+	 *    // example of sectionDetails object
+	 *    const G_DEFAULT_REPEATING = [
+	 *      { section: "repeating_inventory", fields: ["weight", "name", "quantity"] },
+	 *      { section: "repeating_attack", fields: ["bonus", "damage", "name"] },
+	 *    ];
+	 * @param {string[]} getArray optional global attribute request
+	 * @param {callback} callback
+	 * @returns {(Object|Object)}
+	 */
+	const getAllAttrs = (sectionDetails, getArray, callback) => {
+		const sectionClone = structuredClone(sectionDetails);
 
-    // add the sections reporder to the getArray so that we can order the idArray later.
-    getArray.push(`_reporder_${section.section}`);
-    // iterate through the ids
-    idArray.forEach((id) => {
-      // Iterate through each of the fields for the repeating section
-      section.fields.forEach((field) => {
-        // add the repeating attribute for this id to the getArray
-        getArray.push(`${section.section}_${id}_${field}`);
-      });
-    });
-    if (sectionDetails[0]) {
-      // If there's another section to work through, go through the burndown again
-      getSections(getArray, sectionDetails, callback, sections);
-    } else {
-      // If no sections are left, call the callback
-      callback(getArray, sections);
-    }
-  });
-};
+    if (typeof callback !== "function") return;
 
-// The next three functions are only used for the ID ordering.
-// orders the section id arrays to match the repOrder attribute
-const orderSections = function (attributes, sections) {
-  Object.keys(sections).forEach((section) => {
-    attributes[`_reporder_${section}`] = commaArray(attributes[`_reporder_${section}`]);
-    orderSection(attributes[`_reporder_${section}`], sections[section]);
-  });
-};
+		getSections(getArray, sectionClone, (getArr, sections) => {
+			getAttrs(getArr, (attributes) => {
+				// call the callback function to finally do what we wanted to do.
+				callback(attributes, sections);
+			});
+		});
+	}
 
-// splits a comma delimited string into an array
-const commaArray = function (string = '') {
-  return string.toLowerCase().split(/\s*,\s*/);
-};
+	/**
+	 * Gets the rowIDs for all the sections passed to it,
+	 * and assembles an array of repeating attributes to get.
+	 * Does this via a work queue or burndown set up.
+	 * Arguments are the same as for getAllAttrs with the addition of sections.
+	 * @param {*} getArray
+	 * @param {*} sectionDetails
+	 * @param {callback} callback
+	 * @param {*} sections accumulates the idArrays for each section
+	 */
+	const getSections = (
+		getArray,
+		sectionDetails,
+		callback,
+		sections = {},
+	) => {
+		// grab the first section to work;
+		const section = sectionDetails.shift();
+		getSectionIDs(section.section, (idArray) => {
+			// store the idArray for use later on if needed.
+			sections[section.section] = [...idArray];
 
-// orders a single ID array
-const orderSection = function (repOrder, IDs = []) {
-  IDs.sort((a, b) => {
-    return repOrder.indexOf(a.toLowerCase()) - repOrder.indexOf(b.toLowerCase());
-  });
-};
+			// add the sections reporder to the getArray so that we can order the idArray later.
+			getArray.push(`_reporder_${section.section}`);
+			// iterate through the ids
+
+      for (const id of idArray) {
+				// Iterate through each of the fields for the repeating section
+        for (const field of section.fields){
+					// add the repeating attribute for this id to the getArray
+					getArray.push(`${section.section}_${id}_${field}`);
+				}
+			}
+
+			if (sectionDetails[0]) {
+				// If there's another section to work through, go through the burndown again
+				getSections(getArray, sectionDetails, callback, sections);
+			} else {
+				// If no sections are left, call the callback
+				callback(getArray, sections);
+			}
+		});
+	}
+
+	/**
+	 * Splits a comma delimited string into an array
+	 * @param {string} string
+	 * @returns {Array}
+	 */
+	const commaArray = (string = "") => {
+		return string.toLowerCase().split(/\s*,\s*/);
+	}

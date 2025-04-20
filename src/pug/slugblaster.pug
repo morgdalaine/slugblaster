@@ -13,11 +13,6 @@ include components/_mixins
     include layout/options
 
     footer.footer
-      - const version = data.global.sheet_version;
-      +field(version)
-      span.visually-hidden(data-i18n=version.name)= version.label
-      +span(version)
-
       include abstracts/translations
 
 include templates/mixins

@@ -54,7 +54,7 @@ const G_REPEATING_FIELDSETS = [
   'crowd-factions',
 ];
 
-const G_OPTIONS = ["attitude_override"];
+const G_OPTIONS = ['attitude_override'];
 
 const G_CONSTANTS = {
   trouble_max: 8,
@@ -62,78 +62,54 @@ const G_CONSTANTS = {
 };
 
 const G_PLAYBOOKS = {
-	grit: {
-		attitude: { boost: 3, kick: 1 },
-		traits: [
-			"patient",
-			"sacrifice_your_body",
-			"diligent",
-			"walk_it_off",
-			"skill",
-			"personal_growth",
-		],
-		gear: ["something_everyone_else_forgot", "backup_portaling_device"],
-		beat: {
-			grinding: "2_style",
-			origin_story: "3_style",
-			sharpened: "4_style",
-		},
-		arc: [
-			{ a_goal: "1_style" },
-			{ setbacks: "2_style" },
-			{ quitting: "4_trouble" },
-			{ perseverance: "3_style" },
-		],
-		vibes: [
-			"one_song_on_repeat",
-			"never_smile",
-			"your_drink_matches_your_shoes",
-			"sleep_when_youre_dead",
-			"adult_in_residence",
-			"overachiever",
-		],
-	},
-	guts: {
-		attitude: { boost: 1, kick: 3 },
-		traits: [],
-		gear: [],
-		beat: [""],
-		arc: [],
-	},
-	smarts: {
-		attitude: { boost: 2, kick: 2 },
-		traits: [],
-		gear: [],
-		beat: [""],
-		arc: [],
-	},
-	heart: {
-		attitude: { boost: 1, kick: 2 },
-		traits: [],
-		gear: [],
-		beat: [""],
-		arc: [],
-	},
-	chill: {
-		attitude: { boost: 1, kick: 0 },
-		traits: [],
-		gear: [],
-		beat: [""],
-		arc: [],
-	},
-	custom: {
-		attitude: { boost: 3, kick: 3 },
-		traits: [],
-		gear: [],
-		beat: [""],
-		arc: [],
-	},
+  grit: {
+    attitude: { boost: 3, kick: 1 },
+    traits: ['patient', 'sacrifice_your_body', 'diligent', 'walk_it_off', 'skill', 'personal_growth'],
+    gear: ['something_everyone_else_forgot', 'backup_portaling_device'],
+    vibes: [
+      'one_song_on_repeat',
+      'never_smile',
+      'your_drink_matches_your_shoes',
+      'sleep_when_youre_dead',
+      'adult_in_residence',
+      'overachiever',
+    ],
+  },
+  guts: {
+    attitude: { boost: 1, kick: 3 },
+    traits: ['show_off', 'snake', 'double_dare', 'walking_disaster', 'raw_talent', 'personal_growth'],
+    gear: [],
+  },
+  smarts: {
+    attitude: { boost: 2, kick: 2 },
+    traits: [
+      'lateral_thinking',
+      'technobabble',
+      'power_user',
+      'actually_reads_the_manual',
+      'know_how',
+      'personal_growth',
+    ],
+    gear: [],
+  },
+  heart: {
+    attitude: { boost: 1, kick: 2 },
+    traits: ['team_player', 'pep_talk', 'middle_finger', 'intuition', 'passion', 'personal_growth'],
+    gear: [],
+  },
+  chill: {
+    attitude: { boost: 1, kick: 0 },
+    traits: ['steezey', 'umm_guys', 'button_masher', 'lucky', 'quirk', 'personal_growth'],
+    gear: [],
+  },
+  custom: {
+    attitude: { boost: 2, kick: 2 },
+  },
 };
 
 const G_SIGNATURES = {
   negafriction_sword: {
     mods: ['slip_rattle', 'field_projector', 'ref_coating', 'negafriction_wake', 'subdimensional_edge', 'kitbashed'],
-    looks: [],
   },
   gravity_blaster: {},
   hardlight_board: {},
@@ -203,3 +179,49 @@ const G_FACTION_FIELDSET = [
 ];
 
 const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
+
+const G_AUTOGEN_FIELDSET = {
+  traits: [
+    {
+      section: 'repeating_traits',
+      fields: ['trait_check', 'trait_name', 'trait_autogen', 'trait_description'],
+    },
+  ],
+  factions: [
+    {
+      section: 'repeating_crew-factions',
+      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+    },
+    {
+      section: 'repeating_sponsor-factions',
+      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+    },
+    {
+      section: 'repeating_authority-factions',
+      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+    },
+    {
+      section: 'repeating_crowd-factions',
+      fields: ['faction_name', 'faction_relationship', 'faction_description', 'faction_autogen'],
+    },
+  ],
+  mods: [
+    {
+      section: 'repeating_mods',
+      fields: ['mod_check', 'mod_name', 'mod_cost', 'mod_autogen', 'mod_description'],
+    },
+  ],
+};
+
+const G_ATTITUDE_TURBO = {
+	boosts: [
+		...Array.from(Array(4).keys(), (key) => `attitude_boost_${key + 1}`),
+		...Array.from(Array(4).keys(), (key) => `turbo_boost_${key + 1}`),
+		...Array.from(Array(4).keys(), (key) => `hype_boost_${key + 1}`),
+	],
+	kicks: [
+		...Array.from(Array(4).keys(), (key) => `attitude_kick_${key + 1}`),
+		...Array.from(Array(4).keys(), (key) => `turbo_kick_${key + 1}`),
+		...Array.from(Array(4).keys(), (key) => `hype_kick_${key + 1}`),
+	],
+};

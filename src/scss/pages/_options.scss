@@ -64,4 +64,15 @@
     padding: $p-lg;
     border-radius: 0px;
   }
+
+  .sheet-version {
+text-align: end;
+  > span[name] {
+    // opacity: 0.5;
+    font-family: $font-handwritten;
+    &::before {
+      content: 'v';
+    }
+  }
+  }
 }

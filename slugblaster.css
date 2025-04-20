@@ -121,8 +121,10 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
 .charactersheet.tab-pane.charsheet {
   position: relative;
+  background-color: #705a8e;
 }
 .charactersheet.tab-pane.charsheet::before {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/slime.svg");
   content: " ";
   display: block;
   position: absolute;
@@ -131,7 +133,8 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 50%;
+  background-position: bottom;
 }
 
 div#tab-content.tab-content .attributesabilities {
@@ -353,7 +356,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(79, 80%, 80%), hsl(141, 80%, 80%), hsl(311, 80%, 80%));
+  background-image: radial-gradient(hsl(47, 80%, 80%), hsl(153, 80%, 80%), hsl(254, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -767,7 +770,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(176, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(197, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -1380,6 +1383,8 @@ html .charsheet .slugblaster .character .dicetray__actions {
 }
 html .charsheet .slugblaster .character .dicetray__action {
   flex: 1;
+  font-size: 1.4rem;
+  white-space: nowrap;
 }
 html .charsheet .slugblaster .character .doom {
   background-color: #fff;
@@ -1850,6 +1855,7 @@ html .charsheet .slugblaster .character .trouble__action[type=action] {
   font-weight: 700;
   text-transform: uppercase;
   padding-inline: 0.25rem;
+  white-space: nowrap;
 }
 html .charsheet .slugblaster .character .turbo {
   color: #fff;
@@ -2441,6 +2447,15 @@ html .charsheet .slugblaster .options .a-heartfelt-word {
   font-weight: 700;
   padding: 1rem;
   border-radius: 0px;
+}
+html .charsheet .slugblaster .options .sheet-version {
+  text-align: end;
+}
+html .charsheet .slugblaster .options .sheet-version > span[name] {
+  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+}
+html .charsheet .slugblaster .options .sheet-version > span[name]::before {
+  content: "v";
 }
 @media (min-width: 768px) {
   html .charsheet .slugblaster .diary .blade__wrapper, html .charsheet .slugblaster .downtimes .blade__wrapper, html .charsheet .slugblaster .epilogue .blade__wrapper, html .charsheet .slugblaster .factions .blade__wrapper {
@@ -3128,14 +3143,7 @@ html .charsheet .slugblaster .nav__action span {
   white-space: nowrap;
 }
 html .charsheet .slugblaster .footer {
-  background-color: #fff;
   padding: 0.5rem;
-}
-html .charsheet .slugblaster .footer > span {
-  opacity: 0.5;
-}
-html .charsheet .slugblaster .footer > span::before {
-  content: "v";
 }
 html .charsheet .slugblaster__wrapper {
   display: flex;
