@@ -29,10 +29,10 @@
       aspect-ratio: 1;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('https://www.svgrepo.com/show/448659/triangle.svg');
+      background-image: image('triangle.svg');
 
       &:checked {
-        background-image: url('https://www.svgrepo.com/show/448188/triangle.svg');
+        background-image: url('triangle-filled.svg');
       }
     }
 
@@ -43,7 +43,7 @@
       border-left: 2px solid $text-color;
 
       input {
-        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+        background-image: image('circle-x.svg');
       }
     }
     &--4 {
@@ -52,9 +52,9 @@
 
     &--8 {
       input {
-        background-image: url('https://www.svgrepo.com/show/448712/alert-triangle.svg');
+        background-image: image('triangle-alert.svg');
         &:checked {
-          background-image: url('https://www.svgrepo.com/show/448199/alert-triangle.svg');
+          background-image: image('triangle-alert-filled.svg');
         }
       }
     }
@@ -66,7 +66,7 @@
       @if $fill < $selected {
         input[name='attr_trouble'][value='#{$selected}'] {
           ~ #{$this}__checkbox--#{$fill} input {
-            background-image: url('https://www.svgrepo.com/show/448188/triangle.svg');
+            background-image: image('triangle-filled.svg');
           }
         }
       }

@@ -26,7 +26,7 @@
           @if $fill < $selected {
             .component__value[value='#{$selected}'] {
               ~ .component__checkbox--#{$fill} input {
-                background-image: url('https://www.svgrepo.com/show/448206/circle.svg');
+                background-image: image('circle-filled.svg');
               }
             }
           }
@@ -50,10 +50,10 @@
       aspect-ratio: 1;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('https://www.svgrepo.com/show/448352/circle.svg');
+      background-image: image('circle.svg');
 
       &:checked {
-        background-image: url('https://www.svgrepo.com/show/448206/circle.svg');
+        background-image: image('circle-filled.svg');
       }
     }
 
@@ -62,9 +62,9 @@
       border-right: 2px solid $text-color;
 
       input {
-        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+        background-image: image('circle-x.svg');
         &:checked {
-          background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+          background-image: image('circle-x.svg');
         }
       }
     }
@@ -73,7 +73,7 @@
     &[value='0'],
     &:not([value]) {
       ~ #{$this}__checkbox--0 {
-        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg') !important;
+        background-image: image('circle-x.svg') !important;
       }
     }
   }

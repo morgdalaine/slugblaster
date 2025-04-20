@@ -102,11 +102,6 @@
 
           text-align: center;
 
-          background-image: radial-gradient(
-            hsl(random(360) 80% 80%),
-            hsl(random(360) 80% 80%),
-            hsl(random(360) 80% 80%)
-          );
           background-clip: text;
           -webkit-text-fill-color: transparent;
 

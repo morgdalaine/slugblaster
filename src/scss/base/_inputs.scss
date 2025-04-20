@@ -37,7 +37,7 @@ textarea {
 select {
   appearance: none;
 
-  background-image: url('https://www.svgrepo.com/show/471164/chevron-down.svg');
+  background-image: image('chevron-down.svg');
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -109,10 +109,10 @@ label {
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('https://www.svgrepo.com/show/448629/square.svg');
+    background-image: image('square.svg');
 
     &:checked {
-      background-image: url('https://www.svgrepo.com/show/448343/check-square.svg');
+      background-image: image('check-square.svg');
     }
 
     + span {

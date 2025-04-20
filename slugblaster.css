@@ -356,7 +356,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   font-size: 5rem;
   line-height: 5rem;
   text-align: center;
-  background-image: radial-gradient(hsl(47, 80%, 80%), hsl(153, 80%, 80%), hsl(254, 80%, 80%));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -612,7 +611,7 @@ html .charsheet .slugblaster select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("https://www.svgrepo.com/show/471164/chevron-down.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/chevron-down.svg");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -665,10 +664,10 @@ html .charsheet .slugblaster label input[type=checkbox] {
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("https://www.svgrepo.com/show/448629/square.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square.svg");
 }
 html .charsheet .slugblaster label input[type=checkbox]:checked {
-  background-image: url("https://www.svgrepo.com/show/448343/check-square.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/check-square.svg");
 }
 html .charsheet .slugblaster label input[type=checkbox] + span {
   -webkit-margin-start: 0.25rem;
@@ -714,7 +713,7 @@ html .charsheet .slugblaster .repcontainer.editmode + .repcontrol {
   display: block !important;
 }
 html .charsheet .slugblaster .repcontainer.editmode + .repcontrol button.repcontrol_edit::before {
-  background-image: url("https://www.svgrepo.com/show/471631/lock-unlocked-01.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/lock-unlocked.svg");
 }
 html .charsheet .slugblaster .repcontainer.editmode .repeating__delete {
   display: grid;
@@ -744,10 +743,10 @@ html .charsheet .slugblaster .repcontrol_add::before, html .charsheet .slugblast
   width: 2rem;
 }
 html .charsheet .slugblaster .repcontrol_add::before {
-  background-image: url("https://www.svgrepo.com/show/471794/plus-square.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/plus-square.svg");
 }
 html .charsheet .slugblaster .repcontrol_edit::before {
-  background-image: url("https://www.svgrepo.com/show/471623/lock-01.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/lock.svg");
 }
 html .charsheet .slugblaster .repcontrol_del, html .charsheet .slugblaster .repcontrol_move {
   position: absolute;
@@ -758,19 +757,19 @@ html .charsheet .slugblaster .repcontrol_del {
   right: 0.25rem;
 }
 html .charsheet .slugblaster .repcontrol_del::before {
-  background-image: url("https://www.svgrepo.com/show/471998/trash-01.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/trash.svg");
 }
 html .charsheet .slugblaster .repcontrol_move {
   left: 0.25rem;
 }
 html .charsheet .slugblaster .repcontrol_move::before {
-  background-image: url("https://www.svgrepo.com/show/471721/move.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/move.svg");
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(197, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(134, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -911,7 +910,7 @@ html .charsheet .slugblaster .bubble__broadcast[type=roll]:hover, html .charshee
 }
 html .charsheet .slugblaster .bubble__broadcast[type=roll] {
   background-color: transparent;
-  background-image: url("https://www.svgrepo.com/show/471691/message-square-01.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/broadcast.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -920,12 +919,12 @@ html .charsheet .slugblaster .bubble__broadcast[type=roll] span.pictos {
 }
 html .charsheet .slugblaster .bubble__broadcast[type=roll]:hover, html .charsheet .slugblaster .bubble__broadcast[type=roll]:active, html .charsheet .slugblaster .bubble__broadcast[type=roll]:focus {
   background-color: transparent;
-  background-image: url("https://www.svgrepo.com/show/471691/message-square-01.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/broadcast.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
 html .charsheet .slugblaster .bubble__expand {
-  background-image: url("https://www.svgrepo.com/show/471164/chevron-down.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/chevron-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1323,13 +1322,13 @@ html .charsheet .slugblaster .character .components__component--track {
   justify-content: center;
 }
 html .charsheet .slugblaster .character .components__component--track .component__value[value="2"] ~ .component__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-filled.svg");
 }
 html .charsheet .slugblaster .character .components__component--track .component__value[value="3"] ~ .component__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-filled.svg");
 }
 html .charsheet .slugblaster .character .components__component--track .component__value[value="3"] ~ .component__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-filled.svg");
 }
 html .charsheet .slugblaster .character .component__checkbox {
   display: grid;
@@ -1344,23 +1343,23 @@ html .charsheet .slugblaster .character .component__checkbox input {
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("https://www.svgrepo.com/show/448352/circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle.svg");
 }
 html .charsheet .slugblaster .character .component__checkbox input:checked {
-  background-image: url("https://www.svgrepo.com/show/448206/circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-filled.svg");
 }
 html .charsheet .slugblaster .character .component__checkbox--0 {
   padding-right: 0.5rem;
   border-right: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .component__checkbox--0 input {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg");
 }
 html .charsheet .slugblaster .character .component__checkbox--0 input:checked {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg");
 }
 html .charsheet .slugblaster .character .component__value[value="0"] ~ .component__checkbox--0, html .charsheet .slugblaster .character .component__value:not([value]) ~ .component__checkbox--0 {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg") !important;
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg") !important;
 }
 html .charsheet .slugblaster .character .dicetray {
   background-color: #fff;
@@ -1586,10 +1585,10 @@ html .charsheet .slugblaster .character .style__checkbox input {
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("https://www.svgrepo.com/show/448395/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond.svg");
 }
 html .charsheet .slugblaster .character .style__checkbox input:checked {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style__checkbox--0 {
   order: 1;
@@ -1597,115 +1596,115 @@ html .charsheet .slugblaster .character .style__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .style__checkbox--0 input {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="2"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="3"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="3"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="4"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="5"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="6"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="7"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="8"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--8 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .character .traits {
   background-color: #fff;
@@ -1740,10 +1739,10 @@ html .charsheet .slugblaster .character .trouble__checkbox input {
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("https://www.svgrepo.com/show/448659/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox input:checked {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox--0 {
   order: 1;
@@ -1751,100 +1750,100 @@ html .charsheet .slugblaster .character .trouble__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .character .trouble__checkbox--0 input {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox--4 {
   margin-right: 1rem;
 }
 html .charsheet .slugblaster .character .trouble__checkbox--8 input {
-  background-image: url("https://www.svgrepo.com/show/448712/alert-triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-alert.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox--8 input:checked {
-  background-image: url("https://www.svgrepo.com/show/448199/alert-triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-alert-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="2"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="3"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="3"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="4"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="5"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="6"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="7"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="8"] ~ .trouble__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448188/triangle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble__actions {
   display: flex;
@@ -1930,7 +1929,7 @@ html .charsheet .slugblaster .character .tracks .track__name {
 html .charsheet .slugblaster .character .tracks .track__progress {
   position: relative;
   display: grid;
-  width: 1.5rem;
+  width: 2.5rem;
   aspect-ratio: 1;
 }
 html .charsheet .slugblaster .character .tracks .track__progress:hover, html .charsheet .slugblaster .character .tracks .track__progress:focus {
@@ -1959,6 +1958,9 @@ html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox] {
           appearance: none;
   width: 100%;
   height: 100%;
+}
+html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked {
+  background-image: none;
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;
@@ -2177,10 +2179,10 @@ html .charsheet .slugblaster .crew .style__checkbox input {
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("https://www.svgrepo.com/show/448395/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond.svg");
 }
 html .charsheet .slugblaster .crew .style__checkbox input:checked {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style__checkbox--0 {
   grid-row: 1/span 2;
@@ -2192,142 +2194,142 @@ html .charsheet .slugblaster .crew .style__checkbox--0 {
   border-left: 2px solid var(--text-color, rgb(34, 34, 34));
 }
 html .charsheet .slugblaster .crew .style__checkbox--0 input {
-  background-image: url("https://www.svgrepo.com/show/448696/x-circle.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="2"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="3"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="3"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="4"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="5"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="6"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="7"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="8"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--8 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="9"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--9 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--8 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--7 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--6 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--5 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--4 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--3 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--2 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--1 input {
-  background-image: url("https://www.svgrepo.com/show/448209/diamond.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
 html .charsheet .slugblaster .crew .notes {
   background-color: #fff;
@@ -2354,7 +2356,7 @@ html .charsheet .slugblaster .crew .tracks .track__name {
 html .charsheet .slugblaster .crew .tracks .track__progress {
   position: relative;
   display: grid;
-  width: 1.5rem;
+  width: 2.5rem;
   aspect-ratio: 1;
 }
 html .charsheet .slugblaster .crew .tracks .track__progress:hover, html .charsheet .slugblaster .crew .tracks .track__progress:focus {
@@ -2383,6 +2385,9 @@ html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox] {
           appearance: none;
   width: 100%;
   height: 100%;
+}
+html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked {
+  background-image: none;
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;

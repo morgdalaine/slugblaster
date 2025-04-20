@@ -22,7 +22,7 @@
   .track__progress {
     position: relative;
     display: grid;
-    width: 1.5rem;
+    width: 2.5rem;
     aspect-ratio: 1;
     &:hover,
     &:focus {
@@ -57,6 +57,7 @@
     height: 100%;
 
     &:checked {
+    background-image: none;
       + .track__letter {
         display: none;
         // font-size: 0;

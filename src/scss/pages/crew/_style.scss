@@ -30,10 +30,10 @@
       aspect-ratio: 1;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('https://www.svgrepo.com/show/448395/diamond.svg');
+      background-image: image('diamond.svg');
 
       &:checked {
-        background-image: url('https://www.svgrepo.com/show/448209/diamond.svg');
+        background-image: image('diamond-filled.svg');
       }
     }
 
@@ -49,7 +49,7 @@
       border-left: 2px solid $text-color;
 
       input {
-        background-image: url('https://www.svgrepo.com/show/448696/x-circle.svg');
+        background-image: image('circle-x.svg');
       }
     }
   }
@@ -60,7 +60,7 @@
       @if $fill < $selected {
         input[name='attr_crew_style'][value='#{$selected}'] {
           ~ #{$this}__checkbox--#{$fill} input {
-            background-image: url('https://www.svgrepo.com/show/448209/diamond.svg');
+            background-image: image('diamond-filled.svg');
           }
         }
       }

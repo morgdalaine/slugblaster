@@ -7,7 +7,7 @@
     + .repcontrol {
       display: block !important;
       button.repcontrol_edit::before {
-        background-image: url('https://www.svgrepo.com/show/471631/lock-unlocked-01.svg');
+        background-image: image('lock-unlocked.svg');
       }
     }
     .repeating__delete {
@@ -62,12 +62,12 @@
 
   &_add {
     &::before {
-      background-image: url('https://www.svgrepo.com/show/471794/plus-square.svg');
+      background-image: image('plus-square.svg');
     }
   }
   &_edit {
     &::before {
-      background-image: url('https://www.svgrepo.com/show/471623/lock-01.svg');
+      background-image: image('lock.svg');
     }
   }
 
@@ -81,13 +81,13 @@
   &_del {
     right: 0.25rem;
     &::before {
-      background-image: url('https://www.svgrepo.com/show/471998/trash-01.svg');
+      background-image: image('trash.svg');
     }
   }
   &_move {
     left: 0.25rem;
     &::before {
-      background-image: url('https://www.svgrepo.com/show/471721/move.svg');
+      background-image: image('move.svg');
     }
   }
 }
