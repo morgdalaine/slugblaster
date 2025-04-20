@@ -769,7 +769,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(134, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(240, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -1742,7 +1742,7 @@ html .charsheet .slugblaster .character .trouble__checkbox input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox input:checked {
-  background-image: url("triangle-filled.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
 }
 html .charsheet .slugblaster .character .trouble__checkbox--0 {
   order: 1;

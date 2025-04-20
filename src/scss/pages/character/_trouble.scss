@@ -32,7 +32,7 @@
       background-image: image('triangle.svg');
 
       &:checked {
-        background-image: url('triangle-filled.svg');
+        background-image: image('triangle-filled.svg');
       }
     }
 
