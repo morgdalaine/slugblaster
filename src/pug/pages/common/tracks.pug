@@ -33,7 +33,7 @@
                   - letter.name = `${letter.name}_${index}`;
                   - marker.name = `${marker.name}_${index}`;
                   +field(letter).track__letter-exists
-                  label.track__progress(class=`track__progress--${index}`, for=marker.name)
+                  label.track__progress(class=`track__progress--${index}`)
                     +field(marker).track__marker
                     +span(letter).track__letter
                     span.track__marked X

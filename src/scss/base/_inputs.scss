@@ -112,7 +112,7 @@ label {
     background-image: image('square.svg');
 
     &:checked {
-      background-image: image('check-square.svg');
+      background-image: image('square-check.svg');
     }
 
     + span {

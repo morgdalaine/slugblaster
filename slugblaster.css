@@ -667,7 +667,7 @@ html .charsheet .slugblaster label input[type=checkbox] {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square.svg");
 }
 html .charsheet .slugblaster label input[type=checkbox]:checked {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/check-square.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square-check.svg");
 }
 html .charsheet .slugblaster label input[type=checkbox] + span {
   -webkit-margin-start: 0.25rem;
@@ -769,7 +769,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(240, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(143, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -1931,11 +1931,12 @@ html .charsheet .slugblaster .character .tracks .track__progress {
   display: grid;
   width: 2.5rem;
   aspect-ratio: 1;
+  border-radius: 0.5em;
+  isolation: isolate;
 }
 html .charsheet .slugblaster .character .tracks .track__progress:hover, html .charsheet .slugblaster .character .tracks .track__progress:focus {
   color: var(--button-color);
   background-color: var(--button-background-hover);
-  box-shadow: 0 0 0 1px var(--input-border-color) inset;
 }
 html .charsheet .slugblaster .character .tracks .track__letter,
 html .charsheet .slugblaster .character .tracks .track__marked {
@@ -1960,17 +1961,18 @@ html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox] {
   height: 100%;
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square-filled.svg");
   background-image: none;
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;
   color: var(--foreground);
-  background-color: var(--input-color);
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked ~ .track__marked {
   display: block;
   color: var(--foreground);
   background-color: var(--input-color);
+  border-radius: 0.5em;
 }
 html .charsheet .slugblaster .character .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .character .tracks .track__letter-exists[value=""] + .track__progress {
   display: none !important;
@@ -2358,11 +2360,12 @@ html .charsheet .slugblaster .crew .tracks .track__progress {
   display: grid;
   width: 2.5rem;
   aspect-ratio: 1;
+  border-radius: 0.5em;
+  isolation: isolate;
 }
 html .charsheet .slugblaster .crew .tracks .track__progress:hover, html .charsheet .slugblaster .crew .tracks .track__progress:focus {
   color: var(--button-color);
   background-color: var(--button-background-hover);
-  box-shadow: 0 0 0 1px var(--input-border-color) inset;
 }
 html .charsheet .slugblaster .crew .tracks .track__letter,
 html .charsheet .slugblaster .crew .tracks .track__marked {
@@ -2387,17 +2390,18 @@ html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox] {
   height: 100%;
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked {
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square-filled.svg");
   background-image: none;
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;
   color: var(--foreground);
-  background-color: var(--input-color);
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked ~ .track__marked {
   display: block;
   color: var(--foreground);
   background-color: var(--input-color);
+  border-radius: 0.5em;
 }
 html .charsheet .slugblaster .crew .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .crew .tracks .track__letter-exists[value=""] + .track__progress {
   display: none !important;

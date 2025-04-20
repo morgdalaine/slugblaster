@@ -24,11 +24,13 @@
     display: grid;
     width: 2.5rem;
     aspect-ratio: 1;
+    border-radius: 0.5em;
+    isolation: isolate;
+
     &:hover,
     &:focus {
       color: $button-color;
       background-color: $button-background-hover;
-      box-shadow: $input-shadow;
     }
   }
 
@@ -57,21 +59,18 @@
     height: 100%;
 
     &:checked {
-    background-image: none;
+      background-image: image('square-filled.svg');
+      background-image: none;
+
       + .track__letter {
         display: none;
-        // font-size: 0;
         color: $foreground;
-        background-color: $input-color;
-        // &::after {
-        //   content: 'X';
-        //   font-size: $font-h4;
-        // }
       }
       ~ .track__marked {
         display: block;
         color: $foreground;
         background-color: $input-color;
+        border-radius: 0.5em;
       }
     }
   }
