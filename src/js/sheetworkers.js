@@ -129,8 +129,8 @@ const loadSignature = (signature) => {
   update.signature_function = getTranslationByKey(`${signature}_function`);
   update.signature_description = getTranslationByKey(`${signature}_description`);
 
-  // mods
-  importFieldset('mods', 'mod', data.mods);
+  // TODO mod translations
+  // importFieldset('mods', 'mod', data.mods);
 
   setAttrs(update);
 };

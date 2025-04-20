@@ -111,21 +111,39 @@ const G_SIGNATURES = {
   negafriction_sword: {
     mods: ['slip_rattle', 'field_projector', 'ref_coating', 'negafriction_wake', 'subdimensional_edge', 'kitbashed'],
   },
-  gravity_blaster: {},
-  hardlight_board: {},
-  hyperoptic_visor: {},
-  kinetic_deck: {},
-  photonic_jacket: {},
-  powered_armour: {},
-  reality_cannon: {},
-  riftninja_sneakers: {},
-  robotic_companion: {},
-  skipmode_runners: {},
-  voidwear_backpack: {},
-};
-
-const G_IMPORT_DATA_MAP = {
-  traits: [],
+  gravity_blaster: {
+    mods: [],
+  },
+  hardlight_board: {
+    mods: [],
+  },
+  hyperoptic_visor: {
+    mods: [],
+  },
+  kinetic_deck: {
+    mods: [],
+  },
+  photonic_jacket: {
+    mods: [],
+  },
+  powered_armour: {
+    mods: [],
+  },
+  reality_cannon: {
+    mods: [],
+  },
+  riftninja_sneakers: {
+    mods: [],
+  },
+  robotic_companion: {
+    mods: [],
+  },
+  skipmode_runners: {
+    mods: [],
+  },
+  voidwear_backpack: {
+    mods: [],
+  },
 };
 
 const G_EXTRA_GEAR = [
@@ -177,8 +195,6 @@ const G_FACTION_FIELDSET = [
     fields: ['faction_name', 'faction_description', 'faction_autogen'],
   },
 ];
-
-const G_FACTION_AUTOGEN = ['faction_name', 'faction_relationship', 'faction_description'];
 
 const G_AUTOGEN_FIELDSET = {
   traits: [
