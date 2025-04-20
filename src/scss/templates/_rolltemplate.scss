@@ -3,7 +3,9 @@
   @import '../base/typography';
 
   position: relative;
-  // &::before,
+  margin-right: $m-lg;
+  background-color: $magenta;
+
   &::after {
     content: ' ';
     display: block;
@@ -16,6 +18,7 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-image: image('nasty-photocopy.png');
+    mix-blend-mode: screen;
     z-index: 1;
   }
 
@@ -23,8 +26,6 @@
     position: relative;
     display: grid;
     gap: $grid-gutter;
-    // background-color: $$white;
-    // padding: $p-lg;
     z-index: 2;
 
     font-family: $font-body;
@@ -48,9 +49,6 @@
       span {
         font-family: $font-handwritten;
         font-size: $font-l;
-        // line-height: 1rem;
-
-        // text-transform: uppercase;
         font-variant: small-caps;
       }
 
@@ -132,7 +130,6 @@
         &--#{$d} {
           padding: 0;
           margin: 0;
-          font-family: $font-dice;
           font-size: $font-h2;
           line-height: normal;
           font-size: 0;
@@ -150,24 +147,30 @@
       }
       &--4,
       &--5 {
-        color: $yellow;
+        color: $pink;
       }
       &--6 {
-        color: $pink;
+        color: $yellow;
       }
     }
 
-    &__modifiers {
-      // display: flex;
-      // gap: $grid-gutter;
-      // flex-wrap: wrap;
-    }
+    // &__modifiers {}
+
     &__boosts,
     &__kicks,
     &__dares {
       display: flex;
       gap: $grid-gutter;
       // text-align: center;
+
+      > label {
+        font-family: $font-body;
+        font-size: 0.8em;
+        text-transform: uppercase;
+      }
+      > span {
+        font-family: $font-handwritten;
+      }
     }
 
     &__broadcast {
@@ -175,13 +178,16 @@
       gap: $grid-gutter;
       margin-top: $m-lg;
 
-      &-item {
-      }
       &--value {
         display: block;
       }
       &--key {
         border-top: 1px dashed $black;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        font-size: 0.8em;
+        margin: 0;
       }
     }
   }
@@ -192,6 +198,7 @@
     padding: 0;
     margin: 0;
     font-family: $font-handwritten;
+
     &.fullcrit,
     &.fullfail,
     &.importantroll {

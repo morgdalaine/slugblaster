@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Radio+Canada:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Knewave&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Silkscreen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Tiny5&display=swap");
@@ -116,7 +114,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
 * {
   color: var(--text-color, rgb(34, 34, 34));
-  font: normal 1rem/1.4 "Radio Canada", "Poppins", "Ubuntu", sans-serif;
+  font: normal 1rem/1.4 "Radio Canada", "Sofia Sans Condensed", sans-serif;
 }
 
 .charactersheet.tab-pane.charsheet {
@@ -156,7 +154,7 @@ html .characterviewer .charsheet {
 }
 html .characterviewer .nav-tabs {
   padding-top: 0.25rem;
-  margin-left: 0.25rem;
+  margin-left: 0;
   margin-bottom: 0;
   border: none;
 }
@@ -166,7 +164,7 @@ html .characterviewer .nav-tabs > li {
 html .characterviewer .nav-tabs > li.active > a {
   opacity: 1 !important;
   color: #fff;
-  background: #008395;
+  background: #705a8e;
 }
 html .characterviewer .nav-tabs > li > a {
   border: none !important;
@@ -238,12 +236,14 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
    * Basic typography style for copy text
    */
   position: relative;
+  margin-right: 1rem;
+  background-color: #ec008b;
 }
 .sheet-rolltemplate-slugcast label,
 .sheet-rolltemplate-slugblaster label {
   display: block;
   color: var(--label-color);
-  font-family: "Radio Canada", "Poppins", "Ubuntu", "Nunito", sans-serif;
+  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
@@ -277,6 +277,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy.png");
+  mix-blend-mode: screen;
   z-index: 1;
 }
 .sheet-rolltemplate-slugcast .sheet-roll,
@@ -285,7 +286,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   display: grid;
   gap: 0.5rem 0.5rem;
   z-index: 2;
-  font-family: "Radio Canada", "Poppins", "Ubuntu", sans-serif;
+  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
   line-height: inherit;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header, .sheet-rolltemplate-slugcast .sheet-roll__content,
@@ -304,7 +305,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header span,
 .sheet-rolltemplate-slugblaster .sheet-roll__header span {
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-size: 1.125rem;
   font-variant: small-caps;
 }
@@ -366,7 +367,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugcast .sheet-roll__result,
 .sheet-rolltemplate-slugblaster .sheet-roll__result {
   text-align: justify;
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__result--label,
 .sheet-rolltemplate-slugblaster .sheet-roll__result--label {
@@ -385,7 +386,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--1 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -398,7 +398,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--2 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -411,7 +410,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--3 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -424,7 +422,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--4 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -437,7 +434,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--5 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -450,7 +446,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--6 {
   padding: 0;
   margin: 0;
-  font-family: "Silkscreen", "DotGothic16", monospace;
   font-size: 2rem;
   line-height: normal;
   font-size: 0;
@@ -468,11 +463,11 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugcast .sheet-roll__die--4, .sheet-rolltemplate-slugcast .sheet-roll__die--5,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--4,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--5 {
-  color: #ffd456;
+  color: #f180b3;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__die--6,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--6 {
-  color: #f180b3;
+  color: #ffd456;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__boosts, .sheet-rolltemplate-slugcast .sheet-roll__kicks, .sheet-rolltemplate-slugcast .sheet-roll__dares,
 .sheet-rolltemplate-slugblaster .sheet-roll__boosts,
@@ -480,6 +475,20 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__dares {
   display: flex;
   gap: 0.5rem 0.5rem;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__boosts > label, .sheet-rolltemplate-slugcast .sheet-roll__kicks > label, .sheet-rolltemplate-slugcast .sheet-roll__dares > label,
+.sheet-rolltemplate-slugblaster .sheet-roll__boosts > label,
+.sheet-rolltemplate-slugblaster .sheet-roll__kicks > label,
+.sheet-rolltemplate-slugblaster .sheet-roll__dares > label {
+  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.sheet-rolltemplate-slugcast .sheet-roll__boosts > span, .sheet-rolltemplate-slugcast .sheet-roll__kicks > span, .sheet-rolltemplate-slugcast .sheet-roll__dares > span,
+.sheet-rolltemplate-slugblaster .sheet-roll__boosts > span,
+.sheet-rolltemplate-slugblaster .sheet-roll__kicks > span,
+.sheet-rolltemplate-slugblaster .sheet-roll__dares > span {
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__broadcast,
 .sheet-rolltemplate-slugblaster .sheet-roll__broadcast {
@@ -494,6 +503,11 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugcast .sheet-roll__broadcast--key,
 .sheet-rolltemplate-slugblaster .sheet-roll__broadcast--key {
   border-top: 1px dashed #292828;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 0.8em;
+  margin: 0;
 }
 .sheet-rolltemplate-slugcast .inlinerollresult,
 .sheet-rolltemplate-slugblaster .inlinerollresult {
@@ -501,7 +515,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   background-color: transparent !important;
   padding: 0;
   margin: 0;
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
 }
 .sheet-rolltemplate-slugcast .inlinerollresult.fullcrit, .sheet-rolltemplate-slugcast .inlinerollresult.fullfail, .sheet-rolltemplate-slugcast .inlinerollresult.importantroll,
 .sheet-rolltemplate-slugblaster .inlinerollresult.fullcrit,
@@ -523,9 +537,9 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   --input-color: rgb(68, 68, 68);
   --input-color-active: #292828;
   --input-color-disabled: rgb(153, 153, 153);
-  --button-background: rgba(0, 131, 149, 0.8);
+  --button-background: rgba(51, 156, 170, 0.8);
   --button-background-active: rgba(0, 105, 119, 0.8);
-  --button-background-hover: rgba(51, 156, 170, 0.8);
+  --button-background-hover: rgba(0, 131, 149, 0.8);
   --button-color: #fff;
   --button-color-active: #fff;
   --button-color-hover: #fff;
@@ -560,7 +574,7 @@ html .charsheet .slugblaster {
    */
 }
 html .charsheet .slugblaster .row__header {
-  font-family: "Permanent Marker", "Radio Canada", "Poppins", "Ubuntu", sans-serif;
+  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
   font-size: 1.125rem;
   text-transform: uppercase;
 }
@@ -572,7 +586,7 @@ html .charsheet .slugblaster textarea {
   height: 2.5rem;
   background-color: var(--input-background);
   border-bottom: 1px dashed var(--input-border-color);
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-size: 1rem;
   line-height: 1rem;
   color: var(--input-color);
@@ -620,7 +634,7 @@ html .charsheet .slugblaster select option {
   background: var(--input-background);
   background-color: #ef4b31;
   color: var(--input-color);
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -769,12 +783,12 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(264, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(254, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
   color: var(--label-color);
-  font-family: "Radio Canada", "Poppins", "Ubuntu", "Nunito", sans-serif;
+  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
@@ -808,7 +822,7 @@ html .charsheet .slugblaster .blade__title {
   font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "Permanent Marker", "Radio Canada", "Poppins", "Ubuntu", sans-serif;
+  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
   font-weight: normal;
 }
 html .charsheet .slugblaster .blade__title::before {
@@ -865,7 +879,6 @@ html .charsheet .slugblaster .blob__header {
   justify-content: space-between;
   display: grid;
   grid-template-columns: 1fr auto;
-  border-bottom: 4px solid black;
 }
 html .charsheet .slugblaster .blob--editor {
   grid-template-columns: 1fr auto;
@@ -1152,7 +1165,7 @@ html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .blob__
   line-height: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "Permanent Marker", "Radio Canada", "Poppins", "Ubuntu", sans-serif;
+  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
   font-weight: normal;
 }
 html .charsheet .slugblaster .repeating__is-empty[value="0"] ~ .repeating__empty {
@@ -1941,7 +1954,7 @@ html .charsheet .slugblaster .character .tracks .track__progress:hover, html .ch
 html .charsheet .slugblaster .character .tracks .track__letter,
 html .charsheet .slugblaster .character .tracks .track__marked {
   margin: 0;
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-family: "Permanent Marker", "Comic Sans MS", serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
@@ -2054,7 +2067,7 @@ html .charsheet .slugblaster .crew .fame__rank--name {
   font-size: 1.25rem;
 }
 html .charsheet .slugblaster .crew .fame__rank--style {
-  font-family: "Radio Canada", "Poppins", "Ubuntu", "Nunito", sans-serif;
+  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
   font-size: 1rem;
   -webkit-padding-start: 0.5rem;
           padding-inline-start: 0.5rem;
@@ -2370,7 +2383,7 @@ html .charsheet .slugblaster .crew .tracks .track__progress:hover, html .charshe
 html .charsheet .slugblaster .crew .tracks .track__letter,
 html .charsheet .slugblaster .crew .tracks .track__marked {
   margin: 0;
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-family: "Permanent Marker", "Comic Sans MS", serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
@@ -2450,18 +2463,19 @@ html .charsheet .slugblaster .options .option .options-hide[value="0"] ~ .option
 }
 html .charsheet .slugblaster .options .a-heartfelt-word {
   width: 250px;
+  padding: 1rem;
+  border-radius: 0px;
   text-align: start;
   background-color: #008abf;
   color: #fff;
   font-weight: 700;
-  padding: 1rem;
-  border-radius: 0px;
 }
 html .charsheet .slugblaster .options .sheet-version {
+  color: #fff;
   text-align: end;
 }
 html .charsheet .slugblaster .options .sheet-version > span[name] {
-  font-family: "Playpen Sans", "Gloria Hallelujah", "Comic Sans MS", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", cursive;
 }
 html .charsheet .slugblaster .options .sheet-version > span[name]::before {
   content: "v";
@@ -3125,7 +3139,7 @@ html .charsheet .slugblaster .tophat__title {
 }
 html .charsheet .slugblaster .tophat .nav {
   width: calc(40% - 1rem);
-  background-color: #fff;
+  background-color: transparent;
 }
 html .charsheet .slugblaster .nav {
   display: flex;
@@ -3159,5 +3173,6 @@ html .charsheet .slugblaster__wrapper {
   flex-direction: column;
   gap: 0.5rem 0;
   margin: 0.25rem;
+  margin-top: 0;
   margin-right: 1rem;
 }

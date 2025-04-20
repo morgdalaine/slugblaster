@@ -23,7 +23,6 @@
     display: grid;
     gap: $grid-gutter-row 0;
     grid-template-rows: auto, 1fr;
-
   }
 
   .option {
@@ -47,8 +46,7 @@
       width: 10em;
     }
 
-
-    .options-hide[value="0"]  {
+    .options-hide[value='0'] {
       ~ .option__dropdown {
         display: none !important;
       }
@@ -57,22 +55,25 @@
 
   .a-heartfelt-word {
     width: 250px;
+    padding: $p-lg;
+    border-radius: 0px;
+
     text-align: start;
     background-color: $blue-dark;
     color: $white;
     font-weight: 700;
-    padding: $p-lg;
-    border-radius: 0px;
   }
 
   .sheet-version {
-text-align: end;
-  > span[name] {
-    // opacity: 0.5;
-    font-family: $font-handwritten;
-    &::before {
-      content: 'v';
+    color: $white;
+    text-align: end;
+
+    > span[name] {
+      // opacity: 0.5;
+      font-family: $font-handwritten;
+      &::before {
+        content: 'v';
+      }
     }
-  }
   }
 }

@@ -20,12 +20,12 @@
   .nav {
     // flex: calc(40% - 1rem);
     width: calc(40% - 1rem);
-    background-color: $white;
+    background-color: transparent;
   }
 }
 
 .nav {
-  $this: '.tophat';
+  $this: '.nav';
 
   display: flex;
   gap: $grid-gutter;

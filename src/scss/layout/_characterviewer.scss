@@ -47,10 +47,9 @@ html {
 
     .nav-tabs {
       padding-top: $p-sm;
-      margin-left: $p-sm;
-      margin-bottom: 0; // $m-sm;
+      margin-left: 0;
+      margin-bottom: 0;
       border: none;
-      // border-bottom: $nav-tab-border;
 
       > li {
         margin-bottom: 0;

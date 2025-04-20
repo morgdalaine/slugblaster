@@ -1,8 +1,8 @@
 {
   "html": "slugblaster.html",
   "css": "slugblaster.css",
-  "authors": "Morgdalaine",
-  "roll20userid": "61327",
   "preview": "slugblaster.png",
-  "instructions": "Slugblaster RPG character sheet"
+  "authors": "morgdalaine",
+  "roll20userid": "61327",
+  "instructions": "Slugblaster RPG by Mikey Hamm @ Mythopoeia"
 }

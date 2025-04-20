@@ -29,7 +29,7 @@ $grid-gutter: $grid-gutter-row $grid-gutter-col;
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Poppins', sans-serif !default;
+$text-font-stack: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -45,13 +45,12 @@ $font-nav: 'Silkscreen', 'DotGothic16', 'Comic Sans MS', cursive !default;
 $font-playbook: 'Permanent Marker', 'Comic Sans MS', serif !default;
 $font-nav-tab: 'Tiny5', 'Jersey 10', 'DotGothic16', 'Comic Sans MS', serif !default;
 
-$font-label: 'Radio Canada', 'Poppins', 'Ubuntu', 'Nunito', sans-serif !default;
-$font-body: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-// $font-input: 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-input: 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
-$font-action: 'Coiny', 'Comic Sans MS', serif !default;
-$font-header: 'Permanent Marker', 'Radio Canada', 'Poppins', 'Ubuntu', sans-serif !default;
-$font-handwritten: 'Playpen Sans', 'Gloria Hallelujah', 'Comic Sans MS', cursive !default;
+$font-label: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+$font-body: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+// $font-input: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+$font-input: 'Playpen Sans', 'Comic Sans MS', cursive !default;
+$font-header: 'Permanent Marker', 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+$font-handwritten: 'Playpen Sans', 'Comic Sans MS', cursive !default;
 $font-dice: 'Silkscreen', 'DotGothic16', monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -104,7 +103,6 @@ $breakpoints: (
 
 $black: #292828;
 $white: #fff;
-
 
 // Primary
 // Purple #8c70b1
@@ -175,7 +173,7 @@ $container-max-widths: (
 
 // Nav-Tab
 $nav-tab-color: $white;
-$nav-tab-background: $teal;
+$nav-tab-background: $purple-dark;
 $nav-tab-background-active: $teal-dark;
 $nav-tab-background-hover: $teal-light;
 $nav-tab-border: 2px solid $teal;

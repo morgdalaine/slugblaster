@@ -3,16 +3,14 @@
 @use 'sass:map';
 
 // Sans-Serif
-@import url('https://fonts.googleapis.com/css?family=Radio+Canada:300:400:700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap');
 
 // Handwriting
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
 // Special
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Tiny5&display=swap');
@@ -85,6 +83,7 @@ html {
       margin: $m-sm;
 
       //  make room for scrollbar
+      margin-top: 0;
       margin-right: $m-lg;
     }
   }
