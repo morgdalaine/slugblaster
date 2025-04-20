@@ -769,7 +769,7 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(143, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, hsla(264, 80%, 80%, 0.8), transparent);
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -825,7 +825,7 @@ html .charsheet .slugblaster .blade-toggle {
 }
 html .charsheet .slugblaster .blade-toggle[type=action] {
   background-color: transparent;
-  background-image: linear-gradient(90deg, #fff, rgba(112, 90, 142, 0.8));
+  background-image: linear-gradient(135deg, #fff, #fff 75%, #ffd456 75%);
   border-radius: 0;
   padding: 0.25rem;
   color: #292828;
