@@ -1,6 +1,6 @@
 mixin makeDowntimeFieldset(fieldset)
   - const { downtime } = data.character;
-  - const beats = downtime.beats[fieldset.name]
+  - const beats = downtime.beats[fieldset.name];
   +panel({ name: fieldset.name, title: fieldset.title }).downtime
     +block('content')
       +editorblock(fieldset.name)
@@ -10,7 +10,7 @@ mixin makeDowntimeFieldset(fieldset)
             if field.type === "checkbox"
               label(class=field.blockName, for=field.name)
                 +field(field)
-                span(data-i18n=field.name)=field.label
+                span(data-i18n=field.name)= field.label
             else
               -
                 const checkbox = structuredClone(field)
@@ -25,11 +25,10 @@ mixin makeDowntimeFieldset(fieldset)
           each field in beats
             if field.type === "checkbox"
               +hidden(field.name)
-              span(data-i18n=field.name)=field.label
+              span(data-i18n=field.name)= field.label
             else
               +hidden(`${field.name}_checkbox`)
               +span(field)
-
 
   //- if fieldset.name === "personality-arc"
     +blob({ name: fieldset.name})

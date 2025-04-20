@@ -2,10 +2,9 @@
 
 main.options
   section.options__main
-
     section.options__col
       .option.options__override-attitude
-        - const { override, selects } = options.attitude
+        - const { override, selects } = options.attitude;
         label(for=override.name)
           +field(override)
           span(data-i18n=override.name)= override.label
@@ -18,16 +17,15 @@ main.options
 
     aside
       .a-heartfelt-word
-        span(data-i18n="you_are_small") You are small.
+        span(data-i18n='you_are_small') You are small.
         <br><br>
-        span(data-i18n="you_are_just_a_handful_of_parameters") You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.
+        span(data-i18n='you_are_just_a_handful_of_parameters') You are just a handful of parameters in the infinite universe generator. A few numbers a quintillion decimal places down the encyclopedia wand. A blip on the timeline, a speck of cosmic dust.
         <br><br>
-        span(data-i18n="you_are_also_big") You are also big.
+        span(data-i18n='you_are_also_big') You are also big.
         <br><br>
-        span(data-i18n="your_intestines_are") Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.
+        span(data-i18n='your_intestines_are') Your intestines are the coil-structured megacity for trillions of bacteria. Whole dimensions are born and collapse in the quantum foam inside you every second. Your dad brings you up in every conversation.
         <br><br>
-        span(data-i18n="you_are_someones_world") You are someone’s world.
-
+        span(data-i18n='you_are_someones_world') You are someone’s world.
 
       - const version = data.global.sheet_version;
       .sheet-version

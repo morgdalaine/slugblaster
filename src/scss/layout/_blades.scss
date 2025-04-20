@@ -1,6 +1,9 @@
 @use 'sass:map';
 
-.diary, .downtimes, .epilogue, .factions {
+.diary,
+.downtimes,
+.epilogue,
+.factions {
   .blade {
     &__wrapper {
       @media (min-width: map.get($grid-breakpoints, 'md')) {

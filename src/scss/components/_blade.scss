@@ -21,7 +21,6 @@
     font-family: $font-header;
     font-weight: normal;
 
-
     &::before {
       content: '_';
       font-family: Pictos;
@@ -37,7 +36,6 @@
 
   padding: $p-md;
   text-align: left;
-
 
   &[type='action'] {
     background-color: transparent;
