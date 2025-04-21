@@ -591,8 +591,7 @@ html .charsheet .slugblaster textarea {
   line-height: 1rem;
   color: var(--input-color);
   transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in, padding 0.2s ease-in;
-  -webkit-padding-start: 0.25rem;
-          padding-inline-start: 0.25rem;
+  padding-inline-start: 0.25rem;
   padding-block: 1px;
 }
 html .charsheet .slugblaster input[type=number]:active, html .charsheet .slugblaster input[type=number]:hover, html .charsheet .slugblaster input[type=number]:focus,
@@ -609,8 +608,7 @@ html .charsheet .slugblaster textarea:focus {
   background-color: var(--input-background-color-active);
   color: var(--input-color-active);
   border-bottom: 2px solid var(--input-border-color-active);
-  -webkit-padding-start: 0.5rem;
-          padding-inline-start: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 html .charsheet .slugblaster input[type=number]::-moz-placeholder, html .charsheet .slugblaster input[type=text]::-moz-placeholder, html .charsheet .slugblaster select::-moz-placeholder, html .charsheet .slugblaster textarea::-moz-placeholder {
   color: rgb(153, 153, 153);
@@ -684,8 +682,7 @@ html .charsheet .slugblaster label input[type=checkbox]:checked {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square-check.svg");
 }
 html .charsheet .slugblaster label input[type=checkbox] + span {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
+  margin-inline-start: 0.25rem;
   vertical-align: middle;
 }
 html .charsheet .slugblaster .clearfix::after {
@@ -709,8 +706,7 @@ html .charsheet .slugblaster .hide-text {
 }
 html .charsheet .slugblaster .visually-hidden:not(:focus):not(:active) {
   border: 0;
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
@@ -828,8 +824,7 @@ html .charsheet .slugblaster .blade__title {
 html .charsheet .slugblaster .blade__title::before {
   content: "_";
   font-family: Pictos;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
+  margin-inline-end: 0.5rem;
   font-weight: normal;
 }
 html .charsheet .slugblaster .blade-toggle {
@@ -1417,8 +1412,7 @@ html .charsheet .slugblaster .character .downtime .beats__custom {
   align-items: center;
 }
 html .charsheet .slugblaster .character .downtime .beats + .beats__custom {
-  -webkit-margin-before: 2px;
-          margin-block-start: 2px;
+  margin-block-start: 2px;
 }
 html .charsheet .slugblaster .character .downtime .beats--chill {
   display: none;
@@ -2069,8 +2063,7 @@ html .charsheet .slugblaster .crew .fame__rank--name {
 html .charsheet .slugblaster .crew .fame__rank--style {
   font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
   font-size: 1rem;
-  -webkit-padding-start: 0.5rem;
-          padding-inline-start: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 html .charsheet .slugblaster .crew .fame__rank--style::before {
   content: "(";
@@ -2079,12 +2072,10 @@ html .charsheet .slugblaster .crew .fame__rank--style::after {
   content: ")";
 }
 html .charsheet .slugblaster .crew .fame__perk {
-  -webkit-margin-start: 1rem;
-          margin-inline-start: 1rem;
+  margin-inline-start: 1rem;
 }
 html .charsheet .slugblaster .crew .fame__perk--description {
-  -webkit-padding-start: 1rem;
-          padding-inline-start: 1rem;
+  padding-inline-start: 1rem;
 }
 html .charsheet .slugblaster .crew .fractures {
   background-color: #fff;
