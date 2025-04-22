@@ -259,8 +259,6 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   font-family: "Nunito Sans", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
   margin: 0;
 }
 .sheet-rolltemplate-slugcast label span,
@@ -268,6 +266,11 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+}
+.sheet-rolltemplate-slugcast span + label,
+.sheet-rolltemplate-slugblaster span + label {
+  letter-spacing: 2px;
+  font-weight: 900;
 }
 .sheet-rolltemplate-slugcast .pictos,
 .sheet-rolltemplate-slugblaster .pictos {
@@ -803,7 +806,8 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, transparent, #ffd456);
+  background-color: rgb(243.8, 153.4, 194.2);
+  mix-blend-mode: multiply;
 }
 html .charsheet .slugblaster label {
   display: block;
@@ -811,14 +815,16 @@ html .charsheet .slugblaster label {
   font-family: "Nunito Sans", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
   margin: 0;
 }
 html .charsheet .slugblaster label span {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+}
+html .charsheet .slugblaster span + label {
+  letter-spacing: 2px;
+  font-weight: 900;
 }
 html .charsheet .slugblaster .pictos {
   font-family: Pictos;
@@ -1336,9 +1342,10 @@ html .charsheet .slugblaster .character .components__content {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .components__component--header {
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 html .charsheet .slugblaster .character .components__component--track {
   display: flex;

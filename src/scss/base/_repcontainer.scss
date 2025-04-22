@@ -96,8 +96,10 @@
   .itemcontrol {
     $this: '.itemcontrol';
     background-color: transparent;
+
     &:hover {
-      background-image: linear-gradient(to right, transparent, $yellow);
+      background-color: $pink-light;
+      mix-blend-mode: multiply;
     }
   }
 }

@@ -10,9 +10,10 @@
 
   &__component {
     &--header {
-      font-weight: 700;
+      font-weight: 900;
       text-align: center;
       text-transform: uppercase;
+      letter-spacing: 2px;
     }
     &--track {
       display: flex;

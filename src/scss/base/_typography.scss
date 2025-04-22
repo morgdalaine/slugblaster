@@ -8,8 +8,6 @@ label {
   font-family: $text-font-stack;
   text-transform: lowercase;
   font-variant: small-caps;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
   margin: 0;
 
   span {
@@ -17,6 +15,11 @@ label {
     font-variant: normal;
     text-transform: none;
   }
+}
+
+span + label {
+  letter-spacing: 2px;
+  font-weight: 900;
 }
 
 .pictos {
