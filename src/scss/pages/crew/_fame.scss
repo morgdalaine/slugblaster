@@ -33,19 +33,26 @@
 
   &__rank {
     align-self: flex-start;
-    &--name {
-      font-family: $font-playbook;
-      font-size: $font-h5;
-    }
-    &--style {
-      font-family: $font-label;
-      font-size: $font-m;
-      padding-inline-start: $p-md;
-      &::before {
-        content: '(';
+    .rank {
+      &__name {
+        font-family: $text-font-stack;
+        font-size: $font-h5;
+        font-weight: 900;
+        text-transform: uppercase;
       }
-      &::after {
-        content: ')';
+      &__cost {
+        font-family: $text-font-stack;
+        font-size: $font-m;
+        padding-inline-start: $p-md;
+        text-transform: none;
+        font-weight: normal;
+
+        &::before {
+          content: '(';
+        }
+        &::after {
+          content: ')';
+        }
       }
     }
   }

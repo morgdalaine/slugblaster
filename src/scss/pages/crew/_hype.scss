@@ -2,7 +2,7 @@
   $this: '.hype';
 
   color: $white;
-  background-color: $teal;
+  background-color: var(--panel-background-accent);
 
   &__header {
     border-color: transparent;

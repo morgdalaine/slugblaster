@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Silkscreen&display=swap");
@@ -114,15 +113,15 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
 * {
   color: var(--text-color, rgb(34, 34, 34));
-  font: normal 1rem/1.4 "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font: normal 1rem/1.4 "Nunito Sans", sans-serif;
 }
 
 .charactersheet.tab-pane.charsheet {
   position: relative;
-  background-color: #705a8e;
+  background-color: transparent;
 }
 .charactersheet.tab-pane.charsheet::before {
-  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/slime.svg");
+  background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy-dark.png");
   content: " ";
   display: block;
   position: absolute;
@@ -131,7 +130,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 100% 50%;
+  background-size: 100% 100%;
   background-position: bottom;
 }
 
@@ -163,8 +162,8 @@ html .characterviewer .nav-tabs > li {
 }
 html .characterviewer .nav-tabs > li.active > a {
   opacity: 1 !important;
-  color: #fff;
-  background: #705a8e;
+  color: var(--nav-tab-color);
+  background: var(--nav-tab-background);
 }
 html .characterviewer .nav-tabs > li > a {
   border: none !important;
@@ -177,13 +176,13 @@ html .characterviewer .nav-tabs > li > a {
   letter-spacing: 2px;
 }
 html .characterviewer .nav-tabs > li > a:hover, html .characterviewer .nav-tabs > li > a:active {
-  color: #fff;
+  color: var(--nav-tab-color);
 }
 html .characterviewer .nav-tabs > li > a:hover {
-  background: #339caa;
+  background: var(--nav-tab-background-hover);
 }
 html .characterviewer .nav-tabs > li > a:active {
-  background: #006977;
+  background: var(--nav-tab-background-active);
 }
 html .characterviewer .nav-tabs > li.active > a,
 html .characterviewer .nav-tabs > li.active > a:hover,
@@ -199,28 +198,43 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   opacity: 1;
 }
 
+html .charsheet .slugblaster .nav__action[type=action] {
+  color: var(--nav-color);
+  background-color: var(--nav-background);
+}
+html .charsheet .slugblaster .nav__action[type=action]:hover {
+  color: var(--nav-color-hover);
+  background-color: var(--nav-background-hover);
+}
+html .charsheet .slugblaster .nav__action[type=action]:active {
+  color: var(--nav-color-active);
+  background-color: var(--nav-background-active);
+}
+
 .slugblaster__sheet-mode[value=character] ~ * .character {
   display: grid;
 }
 .slugblaster__sheet-mode[value=character] ~ * .nav--character {
   color: #292828 !important;
-  background-color: var(--button-color) !important;
+  background-color: var(--nav-color) !important;
   pointer-events: none;
 }
+
 .slugblaster__sheet-mode[value=crew] ~ * .crew {
   display: grid;
 }
 .slugblaster__sheet-mode[value=crew] ~ * .nav--crew {
   color: #292828 !important;
-  background-color: var(--button-color) !important;
+  background-color: var(--nav-color) !important;
   pointer-events: none;
 }
+
 .slugblaster__sheet-mode[value=options] ~ * .options {
   display: grid;
 }
 .slugblaster__sheet-mode[value=options] ~ * .nav--options {
   color: #292828 !important;
-  background-color: var(--button-color) !important;
+  background-color: var(--nav-color) !important;
   pointer-events: none;
 }
 
@@ -237,13 +251,12 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
    */
   position: relative;
   margin-right: 1rem;
-  background-color: #ec008b;
 }
 .sheet-rolltemplate-slugcast label,
 .sheet-rolltemplate-slugblaster label {
   display: block;
   color: var(--label-color);
-  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
@@ -277,7 +290,6 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/nasty-photocopy.png");
-  mix-blend-mode: screen;
   z-index: 1;
 }
 .sheet-rolltemplate-slugcast .sheet-roll,
@@ -286,7 +298,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   display: grid;
   gap: 0.5rem 0.5rem;
   z-index: 2;
-  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   line-height: inherit;
 }
 .sheet-rolltemplate-slugcast .sheet-roll__header, .sheet-rolltemplate-slugcast .sheet-roll__content,
@@ -299,7 +311,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   display: flex;
   flex-wrap: wrap;
   gap: 0 0.5rem;
-  background-color: #006977;
+  background-color: #6a4d9a;
   color: #fff;
   justify-content: flex-end;
 }
@@ -458,7 +470,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__die--1,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--2,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--3 {
-  color: #a38dc1;
+  color: rgb(135.8, 112.6, 174.2);
 }
 .sheet-rolltemplate-slugcast .sheet-roll__die--4, .sheet-rolltemplate-slugcast .sheet-roll__die--5,
 .sheet-rolltemplate-slugblaster .sheet-roll__die--4,
@@ -480,7 +492,7 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
 .sheet-rolltemplate-slugblaster .sheet-roll__boosts > label,
 .sheet-rolltemplate-slugblaster .sheet-roll__kicks > label,
 .sheet-rolltemplate-slugblaster .sheet-roll__dares > label {
-  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
 }
@@ -537,12 +549,24 @@ html .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, html .
   --input-color: rgb(68, 68, 68);
   --input-color-active: #292828;
   --input-color-disabled: rgb(153, 153, 153);
-  --button-background: rgba(51, 156, 170, 0.8);
-  --button-background-active: rgba(0, 105, 119, 0.8);
-  --button-background-hover: rgba(0, 131, 149, 0.8);
+  --button-background: rgba(135.8, 112.6, 174.2, 0.8);
+  --button-background-active: rgba(84.8, 61.6, 123.2, 0.8);
+  --button-background-hover: rgba(106, 77, 154, 0.8);
   --button-color: #fff;
   --button-color-active: #fff;
   --button-color-hover: #fff;
+  --nav-background: rgba(241, 128, 179, 0.8);
+  --nav-background-active: rgba(192.8, 102.4, 143.2, 0.8);
+  --nav-background-hover: rgba(243.8, 153.4, 194.2, 0.8);
+  --nav-color: #fff;
+  --nav-color-active: #fff;
+  --nav-color-hover: #fff;
+  --nav-tab-color: #fff;
+  --nav-tab-background: rgb(84.8, 61.6, 123.2);
+  --nav-tab-background-active: rgb(0, 104.8, 119.2);
+  --nav-tab-background-hover: rgb(51, 155.8, 170.2);
+  --panel-background-accent: #6a4d9a;
+  --roll-template-header: #6a4d9a;
 }
 
 .ul-dialog {
@@ -574,7 +598,7 @@ html .charsheet .slugblaster {
    */
 }
 html .charsheet .slugblaster .row__header {
-  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 1.125rem;
   text-transform: uppercase;
 }
@@ -779,12 +803,12 @@ html .charsheet .slugblaster .repcontainer .repitem .itemcontrol {
   background-color: transparent;
 }
 html .charsheet .slugblaster .repcontainer .repitem .itemcontrol:hover {
-  background-image: linear-gradient(to right, hsla(336, 80%, 80%, 0.8), transparent);
+  background-image: linear-gradient(to right, transparent, #ffd456);
 }
 html .charsheet .slugblaster label {
   display: block;
   color: var(--label-color);
-  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.05rem;
@@ -813,13 +837,6 @@ html .charsheet .slugblaster .blade__wrapper {
   display: grid;
   gap: 0.5rem 0.5rem;
   overflow: hidden;
-}
-html .charsheet .slugblaster .blade__title {
-  font-size: 2rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
-  font-weight: normal;
 }
 html .charsheet .slugblaster .blade__title::before {
   content: "_";
@@ -863,7 +880,7 @@ html .charsheet .slugblaster .blob__wrapper {
   overflow: hidden;
 }
 html .charsheet .slugblaster .blob__header, html .charsheet .slugblaster .blob__content {
-  padding: 0.25rem;
+  padding: 0.5rem;
 }
 html .charsheet .slugblaster .blob__header {
   position: relative;
@@ -950,7 +967,7 @@ html .charsheet .slugblaster button[type=action],
 html .charsheet .slugblaster button[type=roll] {
   background: var(--button-background);
   color: var(--button-color);
-  border-radius: 0;
+  border-radius: var(--button-border-radius);
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   padding: 0;
   margin: 0;
@@ -1142,7 +1159,7 @@ html .charsheet .slugblaster .panel__wrapper {
   overflow: hidden;
 }
 html .charsheet .slugblaster .panel__header, html .charsheet .slugblaster .panel__content {
-  padding: 0.25rem;
+  padding: 0.5rem;
 }
 html .charsheet .slugblaster .panel__header {
   position: relative;
@@ -1155,13 +1172,13 @@ html .charsheet .slugblaster .panel__header {
   grid-template-columns: 1fr auto;
   border-bottom: none;
 }
-html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .blob__title {
+html .charsheet .slugblaster .panel__title, html .charsheet .slugblaster .character .signature__title, html .charsheet .slugblaster .character .signature__title--custom, html .charsheet .slugblaster .character .header__title, html .charsheet .slugblaster .character .header__title--custom, html .charsheet .slugblaster .blade__title, html .charsheet .slugblaster .blob__title {
   font-size: 2rem;
   line-height: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "Permanent Marker", "Radio Canada", "Sofia Sans Condensed", sans-serif;
-  font-weight: normal;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
 }
 html .charsheet .slugblaster .repeating__is-empty[value="0"] ~ .repeating__empty {
   display: grid;
@@ -1233,7 +1250,7 @@ html .charsheet .slugblaster .character__blades {
 }
 html .charsheet .slugblaster .character .attitude {
   color: #fff;
-  background-color: #008395;
+  background-color: var(--panel-background-accent);
 }
 html .charsheet .slugblaster .character .attitude__header {
   border-color: transparent;
@@ -1473,13 +1490,6 @@ html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaste
 html .charsheet .slugblaster .character .header {
   background-color: #fff;
 }
-html .charsheet .slugblaster .character .header__title, html .charsheet .slugblaster .character .header__title--custom {
-  font-size: 2rem;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  height: auto;
-}
 html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblaster .character .header__view {
   gap: 0.5rem 0.5rem;
 }
@@ -1526,13 +1536,6 @@ html .charsheet .slugblaster .character .mods .mod__name {
 }
 html .charsheet .slugblaster .character .signature {
   background-color: #fff;
-}
-html .charsheet .slugblaster .character .signature__title, html .charsheet .slugblaster .character .signature__title--custom {
-  font-size: 2rem;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  height: auto;
 }
 html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugblaster .character .signature__view {
   gap: 0.5rem 0.5rem;
@@ -1865,7 +1868,7 @@ html .charsheet .slugblaster .character .trouble__action[type=action] {
 }
 html .charsheet .slugblaster .character .turbo {
   color: #fff;
-  background-color: #008395;
+  background-color: var(--panel-background-accent);
 }
 html .charsheet .slugblaster .character .turbo__header {
   border-color: transparent;
@@ -1947,9 +1950,12 @@ html .charsheet .slugblaster .character .tracks .track__progress:hover, html .ch
 }
 html .charsheet .slugblaster .character .tracks .track__letter,
 html .charsheet .slugblaster .character .tracks .track__marked {
+  position: absolute;
+  inset: 0;
+  top: 1px;
   margin: 0;
   font-family: "Playpen Sans", "Comic Sans MS", cursive;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Nunito Sans", sans-serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1979,7 +1985,6 @@ html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:ch
   display: block;
   color: var(--foreground);
   background-color: var(--input-color);
-  border-radius: 0.5em;
 }
 html .charsheet .slugblaster .character .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .character .tracks .track__letter-exists[value=""] + .track__progress {
   display: none !important;
@@ -2056,19 +2061,23 @@ html .charsheet .slugblaster .crew .fame__hypes {
 html .charsheet .slugblaster .crew .fame__rank {
   align-self: flex-start;
 }
-html .charsheet .slugblaster .crew .fame__rank--name {
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+html .charsheet .slugblaster .crew .fame__rank .rank__name {
+  font-family: "Nunito Sans", sans-serif;
   font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
-html .charsheet .slugblaster .crew .fame__rank--style {
-  font-family: "Radio Canada", "Sofia Sans Condensed", sans-serif;
+html .charsheet .slugblaster .crew .fame__rank .rank__cost {
+  font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   padding-inline-start: 0.5rem;
+  text-transform: none;
+  font-weight: normal;
 }
-html .charsheet .slugblaster .crew .fame__rank--style::before {
+html .charsheet .slugblaster .crew .fame__rank .rank__cost::before {
   content: "(";
 }
-html .charsheet .slugblaster .crew .fame__rank--style::after {
+html .charsheet .slugblaster .crew .fame__rank .rank__cost::after {
   content: ")";
 }
 html .charsheet .slugblaster .crew .fame__perk {
@@ -2096,7 +2105,7 @@ html .charsheet .slugblaster .crew .header-crew {
 }
 html .charsheet .slugblaster .crew .header-crew__title[type=text] {
   font-size: 2rem;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase;
   height: auto;
 }
@@ -2105,7 +2114,7 @@ html .charsheet .slugblaster .crew .header-crew__edit, html .charsheet .slugblas
 }
 html .charsheet .slugblaster .crew .hype {
   color: #fff;
-  background-color: #008395;
+  background-color: var(--panel-background-accent);
 }
 html .charsheet .slugblaster .crew .hype__header {
   border-color: transparent;
@@ -2373,9 +2382,12 @@ html .charsheet .slugblaster .crew .tracks .track__progress:hover, html .charshe
 }
 html .charsheet .slugblaster .crew .tracks .track__letter,
 html .charsheet .slugblaster .crew .tracks .track__marked {
+  position: absolute;
+  inset: 0;
+  top: 1px;
   margin: 0;
   font-family: "Playpen Sans", "Comic Sans MS", cursive;
-  font-family: "Permanent Marker", "Comic Sans MS", serif;
+  font-family: "Nunito Sans", sans-serif;
   font-family: "Silkscreen", "DotGothic16", "Comic Sans MS", cursive;
   font-size: 1.5rem;
   font-weight: 700;
@@ -2405,7 +2417,6 @@ html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked
   display: block;
   color: var(--foreground);
   background-color: var(--input-color);
-  border-radius: 0.5em;
 }
 html .charsheet .slugblaster .crew .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .crew .tracks .track__letter-exists[value=""] + .track__progress {
   display: none !important;
@@ -2457,7 +2468,7 @@ html .charsheet .slugblaster .options .a-heartfelt-word {
   padding: 1rem;
   border-radius: 0px;
   text-align: start;
-  background-color: #008abf;
+  background-color: rgb(0, 138.4, 191.2);
   color: #fff;
   font-weight: 700;
 }
@@ -3168,5 +3179,5 @@ html .charsheet .slugblaster__wrapper {
   gap: 0.5rem 0;
   margin: 0.25rem;
   margin-top: 0;
-  margin-right: 1rem;
+  margin-inline: 1rem;
 }

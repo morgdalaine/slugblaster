@@ -97,7 +97,7 @@
     $this: '.itemcontrol';
     background-color: transparent;
     &:hover {
-      background-image: linear-gradient(to right, hsl(random(360) 80% 80% / 80%), transparent);
+      background-image: linear-gradient(to right, transparent, $yellow);
     }
   }
 }

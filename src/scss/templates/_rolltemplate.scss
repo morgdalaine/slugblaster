@@ -4,7 +4,7 @@
 
   position: relative;
   margin-right: $m-lg;
-  background-color: $magenta;
+  // background-color: $magenta;
 
   &::after {
     content: ' ';
@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-image: image('nasty-photocopy.png');
-    mix-blend-mode: screen;
+    // mix-blend-mode: screen;
     z-index: 1;
   }
 
@@ -28,7 +28,7 @@
     gap: $grid-gutter;
     z-index: 2;
 
-    font-family: $font-body;
+    font-family: $text-font-stack;
     line-height: inherit;
 
     &__header,
@@ -41,7 +41,7 @@
       flex-wrap: wrap;
       gap: 0 $grid-gutter-col;
 
-      background-color: $teal-dark;
+      background-color: $purple;
       color: $white;
 
       justify-content: flex-end;
@@ -164,7 +164,7 @@
       // text-align: center;
 
       > label {
-        font-family: $font-body;
+        font-family: $text-font-stack;
         font-size: 0.8em;
         text-transform: uppercase;
       }

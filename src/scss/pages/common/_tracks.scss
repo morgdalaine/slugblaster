@@ -29,17 +29,21 @@
 
     &:hover,
     &:focus {
-      color: $button-color;
-      background-color: $button-background-hover;
+      color: var(--button-color);
+      background-color: var(--button-background-hover);
     }
   }
 
   .track__letter,
   .track__marked {
+    position: absolute;
+    inset: 0;
+    top: 1px;
+
     margin: 0;
 
     font-family: $font-handwritten;
-    font-family: $font-playbook;
+    font-family: $text-font-stack;
     font-family: $font-nav;
     font-size: $font-h4;
     font-weight: 700;
@@ -70,7 +74,6 @@
         display: block;
         color: $foreground;
         background-color: $input-color;
-        border-radius: 0.5em;
       }
     }
   }

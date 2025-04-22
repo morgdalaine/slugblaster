@@ -10,9 +10,9 @@
   --text-color: #{$black};
 
   // Inputs
-  --input-background: #{rgb($grey-light, 0.5)};
-  --input-background-color-active: #{rgb($blue, 0.1)};
-  --input-background-color-disabled: #{rgb($grey-light, 0.1)};
+  --input-background: #{rgba($grey-light, 0.5)};
+  --input-background-color-active: #{rgba($blue, 0.1)};
+  --input-background-color-disabled: #{rgba($grey-light, 0.1)};
 
   --input-border-color: #{$black};
   --input-border-color-active: #{$magenta};
@@ -23,11 +23,32 @@
   --input-color-disabled: #{$grey-mid};
 
   // Buttons
-  --button-background: #{rgb($teal-light, 0.8)};
-  --button-background-active: #{rgb($teal-dark, 0.8)};
-  --button-background-hover: #{rgb($teal, 0.8)};
+  --button-background: #{rgba($purple-light, 0.8)};
+  --button-background-active: #{rgba($purple-dark, 0.8)};
+  --button-background-hover: #{rgba($purple, 0.8)};
 
   --button-color: #{$white};
   --button-color-active: #{$white};
   --button-color-hover: #{$white};
+
+  // Nav
+  --nav-background: #{rgba($pink, 0.8)};
+  --nav-background-active: #{rgba($pink-dark, 0.8)};
+  --nav-background-hover: #{rgba($pink-light, 0.8)};
+
+  --nav-color: #{$white};
+  --nav-color-active: #{$white};
+  --nav-color-hover: #{$white};
+
+  // Nav-Tab
+  --nav-tab-color: #{$white};
+  --nav-tab-background: #{$purple-dark};
+  --nav-tab-background-active: #{$teal-dark};
+  --nav-tab-background-hover: #{$teal-light};
+
+  // Panel
+  --panel-background-accent: #{$purple};
+
+  // Roll Template
+  --roll-template-header: #{$purple};
 }

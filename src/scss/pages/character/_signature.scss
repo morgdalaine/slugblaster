@@ -4,11 +4,7 @@
 
   &__title,
   &__title--custom {
-    font-size: 2rem;
-    font-family: $font-playbook;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    height: auto;
+    @extend .panel__title;
   }
 
   &__edit,

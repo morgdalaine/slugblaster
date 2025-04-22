@@ -12,11 +12,11 @@
           each rank in fame.ranks
             - const { label, style, perks, descriptions } = rank;
             .fame__rank
-              label.fame__rank--name(for=label.name)
+              label.rank(for=label.name)
                 +field(label)
-                span(data-i18n=label.name)= label.label
+                span.rank__name(data-i18n=label.name)= label.label
                 if style
-                  span.fame__rank--style(data-i18n=style.name)= style.label
+                  span.rank__cost(data-i18n=style.name)= style.label
               each field in perks
                 .fame__perk
                   label.fame__perk--name(for=field.name)
@@ -30,7 +30,7 @@
             - const { label, perks, descriptions } = rank;
             .fame__rank
               +hidden(label.name)
-              span.fame__rank--name(data-i18n=label.name)= label.label
+              span.rank__name(data-i18n=label.name)= label.label
               each field in perks
                 .fame__perk
                   +hidden(field.name)

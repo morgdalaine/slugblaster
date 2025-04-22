@@ -72,15 +72,14 @@
     }
   }
   &__expand {
-    &--expand,
-    &--collapse {
-      display: none;
-    }
-
     background-image: image('chevron-down.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
+    &--expand,
+    &--collapse {
+      display: none;
+    }
     input {
       outline: transparent;
       appearance: none;

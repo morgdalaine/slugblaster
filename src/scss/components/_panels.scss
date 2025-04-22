@@ -11,7 +11,7 @@
 
   &__header,
   &__content {
-    padding: $p-sm;
+    padding: $p-md;
   }
 
   &__header {
@@ -34,7 +34,7 @@
     line-height: $font-h2;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: $font-header;
-    font-weight: normal;
+    font-family: $text-font-stack;
+    font-weight: 900;
   }
 }

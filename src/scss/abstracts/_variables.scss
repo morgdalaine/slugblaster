@@ -27,9 +27,11 @@ $grid-gutter-row: $p-md;
 $grid-gutter-col: $p-md;
 $grid-gutter: $grid-gutter-row $grid-gutter-col;
 
+// Fonts
+
 /// Regular font family
 /// @type List
-$text-font-stack: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+$text-font-stack: 'Nunito Sans', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -39,17 +41,11 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// @type Color
 $text-color: var(--text-color, rgb(34, 34, 34)) !default;
 
-// Fonts
 $font-title: 'Playpen Sans', 'Comic Sans MS', serif !default;
 $font-nav: 'Silkscreen', 'DotGothic16', 'Comic Sans MS', cursive !default;
-$font-playbook: 'Permanent Marker', 'Comic Sans MS', serif !default;
 $font-nav-tab: 'Tiny5', 'Jersey 10', 'DotGothic16', 'Comic Sans MS', serif !default;
-
-$font-label: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
-$font-body: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
-// $font-input: 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
 $font-input: 'Playpen Sans', 'Comic Sans MS', cursive !default;
-$font-header: 'Permanent Marker', 'Radio Canada', 'Sofia Sans Condensed', sans-serif !default;
+
 $font-handwritten: 'Playpen Sans', 'Comic Sans MS', cursive !default;
 $font-dice: 'Silkscreen', 'DotGothic16', monospace !default;
 
@@ -117,7 +113,7 @@ $white: #fff;
 // And then lighter versions of primary sometimes too (like a lighter pink on a purple background)
 
 // https://coolors.co/8c70b1-f180b3-2fb996-00adef-ffd456-ec008b-008395-292828
-$purple: #8c70b1;
+$purple: #6a4d9a;
 $purple-light: tint-color($purple, 20%);
 $purple-dark: shade-color($purple, 20%);
 
@@ -171,13 +167,6 @@ $container-max-widths: (
   xxl: 1320px,
 ) !default;
 
-// Nav-Tab
-$nav-tab-color: $white;
-$nav-tab-background: $purple-dark;
-$nav-tab-background-active: $teal-dark;
-$nav-tab-background-hover: $teal-light;
-$nav-tab-border: 2px solid $teal;
-
 // Inputs
 $input-component-size: 2.5rem;
 $input-component-size-small: 2rem;
@@ -201,16 +190,7 @@ $input-font-size: $font-m;
 $input-shadow: 0 0 0 1px var(--input-border-color) inset;
 $input-shadow-active: 0 0 0 1px var(--input-border-color-active) inset;
 
-// Buttons
-$button-background: var(--button-background);
-$button-background-active: var(--button-background-active);
-$button-background-hover: var(--button-background-hover);
-
 $button-border-radius: 0; // 0.5rem;
-
-$button-color: var(--button-color);
-$button-color-active: var(--button-color-active);
-$button-color-hover: var(--button-color-hover);
 
 // Typography
 $label-color: var(--label-color);

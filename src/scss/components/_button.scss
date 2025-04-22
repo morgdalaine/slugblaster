@@ -6,9 +6,9 @@
 
 button[type='action'],
 button[type='roll'] {
-  background: $button-background;
-  color: $button-color;
-  border-radius: $button-border-radius;
+  background: var(--button-background);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
 
   font-family: $font-nav;
 
@@ -16,12 +16,12 @@ button[type='roll'] {
   margin: 0;
 
   &:hover {
-    background: $button-background-hover;
-    color: $button-color-hover;
+    background: var(--button-background-hover);
+    color: var(--button-color-hover);
   }
   &:active {
-    background: $button-background-active;
-    color: $button-color-active;
+    background: var(--button-background-active);
+    color: var(--button-color-active);
   }
 }
 
