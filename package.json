@@ -1,6 +1,6 @@
 {
   "name": "slugblaster",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Roll20 character sheet for Slugblaster by Mikey Hamm",
   "scripts": {
     "dev": "run-p compile:* postcss",
