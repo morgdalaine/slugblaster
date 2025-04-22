@@ -27,45 +27,8 @@ main.options
         <br><br>
         span(data-i18n='you_are_someones_world') You are someone’s world.
 
-      - const version = data.global.sheet_version;
       .sheet-version
+        - const version = data.global.sheet_version;
         +field(version)
         span.visually-hidden(data-i18n=version.name)= version.label
         +span(version)
-
-      div(style='display: none; gap: 0.25rem')
-        div
-          div(style='background: #a38dc1; width: 4rem; aspect-ratio: 1', title='purple-dark')
-          div(style='background: #8c70b1; width: 4rem; aspect-ratio: 1', title='purple')
-          div(style='background: #705a8e; width: 4rem; aspect-ratio: 1', title='purple-light')
-        div
-          div(style='background: #f499c2; width: 4rem; aspect-ratio: 1', title='pink-light')
-          div(style='background: #f180b3; width: 4rem; aspect-ratio: 1', title='pink')
-          div(style='background: #c1668f; width: 4rem; aspect-ratio: 1', title='pink-dark')
-        div
-          div(style='background: #59c7ab; width: 4rem; aspect-ratio: 1', title='green-light')
-          div(style='background: #2fb996; width: 4rem; aspect-ratio: 1', title='green')
-          div(style='background: #269478; width: 4rem; aspect-ratio: 1', title='green-dark')
-        div
-          div(style='background: #33bdf2; width: 4rem; aspect-ratio: 1', title='blue-light')
-          div(style='background: #00adef; width: 4rem; aspect-ratio: 1', title='blue')
-          div(style='background: #008abf; width: 4rem; aspect-ratio: 1', title='blue-dark')
-        div
-          div(style='background: #ffdd78; width: 4rem; aspect-ratio: 1', title='gold-light')
-          div(style='background: #ffd456; width: 4rem; aspect-ratio: 1', title='gold')
-          div(style='background: #ccaa45; width: 4rem; aspect-ratio: 1', title='gold-dark')
-        div(style='background: #ec008b; width: 4rem; aspect-ratio: 1', title='magenta')
-        div
-          div(style='background: #339caa; width: 4rem; aspect-ratio: 1', title='teal-light')
-          div(style='background: #008395; width: 4rem; aspect-ratio: 1', title='teal')
-          div(style='background: #006977; width: 4rem; aspect-ratio: 1', title='teal-dark')
-        //- div
-          div(style='background: #f26f5a; width: 4rem; aspect-ratio: 1', title='red-light')
-          div(style='background: #ef4b31; width: 4rem; aspect-ratio: 1', title='red')
-          div(style='background: #bf3c27; width: 4rem; aspect-ratio: 1', title='red-dark')
-        div
-          div(style='background: #fff; width: 4rem; height: 2.4rem', title='white')
-          div(style='background: rgb(237, 237, 237); width: 4rem; height: 2.4rem', title='light-grey')
-          div(style='background: rgb(153, 153, 153); width: 4rem; height: 2.4rem', title='mid-grey')
-          div(style='background: rgb(68, 68, 68); width: 4rem; height: 2.4rem', title='dark-grey')
-          div(style='background: #292828; width: 4rem; height: 2.4rem', title='black')
