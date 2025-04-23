@@ -1,6 +1,5 @@
 .tracks {
   $this: '.tracks';
-  background-color: $white;
 
   &__edit,
   &__view {
@@ -68,12 +67,12 @@
 
       + .track__letter {
         display: none;
-        color: $foreground;
+        color: var(--panel-background);
       }
       ~ .track__marked {
         display: block;
-        color: $foreground;
-        background-color: $input-color;
+        color: var(--panel-background);
+        background-color: var(--input-color);
       }
     }
   }

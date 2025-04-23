@@ -1,7 +1,5 @@
 .trouble {
   $this: '.trouble';
-  background-color: $white;
-  // flex: 1;
 
   input[name='attr_trouble'] {
     &[value='0'],

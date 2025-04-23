@@ -2,6 +2,7 @@
   $this: '.panel';
   position: relative;
   padding: $p-sm;
+  background-color: var(--panel-background);
 
   &__wrapper {
     display: grid;

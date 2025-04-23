@@ -1,7 +1,5 @@
 .style {
   $this: '.style';
-  background-color: $white;
-  // flex: 1;
 
   input[name='attr_style'] {
     &[value='0'],

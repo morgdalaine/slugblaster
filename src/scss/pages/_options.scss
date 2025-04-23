@@ -29,7 +29,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: $white;
+    background-color: var(--panel-background);
     gap: $grid-gutter-row 0;
     padding: $p-lg;
 

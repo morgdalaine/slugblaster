@@ -1,6 +1,7 @@
 .blob {
   $this: '.blob';
   position: relative;
+  background-color: var(--panel-background);
 
   &__wrapper {
     display: grid;
