@@ -4,7 +4,6 @@
 // -----------------------------------------------------------------------------
 
 * {
-  --foreground: #{$white};
 
   --label-color: #{$black};
   --text-color: #{$black};
@@ -21,6 +20,11 @@
   --input-color: #{$grey-dark};
   --input-color-active: #{$black};
   --input-color-disabled: #{$grey-mid};
+
+  --input-border: 1px dashed var(--input-border-color);
+  --input-border-active: 2px solid var(--input-border-color-active);
+  --input-border-disabled: 2px solid var(--input-border-color-disabled);
+  --input-border-radius: 0.5rem;
 
   // Buttons
   --button-background: #{rgba($purple-light, 0.8)};
@@ -47,6 +51,7 @@
   --nav-tab-background-hover: #{$teal-light};
 
   // Panel
+  --panel-background: #{$white};
   --panel-background-accent: #{$purple};
 
   // Roll Template

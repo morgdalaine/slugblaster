@@ -27,7 +27,7 @@ html .charsheet .slugblaster {
         display: grid;
       }
       ~ * .nav--#{$sheet} {
-        // outline: $input-border-active;
+        // outline: var(--input-border-active);
         color: $black !important;
         background-color: var(--nav-color) !important;
         pointer-events: none;

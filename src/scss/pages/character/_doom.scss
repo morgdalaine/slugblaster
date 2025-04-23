@@ -8,6 +8,6 @@
 
   .doom__name {
     display: block;
-    border-bottom: $input-border;
+    border-bottom: var(--input-border);
   }
 }

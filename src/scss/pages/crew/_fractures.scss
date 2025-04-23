@@ -19,7 +19,7 @@
     &:active,
     &:hover,
     &:focus {
-      border: $input-border-active;
+      border: var(--input-border-active);
     }
   }
 }

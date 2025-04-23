@@ -540,7 +540,6 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
 }
 
 * {
-  --foreground: #fff;
   --label-color: #292828;
   --text-color: #292828;
   --input-background: rgba(237, 237, 237, 0.5);
@@ -552,6 +551,10 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   --input-color: rgb(68, 68, 68);
   --input-color-active: #292828;
   --input-color-disabled: rgb(153, 153, 153);
+  --input-border: 1px dashed var(--input-border-color);
+  --input-border-active: 2px solid var(--input-border-color-active);
+  --input-border-disabled: 2px solid var(--input-border-color-disabled);
+  --input-border-radius: 0.5rem;
   --button-background: rgba(135.8, 112.6, 174.2, 0.8);
   --button-background-active: rgba(84.8, 61.6, 123.2, 0.8);
   --button-background-hover: rgba(106, 77, 154, 0.8);
@@ -568,6 +571,7 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   --nav-tab-background: rgb(84.8, 61.6, 123.2);
   --nav-tab-background-active: rgb(0, 104.8, 119.2);
   --nav-tab-background-hover: rgb(51, 155.8, 170.2);
+  --panel-background: #fff;
   --panel-background-accent: #6a4d9a;
   --roll-template-header: #6a4d9a;
 }
@@ -612,7 +616,7 @@ html .charsheet .slugblaster textarea {
   width: 100%;
   height: 2.5rem;
   background-color: var(--input-background);
-  border-bottom: 1px dashed var(--input-border-color);
+  border-bottom: var(--input-border);
   font-family: "Playpen Sans", "Comic Sans MS", cursive;
   font-size: 1rem;
   line-height: 1rem;
@@ -632,9 +636,9 @@ html .charsheet .slugblaster textarea:active,
 html .charsheet .slugblaster textarea:hover,
 html .charsheet .slugblaster textarea:focus {
   outline: transparent;
-  background-color: var(--input-background-color-active);
+  background-color: var(--input-background-active);
   color: var(--input-color-active);
-  border-bottom: 2px solid var(--input-border-color-active);
+  border-bottom: var(--input-border-active);
   padding-inline-start: 0.5rem;
 }
 html .charsheet .slugblaster input[type=number]::-moz-placeholder, html .charsheet .slugblaster input[type=text]::-moz-placeholder, html .charsheet .slugblaster select::-moz-placeholder, html .charsheet .slugblaster textarea::-moz-placeholder {
@@ -668,9 +672,9 @@ html .charsheet .slugblaster input[type=number] {
 }
 html .charsheet .slugblaster input[type=number][disabled], html .charsheet .slugblaster input[type=number][readonly] {
   cursor: default;
-  background: var(--input-background-color-disabled);
+  background: var(--input-background-disabled);
   color: var(--input-color-disabled);
-  border: 2px solid var(--input-border-color-disabled);
+  border: var(--input-border-disabled);
 }
 html .charsheet .slugblaster textarea {
   min-height: 5rem;
@@ -879,6 +883,7 @@ html .charsheet .slugblaster .blade-toggle__controller[value=on] ~ button.blade-
 }
 html .charsheet .slugblaster .blob {
   position: relative;
+  background-color: var(--panel-background);
 }
 html .charsheet .slugblaster .blob__wrapper {
   display: grid;
@@ -1158,6 +1163,7 @@ html .charsheet .slugblaster .broadcast {
 html .charsheet .slugblaster .panel {
   position: relative;
   padding: 0.25rem;
+  background-color: var(--panel-background);
 }
 html .charsheet .slugblaster .panel__wrapper {
   display: grid;
@@ -1333,9 +1339,6 @@ html .charsheet .slugblaster .character .attitude__kick input {
   background-size: contain;
   width: 3rem;
 }
-html .charsheet .slugblaster .character .components {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .components__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1393,9 +1396,6 @@ html .charsheet .slugblaster .character .component__checkbox--0 input:checked {
 html .charsheet .slugblaster .character .component__value[value="0"] ~ .component__checkbox--0, html .charsheet .slugblaster .character .component__value:not([value]) ~ .component__checkbox--0 {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-x.svg") !important;
 }
-html .charsheet .slugblaster .character .dicetray {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .dicetray__content {
   display: grid;
   gap: 0.5rem 0.5rem;
@@ -1417,18 +1417,12 @@ html .charsheet .slugblaster .character .dicetray__action {
   font-size: 1.4rem;
   white-space: nowrap;
 }
-html .charsheet .slugblaster .character .doom {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .doom__edit, html .charsheet .slugblaster .character .doom__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .doom .doom__name {
   display: block;
-  border-bottom: 1px dashed var(--input-border-color);
-}
-html .charsheet .slugblaster .character .downtime {
-  background-color: #fff;
+  border-bottom: var(--input-border);
 }
 html .charsheet .slugblaster .character .downtime .beats__custom {
   grid-template-columns: auto 1fr;
@@ -1488,14 +1482,8 @@ html .charsheet .slugblaster .character .downtime__view {
 html .charsheet .slugblaster .character .downtime .editor__view input:not([value]) + span, html .charsheet .slugblaster .character .downtime .editor__view input[value="0"] + span {
   display: none;
 }
-html .charsheet .slugblaster .character .gear {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .gear__edit, html .charsheet .slugblaster .character .gear__view {
   gap: 0.5rem 0.5rem;
-}
-html .charsheet .slugblaster .character .header {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .character .header__edit, html .charsheet .slugblaster .character .header__view {
   gap: 0.5rem 0.5rem;
@@ -1510,18 +1498,12 @@ html .charsheet .slugblaster .character .header input[name=attr_personality][val
 html .charsheet .slugblaster .character .header input[name=attr_personality][value=custom] ~ .header__personality--custom {
   display: block;
 }
-html .charsheet .slugblaster .character .legacy {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .legacy__edit, html .charsheet .slugblaster .character .legacy__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .legacy .legacy__name {
   display: block;
-  border-bottom: 1px dashed var(--input-border-color);
-}
-html .charsheet .slugblaster .character .mods {
-  background-color: #fff;
+  border-bottom: var(--input-border);
 }
 html .charsheet .slugblaster .character .mods__edit, html .charsheet .slugblaster .character .mods__view {
   gap: 0.5rem 0.5rem;
@@ -1541,9 +1523,6 @@ html .charsheet .slugblaster .character .mods__view .mods__turbo input[name*=tur
 html .charsheet .slugblaster .character .mods .mod__name {
   font-weight: 700;
 }
-html .charsheet .slugblaster .character .signature {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .signature__edit, html .charsheet .slugblaster .character .signature__view {
   gap: 0.5rem 0.5rem;
 }
@@ -1556,9 +1535,6 @@ html .charsheet .slugblaster .character .signature input[name=attr_signature][va
 html .charsheet .slugblaster .character .signature input[name=attr_signature][value=custom] ~ .signature__title--custom,
 html .charsheet .slugblaster .character .signature input[name=attr_signature][value=custom] ~ .signature__signature--custom {
   display: block;
-}
-html .charsheet .slugblaster .character .slams {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .character .slams__boxes {
   display: grid;
@@ -1573,10 +1549,7 @@ html .charsheet .slugblaster .character .slams__input--text[type=text] {
   border: 2px solid var(--input-border-color);
 }
 html .charsheet .slugblaster .character .slams__input--text[type=text]:active, html .charsheet .slugblaster .character .slams__input--text[type=text]:hover, html .charsheet .slugblaster .character .slams__input--text[type=text]:focus {
-  border: 2px solid var(--input-border-color-active);
-}
-html .charsheet .slugblaster .character .style {
-  background-color: #fff;
+  border: var(--input-border-active);
 }
 html .charsheet .slugblaster .character .style input[name=attr_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .character .style input[name=attr_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
@@ -1723,17 +1696,11 @@ html .charsheet .slugblaster .character .style input[name=attr_style][value="9"]
 html .charsheet .slugblaster .character .style input[name=attr_style][value="9"] ~ .style__checkbox--1 input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
-html .charsheet .slugblaster .character .traits {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .traits__edit, html .charsheet .slugblaster .character .traits__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .traits .trait__name {
   font-weight: 700;
-}
-html .charsheet .slugblaster .character .trouble {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .character .trouble input[name=attr_trouble][value="0"] ~ .trouble__checkbox--0, html .charsheet .slugblaster .character .trouble input[name=attr_trouble]:not([value]) ~ .trouble__checkbox--0 {
   display: none;
@@ -1921,17 +1888,11 @@ html .charsheet .slugblaster .character .turbo__kick input {
   background-size: contain;
   width: 3rem;
 }
-html .charsheet .slugblaster .character .notes {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .character .notes__edit, html .charsheet .slugblaster .character .notes__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .character .notes .note__name {
   font-weight: 700;
-}
-html .charsheet .slugblaster .character .tracks {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .character .tracks__edit, html .charsheet .slugblaster .character .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -1986,11 +1947,11 @@ html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:ch
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;
-  color: var(--foreground);
+  color: var(--panel-background);
 }
 html .charsheet .slugblaster .character .tracks .track__marker[type=checkbox]:checked ~ .track__marked {
   display: block;
-  color: var(--foreground);
+  color: var(--panel-background);
   background-color: var(--input-color);
 }
 html .charsheet .slugblaster .character .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .character .tracks .track__letter-exists[value=""] + .track__progress {
@@ -2027,9 +1988,6 @@ html .charsheet .slugblaster .crew__action {
 html .charsheet .slugblaster .crew input[name*=load_factions]:not([value="0"]) + .crew--factions {
   display: none;
 }
-html .charsheet .slugblaster .crew .faction {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .crew .faction__edit, html .charsheet .slugblaster .crew .faction__view {
   gap: 0.5rem 0.5rem;
 }
@@ -2044,9 +2002,6 @@ html .charsheet .slugblaster .crew .faction .faction__name {
 html .charsheet .slugblaster .crew .faction .faction__relationship {
   font-family: "Press Start 2P";
   text-align: center;
-}
-html .charsheet .slugblaster .crew .fame {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .fame__edit .fame__ranks, html .charsheet .slugblaster .crew .fame__view .fame__ranks {
   display: grid;
@@ -2093,9 +2048,6 @@ html .charsheet .slugblaster .crew .fame__perk {
 html .charsheet .slugblaster .crew .fame__perk--description {
   padding-inline-start: 1rem;
 }
-html .charsheet .slugblaster .crew .fractures {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .crew .fractures__boxes {
   display: grid;
   gap: 0.5rem 0.5rem;
@@ -2105,10 +2057,7 @@ html .charsheet .slugblaster .crew .fractures__input--text[type=text] {
   border: 2px solid var(--input-border-color);
 }
 html .charsheet .slugblaster .crew .fractures__input--text[type=text]:active, html .charsheet .slugblaster .crew .fractures__input--text[type=text]:hover, html .charsheet .slugblaster .crew .fractures__input--text[type=text]:focus {
-  border: 2px solid var(--input-border-color-active);
-}
-html .charsheet .slugblaster .crew .header-crew {
-  background-color: #fff;
+  border: var(--input-border-active);
 }
 html .charsheet .slugblaster .crew .header-crew__title[type=text] {
   font-size: 2rem;
@@ -2175,9 +2124,6 @@ html .charsheet .slugblaster .crew .hype__kick input {
 }
 html .charsheet .slugblaster .crew .hype__kick--2 {
   display: none;
-}
-html .charsheet .slugblaster .crew .style {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="0"] ~ .style__checkbox--0, html .charsheet .slugblaster .crew .style input[name=attr_crew_style]:not([value]) ~ .style__checkbox--0 {
   display: none;
@@ -2353,17 +2299,11 @@ html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"
 html .charsheet .slugblaster .crew .style input[name=attr_crew_style][value="10"] ~ .style__checkbox--1 input {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
 }
-html .charsheet .slugblaster .crew .notes {
-  background-color: #fff;
-}
 html .charsheet .slugblaster .crew .notes__edit, html .charsheet .slugblaster .crew .notes__view {
   gap: 0.5rem 0.5rem;
 }
 html .charsheet .slugblaster .crew .notes .note__name {
   font-weight: 700;
-}
-html .charsheet .slugblaster .crew .tracks {
-  background-color: #fff;
 }
 html .charsheet .slugblaster .crew .tracks__edit, html .charsheet .slugblaster .crew .tracks__view {
   gap: 0.5rem 0.5rem;
@@ -2418,11 +2358,11 @@ html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked + .track__letter {
   display: none;
-  color: var(--foreground);
+  color: var(--panel-background);
 }
 html .charsheet .slugblaster .crew .tracks .track__marker[type=checkbox]:checked ~ .track__marked {
   display: block;
-  color: var(--foreground);
+  color: var(--panel-background);
   background-color: var(--input-color);
 }
 html .charsheet .slugblaster .crew .tracks .track__letter-exists:not([value]) + .track__progress, html .charsheet .slugblaster .crew .tracks .track__letter-exists[value=""] + .track__progress {
@@ -2453,7 +2393,7 @@ html .charsheet .slugblaster .options .option {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--panel-background);
   gap: 0.5rem 0;
   padding: 1rem;
 }
@@ -3134,6 +3074,9 @@ html .charsheet .slugblaster .rowspan-12 {
 html .charsheet .slugblaster .colspan-12 {
   height: 100%;
   grid-column: span 12;
+}
+html .charsheet .slugblaster .tophat {
+  background-color: transparent;
 }
 html .charsheet .slugblaster .tophat__content {
   display: flex;

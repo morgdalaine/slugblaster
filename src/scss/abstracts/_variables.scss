@@ -143,8 +143,6 @@ $green: #2fb996;
 $green-light: tint-color($green, 20%);
 $green-dark: shade-color($green, 20%);
 
-$foreground: var(--foreground);
-
 // google sheet custom colors
 // https://coolors.co/82ffc4-ff7cd3-fe5a30-00b0ef-cbff2c-78419f-fbff82-b4a7d6-b3e028
 
@@ -172,23 +170,7 @@ $input-component-size: 2.5rem;
 $input-component-size-small: 2rem;
 $input-component-size-large: 3rem;
 
-$input-background: var(--input-background);
-$input-background-active: var(--input-background-color-active);
-$input-background-disabled: var(--input-background-color-disabled);
-
-$input-border: 1px dashed var(--input-border-color);
-$input-border-active: 2px solid var(--input-border-color-active);
-$input-border-disabled: 2px solid var(--input-border-color-disabled);
-$input-border-radius: 0.5rem;
-
-$input-color: var(--input-color);
-$input-color-active: var(--input-color-active);
-$input-color-disabled: var(--input-color-disabled);
-
 $input-font-size: $font-m;
-
-$input-shadow: 0 0 0 1px var(--input-border-color) inset;
-$input-shadow-active: 0 0 0 1px var(--input-border-color-active) inset;
 
 $button-border-radius: 0; // 0.5rem;
 
