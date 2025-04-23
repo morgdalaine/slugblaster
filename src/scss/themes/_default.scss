@@ -10,8 +10,8 @@
 
   // Inputs
   --input-background: #{rgba($grey-light, 0.5)};
-  --input-background-color-active: #{rgba($blue, 0.1)};
-  --input-background-color-disabled: #{rgba($grey-light, 0.1)};
+  --input-background-active: #{rgba($blue, 0.1)};
+  --input-background-disabled: #{rgba($grey-light, 0.1)};
 
   --input-border-color: #{$black};
   --input-border-color-active: #{$magenta};

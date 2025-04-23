@@ -543,8 +543,8 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   --label-color: #292828;
   --text-color: #292828;
   --input-background: rgba(237, 237, 237, 0.5);
-  --input-background-color-active: rgba(0, 173, 239, 0.1);
-  --input-background-color-disabled: rgba(237, 237, 237, 0.1);
+  --input-background-active: rgba(0, 173, 239, 0.1);
+  --input-background-disabled: rgba(237, 237, 237, 0.1);
   --input-border-color: #292828;
   --input-border-color-active: #ec008b;
   --input-border-color-disabled: rgb(153, 153, 153);
@@ -574,6 +574,28 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   --panel-background: #fff;
   --panel-background-accent: #6a4d9a;
   --roll-template-header: #6a4d9a;
+}
+
+.sheet-darkmode *,
+.sheet-rolltemplate-slugblaster.sheet-rolltemplate-darkmode {
+  --label-color: #fff;
+  --text-color: #fff;
+  --panel-background: #292828;
+  --panel-background-accent: #6a4d9a;
+  --icon-filter: invert(1);
+  --input-background: rgba(41, 40, 40, 0.5);
+  --input-background-active: rgba(0,0,0,.5);
+  --input-background-disabled: rgba(153, 153, 153, 0.1);
+  --input-border-color: #fff;
+  --input-border-color-active: #6a4d9a;
+  --input-border-color-disabled: rgb(153, 153, 153);
+  --input-color: #fff;
+  --input-color-active: #fff;
+  --input-color-disabled: rgb(153, 153, 153);
+  --input-border: 1px dashed var(--input-border-color);
+  --input-border-active: 2px solid var(--input-border-color-active);
+  --input-border-disabled: 2px solid var(--input-border-color-disabled);
+  --input-border-radius: 0.5rem;
 }
 
 .ul-dialog {
@@ -655,6 +677,7 @@ html .charsheet .slugblaster select {
      -moz-appearance: none;
           appearance: none;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/chevron-down.svg");
+  filter: var(--icon-filter);
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -708,6 +731,7 @@ html .charsheet .slugblaster label input[type=checkbox] {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square.svg");
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster label input[type=checkbox]:checked {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/square-check.svg");
@@ -755,6 +779,7 @@ html .charsheet .slugblaster .repcontainer.editmode + .repcontrol {
 }
 html .charsheet .slugblaster .repcontainer.editmode + .repcontrol button.repcontrol_edit::before {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/lock-unlocked.svg");
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .repcontainer.editmode .repeating__delete {
   display: grid;
@@ -775,10 +800,10 @@ html .charsheet .slugblaster .repcontrol_add::before, html .charsheet .slugblast
   aspect-ratio: 1;
   background-repeat: no-repeat;
   background-size: contain;
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .repcontrol_add:hover, html .charsheet .slugblaster .repcontrol_edit:hover, html .charsheet .slugblaster .repcontrol_del:hover, html .charsheet .slugblaster .repcontrol_move:hover {
   background-color: transparent;
-  filter: invert(99%);
 }
 html .charsheet .slugblaster .repcontrol_add::before, html .charsheet .slugblaster .repcontrol_edit::before {
   width: 2rem;
@@ -949,6 +974,7 @@ html .charsheet .slugblaster .bubble__broadcast[type=roll] {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/broadcast.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .bubble__broadcast[type=roll] span.pictos {
   display: none;
@@ -963,6 +989,7 @@ html .charsheet .slugblaster .bubble__expand {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/chevron-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .bubble__expand--expand, html .charsheet .slugblaster .bubble__expand--collapse {
   display: none;
@@ -1212,7 +1239,7 @@ html .charsheet .slugblaster .repeating__controller[value=on] ~ * .repeating__ed
 }
 html .charsheet .slugblaster .repeating__empty {
   display: none;
-  background-color: #fff;
+  background-color: var(--panel-background);
 }
 html .charsheet .slugblaster .repeating__header {
   padding: 0.5rem;
@@ -1227,7 +1254,7 @@ html .charsheet .slugblaster .repeating__view, html .charsheet .slugblaster .rep
 }
 html .charsheet .slugblaster .repeating__edit {
   position: relative;
-  background-color: #fff;
+  background-color: var(--panel-background);
 }
 html .charsheet .slugblaster .repeating__delete {
   min-height: 2rem;
@@ -1322,6 +1349,7 @@ html .charsheet .slugblaster .character .attitude__boost input, html .charsheet 
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  filter: none;
 }
 html .charsheet .slugblaster .character .attitude__boost input:checked, html .charsheet .slugblaster .character .attitude__kick input:checked {
   opacity: 0.5;
@@ -1379,6 +1407,7 @@ html .charsheet .slugblaster .character .component__checkbox input {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle.svg");
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .character .component__checkbox input:checked {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/circle-filled.svg");
@@ -1576,6 +1605,7 @@ html .charsheet .slugblaster .character .style__checkbox input {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond.svg");
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .character .style__checkbox input:checked {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/diamond-filled.svg");
@@ -1724,6 +1754,7 @@ html .charsheet .slugblaster .character .trouble__checkbox input {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle.svg");
+  filter: var(--icon-filter);
 }
 html .charsheet .slugblaster .character .trouble__checkbox input:checked {
   background-image: url("https://raw.githubusercontent.com/morgdalaine/slugblaster/main/assets/triangle-filled.svg");
@@ -1871,6 +1902,7 @@ html .charsheet .slugblaster .character .turbo__boost input, html .charsheet .sl
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  filter: none;
 }
 html .charsheet .slugblaster .character .turbo__boost input:checked, html .charsheet .slugblaster .character .turbo__kick input:checked {
   opacity: 0.5;
@@ -2105,6 +2137,7 @@ html .charsheet .slugblaster .crew .hype__boost input, html .charsheet .slugblas
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  filter: none;
 }
 html .charsheet .slugblaster .crew .hype__boost input:checked, html .charsheet .slugblaster .crew .hype__kick input:checked {
   opacity: 0.5;

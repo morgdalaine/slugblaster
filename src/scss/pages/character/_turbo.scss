@@ -37,6 +37,7 @@
     input {
       outline: transparent;
       appearance: none;
+      filter: none;
 
       &:checked {
         opacity: 0.5;

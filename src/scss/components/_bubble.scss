@@ -57,6 +57,7 @@
     background-image: image('broadcast.svg');
     background-repeat: no-repeat;
     background-size: contain;
+      filter: var(--icon-filter);
 
     span.pictos {
       display: none;
@@ -75,6 +76,7 @@
     background-image: image('chevron-down.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    filter: var(--icon-filter);
 
     &--expand,
     &--collapse {

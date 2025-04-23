@@ -38,6 +38,7 @@ select {
   appearance: none;
 
   background-image: image('chevron-down.svg');
+  filter: var(--icon-filter);
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -110,6 +111,7 @@ label {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: image('square.svg');
+    filter: var(--icon-filter);
 
     &:checked {
       background-image: image('square-check.svg');

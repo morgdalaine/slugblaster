@@ -51,6 +51,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-image: image('circle.svg');
+      filter: var(--icon-filter);
 
       &:checked {
         background-image: image('circle-filled.svg');

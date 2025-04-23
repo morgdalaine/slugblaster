@@ -28,6 +28,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-image: image('triangle.svg');
+      filter: var(--icon-filter);
 
       &:checked {
         background-image: image('triangle-filled.svg');
