@@ -8,7 +8,7 @@
       display: block !important;
       button.repcontrol_edit::before {
         background-image: image('lock-unlocked.svg');
-  filter: var(--icon-filter);
+        filter: var(--icon-filter);
       }
     }
     .repeating__delete {

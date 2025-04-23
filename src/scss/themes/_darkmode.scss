@@ -1,6 +1,5 @@
 .sheet-darkmode *,
 .sheet-rolltemplate-slugblaster.sheet-rolltemplate-darkmode {
-
   --label-color: #{$white};
   --text-color: #{$white};
 
@@ -12,7 +11,7 @@
 
   // Inputs
   --input-background: #{rgba($black, 0.5)};
-  --input-background-active: rgba(0,0,0,.5);
+  --input-background-active: rgba(0, 0, 0, 0.5);
   --input-background-disabled: #{rgba($grey-mid, 0.1)};
 
   --input-border-color: #{$white};

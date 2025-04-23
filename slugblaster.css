@@ -584,7 +584,7 @@ html .charsheet .slugblaster .nav__action[type=action]:active {
   --panel-background-accent: #6a4d9a;
   --icon-filter: invert(1);
   --input-background: rgba(41, 40, 40, 0.5);
-  --input-background-active: rgba(0,0,0,.5);
+  --input-background-active: rgba(0, 0, 0, 0.5);
   --input-background-disabled: rgba(153, 153, 153, 0.1);
   --input-border-color: #fff;
   --input-border-color-active: #6a4d9a;
