@@ -34,7 +34,7 @@
 
   &__view {
     label {
-      border-top: 1px dashed $black;
+      border-top: var(--input-border);
     }
   }
 
